@@ -1,0 +1,10 @@
+construct,label,ppm,items,n_items
+SAT,Satisfaction / expectation fulfilment,Push,"SAT1, SAT2",2
+ALT,Alternative attractiveness,Pull,"ALT1, ALT2",2
+VAR,Competitor product choice/variety,Pull,"VAR1, VAR2",2
+PROMO,Competitor promotional attractiveness,Pull,PROMO1,1
+SWEFFORT,Switching effort (cost),Mooring,"SC1, SC2",2
+FAM,Familiarity,Mooring,FAM1,1
+INERT,Inertia / continued-use tendency,Mooring,INERT1,1
+PULL,Pull composite (5 items),Pull,"ALT1, ALT2, VAR1, VAR2, PROMO1",5
+INT,Switching intention,Outcome,"INT1, INT2, INT3",3

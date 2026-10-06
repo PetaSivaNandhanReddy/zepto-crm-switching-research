@@ -1,0 +1,2 @@
+model,n,events,nonevents,k,events_per_predictor,mcfadden_r2,LR_chi2,LR_p
+Logit shifted_any ~ SAT+PULL+SWEFFORT,51,29,22,3,7.333333333333333,0.07434036772203545,5.184288233351381,0.15878944971803083

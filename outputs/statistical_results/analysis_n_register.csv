@@ -1,0 +1,20 @@
+analysis,sample,n,note
+Respondent profile / group distribution,All respondents,184,
+Location and monthly-spend descriptives,All respondents who were asked (V1.5 and V2),168,16 structurally missing (V1)
+Group x profile tests,All (location/spend: 168),184 / 168,
+"Current-user descriptives, H1-H6",Current users,51,VAR uses VAR1 only for 5 V1 respondents
+H7 inertia,Current users with INERT1,46,5 structurally missing (V1)
+HTMT discriminant-validity analysis,Current users with all items incl. VAR2,46,complete cases
+"M1 regression (SAT, PULL, SWEFFORT, FAM)",Current users,51,12.8 cases/predictor
+M2 regression (6 predictors),Current users,51,8.5 cases/predictor (exploratory)
+Logistic partial shift (3 predictors),Current users,51,29 events / 22 non-events
+Sensitivity: excl. straight-liners,Current users,39,
+Sensitivity: V2 only,Current users,44,
+Sensitivity: excl. Q1-inconsistent,Current users,39,
+Sensitivity: straight-liners and V1/V1.5 excluded,Current users,33,
+Former reasons/destination,Former users,73,
+Former alt variants / return intention,Former users,68,5 structurally missing (V1)
+H10 (class A vs C),"Former users, class A (28) and C (30)",58,Return item missing for 5 V1 former users; class B (n=10) descriptive only
+Never-user reasons,Never-users,60,
+Never-user preferred-platform reason / help items,Never-users,54,6 missing (branch/version)
+Supplementary: current users' out-of-branch reasons,Current users (leaked),7,descriptive only

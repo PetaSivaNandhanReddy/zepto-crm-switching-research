@@ -1,0 +1,91 @@
+{
+  "sha256": "33c47472219fa2ef7e56a5717efa22091d601f2fea911784747d91600c93aaa1",
+  "n_hypotheses": 10,
+  "decision_rule": "Supported iff direction as hypothesised AND Holm-adjusted p < .05 within H1-H7",
+  "note": "Hypotheses are defined in src/config.py and written to this registry BEFORE any test is executed in the same run. They were written after the Phase-1 audit, in which item-level descriptive correlations had been shown; specification was theory-led but not blind to those descriptives.",
+  "written_at_utc": "2026-10-04T14:44:43+00:00",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "construct": "SAT",
+      "ppm": "Push",
+      "expected": "-",
+      "outcome": "INT",
+      "text": "Satisfaction/expectation fulfilment is negatively associated with switching intention.",
+      "literature": "Bansal et al. 2005 (dissatisfaction as push); Hsieh et al. 2012",
+      "items": "SAT1, SAT2"
+    },
+    {
+      "id": "H2",
+      "construct": "ALT",
+      "ppm": "Pull",
+      "expected": "+",
+      "outcome": "INT",
+      "text": "Alternative attractiveness is positively associated with switching intention.",
+      "literature": "Bansal et al. 2005; Hsieh et al. 2012; Chang et al. 2023 (pull significant)",
+      "items": "ALT1, ALT2"
+    },
+    {
+      "id": "H3",
+      "construct": "VAR",
+      "ppm": "Pull",
+      "expected": "+",
+      "outcome": "INT",
+      "text": "Perceived competitor product choice/variety is positively associated with switching intention.",
+      "literature": "Pull/alternative-attractiveness tradition; fresh-food e-commerce PPM (WHICEB 2025)",
+      "items": "VAR1, VAR2"
+    },
+    {
+      "id": "H4",
+      "construct": "PROMO",
+      "ppm": "Pull",
+      "expected": "+",
+      "outcome": "INT",
+      "text": "Perceived competitor promotional attractiveness is positively associated with switching intention.",
+      "literature": "Pull factors in platform switching (Chang et al. 2023; e-grocery PPM 2023)",
+      "items": "PROMO1"
+    },
+    {
+      "id": "H5",
+      "construct": "SWEFFORT",
+      "ppm": "Mooring",
+      "expected": "-",
+      "outcome": "INT",
+      "text": "Perceived switching effort is negatively associated with switching intention.",
+      "literature": "Burnham et al. 2003; Bansal et al. 2005; Chang et al. 2023 (mooring significant)",
+      "items": "SC1, SC2"
+    },
+    {
+      "id": "H6",
+      "construct": "FAM",
+      "ppm": "Mooring",
+      "expected": "-",
+      "outcome": "INT",
+      "text": "Familiarity with Zepto is negatively associated with switching intention.",
+      "literature": "Habit/familiarity as mooring (Bansal et al. 2005; Cui et al. 2026 on inertia)",
+      "items": "FAM1"
+    },
+    {
+      "id": "H7",
+      "construct": "INERT",
+      "ppm": "Mooring",
+      "expected": "-",
+      "outcome": "INT",
+      "text": "Inertia (continued-use tendency) is negatively associated with switching intention.",
+      "literature": "Inertia as mooring (Cui et al. 2026)",
+      "items": "INERT1"
+    },
+    {
+      "id": "H8",
+      "text": "Push, Pull and Mooring composites jointly explain variance in switching intention (multiple regression, model F-test)."
+    },
+    {
+      "id": "H9",
+      "text": "Current users who report having shifted some purchases (Q19=Yes) have higher switching intention than those who have not."
+    },
+    {
+      "id": "H10",
+      "text": "Former users whose most important reason was area/coverage have higher willingness to return than former users whose most important reason was voluntary (platform-choice)."
+    }
+  ]
+}

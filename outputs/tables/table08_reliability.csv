@@ -1,0 +1,9 @@
+scale,n_items,n_complete,alpha,mean_inter_item_r,spearman_brown,itemtotal_SAT1,alpha_if_deleted_SAT1,itemtotal_SAT2,alpha_if_deleted_SAT2,itemtotal_ALT1,alpha_if_deleted_ALT1,itemtotal_ALT2,alpha_if_deleted_ALT2,itemtotal_VAR1,alpha_if_deleted_VAR1,itemtotal_VAR2,alpha_if_deleted_VAR2,itemtotal_SC1,alpha_if_deleted_SC1,itemtotal_SC2,alpha_if_deleted_SC2,itemtotal_INT1,alpha_if_deleted_INT1,itemtotal_INT2,alpha_if_deleted_INT2,itemtotal_INT3,alpha_if_deleted_INT3,itemtotal_PROMO1,alpha_if_deleted_PROMO1,itemtotal_FAM1,alpha_if_deleted_FAM1,itemtotal_INERT1,alpha_if_deleted_INERT1
+SAT (Push),2,51,0.7213114754098362,0.5647653550585481,0.7218530922004168,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ALT (Pull),2,51,0.8483676975945016,0.740863364829335,0.8511447593154048,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VAR (Pull),2,46,0.9014285714285715,0.8246546877853997,0.9039021939940765,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SWEFFORT (Mooring),2,51,0.7915087187263077,0.6599023992046119,0.7951098805819214,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+INT (Outcome),3,51,0.9093492747941984,0.7703662729369425,,,,,,,,,,,,,,,,,,0.8155980543256214,0.873202614379085,0.863161069865372,0.8313655602584094,0.781838092977548,0.9006416488430875,,,,,,
+PULL5 (Pull composite),5,46,0.9155199220290998,0.6850823006503547,,,,,,0.7124531836621697,0.9103935486020861,0.8630066041179647,0.879503481683318,0.8767990227912211,0.8784642032332564,0.8277417808522293,0.8872687596091852,,,,,,,,,,,0.651606790310612,0.923094142797981,,,,
+"Mooring-3 (SC1,FAM1,SC2) [tested for pooling]",3,51,0.7659348441926346,0.5245772533040589,,,,,,,,,,,,,,0.5855109949016424,0.7100313479623823,0.7384938840308939,0.5252682926829266,,,,,,,,,0.4949846908330844,0.7915087187263077,,
+"Habit-2 (FAM1,INERT1) [tested for pooling]",2,46,0.49964433063024627,0.3332546636622915,0.499911491397871,,,,,,,,,,,,,,,,,,,,,,,,,,,,

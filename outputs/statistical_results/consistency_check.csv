@@ -1,0 +1,30 @@
+check,passed,detail
+version naming uses V1/V1.5/V2 only (no lowercase v1/v2/v3 tokens),True,
+version values,True,"{'V2': 162, 'V1': 16, 'V1.5': 6}"
+version counts 16/6/162,True,
+groups 51/73/60,True,
+routing leak unique respondents = 15 (22 = block instances),True,
+cleaning_log summary matches data,True,
+every reference id cited in report exists in references.csv,True,[]
+every reference has verification_level,True,
+hypothesis matrix has H1-H10,True,
+"hypothesis matrix has rationale, direction, items, test, n",True,
+each recommended CRM item has all 7 chain fields,True,
+M1 n = 51,True,
+independent verification all passed,True,53/53
+hypothesis registry hash matches config,True,
+reference verification labels limited to A/B/C/UNVERIFIED,True,"{'B': 8, 'C': 5, 'A': 2, 'UNVERIFIED': 2}"
+no UNVERIFIED reference used as hypothesis support,True,[]
+full-text (A) references recorded with source_location,True,"['L05', 'L10']"
+evidence-matrix source IDs exist in sources.csv,True,[]
+media sources are not in the evidence matrix,True,
+triangulation uses only Convergent/Partial/Contradictory/Insufficient/Contextual,True,"{'Contradictory', 'Insufficient / Contextual', 'Insufficient', 'Partial'}"
+report does not call the Redseer ~95% a CAGR,True,
+report states filing-risk caveat (risks are not causes),True,
+report states n=51 for current-user models,True,
+S02 commissioned report flagged as not retrieved,True,
+every evidence item has claim_owner and survey_relation_type,True,
+excerpt-level (S11) items never carry a printed page number,True,
+S11 verification states excerpts are not a reading of the section or superseded,True,
+S02 commissioned report recorded as NOT retrieved,True,
+media claims with UNVERIFIED status are not in evidence matrix,True,

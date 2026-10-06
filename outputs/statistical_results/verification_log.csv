@@ -1,0 +1,54 @@
+check,independent_value,pipeline_value,passed
+raw rows,184.0,184.0,True
+raw columns,37.0,37.0,True
+current n,51.0,51.0,True
+former n,73.0,73.0,True
+never n,60.0,60.0,True
+leak: current users answering former block (respondents),7.0,7.0,True
+leak: current+former answering never block (respondents),15.0,15.0,True
+leak: UNIQUE respondents,15.0,15.0,True
+leak: block-level instances (7+15),22.0,22.0,True
+all leaking respondents within responses 1-22,1.0,1.0,True
+SAT rho (independent),0.16960405658730102,0.169604056587301,True
+SAT n,51.0,51.0,True
+ALT rho (independent),0.6853066978230739,0.6853066978230739,True
+ALT n,51.0,51.0,True
+VAR rho (independent),0.693650687545273,0.693650687545273,True
+VAR n,51.0,51.0,True
+PROMO rho (independent),0.6996910935773203,0.6996910935773203,True
+PROMO n,51.0,51.0,True
+SWEFFORT rho (independent),0.720637431098369,0.720637431098369,True
+SWEFFORT n,51.0,51.0,True
+FAM rho (independent),0.2450634098290082,0.2450634098290082,True
+FAM n,51.0,51.0,True
+INERT rho (independent),0.2531053195289304,0.2531053195289304,True
+INERT n,46.0,46.0,True
+SAT Holm p (statsmodels),0.24915154727143135,0.2491515472714313,True
+ALT Holm p (statsmodels),1.157514063559934e-07,1.157514063559934e-07,True
+VAR Holm p (statsmodels),8.359789631049467e-08,8.359789631049468e-08,True
+PROMO Holm p (statsmodels),6.666171894410773e-08,6.666171894410774e-08,True
+SWEFFORT Holm p (statsmodels),1.7376107715240173e-08,1.7376107715240173e-08,True
+FAM Holm p (statsmodels),0.24915154727143135,0.2491515472714313,True
+INERT Holm p (statsmodels),0.24915154727143135,0.2491515472714313,True
+alpha INT,0.9093492747941984,0.9093492747941984,True
+alpha ALT,0.8483676975945018,0.8483676975945016,True
+alpha SWEFFORT,0.7915087187263081,0.7915087187263077,True
+M1 coefficient const,0.9217857380614537,0.921785738061438,True
+M1 coefficient SAT,-0.0835235951889716,-0.0835235951889701,True
+M1 coefficient PULL,0.5806364754902786,0.5806364754902857,True
+M1 coefficient SWEFFORT,0.3369393578838273,0.3369393578838226,True
+M1 coefficient FAM,-0.09664410505063707,-0.0966441050506377,True
+M1 n,51.0,51.0,True
+M1 R2,0.7057459116114273,0.7057459116114275,True
+straight-liners,12.0,12.0,True
+INT: age 18-24 vs 25+ p,0.6227984030004661,0.6227984030004661,True
+INT: age 18-24 vs 25+ n1,37.0,37.0,True
+INT: age 18-24 vs 25+ n2,14.0,14.0,True
+INT: student vs non-student p,0.8834384624751628,0.8834384624751628,True
+INT: student vs non-student n1,31.0,31.0,True
+INT: student vs non-student n2,20.0,20.0,True
+former class A,31.0,31.0,True
+former class B,10.0,10.0,True
+former class C,32.0,32.0,True
+H10 p,0.2140525189780964,0.2140525189780964,True
+H10 n,58.0,58.0,True

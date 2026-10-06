@@ -1,0 +1,8 @@
+resp_id,questionnaire_version,shifted_any,fu_reasons,fu_destination,fu_main_reason,fu_increased_other,fu_alt_variants,fu_return
+3,V1,Yes,Product availability;Pricing;Discounts / promotions,Swiggy Instamart,Availability in my area,Yes,,
+9,V1,Yes,Product availability;Zepto was not available in my area,Blinkit,Product availability,No,,
+11,V1,Yes,Product availability,Swiggy Instamart,Product availability,Yes,,
+14,V1,Yes,Product availability,Blinkit,Product variety / choice,Not sure,,
+15,V1,Yes,Product variety / choice,Swiggy Instamart,Discounts / promotions,Yes,,
+21,V1.5,Yes,Zepto was not available in my area,Swiggy Instamart,Availability in my area,Yes,Yes,Probably Yes
+22,V1.5,No,Zepto was not available in my area,I did not shift to another platform,Availability in my area,Not sure,Maybe,Probably Yes

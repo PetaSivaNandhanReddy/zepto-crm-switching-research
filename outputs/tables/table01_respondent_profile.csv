@@ -1,0 +1,19 @@
+category,variable,Current,Former,Never,All
+18–24,Age group,37,67,53,157
+25–34,Age group,12,5,6,23
+35–44,Age group,1,1,1,3
+45 and above,Age group,1,0,0,1
+Other,Occupation,1,0,0,1
+Self-employed,Occupation,3,2,2,7
+Student,Occupation,31,64,54,149
+Working Professional,Occupation,16,7,4,27
+Metro city,Location type (n=168),27,33,21,81
+Other,Location type (n=168),3,3,3,9
+Tier 1 city,Location type (n=168),7,17,14,38
+Tier 2 city,Location type (n=168),9,10,11,30
+Tier 3 / smaller city,Location type (n=168),0,5,5,10
+Less than ₹500,Monthly QC spend (n=168),10,16,26,52
+"₹500–₹1,000",Monthly QC spend (n=168),13,28,11,52
+"₹1,001–₹2,000",Monthly QC spend (n=168),11,17,10,38
+"₹2,001–₹5,000",Monthly QC spend (n=168),6,4,6,16
+"More than ₹5,000",Monthly QC spend (n=168),6,3,1,10

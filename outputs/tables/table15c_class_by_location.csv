@@ -1,0 +1,4 @@
+fu_class,Metro city,Not asked (V1),Other,Tier 1 city,Tier 2 city,Tier 3 / smaller city
+A_coverage_primary,15,3,0,11,2,0
+B_coverage_mentioned_other_primary,5,0,2,0,2,1
+C_voluntary_only,13,2,1,6,6,4

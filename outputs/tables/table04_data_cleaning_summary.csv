@@ -1,0 +1,16 @@
+metric,value
+rows,184
+columns_raw,37
+current,51
+former,73
+never,60
+V1,16
+V1.5,6
+V2,162
+routing_leak_unique_respondents,15
+routing_leak_block_instances,22
+routing_leak_former_block_respondents,7
+routing_leak_never_block_respondents,15
+straight_liners,12
+q1_inconsistent,40
+exclusions,0

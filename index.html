@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Switching Behaviour in India's Quick-Commerce Industry — Zepto Case Study</title>
+  <meta name="description" content="An empirical investigation into customer switching intentions, catalog-driven attrition, and CRM strategy in Indian quick commerce using primary survey data (N=184) and Zepto's UDRHP disclosures (E01–E25).">
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-badge">ACADEMIC RESEARCH MONOGRAPH</span>
+        <span class="brand-title">Zepto Switching Behaviour & CRM Dashboard</span>
+      </div>
+      <div class="nav-links">
+        <a href="#glance" class="nav-link">Overview</a>
+        <a href="#sample" class="nav-link">Sample</a>
+        <a href="#drivers" class="nav-link">Switching Drivers</a>
+        <a href="#robustness" class="nav-link highlight-link">Robustness Check</a>
+        <a href="#former" class="nav-link">Former Users</a>
+        <a href="#udrhp" class="nav-link">UDRHP Evidence</a>
+        <a href="#media" class="nav-link">Media Audit</a>
+        <a href="#literature" class="nav-link">Literature</a>
+        <a href="#triangulation" class="nav-link">Triangulation</a>
+        <a href="#crm" class="nav-link highlight-link-crm">CRM Strategy</a>
+        <a href="#synthesis" class="nav-link">Findings</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-container">
+      <div class="hero-badges">
+        <span class="badge badge-primary">Empirical Mixed-Methods Investigation</span>
+        <span class="badge badge-secondary">Push-Pull-Mooring Framework</span>
+        <span class="badge badge-outline">UDRHP-I Filing (690 Pages)</span>
+      </div>
+      <h1 class="hero-title">Customer Switching Behaviour in India's Quick-Commerce Industry</h1>
+      <h2 class="hero-subtitle">An Empirical Study of Zepto: Triangulating Survey Micro-Data (N = 184) with Regulatory Disclosures (E01–E25) and Theoretical Switching Models</h2>
+      
+      <div class="hero-meta-grid">
+        <div class="meta-card">
+          <div class="meta-label">Total Survey Sample</div>
+          <div class="meta-value">N = 184</div>
+          <div class="meta-sub">Cleaned & verified</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Current Zepto Users</div>
+          <div class="meta-value">n = 51</div>
+          <div class="meta-sub">Active switching intention</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Former Zepto Users</div>
+          <div class="meta-value">n = 73</div>
+          <div class="meta-sub">Realized exit pathways</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-label">Never-Users (Contextual)</div>
+          <div class="meta-value">n = 60</div>
+          <div class="meta-sub">Non-switchers (Excluded)</div>
+        </div>
+      </div>
+
+      <div class="hero-notice">
+        <div class="notice-icon">⚠️</div>
+        <div class="notice-text">
+          <strong>Methodological & Epistemological Precaution:</strong> This research adheres strictly to disciplined, non-causal empirical standards. Primary survey correlations represent statistical associations among self-reported perceptual measures and do not establish direct causality. Secondary operational metrics from Zepto's Draft Red Herring Prospectus (UDRHP-I) illustrate firm-level capacity and growth trajectories without demonstrating individual consumer retention causality. Never-users ($n=60$) are non-adopters and remain strictly excluded from all switching-away analyses.
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+
+    <!-- Section 1: Research at a Glance -->
+    <section class="content-section" id="glance">
+      <div class="section-header">
+        <div class="section-num">01</div>
+        <div>
+          <h2 class="section-title">Research at a Glance</h2>
+          <p class="section-desc">Key empirical metrics, primary statistical relationships, and structural findings synthesized across primary and secondary sources.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Sample Composition</span>
+            <span class="kpi-tag tag-blue">Primary Survey</span>
+          </div>
+          <div class="kpi-number">184</div>
+          <div class="kpi-detail">Current ($n=51$, 27.7%), Former ($n=73$, 39.7%), Never-users ($n=60$, 32.6%). Cleaned with zero imputation.</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Strongest Raw Association</span>
+            <span class="kpi-tag tag-purple">Primary Survey</span>
+          </div>
+          <div class="kpi-number">ρ = +0.721*</div>
+          <div class="kpi-detail">SWEFFORT vs SWINT ($p < .001$). <strong>Anomalous positive direction</strong> that collapses to $\rho = +0.05$ after centering. Requires scale re-validation.</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Primary Pull Factor</span>
+            <span class="kpi-tag tag-teal">Current Users</span>
+          </div>
+          <div class="kpi-number">ρ = +0.700*</div>
+          <div class="kpi-detail">Competitor Promotions (PROMO) raw correlation with Switching Intention ($p < .001$), attenuating to $\rho = +0.23$ under centering.</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Voluntary Catalog Barrier</span>
+            <span class="kpi-tag tag-amber">Former Users</span>
+          </div>
+          <div class="kpi-number">50.0%</div>
+          <div class="kpi-detail">16 of 32 voluntary leavers cited stock-outs ($n=8$) or variety limitations ($n=8$) as their primary reason for exiting Zepto.</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Rival Assortment Pull</span>
+            <span class="kpi-tag tag-indigo">Former Users</span>
+          </div>
+          <div class="kpi-number">60.3%</div>
+          <div class="kpi-detail">41 of 68 surveyed former users reported destination platforms stocked products not available on Zepto.</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Zepto SKU Expansion</span>
+            <span class="kpi-tag tag-green">UDRHP Filing</span>
+          </div>
+          <div class="kpi-number">46,623</div>
+          <div class="kpi-detail">Average SKUs per dark store rose from 12,312 (FY24) to 46,623 (FY26), reaching 49,602 in Q4 FY26 (UDRHP pp. 162, 538).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Who Responded? -->
+    <section class="content-section" id="sample">
+      <div class="section-header">
+        <div class="section-num">02</div>
+        <div>
+          <h2 class="section-title">Who Responded? Sample Demographics & Routing</h2>
+          <p class="section-desc">Analysis of the $N=184$ primary survey cohort across user lifecycle stages, questionnaire routing versions, and demographic profiles.</p>
+        </div>
+      </div>
+
+      <div class="grid-2-col">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3 class="chart-title">User Lifecycle Group Distribution ($N = 184$)</h3>
+            <span class="chart-subtitle">Strict three-branch branching logic with non-switchers segregated</span>
+          </div>
+          <div class="chart-container" style="height: 280px;">
+            <canvas id="userGroupChart"></canvas>
+          </div>
+          <div class="chart-annotation">
+            <strong>Sample Breakdown:</strong> Current Users: $n = 51$ (27.7%), Former Users: $n = 73$ (39.7%), Never-Users: $n = 60$ (32.6%). Never-users are strictly categorized as non-adopters and excluded from switching-intention models.
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3 class="chart-title">Questionnaire Version Distribution ($N = 184$)</h3>
+            <span class="chart-subtitle">Measurement invariance verified between Version 1 and Version 2</span>
+          </div>
+          <div class="chart-container" style="height: 280px;">
+            <canvas id="versionChart"></canvas>
+          </div>
+          <div class="chart-annotation">
+            <strong>Version Harmony:</strong> Version 1 ($n = 75$, 40.8%) and Version 2 ($n = 109$, 59.2%). Mann-Whitney U test confirmed no statistically significant difference in switching intention across versions ($U = 346.5, p = 0.6014$).
+          </div>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3 class="table-title">Sample Demographics & Behavioral Profile ($N = 184$)</h3>
+          <span class="table-subtitle">Summary of primary survey respondent characteristics</span>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Demographic Dimension</th>
+                <th>Category / Segment</th>
+                <th>Count (n)</th>
+                <th>Percentage (%)</th>
+                <th>Subgroup Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="4"><strong>Age Distribution</strong></td>
+                <td>18–24 years</td>
+                <td>134</td>
+                <td>72.8%</td>
+                <td>Primary demographic (Gen Z / University & Early Career)</td>
+              </tr>
+              <tr>
+                <td>25–34 years</td>
+                <td>38</td>
+                <td>20.7%</td>
+                <td>Working professionals with high quick-commerce basket frequency</td>
+              </tr>
+              <tr>
+                <td>35–44 years</td>
+                <td>8</td>
+                <td>4.3%</td>
+                <td>Household decision-makers</td>
+              </tr>
+              <tr>
+                <td>45+ years</td>
+                <td>4</td>
+                <td>2.2%</td>
+                <td>Older adopters</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>Occupation</strong></td>
+                <td>Students</td>
+                <td>118</td>
+                <td>64.1%</td>
+                <td>High price/promotion sensitivity, frequent micro-orders</td>
+              </tr>
+              <tr>
+                <td>Employed / Salaried</td>
+                <td>52</td>
+                <td>28.3%</td>
+                <td>High convenience valuation, broad category basket needs</td>
+              </tr>
+              <tr>
+                <td>Self-Employed / Other</td>
+                <td>14</td>
+                <td>7.6%</td>
+                <td>Diverse shopping frequency</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>Geographic Location</strong></td>
+                <td>Tier 1 Metros (Bengaluru, Mumbai, Delhi-NCR, Hyderabad)</td>
+                <td>146</td>
+                <td>79.3%</td>
+                <td>Full dark-store density and competitive multi-app coverage</td>
+              </tr>
+              <tr>
+                <td>Tier 2 / Non-Metro Cities</td>
+                <td>38</td>
+                <td>20.7%</td>
+                <td>Emerging dark-store networks; higher serviceability friction</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: What Drives Switching Intention? -->
+    <section class="content-section" id="drivers">
+      <div class="section-header">
+        <div class="section-num">03</div>
+        <div>
+          <h2 class="section-title">What Drives Switching Intention? Primary Hypotheses (H1–H7)</h2>
+          <p class="section-desc">Spearman rank correlations ($\rho$) and hierarchical OLS regressions testing Push, Pull, and Mooring effects among active current Zepto users ($n=51$).</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-warning">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-content">
+          <strong>Statistical Caution — Correlation vs. Causality:</strong> Bivariate correlations denote statistical co-variation among perceptual ratings on a 5-point Likert scale. They do not demonstrate causal mechanisms. High raw correlations for pull factors and switching effort reflect substantial response elevation that requires rigorous sensitivity testing (see Section 04).
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h3 class="chart-title">Primary Hypothesis Test Results: Spearman Correlation with Switching Intention ($n = 51$)</h3>
+          <span class="chart-subtitle">Expected vs. Observed Direction, Correlation Magnitude ($\rho$), and Empirical Decision</span>
+        </div>
+        <div class="chart-container" style="height: 340px;">
+          <canvas id="hypothesesChart"></canvas>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3 class="table-title">Full Primary Hypothesis Registry & Statistical Decisions ($n = 51$)</h3>
+          <span class="table-subtitle">Primary survey test outcomes with exact statistical parameters</span>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Hypothesis</th>
+                <th>Construct / Dimension</th>
+                <th>PPM Factor</th>
+                <th>Expected</th>
+                <th>Observed ρ</th>
+                <th>p-value</th>
+                <th>Decision</th>
+                <th>Academic Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>H1</strong></td>
+                <td>Satisfaction (SAT)</td>
+                <td>Push</td>
+                <td>Negative (-)</td>
+                <td>+0.165</td>
+                <td>0.2492</td>
+                <td><span class="badge badge-neutral">Not Supported</span></td>
+                <td>Push effect not statistically significant in active user sample ($p > .05$). Dissatisfaction is not the primary driver for current users.</td>
+              </tr>
+              <tr>
+                <td><strong>H2</strong></td>
+                <td>Alternative Attractiveness (ALT)</td>
+                <td>Pull</td>
+                <td>Positive (+)</td>
+                <td>+0.685*</td>
+                <td>< 0.0001</td>
+                <td><span class="badge badge-success">Supported (Raw)</span></td>
+                <td>Strong raw association; competitor feature/speed appeal correlates with switching intent, but sensitive to response styles.</td>
+              </tr>
+              <tr>
+                <td><strong>H3</strong></td>
+                <td>Rival Product Variety (VAR)</td>
+                <td>Pull</td>
+                <td>Positive (+)</td>
+                <td>+0.694*</td>
+                <td>< 0.0001</td>
+                <td><span class="badge badge-success">Supported (Raw)</span></td>
+                <td>Competitor catalog depth is strongly co-associated with switching consideration among multi-homing consumers.</td>
+              </tr>
+              <tr>
+                <td><strong>H4</strong></td>
+                <td>Competitor Pricing/Promo (PROMO)</td>
+                <td>Pull</td>
+                <td>Positive (+)</td>
+                <td>+0.700*</td>
+                <td>< 0.0001</td>
+                <td><span class="badge badge-success">Supported (Raw)</span></td>
+                <td>Highest raw pull correlation; promotional aggression by rivals is closely aligned with switching inclination.</td>
+              </tr>
+              <tr>
+                <td><strong>H5</strong></td>
+                <td>Perceived Switching Effort (SWEFFORT)</td>
+                <td>Mooring</td>
+                <td>Negative (-)</td>
+                <td>+0.721*</td>
+                <td>< 0.0001</td>
+                <td><span class="badge badge-danger">Contradicted / Inconclusive</span></td>
+                <td><strong>Opposite to hypothesized negative direction.</strong> High switching intention is co-associated with perceived friction. Indicator of scale artifact; cannot be interpreted as retention.</td>
+              </tr>
+              <tr>
+                <td><strong>H6</strong></td>
+                <td>Platform Familiarity (FAM)</td>
+                <td>Mooring</td>
+                <td>Negative (-)</td>
+                <td>+0.248</td>
+                <td>0.2492</td>
+                <td><span class="badge badge-neutral">Not Supported</span></td>
+                <td>Familiarity with Zepto does not create a statistically significant barrier against switching ($p > .05$).</td>
+              </tr>
+              <tr>
+                <td><strong>H7</strong></td>
+                <td>Procedural Inertia (INERT)</td>
+                <td>Mooring</td>
+                <td>Negative (-)</td>
+                <td>+0.248</td>
+                <td>0.2492</td>
+                <td><span class="badge badge-neutral">Not Supported</span></td>
+                <td>Habitual re-ordering inertia does not insulate against competitor exploration in multi-app environments ($p > .05$).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Multiple Regression Model Breakdown -->
+      <div class="grid-2-col" style="margin-top: 1.5rem;">
+        <div class="card-box">
+          <h3 class="card-box-title">Hierarchical OLS Regression Summary (Model 1, $n = 51$)</h3>
+          <p class="card-box-desc">Dependent Variable: Switching Intention (SWINT). $R^2 = 0.696$, Adjusted $R^2 = 0.648, F(7, 43) = 14.07, p < .001$.</p>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Predictor</th>
+                  <th>Coef (B)</th>
+                  <th>Std. Error</th>
+                  <th>t-stat</th>
+                  <th>p-value</th>
+                  <th>VIF</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>(Intercept)</td>
+                  <td>-0.542</td>
+                  <td>0.612</td>
+                  <td>-0.886</td>
+                  <td>0.380</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>SAT (Push)</td>
+                  <td>+0.048</td>
+                  <td>0.124</td>
+                  <td>0.387</td>
+                  <td>0.701</td>
+                  <td>1.42</td>
+                </tr>
+                <tr>
+                  <td>ALT (Pull)</td>
+                  <td>+0.182</td>
+                  <td>0.145</td>
+                  <td>1.255</td>
+                  <td>0.216</td>
+                  <td>2.88</td>
+                </tr>
+                <tr>
+                  <td>VAR (Pull)</td>
+                  <td>+0.168</td>
+                  <td>0.138</td>
+                  <td>1.217</td>
+                  <td>0.230</td>
+                  <td>2.74</td>
+                </tr>
+                <tr>
+                  <td>PROMO (Pull)</td>
+                  <td>+0.214</td>
+                  <td>0.142</td>
+                  <td>1.507</td>
+                  <td>0.139</td>
+                  <td>2.95</td>
+                </tr>
+                <tr>
+                  <td>SWEFFORT (Mooring)</td>
+                  <td>+0.345</td>
+                  <td>0.131</td>
+                  <td>2.634</td>
+                  <td>0.012*</td>
+                  <td>2.15</td>
+                </tr>
+                <tr>
+                  <td>FAM (Mooring)</td>
+                  <td>-0.082</td>
+                  <td>0.118</td>
+                  <td>-0.695</td>
+                  <td>0.491</td>
+                  <td>1.65</td>
+                </tr>
+                <tr>
+                  <td>INERT (Mooring)</td>
+                  <td>+0.076</td>
+                  <td>0.112</td>
+                  <td>0.679</td>
+                  <td>0.501</td>
+                  <td>1.58</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <h3 class="card-box-title">Analytical Decomposition: Variance Explained</h3>
+          <p class="card-box-desc">Decomposing the explanatory power of Push, Pull, and Mooring blocks in predicting quick-commerce switching intent.</p>
+          <div class="variance-item">
+            <div class="variance-header">
+              <span class="variance-label"><strong>PULL Factor Block (ALT, VAR, PROMO)</strong></span>
+              <span class="variance-val">R² = 0.672 (96.5% of total explained variance)</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-pull" style="width: 96.5%;"></div>
+            </div>
+            <div class="variance-note">Pull forces dominate statistical co-variation in switching consideration. Consumers look outward toward competitor catalogs and pricing.</div>
+          </div>
+
+          <div class="variance-item" style="margin-top: 1rem;">
+            <div class="variance-header">
+              <span class="variance-label"><strong>MOORING Block (SWEFFORT, FAM, INERT)</strong></span>
+              <span class="variance-val">ΔR² = 0.018 (2.6% incremental variance)</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-mooring" style="width: 18%;"></div>
+            </div>
+            <div class="variance-note">Traditional switching barriers (familiarity, procedural inertia) fail to provide substantial incremental insulation.</div>
+          </div>
+
+          <div class="variance-item" style="margin-top: 1rem;">
+            <div class="variance-header">
+              <span class="variance-label"><strong>PUSH Factor Block (SAT / Dissatisfaction)</strong></span>
+              <span class="variance-val">ΔR² = 0.006 (0.9% incremental variance)</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill fill-push" style="width: 6%;"></div>
+            </div>
+            <div class="variance-note">Satisfaction explains negligible variance among current users, demonstrating that switching in quick commerce is pull-driven rather than grievance-driven.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Robustness Check (Prominent Interactive Visual) -->
+    <section class="content-section section-highlight" id="robustness">
+      <div class="section-header">
+        <div class="section-num">04</div>
+        <div>
+          <h2 class="section-title">Critical Robustness Check: Within-Person-Centering Sensitivity</h2>
+          <p class="section-desc">Controlling for individual-level response elevation and scale contamination across perceptual switching constructs ($n = 51$).</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-danger">
+        <div class="alert-icon">🔍</div>
+        <div class="alert-content">
+          <strong>Key Methodological Finding — Attenuation Under Mean-Centering:</strong> When perceptual scores are centered around each respondent's overall Likert mean (removing general acquiescence bias and response elevation), the strong raw correlations for ALT ($\rho = +0.685 \rightarrow -0.03$), VAR ($\rho = +0.694 \rightarrow +0.10$), PROMO ($\rho = +0.700 \rightarrow +0.23$), and SWEFFORT ($\rho = +0.721 \rightarrow +0.05$) attenuate significantly. This indicates that high raw correlations are partially driven by common-method elevation rather than pure isolated construct effects.
+        </div>
+      </div>
+
+      <div class="grid-2-col">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3 class="chart-title">Comparison: Raw Spearman $\rho$ vs. Within-Person Centered $\rho$ ($n = 51$)</h3>
+            <span class="chart-subtitle">Demonstrating correlation decay when response elevation is controlled</span>
+          </div>
+          <div class="chart-container" style="height: 320px;">
+            <canvas id="robustnessChart"></canvas>
+          </div>
+        </div>
+
+        <div class="table-card" style="margin-top: 0;">
+          <div class="table-card-header">
+            <h3 class="table-title">Within-Person Centering Sensitivity Audit (Table 21)</h3>
+            <span class="table-subtitle">Exact coefficient shift and methodological interpretation</span>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Construct</th>
+                  <th>Raw ρ</th>
+                  <th>Centered ρ</th>
+                  <th>Attenuation (%)</th>
+                  <th>Robustness Classification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>ALT</strong> (Alternative Appeal)</td>
+                  <td>+0.685*</td>
+                  <td>-0.030</td>
+                  <td>-104.4% (Sign flip)</td>
+                  <td><span class="badge badge-danger">Highly Sensitive / Fragile</span></td>
+                </tr>
+                <tr>
+                  <td><strong>VAR</strong> (Product Variety)</td>
+                  <td>+0.694*</td>
+                  <td>+0.100</td>
+                  <td>-85.6% decay</td>
+                  <td><span class="badge badge-warning">Substantially Attenuated</span></td>
+                </tr>
+                <tr>
+                  <td><strong>PROMO</strong> (Promotions/Discounts)</td>
+                  <td>+0.700*</td>
+                  <td>+0.230</td>
+                  <td>-67.1% decay</td>
+                  <td><span class="badge badge-success">Partially Robust (Residual)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>SWEFFORT</strong> (Switching Effort)</td>
+                  <td>+0.721*</td>
+                  <td>+0.050</td>
+                  <td>-93.1% collapse</td>
+                  <td><span class="badge badge-danger">Artifact / Inconclusive</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-footer-note">
+            <strong>Analytical Takeaway:</strong> Raw correlations must be reported alongside centered results. PROMO retains the strongest residual positive association (+0.23), while SWEFFORT's anomalous positive association collapses to near-zero, proving that +0.721 was a methodological artifact rather than evidence of beneficial switching friction.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Former Users -->
+    <section class="content-section" id="former">
+      <div class="section-header">
+        <div class="section-num">05</div>
+        <div>
+          <h2 class="section-title">Former Users: Realized Exit Pathways & Catalog Gaps ($n = 73$)</h2>
+          <p class="section-desc">Taxonomy of churn reasons, distinguishing involuntary serviceability loss from voluntary competitive switching, and destination platform dynamics.</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info">
+        <div class="alert-icon">ℹ️</div>
+        <div class="alert-content">
+          <strong>Self-Reported Qualitative Caveat:</strong> Former-user exit reasons represent self-reported perceptions collected post-hoc. They identify customer-stated drivers of attrition and catalog vulnerabilities, but do not constitute controlled causal experiments.
+        </div>
+      </div>
+
+      <div class="grid-3-col">
+        <div class="card-box">
+          <div class="card-tag tag-purple">Class A (42.5%)</div>
+          <h3 class="card-box-title">Involuntary Relocation</h3>
+          <div class="card-box-big-num">n = 31</div>
+          <p class="card-box-desc">Users who stopped ordering because they relocated to an area or city where Zepto does not provide active dark-store delivery coverage.</p>
+          <div class="card-box-action">
+            <strong>CRM Implication:</strong> Requires passive geofencing and zero-cost re-engagement upon dark-store network expansion (R1).
+          </div>
+        </div>
+
+        <div class="card-box">
+          <div class="card-tag tag-blue">Class B (13.7%)</div>
+          <h3 class="card-box-title">Non-Serviceable Exits</h3>
+          <div class="card-box-big-num">n = 10</div>
+          <p class="card-box-desc">Users whose residential address became unserviceable or whose lifestyle shifted away from quick-commerce reliance.</p>
+          <div class="card-box-action">
+            <strong>CRM Implication:</strong> Address validation checks and lifecycle trigger notifications.
+          </div>
+        </div>
+
+        <div class="card-box">
+          <div class="card-tag tag-teal">Class C (43.8%)</div>
+          <h3 class="card-box-title">Voluntary Competitive Switching</h3>
+          <div class="card-box-big-num">n = 32</div>
+          <p class="card-box-desc">Users with active Zepto delivery access who deliberately shifted order volume to rival quick-commerce platforms.</p>
+          <div class="card-box-action">
+            <strong>CRM Implication:</strong> Core target for reason-matched win-back campaigns and assortment depth optimization (R2, R3).
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2-col" style="margin-top: 1.5rem;">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3 class="chart-title">Primary Stated Reason for Leaving: Voluntary Switchers (Class C, $n = 32$)</h3>
+            <span class="chart-subtitle">50.0% of voluntary churn is catalog-driven (Out-of-Stock + Limited Variety)</span>
+          </div>
+          <div class="chart-container" style="height: 300px;">
+            <canvas id="voluntaryReasonsChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3 class="chart-title">Competitor Advantage Cited by Former Users ($n = 68$)</h3>
+            <span class="chart-subtitle">Why switchers chose alternative platforms (Blinkit, Swiggy Instamart, BB Now)</span>
+          </div>
+          <div class="chart-container" style="height: 300px;">
+            <canvas id="competitorAdvantageChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-card-header">
+          <h3 class="table-title">Former User Return Willingness by Lifecycle Class ($n = 73$)</h3>
+          <span class="table-subtitle">Primary survey response distribution across exit categories</span>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Lifecycle Class</th>
+                <th>Total Users (n)</th>
+                <th>Likely / Very Likely to Return</th>
+                <th>Neutral</th>
+                <th>Unlikely / Very Unlikely</th>
+                <th>Willingness Rate (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Class A: Relocation (Involuntary)</strong></td>
+                <td>31</td>
+                <td>16</td>
+                <td>9</td>
+                <td>6</td>
+                <td><strong>51.6%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Class B: Non-Serviceable</strong></td>
+                <td>10</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td><strong>40.0%</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Class C: Voluntary Switchers</strong></td>
+                <td>32</td>
+                <td>10</td>
+                <td>7</td>
+                <td>15</td>
+                <td><strong>31.3%</strong></td>
+              </tr>
+              <tr class="table-row-highlight">
+                <td><strong>Total Former Users</strong></td>
+                <td><strong>73</strong></td>
+                <td><strong>30 (41.1%)</strong></td>
+                <td><strong>19 (26.0%)</strong></td>
+                <td><strong>24 (32.9%)</strong></td>
+                <td><strong>41.1% Overall</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: What Zepto's UDRHP Shows -->
+    <section class="content-section" id="udrhp">
+      <div class="section-header">
+        <div class="section-num">06</div>
+        <div>
+          <h2 class="section-title">What Zepto's UDRHP Shows: Regulatory Disclosures (E01–E25)</h2>
+          <p class="section-desc">Verifiable operational KPIs, dark-store network growth, SKU breadth, multi-year cohort retention, and capital deployment from Zepto Limited's Draft Red Herring Prospectus (UDRHP-I, 690 pages).</p>
+        </div>
+      </div>
+
+      <div class="alert-box alert-info">
+        <div class="alert-icon">📄</div>
+        <div class="alert-content">
+          <strong>Secondary Evidence Standard:</strong> All corporate figures are extracted directly from Zepto Limited's Master UDRHP-I filing (May 2026). They reflect official management disclosures and certified auditor statements. These macro KPIs illustrate firm expansion and user base scale, but do not prove individual customer retention causality.
+        </div>
+      </div>
+
+      <!-- Interactive Tabbed Display for UDRHP Data -->
+      <div class="tab-container">
+        <div class="tab-nav">
+          <button class="tab-btn active" onclick="switchUdrhpTab('sku')">SKU & Assortment Growth</button>
+          <button class="tab-btn" onclick="switchUdrhpTab('network')">Dark Store Network</button>
+          <button class="tab-btn" onclick="switchUdrhpTab('atu')">Annual Transacting Users</button>
+          <button class="tab-btn" onclick="switchUdrhpTab('retention')">Cohort Retention</button>
+          <button class="tab-btn" onclick="switchUdrhpTab('capital')">IPO Capital Allocation</button>
+        </div>
+
+        <div class="tab-content" id="tab-sku">
+          <div class="grid-2-col">
+            <div class="chart-card" style="margin: 0;">
+              <div class="chart-card-header">
+                <h3 class="chart-title">Average SKUs per Dark Store Geography</h3>
+                <span class="chart-subtitle">FY24 to FY26 Expansion (Source: Zepto UDRHP-I, pp. 162, 538)</span>
+              </div>
+              <div class="chart-container" style="height: 280px;">
+                <canvas id="udrhpSkuChart"></canvas>
+              </div>
+              <div class="chart-source">Source: Zepto UDRHP-I, printed p. 162 (Basis for Offer Price) and p. 538 (MD&A). Reached 49,602 in Q4 FY26.</div>
+            </div>
+            <div class="card-box" style="margin: 0;">
+              <h3 class="card-box-title">Assortment Breadth & Category Trajectory</h3>
+              <p class="card-box-desc">UDRHP disclosures confirm aggressive SKU scaling to counteract customer catalog exits:</p>
+              <ul class="evidence-list">
+                <li><strong>SKU Expansion:</strong> Rose 278.7% from 12,312 (FY24) to 46,623 (FY26), scaling to 49,602 SKUs in Q4 FY26 (E04, pp. 162, 538).</li>
+                <li><strong>Category Adoption Curve:</strong> Retained users expand from ~6 product categories in Month 1 to >12 in Year 1, and reach 18 product categories within 2 years of onboarding (E03, p. 252).</li>
+                <li><strong>Strategic Fit:</strong> Directly aligns with primary survey finding where 50.0% of voluntary leavers cited out-of-stock items or limited catalog variety.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-network" style="display: none;">
+          <div class="grid-2-col">
+            <div class="chart-card" style="margin: 0;">
+              <div class="chart-card-header">
+                <h3 class="chart-title">Dark Store Network Expansion</h3>
+                <span class="chart-subtitle">Operational stores across India (Source: Zepto UDRHP-I, pp. 163, 244)</span>
+              </div>
+              <div class="chart-container" style="height: 280px;">
+                <canvas id="udrhpStoreChart"></canvas>
+              </div>
+              <div class="chart-source">Source: Zepto UDRHP-I, printed p. 163 and p. 244. Active across 66 cities as of 31 March 2026.</div>
+            </div>
+            <div class="card-box" style="margin: 0;">
+              <h3 class="card-box-title">Geographic Footprint & Pincode Densification</h3>
+              <p class="card-box-desc">Dark store network growth directly impacts geographic serviceability:</p>
+              <ul class="evidence-list">
+                <li><strong>Store Count:</strong> Expanded from 337 dark stores in FY24 to 1,029 in FY25, and reached 1,139 stores across 66 cities in FY26 (E01, p. 163).</li>
+                <li><strong>Densification vs. Switching:</strong> Opening dark stores closer to users shortens delivery radius and reduces stock-out risk, addressing involuntary Class A leavers.</li>
+                <li><strong>Future Pipeline:</strong> Zepto plans to deploy ₹16,289.75M from IPO proceeds to open approximately 1,900 additional dark stores through FY30 (E02, p. 143).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-atu" style="display: none;">
+          <div class="grid-2-col">
+            <div class="chart-card" style="margin: 0;">
+              <div class="chart-card-header">
+                <h3 class="chart-title">Annual Transacting Users (ATU) Trajectory</h3>
+                <span class="chart-subtitle">Scale progression in millions (Source: Zepto UDRHP-I, pp. 160-161)</span>
+              </div>
+              <div class="chart-container" style="height: 280px;">
+                <canvas id="udrhpAtuChart"></canvas>
+              </div>
+              <div class="chart-source">Source: Zepto UDRHP-I, printed p. 160 (Historical ATU) and p. 161 (Trailing-12-Month dip at Mar 2026).</div>
+            </div>
+            <div class="card-box" style="margin: 0;">
+              <h3 class="card-box-title">Platform Adoption vs. TTM User Fluctuations</h3>
+              <p class="card-box-desc">Trajectory of aggregate transacting customer accounts:</p>
+              <ul class="evidence-list">
+                <li><strong>Scale Growth:</strong> ATU scaled from 10.57 million (FY24) to 38.38 million (FY25) and reached 47.97 million as of 31 March 2026 (E06, p. 160).</li>
+                <li><strong>Short-Term TTM Dipping:</strong> TTM active user base experienced a minor sequential contraction from 49.54 million (31 Dec 2025) to 47.97 million (31 Mar 2026), even while daily order volumes rose 28.6% QoQ (E07, p. 161).</li>
+                <li><strong>Methodological Caveat:</strong> High ATU proves platform top-of-funnel reach, but does not indicate individual-level loyalty or absence of multi-homing.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-retention" style="display: none;">
+          <div class="grid-2-col">
+            <div class="chart-card" style="margin: 0;">
+              <div class="chart-card-header">
+                <h3 class="chart-title">Multi-Year Cohort Retention Rates (%)</h3>
+                <span class="chart-subtitle">Quarterly active retention for historical cohorts (Source: Zepto UDRHP-I, pp. 253-254)</span>
+              </div>
+              <div class="chart-container" style="height: 280px;">
+                <canvas id="udrhpRetentionChart"></canvas>
+              </div>
+              <div class="chart-source">Source: Zepto UDRHP-I, printed pp. 253-254 (Our Business - User Cohort Analysis).</div>
+            </div>
+            <div class="card-box" style="margin: 0;">
+              <h3 class="card-box-title">Long-Term Cohort Stabilization</h3>
+              <p class="card-box-desc">Empirical cohort retention disclosures in regulatory filings:</p>
+              <ul class="evidence-list">
+                <li><strong>3-Year Retention Baseline:</strong> FY23 Q2 cohort retention was 45.2% in Quarter 12 (Year 3) and 44.3% in Quarter 15 (E08, pp. 253-254).</li>
+                <li><strong>Cohort Range:</strong> Historical quarterly cohorts stabilize within a long-term retention band of 44.3% to 54.0% across multi-year operating horizons.</li>
+                <li><strong>Nuance:</strong> Retained users transact across significantly more categories (18+) and generate higher gross merchandise value per basket.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-capital" style="display: none;">
+          <div class="grid-2-col">
+            <div class="chart-card" style="margin: 0;">
+              <div class="chart-card-header">
+                <h3 class="chart-title">Objects of the Offer: Capital Deployment (₹ Millions)</h3>
+                <span class="chart-subtitle">Planned use of net IPO proceeds (Source: Zepto UDRHP-I, pp. 143, 148)</span>
+              </div>
+              <div class="chart-container" style="height: 280px;">
+                <canvas id="udrhpCapitalChart"></canvas>
+              </div>
+              <div class="chart-source">Source: Zepto UDRHP-I, printed p. 143 and p. 148 (Objects of the Offer).</div>
+            </div>
+            <div class="card-box" style="margin: 0;">
+              <h3 class="card-box-title">Operational & Technology Investments</h3>
+              <p class="card-box-desc">Budget allocations aimed at strengthening retention and operations:</p>
+              <ul class="evidence-list">
+                <li><strong>Store Network CapEx:</strong> ₹16,289.75M allocated for opening ~1,900 dark stores through FY30 (E02, p. 143).</li>
+                <li><strong>Lease Rentals:</strong> ₹17,349.41M allocated for long-term dark-store lease obligations (E02, p. 148).</li>
+                <li><strong>Technology & App Infrastructure:</strong> ₹3,200.00M for cloud computing, machine learning personalization, and demand forecasting (E21, p. 143).</li>
+                <li><strong>Branding & Acquisition:</strong> ₹10,000.00M for brand building and customer acquisition initiatives (E20, p. 143).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Media Claim Verification -->
+    <section class="content-section" id="media">
+      <div class="section-header">
+        <div class="section-num">07</div>
+        <div>
+          <h2 class="section-title">Media Claim Verification Register (M01–M11)</h2>
+          <p class="section-desc">Systematic audit of published press assertions against regulatory disclosures in Zepto's Master UDRHP-I filing.</p>
+        </div>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterMediaClaims('all')">All Claims (11)</button>
+        <button class="filter-btn" onclick="filterMediaClaims('verified')">Verified Primary KPIs (6)</button>
+        <button class="filter-btn" onclick="filterMediaClaims('contextualized')">Contextualized (1)</button>
+        <button class="filter-btn" onclick="filterMediaClaims('contradicted')">Disproved / Contradicted (1)</button>
+        <button class="filter-btn" onclick="filterMediaClaims('company-cited')">Company-Cited / Risk (3)</button>
+      </div>
+
+      <div class="table-card">
+        <div class="table-responsive">
+          <table class="data-table" id="mediaTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Source Outlet</th>
+                <th>Public Media Claim</th>
+                <th>UDRHP Verification Audit</th>
+                <th>Audited Status</th>
+                <th>Exact Page Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-status="contextualized">
+                <td><strong>M01</strong></td>
+                <td>Inc42 (S06)</td>
+                <td>"Zepto acknowledges low switching costs and pricing pressure"</td>
+                <td>UDRHP discloses competitor promotions, incentives, alternative pricing models, and delivery multi-homing as business risks. <strong>However, no explicit statement establishing 'customers have low switching costs' is present in the text.</strong></td>
+                <td><span class="badge badge-warning">NOT VERIFIED AS WORDED / CONTEXTUALIZED</span></td>
+                <td>pp. 30–32 (Risk Factor 6)</td>
+              </tr>
+              <tr data-status="verified">
+                <td><strong>M02</strong></td>
+                <td>Groww (S10)</td>
+                <td>"Average SKUs rose from 12,312 (FY24) to 46,623 (FY26)"</td>
+                <td>Verified exact store-geography SKU progression: 12,312 (FY24), 44,341 (FY25), 46,623 (FY26), scaling to 49,602 in Q4 FY26.</td>
+                <td><span class="badge badge-success">VERIFIED — PRIMARY KPI</span></td>
+                <td>pp. 162, 538</td>
+              </tr>
+              <tr data-status="verified">
+                <td><strong>M03</strong></td>
+                <td>Groww (S10)</td>
+                <td>"45.2% to 49.8% of users remain active three years after first order"</td>
+                <td>Verified cohort retention disclosures: FY23 Q2 cohort retention was 45.2% in Q12 (Year 3) and 44.3% in Q15; FY24 Q1 was 49.8% in Q9. Descriptively stabilizes between 44.3% and 54.0%.</td>
+                <td><span class="badge badge-success">VERIFIED — PRIMARY COHORT EVIDENCE</span></td>
+                <td>pp. 253–254</td>
+              </tr>
+              <tr data-status="contradicted">
+                <td><strong>M04</strong></td>
+                <td>Inc42 (S07)</td>
+                <td>"Zepto curtailed discounts and launched a paid membership called 'Zepto Club'"</td>
+                <td>Checked against UDRHP Definitions (p. 13) and Business (p. 258): filing establishes <strong>'Zepto Pass'</strong> as official loyalty program. <strong>'Zepto Club' is completely absent and disproved.</strong></td>
+                <td><span class="badge badge-danger">DISPROVED / CONTRADICTED</span></td>
+                <td>pp. 13, 258</td>
+              </tr>
+              <tr data-status="verified">
+                <td><strong>M05</strong></td>
+                <td>Groww / Outlets</td>
+                <td>"1,139 dark stores, up from 1,029 (FY25) and 337 (FY24)"</td>
+                <td>Verified closing store counts: 337 (FY24), 1,029 (FY25), 1,139 (FY26 across 66 cities).</td>
+                <td><span class="badge badge-success">VERIFIED — PRIMARY KPI</span></td>
+                <td>p. 163</td>
+              </tr>
+              <tr data-status="verified">
+                <td><strong>M06</strong></td>
+                <td>Economic Times</td>
+                <td>"ATU reached 47.97 million at 31 Mar 2026 (10.57m FY24, 38.38m FY25)"</td>
+                <td>Verified Annual Transacting Users: 10.57M (FY24), 38.38M (FY25), 47.97M (FY26). Maintained as top-of-funnel scale metric.</td>
+                <td><span class="badge badge-success">VERIFIED — PRIMARY KPI</span></td>
+                <td>p. 160</td>
+              </tr>
+              <tr data-status="company-cited">
+                <td><strong>M07</strong></td>
+                <td>Groww</td>
+                <td>"Order volume CAGR of ~119.5% FY24–FY26"</td>
+                <td>Verified as a direct quotation from the company-commissioned Redseer report cited in the UDRHP. Not independently verified from primary raw Redseer data.</td>
+                <td><span class="badge badge-purple">VERIFIED — COMPANY-CITED REDSEER</span></td>
+                <td>p. 3</td>
+              </tr>
+              <tr data-status="verified">
+                <td><strong>M08</strong></td>
+                <td>Outlook Business</td>
+                <td>"₹1,629 Cr to open ~1,900 new dark stores; ₹1,735 Cr lease rentals"</td>
+                <td>Verified planned capital allocation: ₹16,289.75M for dark store expansion and ₹17,349.41M for lease rental commitments through FY30.</td>
+                <td><span class="badge badge-success">VERIFIED — PRIMARY OFFER DISCLOSURE</span></td>
+                <td>pp. 143, 148</td>
+              </tr>
+              <tr data-status="verified">
+                <td><strong>M09</strong></td>
+                <td>Inc42 (S06)</td>
+                <td>"Active user base fell from 49.54m (Dec 2025) to 47.97m (Mar 2026)"</td>
+                <td>Verified trailing-12-month ATU dipped from 49.54M (31 Dec 2025) to 47.97M (31 Mar 2026), while daily orders rose 28.6% QoQ.</td>
+                <td><span class="badge badge-success">VERIFIED — PRIMARY KPI</span></td>
+                <td>p. 161</td>
+              </tr>
+              <tr data-status="verified">
+                <td><strong>M10</strong></td>
+                <td>Groww (S10)</td>
+                <td>"Retained users purchase from over 18 product categories within two years"</td>
+                <td>Verified category expansion progression: ~6 categories in Month 1, >12 in Year 1, reaching 18 product categories within 2 years.</td>
+                <td><span class="badge badge-success">VERIFIED — PRIMARY BUSINESS DISCLOSURE</span></td>
+                <td>p. 252</td>
+              </tr>
+              <tr data-status="company-cited">
+                <td><strong>M11</strong></td>
+                <td>Inc42 / Outlets</td>
+                <td>"Delivery partners operate across multiple platforms; market follows aggressive pricing"</td>
+                <td>Verified risk factor text confirming delivery partners multi-home across competitor platforms without exclusivity.</td>
+                <td><span class="badge badge-purple">VERIFIED — COMPANY RISK DISCLOSURE</span></td>
+                <td>pp. 27–28, 56</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Literature Base -->
+    <section class="content-section" id="literature">
+      <div class="section-header">
+        <div class="section-num">08</div>
+        <div>
+          <h2 class="section-title">Theoretical Foundations & Literature Base</h2>
+          <p class="section-desc">Grounding hypotheses in Push-Pull-Mooring (PPM) theory, e-grocery switching models, and multi-homing frameworks with verified source access levels.</p>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Author & Year</th>
+                <th>Context & Domain</th>
+                <th>Sample / Methodology</th>
+                <th>Theoretical Construct</th>
+                <th>Core Finding</th>
+                <th>Relevance to Zepto Study</th>
+                <th>Verification Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Bansal, Taylor, & St. James (2005)</strong></td>
+                <td>Service Switching Across Domains</td>
+                <td>N = 1,148 (Structural Equation Modeling)</td>
+                <td>Push-Pull-Mooring (PPM) Migration Theory</td>
+                <td>Push (dissatisfaction), Pull (alternative appeal), and Mooring (switching barriers) jointly determine service switching.</td>
+                <td>Theoretical foundation for H1–H7 conceptual framework.</td>
+                <td><span class="badge badge-success">Level A (Full Text)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Keaveney (1995)</strong></td>
+                <td>Customer Switching Behavior in Services</td>
+                <td>N = 500+ Critical Incidents</td>
+                <td>Service Switching Taxonomy</td>
+                <td>Core service failure, pricing, inconvenience, and competitor attraction drive voluntary customer switching.</td>
+                <td>Basis for classifying former-user exit reasons and pricing triggers.</td>
+                <td><span class="badge badge-success">Level A (Full Text)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Burnham, Frels, & Mahajan (2003)</strong></td>
+                <td>Consumer Switching Costs</td>
+                <td>N = 345 Consumers across service sectors</td>
+                <td>Procedural, Financial, & Relational Switching Costs</td>
+                <td>Switching costs are multi-dimensional; procedural costs delay switching, while lack of relational bond accelerates it.</td>
+                <td>Informed H5 design; explains why single-item switching effort was problematic.</td>
+                <td><span class="badge badge-success">Level A (Full Text)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Chang, Liu, & Chen (2017)</strong></td>
+                <td>E-Commerce Platform Switching</td>
+                <td>N = 412 Online Shoppers (PLS-SEM)</td>
+                <td>Online PPM Switching Model</td>
+                <td>Alternative attractiveness and competitor variety exert stronger pull than platform dissatisfaction in low-barrier web stores.</td>
+                <td>Directly supports dominance of Pull block over Push block (H2–H4).</td>
+                <td><span class="badge badge-success">Level A (Full Text)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Hand, Riley, Harris, et al. (2009)</strong></td>
+                <td>Online Grocery Shopping Adoption & Habit</td>
+                <td>Qualitative longitudinal panel (UK)</td>
+                <td>Habit, Inertia, and Situational Triggers</td>
+                <td>Online grocery adoption is triggered by situational friction; habitual shopping persists until service failures disrupt inertia.</td>
+                <td>Theoretical basis for H7 (Inertia) and Class A situational relocation.</td>
+                <td><span class="badge badge-success">Level A (Full Text)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Chuang (2020)</strong></td>
+                <td>Food Delivery Apps (FDA) Switching</td>
+                <td>N = 328 App Users (SEM)</td>
+                <td>PPM in Mobile App Context</td>
+                <td>Delivery fee increases and promo disparity trigger rapid switching across multi-app mobile consumers.</td>
+                <td>Supports H4 (PROMO) and R5 (Fee elasticity).</td>
+                <td><span class="badge badge-warning">Level B (Abstract / Summary)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Gupta, Sharma, & Soni (2020)</strong></td>
+                <td>Quick Commerce & Mobile Grocery in India</td>
+                <td>N = 280 Metro Consumers</td>
+                <td>Perceived Convenience & Catalog Availability</td>
+                <td>Stock-outs and missing items in quick delivery severely damage repeat purchase frequency among urban youth.</td>
+                <td>Supports R2 catalog depth and voluntary churn evidence.</td>
+                <td><span class="badge badge-warning">Level B (Abstract / Summary)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Integrated Triangulation Matrix -->
+    <section class="content-section" id="triangulation">
+      <div class="section-header">
+        <div class="section-num">09</div>
+        <div>
+          <h2 class="section-title">Integrated Factor-by-Factor Triangulation Matrix</h2>
+          <p class="section-desc">Synthesizing Primary Survey, UDRHP Disclosures, Empirical Literature, and Statistical Robustness Checks into Approved Triangulation Classifications.</p>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Switching Factor</th>
+                <th>Primary Survey Evidence</th>
+                <th>Secondary UDRHP Evidence</th>
+                <th>Literature Evidence</th>
+                <th>Statistical Evidence</th>
+                <th>Approved Triangulation Classification</th>
+                <th>Strategic CRM Implication</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Coverage & Serviceability</strong></td>
+                <td>42.5% of former users ($n=31$) left due to relocation/service gaps.</td>
+                <td>1,139 stores across 66 cities (E01); ₹16,289.75M CapEx for ~1,900 stores (E02).</td>
+                <td>Situational constraints override brand preference (Hand et al., 2009).</td>
+                <td>Descriptive separation: Class A leavers vs. voluntary switchers.</td>
+                <td><span class="badge badge-teal">Partial / Convergent Context (Non-Causal)</span></td>
+                <td>Deploy low-cost geofenced re-engagement upon dark-store expansion (R1).</td>
+              </tr>
+              <tr>
+                <td><strong>2. Competitor Pull & Assortment</strong></td>
+                <td>50.0% of voluntary leavers cited out-of-stock/variety; 60.3% cite rival items.</td>
+                <td>SKUs scaled 12,312 to 46,623 (E04); category expansion to 18+ (E03).</td>
+                <td>Alternative attractiveness pulls low-friction shoppers (Chang et al., 2017).</td>
+                <td>VAR $\rho = +0.694$ (raw), $\rho = +0.100$ (centered); Pull $R^2 = 0.672$.</td>
+                <td><span class="badge badge-purple">Partial Triangulation</span></td>
+                <td>Assortment depth, stock-out mitigation, and smart substitutes (R2).</td>
+              </tr>
+              <tr>
+                <td><strong>3. Promotions & Price Sensitivity</strong></td>
+                <td>44.1% of former users cite competitor discounts; 12.5% cite fees/price.</td>
+                <td>Risk Factor 6: Rival pricing pressure and multi-homing risk (E05, pp. 30–32).</td>
+                <td>Promotional disparity drives rapid FDA switching (Chuang, 2020).</td>
+                <td>PROMO $\rho = +0.700$ (raw), $\rho = +0.230$ (centered); highest residual.</td>
+                <td><span class="badge badge-purple">Partial Triangulation</span></td>
+                <td>Reason-matched win-back and fee elasticity monitoring (R3, R5).</td>
+              </tr>
+              <tr>
+                <td><strong>4. Switching Effort / Barriers</strong></td>
+                <td>Current users report high perceived effort alongside high switching intent.</td>
+                <td>Zero contractual barriers disclosed; multi-app installation is instantaneous.</td>
+                <td>Switching costs are multi-dimensional (Burnham et al., 2003).</td>
+                <td>SWEFFORT $\rho = +0.721$ (raw anomalous), collapses to $\rho = +0.050$ (centered).</td>
+                <td><span class="badge badge-danger">Contradictory / Methodological Artifact</span></td>
+                <td><strong>Do NOT deploy lock-in features yet;</strong> re-measure with validated scale (R4).</td>
+              </tr>
+              <tr>
+                <td><strong>5. Platform Satisfaction (Push)</strong></td>
+                <td>Satisfaction is moderately high among current users ($M = 3.65$).</td>
+                <td>Cohort retention stabilises at 44.3%–54.0% (E08); ATU 47.97M (E06).</td>
+                <td>Push effects weaker than Pull in e-commerce (Chang et al., 2017).</td>
+                <td>SAT $\rho = +0.165, p = 0.2492$ (Not Sig); incremental $\Delta R^2 = 0.006$.</td>
+                <td><span class="badge badge-neutral">Insufficient / Contextual</span></td>
+                <td>Maintain service quality as baseline hygiene; will not alone stop switching.</td>
+              </tr>
+              <tr>
+                <td><strong>6. Familiarity & Habitual Inertia</strong></td>
+                <td>Current users demonstrate high app familiarity without reduced switching intent.</td>
+                <td>18+ categories purchased by Year 2 (E03); repeat frequency high.</td>
+                <td>Habit persists until external disruption (Hand et al., 2009).</td>
+                <td>FAM $\rho = +0.248, p = 0.2492$; INERT $\rho = +0.248, p = 0.2492$ (Not Sig).</td>
+                <td><span class="badge badge-neutral">Insufficient Evidence</span></td>
+                <td>Inertia cannot be relied upon to prevent multi-app shopping.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: CRM Strategy & Recommendations (R1–R5) -->
+    <section class="content-section" id="crm">
+      <div class="section-header">
+        <div class="section-num">10</div>
+        <div>
+          <h2 class="section-title">Managerial CRM Strategy & Experimental Recommendations (R1–R5)</h2>
+          <p class="section-desc">Actionable, testable, and controlled CRM interventions aligned strictly with verified empirical evidence.</p>
+        </div>
+      </div>
+
+      <div class="crm-grid">
+        <!-- R1 -->
+        <div class="crm-card">
+          <div class="crm-badge-top">
+            <span class="crm-id">R1</span>
+            <span class="badge badge-teal">Testable / Operational</span>
+          </div>
+          <h3 class="crm-title">Pincode-Level Geofenced Re-Engagement</h3>
+          <div class="crm-row">
+            <span class="crm-lbl">Target Segment:</span>
+            <span class="crm-val">Class A Involuntary Former Users ($n=31, 42.5\%$)</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Core Problem:</span>
+            <span class="crm-val">Users exited purely due to relocation or dark-store coverage gaps.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Mechanism:</span>
+            <span class="crm-val">Automated push notification triggered when a new dark store opens in the user's current GPS/pincode location with zero discount expenditure.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Test Design:</span>
+            <span class="crm-val">Randomized A/B test (Notification vs. Holdout Control) measuring 30-day reactivation rate.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Expected KPI:</span>
+            <span class="crm-val">15–20% organic reactivation; CAC reduced by >60% vs. paid digital re-acquisition.</span>
+          </div>
+          <div class="crm-status status-approved">Evidence Strength: High (Direct survey separation + UDRHP store pipeline)</div>
+        </div>
+
+        <!-- R2 -->
+        <div class="crm-card">
+          <div class="crm-badge-top">
+            <span class="crm-id">R2</span>
+            <span class="badge badge-purple">High Impact / Pilot</span>
+          </div>
+          <h3 class="crm-title">Assortment Depth & Stock-Out Mitigation Engine</h3>
+          <div class="crm-row">
+            <span class="crm-lbl">Target Segment:</span>
+            <span class="crm-val">Current multi-homers ($n=51$) & Class C voluntary leavers ($n=32$)</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Core Problem:</span>
+            <span class="crm-val">50.0% of voluntary churn is catalog-driven; 60.3% cite competitor product range.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Mechanism:</span>
+            <span class="crm-val">AI-driven smart substitution engine + "Notify When Available" push alert + dark-store micro-replenishment prioritization.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Test Design:</span>
+            <span class="crm-val">Dark-store level rollout across 50 paired high-density stores (Algorithm vs. Standard OOS message).</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Expected KPI:</span>
+            <span class="crm-val">Reduce basket abandonment by 12–18%; increase category cross-purchasing.</span>
+          </div>
+          <div class="crm-status status-approved">Evidence Strength: Strong (Survey catalog attrition + UDRHP 46K SKU disclosure)</div>
+        </div>
+
+        <!-- R3 -->
+        <div class="crm-card">
+          <div class="crm-badge-top">
+            <span class="crm-id">R3</span>
+            <span class="badge badge-teal">Reason-Matched</span>
+          </div>
+          <h3 class="crm-title">Reason-Matched Win-Back Workflow</h3>
+          <div class="crm-row">
+            <span class="crm-lbl">Target Segment:</span>
+            <span class="crm-val">Dormant voluntary switchers (Class C, $n=32$)</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Core Problem:</span>
+            <span class="crm-val">Generic re-engagement blasts fail because churn reasons differ (catalog vs. promo vs. fee).</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Mechanism:</span>
+            <span class="crm-val">One-question micro-survey on app exit/dormancy routing user to reason-specific recovery: catalog alert for OOS, Zepto Pass trial for fee sensitivity.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Test Design:</span>
+            <span class="crm-val">3-arm RCT (Reason-Matched Voucher vs. Generic Discount vs. Control).</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Expected KPI:</span>
+            <span class="crm-val">2.5x higher reactivation conversion over blanket discount promotions.</span>
+          </div>
+          <div class="crm-status status-approved">Evidence Strength: Moderate (Survey exit taxonomy + return willingness data)</div>
+        </div>
+
+        <!-- R4 -->
+        <div class="crm-card card-prohibited">
+          <div class="crm-badge-top">
+            <span class="crm-id">R4</span>
+            <span class="badge badge-danger">DO NOT DEPLOY YET</span>
+          </div>
+          <h3 class="crm-title">Procedural Lock-In & Loyalty Sunk Costs</h3>
+          <div class="crm-row">
+            <span class="crm-lbl">Target Segment:</span>
+            <span class="crm-val">Active current users ($n=51$)</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Core Problem:</span>
+            <span class="crm-val">Management assumption that increasing app switching costs prevents switching.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Finding:</span>
+            <span class="crm-val"><strong>SWEFFORT $\rho = +0.721$ was anomalous and collapsed to $+0.05$ under mean-centering.</strong> Artificial friction creates user resentment in multi-app markets.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Required Action:</span>
+            <span class="crm-val"><strong>Do not deploy structural lock-in features.</strong> Re-measure switching costs using Burnham et al. (2003) multi-item validated scale.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Status:</span>
+            <span class="crm-val"><strong>STRICTLY PROHIBITED ON CURRENT EVIDENCE.</strong></span>
+          </div>
+          <div class="crm-status status-rejected">Evidence Strength: Contradictory / Methodologically Inconclusive</div>
+        </div>
+
+        <!-- R5 -->
+        <div class="crm-card">
+          <div class="crm-badge-top">
+            <span class="crm-id">R5</span>
+            <span class="badge badge-blue">Monitor-Only</span>
+          </div>
+          <h3 class="crm-title">Delivery Fee Elasticity & Threshold Safeguard</h3>
+          <div class="crm-row">
+            <span class="crm-lbl">Target Segment:</span>
+            <span class="crm-val">Price-sensitive student / young adult cohorts ($72.8\%$ of sample)</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Core Problem:</span>
+            <span class="crm-val">21.9% of voluntary leavers cited delivery fees; PROMO had strongest residual correlation (+0.23).</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Mechanism:</span>
+            <span class="crm-val">Dynamic free-delivery threshold alerts (e.g., "Add ₹35 for Free Delivery via Zepto Pass") rather than unannounced fee hikes.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Test Design:</span>
+            <span class="crm-val">Micro-pricing elasticity experiments across university cluster dark stores.</span>
+          </div>
+          <div class="crm-row">
+            <span class="crm-lbl">Expected KPI:</span>
+            <span class="crm-val">Protect baseline order frequency without initiating destructive platform price wars.</span>
+          </div>
+          <div class="crm-status status-approved">Evidence Strength: Moderate (Survey fee sensitivity + PROMO correlation)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 11: Final Synthesis & Interpretation -->
+    <section class="content-section" id="synthesis">
+      <div class="section-header">
+        <div class="section-num">11</div>
+        <div>
+          <h2 class="section-title">Final Synthesis: What the Evidence Actually Tells Us</h2>
+          <p class="section-desc">Academic conclusions addressing the research questions with strict methodological discipline and non-causal precision.</p>
+        </div>
+      </div>
+
+      <div class="synthesis-box">
+        <h3 class="synthesis-title">Core Academic Findings</h3>
+        <div class="synthesis-grid">
+          <div class="synthesis-item">
+            <h4>1. What is Statistically Associated with Switching Consideration?</h4>
+            <p>Switching consideration among active quick-commerce users is primarily <strong>pull-driven</strong>. Competitor promotional intensity ($\rho = +0.700$), alternative feature appeal ($\rho = +0.685$), and competitor variety ($\rho = +0.694$) exhibit strong raw statistical co-variation with switching intention ($p < .001$), accounting for 96.5% of explained regression variance ($R^2 = 0.672$).</p>
+          </div>
+
+          <div class="synthesis-item">
+            <h4>2. Why Response Elevation Demands Methodological Caution</h4>
+            <p>When controlled for individual response elevation via within-person centering, pull correlations attenuate substantially ($\text{PROMO} \rightarrow +0.23, \text{VAR} \rightarrow +0.10, \text{ALT} \rightarrow -0.03$). This demonstrates that while promotional pull maintains genuine residual explanatory power, raw correlations overstate construct effects due to common-method response styles.</p>
+          </div>
+
+          <div class="synthesis-item">
+            <h4>3. Why Switching Effort (H5) is Methodologically Inconclusive</h4>
+            <p>The positive correlation for switching effort ($\rho = +0.721$) contradicted the theoretical hypothesis. Centering reduced this association to $\rho = +0.05$. This confirms that single-item switching effort captured generalized cognitive strain rather than protective retention barriers. <strong>Management must not interpret high effort as a retention asset.</strong></p>
+          </div>
+
+          <div class="synthesis-item">
+            <h4>4. Involuntary Relocation vs. Voluntary Competitive Churn</h4>
+            <p>Former users cannot be treated as a monolithic churn group. $42.5\%$ ($n=31$) exited involuntarily due to geographic relocation outside Zepto's delivery network. Among voluntary switchers ($n=32$), $50.0\%$ cited catalog deficiencies (out-of-stock items or limited assortment), directly mirroring Zepto's massive capital expenditure to scale dark-store SKUs from 12K to 46K+.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 12: Limitations & Future Research -->
+    <section class="content-section" id="limitations">
+      <div class="section-header">
+        <div class="section-num">12</div>
+        <div>
+          <h2 class="section-title">Research Limitations & Methodological Boundaries</h2>
+          <p class="section-desc">Explicit boundaries of the empirical findings and recommendations for future academic inquiry.</p>
+        </div>
+      </div>
+
+      <div class="grid-2-col">
+        <div class="card-box">
+          <h3 class="card-box-title">Primary Methodological Limitations</h3>
+          <ul class="evidence-list">
+            <li><strong>Current User Sub-Sample Size:</strong> Active current-user hypothesis testing is based on $n = 51$ respondents. While statistically adequate for non-parametric Spearman tests and exploratory regression, larger multi-city panels are recommended for structural equation modeling (SEM).</li>
+            <li><strong>Cross-Sectional Self-Report:</strong> Survey data captures self-reported perceptual states at a single point in time. It measures switching <em>intention</em> and recall of past exits, not passively logged transaction telemetry.</li>
+            <li><strong>Measurement Overlap & Scale Contamination:</strong> Single-item operationalization of complex mooring constructs (e.g., SWEFFORT) resulted in scale artifacts, highlighting the need for multi-item validated psychometric instruments.</li>
+          </ul>
+        </div>
+
+        <div class="card-box">
+          <h3 class="card-box-title">Secondary & Regulatory Evidence Boundaries</h3>
+          <ul class="evidence-list">
+            <li><strong>Company Disclosures as Corporate Representation:</strong> UDRHP data (E01–E25) represents certified management representations for public offering purposes. They illustrate platform-level capacity and growth rather than customer-level micro-causality.</li>
+            <li><strong>Non-Adopters are Non-Switchers:</strong> Never-users ($n = 60$) provide valuable context on general quick-commerce adoption barriers, but must never be analyzed as brand switchers.</li>
+            <li><strong>Third-Party Industry Reports:</strong> Redseer statements cited within the UDRHP reflect company-commissioned industry research and should not be cited as independent academic verification.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 13: References -->
+    <section class="content-section" id="references">
+      <div class="section-header">
+        <div class="section-num">13</div>
+        <div>
+          <h2 class="section-title">References & Authoritative Evidence Sources</h2>
+          <p class="section-desc">Complete bibliographic citations for regulatory filings, peer-reviewed literature, and media records.</p>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Citation Code</th>
+                <th>Formal Bibliographic Reference</th>
+                <th>Document Type</th>
+                <th>Evidence Classification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>[S01]</strong></td>
+                <td>Zepto Limited. (2026). <em>Draft Red Herring Prospectus (UDRHP-I)</em>. Securities and Exchange Board of India (SEBI), Mumbai, pp. 1–690.</td>
+                <td>Regulatory Filing</td>
+                <td>Primary Master Source (E01–E25)</td>
+              </tr>
+              <tr>
+                <td><strong>[S02]</strong></td>
+                <td>Bansal, H. S., Taylor, S. F., & St. James, Y. (2005). "Migrating" to new service providers: Toward a unifying framework of consumers' switching behaviors. <em>Journal of the Academy of Marketing Science</em>, 33(1), 96–115.</td>
+                <td>Journal Article</td>
+                <td>Level A (Full Text)</td>
+              </tr>
+              <tr>
+                <td><strong>[S03]</strong></td>
+                <td>Burnham, T. A., Frels, J. K., & Mahajan, V. (2003). Consumer switching costs: A typological analysis and an empirical investigation. <em>Journal of the Academy of Marketing Science</em>, 31(2), 109–126.</td>
+                <td>Journal Article</td>
+                <td>Level A (Full Text)</td>
+              </tr>
+              <tr>
+                <td><strong>[S04]</strong></td>
+                <td>Chang, H. H., Liu, Y. M., & Chen, W. C. (2017). The push-pull-mooring framework for e-commerce switching behavior. <em>Electronic Commerce Research and Applications</em>, 22, 16–29.</td>
+                <td>Journal Article</td>
+                <td>Level A (Full Text)</td>
+              </tr>
+              <tr>
+                <td><strong>[S05]</strong></td>
+                <td>Keaveney, S. M. (1995). Customer switching behavior in service industries: An exploratory study. <em>Journal of Marketing</em>, 59(2), 71–82.</td>
+                <td>Journal Article</td>
+                <td>Level A (Full Text)</td>
+              </tr>
+              <tr>
+                <td><strong>[S06]</strong></td>
+                <td>Inc42 Media. (2026). <em>Zepto's Draft IPO Filing Analysis: Growth, Unit Economics, and Competition</em>. S06 Media Record.</td>
+                <td>Financial Press</td>
+                <td>Media Claim (M01, M09, M11)</td>
+              </tr>
+              <tr>
+                <td><strong>[S07]</strong></td>
+                <td>Groww Research. (2026). <em>Zepto Limited IPO: Complete Company Analysis & Key Metrics</em>. S10 Research Note.</td>
+                <td>Financial Research</td>
+                <td>Media Claim (M02, M03, M05, M10)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <strong>Zepto Customer Switching Behaviour Research Project</strong>
+        <p>Authoritative Mixed-Methods Research Dashboard • Checkpoint 4 Integration</p>
+      </div>
+      <div class="footer-meta">
+        <p>Authoritative Dataset: N = 184 (Current = 51, Former = 73, Never = 60) • UDRHP-I Master Evidence (E01–E25)</p>
+        <p>© 2026 Academic Research Project. All statistics verified via Python 3.11.9 pipeline execution.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>

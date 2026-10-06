@@ -1,0 +1,19 @@
+step,rule,n_rows,response_ids,action,rationale
+C01,Header standardisation,0,,Renamed 37 columns to short names; whitespace/leading '. ' removed,10 headers carried stray spaces; original text preserved in codebook
+C02,Questionnaire version,22,1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22,Added questionnaire_version (V1: 1-16; V1.5: 17-22; V2: 23-184),Version boundaries from timestamps (21 Aug vs 11 Sep) and observed item availability
+C03,Duplicate check (all answer columns),0,,None found; no rows removed,0 duplicate answer patterns; timestamps unique
+C04,Likert range check (1-5 integers),0,,Invalid columns: none,No impossible values
+C05,Structural missing: VAR2 & INERT1 not asked in V1,5,3;9;11;14;15,Left as NaN; flagged,"Items added after V1; not zero, not respondent error"
+C06,Structural missing: fu_alt_variants & fu_return not asked in V1,5,2;5;7;10;13,Left as NaN; flagged,Items added after V1
+C07,Structural missing: location_type & monthly_spend not asked in V1,16,1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16,Left as NaN; flagged,Items added after V1 (all 16 V1 respondents)
+C08,Routing leak: current users answered former-user block (Q21-26),7,3;9;11;14;15;21;22,Cells kept in cleaned data with flag; removed from primary analysis datasets; reported as supplementary (n=7),"Out-of-branch answers cannot be pooled with former users, but may describe partial switching by current users"
+C09,Routing leak: current/former users answered never-user block (Q27-32),15,2;3;5;7;9;10;11;13;14;15;18;19;20;21;22,Cells kept with flag; excluded from never-user analysis and from models (15 respondents: 7 current + 8 former),Out-of-branch; never-user items are about a platform other than Zepto
+C09b,Routing leak reconciliation: UNIQUE respondents affected (leak_any),15,2;3;5;7;9;10;11;13;14;15;18;19;20;21;22,"15 unique respondents (all among responses 2-22). The 7 current users who answered the former-user block ALSO answered the never-user block, so block-level instances = 7 + 15 = 22, but unique respondents = 15",Earlier '22 routing leaks' counted block-level incidents (double-counting the 7); 22 also coincides with the size of V1+V1.5 by chance
+C10,Q1 inconsistency (Zepto not listed by current/former; listed by never-users),40,30;31;34;35;37;38;43;48;57;65;71;72;74;78;80;81;84;87;88;90;92;98;99;106;114;115;116;123;128;129;136;138;139;140;156;165;168;172;174;176,Flagged; retained; sensitivity analysis,Q1 is not used in inferential models; may reflect wording ('used' vs 'currently use')
+C11,Contradictory multi-select ('Zepto;None'),1,147,Flagged; retained,Single contradictory tick; Q1 descriptive only
+C12,Never-user says no QC use (Q2) yet names a platform used most (Q28),1,70,Flagged; retained,Ambiguous rather than impossible ('currently' vs 'most often')
+C13,Straight-lining across 13 current-user Likert items,12,11;33;36;74;115;122;128;140;146;153;154;157,Flagged; retained; sensitivity analysis with/without,"Item set mixes satisfaction (positive), barrier and switching-propensity wording, so a constant pattern is ambiguous (neutrality vs acquiescence)"
+C14,Multi-select splitting,0,,"Indicator columns created for platforms_used, fu_reasons, nu_what_would",Enables frequency tables; source columns retained
+C15,Ordinal/binary encodings,0,,"fu_return_num (1-5), age_ord, spend_ord, freq_ord, shifted_any_num, is_student, metro",Missing stays NaN
+C16,Former-user classification: coverage-driven vs voluntary,73,73 rows (see cleaned data flag),A=area is single most important reason; B=area mentioned in Q21 but other main reason; C=no area mention and other main reason,Separates service-coverage constraint from voluntary platform choice. 'Availability in my area' may be read as product availability locally; ambiguity noted
+C17,Exclusions,0,,NONE of 184 responses excluded,"No duplicates, impossible values or empty responses; issues flagged and handled by sensitivity analysis"
