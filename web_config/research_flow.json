@@ -1,0 +1,232 @@
+{
+  "phases": [
+    {"id": "design", "label": "Design & Sampling"},
+    {"id": "data", "label": "Data & Measurement"},
+    {"id": "analysis", "label": "Empirical Analysis"},
+    {"id": "synthesis", "label": "Evidence Synthesis"},
+    {"id": "action", "label": "Strategic Action"}
+  ],
+  "nodes": [
+    {
+      "id": "problem",
+      "phase": "design",
+      "label": "Research Problem",
+      "detail": "Customer switching and multi-homing in Indian quick commerce; coverage constraints must be separated from competitive pull.",
+      "source": "final_report §2.3, §3",
+      "anchor": "#question"
+    },
+    {
+      "id": "objectives",
+      "phase": "design",
+      "label": "Research Objectives",
+      "detail": "Four objectives: test PPM model; quantify exit reasons; synthesise with UDRHP-I; formulate testable CRM actions.",
+      "source": "final_report §3",
+      "anchor": "#question"
+    },
+    {
+      "id": "ppm",
+      "phase": "design",
+      "label": "Push–Pull–Mooring Framework",
+      "sub": [
+        "Push: Satisfaction (SAT)",
+        "Pull: Alternative attractiveness (ALT), Variety (VAR), Promotions (PROMO)",
+        "Mooring: Switching effort (SWEFFORT), Familiarity (FAM), Inertia (INERT)"
+      ],
+      "detail": "Hypotheses H1–H7 pre-specified before empirical testing.",
+      "source": "final_report §4.1",
+      "anchor": "#ppm"
+    },
+    {
+      "id": "survey",
+      "phase": "design",
+      "label": "Primary Survey",
+      "metric": "N = 184",
+      "sub": ["V1 n=16", "V1.5 n=6", "V2 n=162"],
+      "detail": "Cross-sectional, non-probability online questionnaire across 3 versions.",
+      "source": "final_report §5.1",
+      "anchor": "#survey"
+    },
+    {
+      "id": "segment",
+      "phase": "design",
+      "label": "Respondent Segmentation",
+      "branches": [
+        {"id": "current", "label": "Current users", "n": "n = 51 (27.7%)"},
+        {"id": "former", "label": "Former users", "n": "n = 73 (39.7%)"},
+        {"id": "never", "label": "Never-users", "n": "n = 60 (32.6%)", "note": "Not switchers; contextual only"}
+      ],
+      "detail": "Branching logic separates intention (current), behavior (former), and non-adoption (never).",
+      "source": "final_report §5.1",
+      "anchor": "#survey"
+    },
+    {
+      "id": "prep",
+      "phase": "data",
+      "label": "Data Preparation",
+      "sub": [
+        "Routing-leak isolation (15 respondents, 22 block instances)",
+        "Structural missingness handling (complete-case n=46 for H7/HTMT)",
+        "Straight-lining sensitivity diagnostics",
+        "Questionnaire version harmonization"
+      ],
+      "detail": "Early-version omitted items treated as structurally missing, not imputed.",
+      "source": "final_report §5.2",
+      "anchor": "#survey"
+    },
+    {
+      "id": "measure",
+      "phase": "data",
+      "label": "Measurement Quality",
+      "sub": [
+        "Cronbach's alpha & McDonald's omega",
+        "HTMT discriminant validity (n=46)",
+        "Single-item construct bounding"
+      ],
+      "conditional": [
+        {"label": "PCA / KMO / Bartlett / MSA", "display": "if_verified"}
+      ],
+      "detail": "Single-item scales (PROMO1, FAM1, INERT1) noted; HTMT diagnostic evaluated on multi-item complete cases.",
+      "source": "final_report App. 2 (table08, table22)",
+      "anchor": "#ppm"
+    },
+    {
+      "id": "current_an",
+      "phase": "analysis",
+      "label": "Current-User Analysis",
+      "metric": "n = 51",
+      "sub": [
+        "Spearman ρ with 5,000-rep bootstrap 95% CIs",
+        "Holm–Bonferroni family-wise error adjustment (H1–H7)",
+        "Exploratory OLS regression with HC3 robust SEs",
+        "Within-person centering sensitivity analysis"
+      ],
+      "detail": "Raw associations examined alongside within-person centered sensitivity models.",
+      "source": "final_report §5.3, §6.2–6.4",
+      "anchor": "#current"
+    },
+    {
+      "id": "robust",
+      "phase": "analysis",
+      "label": "Robustness Diagnostics",
+      "sub": [
+        "Raw vs. Within-person centered correlation comparison",
+        "HTMT discriminant validity overlap assessment",
+        "H9 partial-shift comparison (Mann–Whitney U=346.5, p=0.6014)"
+      ],
+      "detail": "Pull associations attenuate substantially post-centering; switching barriers remain inconclusive.",
+      "source": "final_report §6.3",
+      "anchor": "#robustness"
+    },
+    {
+      "id": "former_an",
+      "phase": "analysis",
+      "label": "Former-User Analysis",
+      "metric": "n = 73",
+      "sub": [
+        "Exit reason frequencies & 95% Wilson CIs",
+        "Class A (Coverage-primary) vs Class C (Voluntary)",
+        "Competitor assortment advantage (n=68)",
+        "H10 return willingness test (U=496.0, p=0.2137)"
+      ],
+      "detail": "Retrospective self-reported behavioral exit drivers; 50.0% of voluntary exits cite availability/variety.",
+      "source": "final_report §6.5",
+      "anchor": "#former"
+    },
+    {
+      "id": "never_an",
+      "phase": "analysis",
+      "label": "Never-User Context",
+      "metric": "n = 60",
+      "detail": "Non-adoption baseline; 37/60 (61.7%) cite unserved geographic locality. Excluded from switching models.",
+      "source": "final_report §11",
+      "anchor": "#never"
+    },
+    {
+      "id": "secondary",
+      "phase": "synthesis",
+      "label": "Secondary & Company Evidence",
+      "sub": [
+        "Zepto UDRHP-I regulatory filing (E01–E25, 690 pp.)",
+        "Media claims register (M01–M11)",
+        "Company-cited Redseer industry benchmarks"
+      ],
+      "detail": "Contextual company disclosure; does not establish individual consumer causality.",
+      "source": "final_report §7–9",
+      "anchor": "#udrhp"
+    },
+    {
+      "id": "lit",
+      "phase": "synthesis",
+      "label": "Literature Evidence",
+      "sub": [
+        "PPM theoretical framework foundation",
+        "E-grocery switching dynamics",
+        "Switching cost & inertia literature (L01–L17)"
+      ],
+      "detail": "17 tracked literature records categorized into Verification Tiers A/B/C/Unverified.",
+      "source": "final_report §4.3, §10",
+      "anchor": "#literature"
+    },
+    {
+      "id": "tri",
+      "phase": "synthesis",
+      "label": "Evidence Triangulation",
+      "sub": [
+        "Academic literature vs Primary survey vs Former users vs UDRHP",
+        "Integrated classifications: Partial / Contradictory / Insufficient"
+      ],
+      "detail": "Synthesizes multi-source findings across 6 core switching factors.",
+      "source": "final_report §11",
+      "anchor": "#triangulation"
+    },
+    {
+      "id": "crm",
+      "phase": "action",
+      "label": "CRM Strategy Recommendations",
+      "sub": [
+        "R1: Coverage demand capture (Recommended, conditional)",
+        "R2: Assortment / stock-out recovery (Conditional pilot)",
+        "R3: Reason-matched win-back (Conditional, n=16)",
+        "R4: Switching-barrier re-measurement (Not recommended on current evidence)",
+        "R5: Service recovery monitoring (Monitor only)"
+      ],
+      "detail": "Evidence-linked, testable CRM actions; avoids artificial lock-in assumptions.",
+      "source": "final_report §13",
+      "anchor": "#crm"
+    },
+    {
+      "id": "final",
+      "phase": "action",
+      "label": "Final Interpretation & Claims Ledger",
+      "detail": "Empirical summary: what the evidence supports, cautious interpretations, and what should NOT be claimed.",
+      "source": "final_report §12",
+      "anchor": "#findings"
+    }
+  ],
+  "edges": [
+    ["problem", "objectives"],
+    ["objectives", "ppm"],
+    ["ppm", "survey"],
+    ["survey", "segment"],
+    ["segment", "prep"],
+    ["prep", "measure"],
+    ["measure", "current_an"],
+    ["measure", "former_an"],
+    ["segment", "never_an"],
+    ["current_an", "robust"],
+    ["robust", "secondary"],
+    ["former_an", "secondary"],
+    ["never_an", "secondary"],
+    ["secondary", "lit"],
+    ["lit", "tri"],
+    ["tri", "crm"],
+    ["crm", "final"]
+  ],
+  "trace": {
+    "R1": ["never_an", "former_an", "secondary"],
+    "R2": ["current_an", "former_an", "secondary"],
+    "R3": ["former_an", "secondary"],
+    "R4": ["current_an", "robust", "lit"],
+    "R5": ["current_an", "former_an", "secondary"]
+  }
+}

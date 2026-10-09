@@ -1,0 +1,50 @@
+{
+  "status_labels": {
+    "R1": {
+      "label": "Recommended (conditional, testable)",
+      "tone": "success",
+      "badge": "Recommended",
+      "stop_card": false
+    },
+    "R2": {
+      "label": "Conditional pilot (control group required)",
+      "tone": "warning",
+      "badge": "Conditional Pilot",
+      "stop_card": false
+    },
+    "R3": {
+      "label": "Conditional, small evidence base (n=16)",
+      "tone": "warning",
+      "badge": "Conditional (Small n)",
+      "stop_card": false
+    },
+    "R4": {
+      "label": "Not recommended on current evidence — re-measure switching barriers first",
+      "tone": "danger",
+      "badge": "Not Recommended",
+      "stop_card": true,
+      "instead": "Re-measure switching barriers with a validated multidimensional scale before designing retention interventions around them. Do NOT deploy artificial friction or lock-in."
+    },
+    "R5": {
+      "label": "Monitor only (exploratory baseline)",
+      "tone": "neutral",
+      "badge": "Monitor Only",
+      "stop_card": false
+    }
+  },
+  "chain": [
+    "Evidence Base",
+    "Customer Problem",
+    "Target Segment",
+    "CRM Mechanism",
+    "Implementation & Test Design",
+    "KPI & Success Metrics",
+    "Risks & Methodological Limitations"
+  ],
+  "text_source": "outputs/tables/table19_crm_recommendations.csv",
+  "rules": [
+    "No outcome is stated as proven",
+    "R3 must show n=16 voluntary exit evidence base prominently",
+    "R4 must never be styled as an action or lock-in feature"
+  ]
+}

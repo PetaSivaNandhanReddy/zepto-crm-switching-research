@@ -1,0 +1,124 @@
+{
+  "methods": [
+    {
+      "id": "spearman",
+      "badge": "Spearman's ρ + Bootstrap CI",
+      "purpose": "Non-parametric rank association & precision estimation",
+      "where": "Hypotheses H1–H7 (Current users, n=51)",
+      "status": "verified_in_report",
+      "formula": "ρ = 1 - \\frac{6 \\sum d_i^2}{n(n^2 - 1)} \\quad \\text{(Computed via rank Pearson correlation to handle ties exact)}",
+      "notes": "5,000-replicate non-parametric bootstrap (seed 42) for 95% confidence intervals."
+    },
+    {
+      "id": "holm",
+      "badge": "Holm–Bonferroni Step-Down",
+      "purpose": "Family-wise error rate (FWER) control",
+      "where": "H1–H7 simultaneous hypothesis tests",
+      "status": "verified_in_report",
+      "formula": "p_{\\text{adj},(i)} = \\min\\left(1, \\max_{j \\le i} (m - j + 1) p_{(j)}\\right)",
+      "notes": "Strict step-down adjustment controlling false discovery across the primary hypothesis family."
+    },
+    {
+      "id": "ols",
+      "badge": "OLS with HC3 Robust Standard Errors",
+      "purpose": "Exploratory multi-predictor variance modeling",
+      "where": "Model M1 (n=51, k=4) & Model M2 (n=51, k=6)",
+      "status": "verified_in_report",
+      "formula": "Y_i = \\beta_0 + \\sum \\beta_j X_{ji} + \\epsilon_i, \\quad \\operatorname{Var}(\\hat{\\beta})_{\\text{HC3}} = (X^T X)^{-1} X^T \\operatorname{diag}\\left(\\frac{e_i^2}{(1-h_{ii})^2}\\right) X (X^T X)^{-1}",
+      "notes": "Exploratory model; 12.8 cases per predictor; HC3 handles small-sample leverage effects."
+    },
+    {
+      "id": "alpha",
+      "badge": "Cronbach's α & McDonald's ω",
+      "purpose": "Scale internal consistency reliability",
+      "where": "Multi-item survey constructs (SAT, ALT, VAR, SC/SWEFFORT, INT)",
+      "status": "verified_in_report",
+      "formula": "\\alpha = \\frac{k}{k-1}\\left(1 - \\frac{\\sum \\sigma_i^2}{\\sigma_X^2}\\right)",
+      "notes": "Not computable for single-item constructs (PROMO1, FAM1, INERT1) which are bounded accordingly."
+    },
+    {
+      "id": "htmt",
+      "badge": "Heterotrait-Monotrait Ratio (HTMT)",
+      "purpose": "Discriminant validity assessment",
+      "where": "Multi-item construct pairs (complete-case n=46)",
+      "status": "verified_in_report",
+      "formula": "\\text{HTMT}_{ij} = \\frac{\\frac{1}{K_i K_j} \\sum_{g=1}^{K_i} \\sum_{h=1}^{K_j} r_{ig, jh}}{\\sqrt{\\left(\\frac{2}{K_i(K_i-1)}\\sum \\sum r_{ig,ih}\\right) \\left(\\frac{2}{K_j(K_j-1)}\\sum \\sum r_{jg,jh}\\right)}}",
+      "notes": "Evaluated on multi-item scales; values > 0.85 indicate potential discriminant validity concern."
+    },
+    {
+      "id": "centering",
+      "badge": "Within-Person Centering (Ipsatization)",
+      "purpose": "Acquiescence & response-style sensitivity diagnostic",
+      "where": "Robustness check across current-user construct ratings (table21)",
+      "status": "verified_in_report",
+      "formula": "x'_{ij} = x_{ij} - \\bar{x}_i, \\quad \\text{where } \\bar{x}_i = \\frac{1}{K}\\sum_{k=1}^K x_{ik}",
+      "notes": "Subtracts respondent-specific mean across Likert items to eliminate individual response-elevation bias."
+    },
+    {
+      "id": "mwu",
+      "badge": "Mann–Whitney U Test",
+      "purpose": "Two-sample non-parametric distributional comparison",
+      "where": "H9 (shifted n=29 vs not n=22) & H10 (Class A n=28 vs Class C n=30)",
+      "status": "verified_in_report",
+      "formula": "U = n_1 n_2 + \\frac{n_1(n_1+1)}{2} - R_1",
+      "notes": "Used for rank-based group comparisons without normality assumptions."
+    },
+    {
+      "id": "wilson",
+      "badge": "Wilson Score Interval",
+      "purpose": "Asymmetric binomial proportion confidence interval",
+      "where": "Former-user & never-user category percentages",
+      "status": "verified_in_report",
+      "formula": "w = \\frac{\\hat{p} + \\frac{z^2}{2n} \\pm z \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n} + \\frac{z^2}{4n^2}}}{1 + \\frac{z^2}{n}}",
+      "notes": "Provides accurate coverage for binomial shares without normal-approximation distortion."
+    },
+    {
+      "id": "routing",
+      "badge": "Routing-Leak Isolation",
+      "purpose": "Data hygiene & branch integrity preservation",
+      "where": "Data cleaning (15 respondents, 22 block instances)",
+      "status": "verified_in_report",
+      "notes": "Quarantined cross-branch questionnaire block leakage without corrupting primary group analyses."
+    },
+    {
+      "id": "missing",
+      "badge": "Structural Missingness (Complete-Case)",
+      "purpose": "Version-specific item harmonization",
+      "where": "H7 (INERT1) & HTMT analysis (n=46)",
+      "status": "verified_in_report",
+      "notes": "Items omitted in questionnaire versions V1/V1.5 treated as structurally missing rather than imputed."
+    },
+    {
+      "id": "straight",
+      "badge": "Straight-Lining Sensitivity",
+      "purpose": "Careless response diagnostic",
+      "where": "Data cleaning & sensitivity models",
+      "status": "verified_in_report",
+      "notes": "Verified that zero-variance responders do not distort correlation or regression estimates."
+    },
+    {
+      "id": "pca",
+      "badge": "PCA & Kaiser-Meyer-Olkin (KMO)",
+      "purpose": "Exploratory factorability diagnostic",
+      "where": "table09 & statistical results",
+      "status": "verified_in_outputs",
+      "display": "if_verified"
+    },
+    {
+      "id": "vif",
+      "badge": "Variance Inflation Factor (VIF)",
+      "purpose": "Multicollinearity diagnostic",
+      "where": "table12c & statistical results (max VIF=2.72 in M1)",
+      "status": "verified_in_outputs",
+      "display": "if_verified"
+    },
+    {
+      "id": "fisher",
+      "badge": "Fisher's Exact Test",
+      "purpose": "Small-cell contingency table independence test",
+      "where": "outputs/statistical_results/former_coverage_by_metro_fisher.csv",
+      "status": "verified_in_outputs",
+      "display": "if_verified"
+    }
+  ]
+}
