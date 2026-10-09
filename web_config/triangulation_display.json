@@ -1,0 +1,54 @@
+{
+  "states": {
+    "CONVERGENT": {"icon": "✓", "label": "Convergent", "tone": "success"},
+    "PARTIAL": {"icon": "◐", "label": "Partial", "tone": "warning"},
+    "CONTRADICTORY": {"icon": "✕", "label": "Contradictory", "tone": "danger"},
+    "INSUFFICIENT": {"icon": "?", "label": "Insufficient", "tone": "neutral"}
+  },
+  "factors": [
+    {
+      "id": "coverage",
+      "label": "Service Coverage & Delivery Reach",
+      "integrated": "PARTIAL",
+      "integrated_note": "Convergent Context (non-causal)",
+      "crm": "R1: Implement waitlist & demand capture before capital commitment"
+    },
+    {
+      "id": "pull",
+      "label": "Competitor Pull: Alternative Attractiveness & Variety",
+      "integrated": "PARTIAL",
+      "integrated_note": "Supported in former-user behavior, but correlation weakens post-centering in current users",
+      "crm": "R2: Deploy stock-out recovery & substitute discovery pilots"
+    },
+    {
+      "id": "promo",
+      "label": "Competitor Promotions & Pricing",
+      "integrated": "PARTIAL",
+      "integrated_note": "Secondary filings and former users show pricing pressure, but centered survey CI spans zero",
+      "crm": "Targeted retention offers; avoid blanket margin erosion"
+    },
+    {
+      "id": "effort",
+      "label": "Switching Effort & Perceived Barriers",
+      "integrated": "CONTRADICTORY",
+      "integrated_note": "Positive raw correlation (+0.721) opposite to PPM theory; collapses to +0.05 post-centering; HTMT=0.923",
+      "crm": "R4: Re-measure switching barriers with multi-dimensional scale; no artificial customer lock-in"
+    },
+    {
+      "id": "satisfaction",
+      "label": "Satisfaction (Push Factor)",
+      "integrated": "INSUFFICIENT",
+      "integrated_note": "Weak non-significant raw association (+0.170); satisfaction does not protect against multi-homing",
+      "crm": "R5: Track repeat fulfillment and recovery rather than passive satisfaction metrics"
+    },
+    {
+      "id": "inertia",
+      "label": "Familiarity & Inertia (Mooring Factors)",
+      "integrated": "INSUFFICIENT",
+      "integrated_note": "Non-significant associations after Holm adjustment; habitual behavior insufficient to prevent competitive experimentation",
+      "crm": "R4 / Continuous engagement: avoid relying on habitual loyalty without behavioral validation"
+    }
+  ],
+  "cell_text_source": "outputs/tables/table18_triangulation.csv",
+  "per_cell_states": false
+}
