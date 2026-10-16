@@ -105,7 +105,15 @@ def normalize_hypothesis_results(df: pd.DataFrame) -> list:
             "decision_rule_result": str(row.get("Decision_rule_result", "")),
             "evidence_label": str(row.get("Evidence_label", "")),
             "robustness_note": str(row.get("Robustness_note", "")) if pd.notna(row.get("Robustness_note")) else "",
-            "is_numeric": is_numeric
+            "is_numeric": is_numeric,
+            # Backward-compatibility aliases for legacy scripts
+            "Construct": str(row.get("Construct", "")),
+            "PPM": str(row.get("PPM", "")),
+            "Relationship": str(row.get("Relationship", "")),
+            "Expected_direction": str(row.get("Expected_direction", "")),
+            "Coefficient": coeff_num if is_numeric else raw_coeff,
+            "CI95": raw_ci,
+            "Decision_rule_result": str(row.get("Decision_rule_result", ""))
         }
         records.append(item)
     return records

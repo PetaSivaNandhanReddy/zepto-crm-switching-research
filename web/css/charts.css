@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Zepto Research Dashboard — Chart & Data-Visualization Styles
+   Accessible Chart Wrappers, Metadata Headers, Tables, SVG Visuals
+   ========================================================================== */
+
+.chart-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.85rem;
+}
+
+.chart-header-main {
+  flex: 1;
+  min-width: 250px;
+}
+
+.chart-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.74rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.chart-meta-tag {
+  background: var(--bg-surface-elevated);
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.chart-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-chart-toggle {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.74rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-chart-toggle:hover {
+  color: var(--text-primary);
+  border-color: var(--border-mid);
+}
+
+.chart-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Accessible Chart Data Table */
+.chart-table-container {
+  display: none;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+}
+
+.chart-table-container.open {
+  display: block;
+}
+
+.chart-caption {
+  font-size: 0.78rem;
+  color: var(--text-subtle);
+  margin-top: 0.75rem;
+  line-height: 1.5;
+  border-left: 2px solid var(--border-mid);
+  padding-left: 8px;
+}
+
+/* SVG Chart Elements */
+.svg-chart-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.svg-plot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.plot-axis-line {
+  stroke: var(--border-mid);
+  stroke-width: 1;
+}
+
+.plot-grid-line {
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-dasharray: 2 2;
+}
+
+.plot-tick-text {
+  fill: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.plot-point {
+  fill: var(--accent-magenta);
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: r var(--transition-fast);
+}
+
+.plot-point:hover {
+  r: 6;
+}
+
+.plot-whisker {
+  stroke: var(--accent-primary);
+  stroke-width: 2;
+}
+
+.plot-whisker-cap {
+  stroke: var(--accent-primary);
+  stroke-width: 2;
+}
+
+.plot-zero-line {
+  stroke: var(--accent-rose);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+}

@@ -24,7 +24,7 @@ window.SITE_DATA = {
     "media_claims_count": 11,
     "crm_recommendations_count": 5,
     "discrepancy_notice": "Report superseded where it differs from the tables; see DISCREPANCIES.md",
-    "build_timestamp": "2026-10-16 08:58:25"
+    "build_timestamp": "2026-10-16 09:07:20"
   },
   "table01_demographics": [
     {
@@ -1985,7 +1985,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Not supported / insufficient evidence",
       "evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
       "robustness_note": "Within-person-centered rho = -0.59 [-0.77, -0.32] (exploratory; ipsatization can bias)",
-      "is_numeric": true
+      "is_numeric": true,
+      "Construct": "SAT",
+      "PPM": "Push",
+      "Relationship": "Satisfaction/expectation fulfilment is negatively associated with switching intention.",
+      "Expected_direction": "-",
+      "Coefficient": 0.17,
+      "CI95": "[-0.12, 0.44]",
+      "Decision_rule_result": "Not supported / insufficient evidence"
     },
     {
       "H": "H2",
@@ -2009,7 +2016,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Supported",
       "evidence_label": "Supported (raw scores)",
       "robustness_note": "Within-person-centered rho = -0.03 [-0.34, +0.31] (exploratory; ipsatization can bias)",
-      "is_numeric": true
+      "is_numeric": true,
+      "Construct": "ALT",
+      "PPM": "Pull",
+      "Relationship": "Alternative attractiveness is positively associated with switching intention.",
+      "Expected_direction": "+",
+      "Coefficient": 0.685,
+      "CI95": "[0.49, 0.83]",
+      "Decision_rule_result": "Supported"
     },
     {
       "H": "H3",
@@ -2033,7 +2047,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Supported",
       "evidence_label": "Supported (raw scores)",
       "robustness_note": "Within-person-centered rho = +0.31 [-0.00, +0.62] (exploratory; ipsatization can bias)",
-      "is_numeric": true
+      "is_numeric": true,
+      "Construct": "VAR",
+      "PPM": "Pull",
+      "Relationship": "Perceived competitor product choice/variety is positively associated with switching intention.",
+      "Expected_direction": "+",
+      "Coefficient": 0.694,
+      "CI95": "[0.49, 0.85]",
+      "Decision_rule_result": "Supported"
     },
     {
       "H": "H4",
@@ -2057,7 +2078,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Supported",
       "evidence_label": "Supported (raw scores)",
       "robustness_note": "Within-person-centered rho = +0.23 [-0.10, +0.55] (exploratory; ipsatization can bias)",
-      "is_numeric": true
+      "is_numeric": true,
+      "Construct": "PROMO",
+      "PPM": "Pull",
+      "Relationship": "Perceived competitor promotional attractiveness is positively associated with switching intention.",
+      "Expected_direction": "+",
+      "Coefficient": 0.7,
+      "CI95": "[0.51, 0.84]",
+      "Decision_rule_result": "Supported"
     },
     {
       "H": "H5",
@@ -2081,7 +2109,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Not supported (significant, opposite direction)",
       "evidence_label": "Anomalous / inconclusive (significant, opposite to hypothesised direction)",
       "robustness_note": "Within-person-centered rho = +0.05 [-0.29, +0.40] (exploratory; ipsatization can bias)",
-      "is_numeric": true
+      "is_numeric": true,
+      "Construct": "SWEFFORT",
+      "PPM": "Mooring",
+      "Relationship": "Perceived switching effort is negatively associated with switching intention.",
+      "Expected_direction": "-",
+      "Coefficient": 0.721,
+      "CI95": "[0.51, 0.87]",
+      "Decision_rule_result": "Not supported (significant, opposite direction)"
     },
     {
       "H": "H6",
@@ -2105,7 +2140,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Not supported / insufficient evidence",
       "evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
       "robustness_note": "Within-person-centered rho = -0.41 [-0.67, -0.08] (exploratory; ipsatization can bias)",
-      "is_numeric": true
+      "is_numeric": true,
+      "Construct": "FAM",
+      "PPM": "Mooring",
+      "Relationship": "Familiarity with Zepto is negatively associated with switching intention.",
+      "Expected_direction": "-",
+      "Coefficient": 0.245,
+      "CI95": "[-0.09, 0.54]",
+      "Decision_rule_result": "Not supported / insufficient evidence"
     },
     {
       "H": "H7",
@@ -2129,7 +2171,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Not supported / insufficient evidence",
       "evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
       "robustness_note": "n/a (single-item, n=46)",
-      "is_numeric": true
+      "is_numeric": true,
+      "Construct": "INERT",
+      "PPM": "Mooring",
+      "Relationship": "Inertia (continued-use tendency) is negatively associated with switching intention.",
+      "Expected_direction": "-",
+      "Coefficient": 0.253,
+      "CI95": "[-0.09, 0.57]",
+      "Decision_rule_result": "Not supported / insufficient evidence"
     },
     {
       "H": "H8",
@@ -2153,7 +2202,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Model significant (F-test) but exploratory",
       "evidence_label": "Exploratory / associational only (item overlap)",
       "robustness_note": "R2 driven mainly by PULL (see overlap diagnostics)",
-      "is_numeric": false
+      "is_numeric": false,
+      "Construct": "SAT, PULL, SWEFFORT, FAM jointly",
+      "PPM": "Push+Pull+Mooring",
+      "Relationship": "Push, Pull and Mooring composites jointly explain variance in switching intention (multiple regression, model F-test).",
+      "Expected_direction": "joint",
+      "Coefficient": "see regression table",
+      "CI95": "",
+      "Decision_rule_result": "Model significant (F-test) but exploratory"
     },
     {
       "H": "H9",
@@ -2177,7 +2233,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Not supported / insufficient evidence",
       "evidence_label": "Not supported / inconclusive",
       "robustness_note": "",
-      "is_numeric": false
+      "is_numeric": false,
+      "Construct": "Partial switching (Q19) vs intention",
+      "PPM": "Outcome link",
+      "Relationship": "Current users who report having shifted some purchases (Q19=Yes) have higher switching intention than those who have not.",
+      "Expected_direction": "Yes > No",
+      "Coefficient": "rank-biserial 0.09; medians 3.67 vs 3.17",
+      "CI95": "not computed",
+      "Decision_rule_result": "Not supported / insufficient evidence"
     },
     {
       "H": "H10",
@@ -2201,7 +2264,14 @@ window.SITE_DATA = {
       "decision_rule_result": "Not supported / insufficient evidence",
       "evidence_label": "Not supported / inconclusive",
       "robustness_note": "Former users only; return item missing for 5 V1 respondents",
-      "is_numeric": false
+      "is_numeric": false,
+      "Construct": "Return willingness: coverage-primary (A) vs voluntary-only (C)",
+      "PPM": "Retention (former users)",
+      "Relationship": "Former users whose most important reason was area/coverage have higher willingness to return than former users whose most important reason was voluntary (platform-choice).",
+      "Expected_direction": "A > C",
+      "Coefficient": "rank-biserial 0.18; medians 4.0 vs 3.5",
+      "CI95": "not computed",
+      "Decision_rule_result": "Not supported / insufficient evidence"
     }
   ],
   "table10_descriptives": [

@@ -331,7 +331,7 @@
               <div class="ppm-model-stats">
                 <div class="model-stat-row">
                   <span>Pre-specified OLS Model (M1):</span>
-                  <strong>R² = 0.696, F(4,46) = 26.27</strong>
+                  <strong>R² = 0.7057, F(4,46) = 27.58</strong>
                 </div>
                 <div class="model-stat-row">
                   <span>Standard Errors:</span>
