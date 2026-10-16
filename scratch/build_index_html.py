@@ -6,6 +6,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+cards_html = (ROOT / "scratch/cards_e01_e25.html").read_text(encoding="utf-8")
+media_rows_html = (ROOT / "scratch/media_rows.html").read_text(encoding="utf-8")
+lit_cards_html = (ROOT / "scratch/lit_cards.html").read_text(encoding="utf-8")
+
 html_content = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1163,7 +1167,7 @@ html_content = '''<!DOCTYPE html>
                   </tbody>
                 </table>
               </div>
-              <p class="chart-caption">56.2% of former users (Class A + B, 41/73) cited dark-store unserviceability, proving that attrition is largely infrastructural rather than dissatisfaction-driven.</p>
+              <p class="chart-caption">56.2% of former users (Class A + B, 41/73) cited dark-store unserviceability, demonstrating that attrition is largely infrastructural rather than dissatisfaction-driven.</p>
             </div>
 
             <!-- Voluntary Exit Reasons (n=32) -->
@@ -1354,88 +1358,18 @@ html_content = '''<!DOCTYPE html>
                   <option value="promotions">Promotions & Fees</option>
                   <option value="retention">Retention & Cohorts</option>
                   <option value="CRM">Technology & CRM</option>
+                  <option value="operational">Financial & Logistics</option>
                 </select>
               </div>
             </div>
 
             <!-- Evidence Cards Container -->
             <div class="card-grid" id="udrhp-cards-container">
-              <!-- Dynamically rendered or static semantic cards E01-E25 -->
-              <div class="evidence-card" data-construct="operational">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">E01</span>
-                  <span class="evidence-card-source">UDRHP p. 24 · Risk Factors</span>
-                </div>
-                <div class="evidence-card-claim">Revenue grew from ₹44,545.16M (FY24) to ₹226,235.84M (FY26) while net loss was ₹59,051.92M (FY26) driven by network expansion.</div>
-                <div class="evidence-card-footer">
-                  <span class="badge badge-verified">Verified</span>
-                  <span>Financial cost floor for H4</span>
-                </div>
-              </div>
-
-              <div class="evidence-card" data-construct="Coverage">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">E07</span>
-                  <span class="evidence-card-source">UDRHP pp. 143–145 · Objects of Offer</span>
-                </div>
-                <div class="evidence-card-claim">Gross proceeds earmarked include ₹16,289.75M for setting up new dark stores in existing and new geographies over FY27–FY29.</div>
-                <div class="evidence-card-footer">
-                  <span class="badge badge-verified">Verified</span>
-                  <span>Underpins Recommendation R1</span>
-                </div>
-              </div>
-
-              <div class="evidence-card" data-construct="assortment">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">E13</span>
-                  <span class="evidence-card-source">UDRHP p. 162 · Basis for Offer</span>
-                </div>
-                <div class="evidence-card-claim">Store-level unique SKUs expanded from 12,312 (FY24) to 44,341 (FY25) to 46,623 (FY26), reaching 49,602 in Q4 FY26.</div>
-                <div class="evidence-card-footer">
-                  <span class="badge badge-verified">Verified</span>
-                  <span>Contextualizes H3 & variety exits</span>
-                </div>
-              </div>
-
-              <div class="evidence-card" data-construct="Coverage">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">E14</span>
-                  <span class="evidence-card-source">UDRHP p. 163 · Basis for Offer</span>
-                </div>
-                <div class="evidence-card-claim">Dark store network expanded from 337 stores across 11 cities (FY24) to 1,029 across 43 cities (FY25) to 1,139 across 66 cities (FY26).</div>
-                <div class="evidence-card-footer">
-                  <span class="badge badge-verified">Verified</span>
-                  <span>Geographic non-metro footprint</span>
-                </div>
-              </div>
-
-              <div class="evidence-card" data-construct="retention">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">E20</span>
-                  <span class="evidence-card-source">UDRHP pp. 253–254 · Our Business</span>
-                </div>
-                <div class="evidence-card-claim">User cohort retention matrix shows quarterly active ordering stabilizes between 44.3% and 54.0% across multi-year cohorts.</div>
-                <div class="evidence-card-footer">
-                  <span class="badge badge-verified">Verified</span>
-                  <span>Industry retention baseline</span>
-                </div>
-              </div>
-
-              <div class="evidence-card" data-construct="CRM">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">E18</span>
-                  <span class="evidence-card-source">UDRHP pp. 246–247 · Our Business</span>
-                </div>
-                <div class="evidence-card-claim">In-house search and recommendations engine utilizes ML models for user intent parsing, query understanding, and catalog ranking.</div>
-                <div class="evidence-card-footer">
-                  <span class="badge badge-verified">Verified</span>
-                  <span>Enabler for Recommendation R2</span>
-                </div>
-              </div>
+<!-- UDRHP_CARDS_PLACEHOLDER -->
             </div>
           </div>
 
-          <!-- Media Claims Register (M01–M11) -->
+          <!-- Media Claims Register<!-- Media Claims Register (M01–M11) -->
           <div class="chart-card">
             <div class="chart-header">
               <div class="chart-header-main">
@@ -1468,55 +1402,7 @@ html_content = '''<!DOCTYPE html>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr data-status="NOT VERIFIED">
-                    <td class="cell-highlight">M01</td>
-                    <td>S06 (Inc42)</td>
-                    <td>UDRHP acknowledges low switching costs and pricing pressure</td>
-                    <td>Checked against UDRHP pp. 30–32: filing notes competitor promotions and multi-homing as business risks; no explicit statement on low switching costs.</td>
-                    <td><span class="badge badge-inconclusive">Unverified as Worded</span></td>
-                  </tr>
-                  <tr data-status="VERIFIED">
-                    <td class="cell-highlight">M02</td>
-                    <td>S10 (Groww)</td>
-                    <td>Average SKUs per dark store rose from 12,312 (FY24) to 46,623 (FY26)</td>
-                    <td>Verified on UDRHP p. 162 & p. 538: SKUs reached 46,623 (FY26) and 49,602 in Q4 FY26.</td>
-                    <td><span class="badge badge-verified">Verified Primary KPI</span></td>
-                  </tr>
-                  <tr data-status="VERIFIED">
-                    <td class="cell-highlight">M03</td>
-                    <td>S10 (Groww)</td>
-                    <td>45.2–49.8% of users remain active three years after first order</td>
-                    <td>Verified on UDRHP pp. 253–254: FY23 Q2 cohort retention was 45.2% in Q12 and 44.3% in Q15; cohorts stabilize between 44.3% and 54.0%.</td>
-                    <td><span class="badge badge-verified">Verified Primary KPI</span></td>
-                  </tr>
-                  <tr data-status="DISPROVED">
-                    <td class="cell-highlight">M04</td>
-                    <td>S07 (Inc42)</td>
-                    <td>Zepto curtailed platform-wide discounts and launched a paid membership ('Zepto Club')</td>
-                    <td>Checked against UDRHP p. 13 & p. 258: official program is 'Zepto Pass'. 'Zepto Club' is not established in the filing.</td>
-                    <td><span class="badge badge-anomalous">Disproved / Contradicted</span></td>
-                  </tr>
-                  <tr data-status="VERIFIED">
-                    <td class="cell-highlight">M05</td>
-                    <td>Groww / others</td>
-                    <td>1,139 dark stores across 66 cities</td>
-                    <td>Verified on UDRHP p. 163: store counts 337 (FY24), 1,029 (FY25), 1,139 (FY26).</td>
-                    <td><span class="badge badge-verified">Verified Primary KPI</span></td>
-                  </tr>
-                  <tr data-status="VERIFIED">
-                    <td class="cell-highlight">M06</td>
-                    <td>Several outlets</td>
-                    <td>Annual Transacting Users (ATU) was 47.97 million at 31 Mar 2026</td>
-                    <td>Verified on UDRHP p. 160: ATU was 10.57M (FY24), 38.38M (FY25), 47.97M (FY26).</td>
-                    <td><span class="badge badge-verified">Verified Primary KPI</span></td>
-                  </tr>
-                  <tr data-status="VERIFIED">
-                    <td class="cell-highlight">M08</td>
-                    <td>Outlook Business</td>
-                    <td>₹1,629 crore capex for dark stores; ₹1,735 crore lease rentals</td>
-                    <td>Verified on UDRHP pp. 143, 148: ₹16,289.75M dark store capex and ₹17,349.41M lease rentals.</td>
-                    <td><span class="badge badge-verified">Verified Primary Offer</span></td>
-                  </tr>
+<!-- MEDIA_ROWS_PLACEHOLDER -->
                 </tbody>
               </table>
             </div>
@@ -1545,53 +1431,7 @@ html_content = '''<!DOCTYPE html>
             </div>
 
             <div class="card-grid" id="literature-cards-container">
-              <div class="evidence-card lit-card" data-tier="A">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">L05</span>
-                  <span class="badge badge-verified">Tier A: Full Text Read</span>
-                </div>
-                <div class="evidence-card-claim"><strong>Chang et al. (2023)</strong>, <i>JTAER</i>: On-demand food delivery platform switching. Attractive alternatives &rarr; intention 0.328 (p &lt; .001); satisfaction &rarr; intention 0.071 (non-significant).</div>
-                <div class="evidence-card-footer">
-                  <span>Taiwan (n=441)</span>
-                  <span>Primary analogue for H1, H2, H8</span>
-                </div>
-              </div>
-
-              <div class="evidence-card lit-card" data-tier="A">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">L10</span>
-                  <span class="badge badge-verified">Tier A: Full Text Read</span>
-                </div>
-                <div class="evidence-card-claim"><strong>Monoarfa et al. (2023)</strong>, <i>Sustainability</i>: E-grocery adoption. Dissatisfaction non-significant (p=.069); alternative attractiveness significant (0.314); switching cost path positive (+0.294, p=.017).</div>
-                <div class="evidence-card-footer">
-                  <span>Indonesia (n=252)</span>
-                  <span>Precedent for positive H5 sign</span>
-                </div>
-              </div>
-
-              <div class="evidence-card lit-card" data-tier="B">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">L16</span>
-                  <span class="badge badge-caution">Tier B: Abstract Verified</span>
-                </div>
-                <div class="evidence-card-claim"><strong>Singh & Rosengren (2020)</strong>, <i>JRCS</i>: Online grocery switching. Push factors (service, quality, price perception) and pull factors significant; switching costs moderate.</div>
-                <div class="evidence-card-footer">
-                  <span>Online Grocery</span>
-                  <span>Context for H1, H2, H5</span>
-                </div>
-              </div>
-
-              <div class="evidence-card lit-card" data-tier="UNVERIFIED">
-                <div class="evidence-card-header">
-                  <span class="evidence-card-id">L07 / L09</span>
-                  <span class="badge badge-anomalous">Unverified / Withdrawn</span>
-                </div>
-                <div class="evidence-card-claim">Unconfirmed records withdrawn from evidence base. Authors/venue unconfirmed on publisher pages. Strictly barred from supporting any hypothesis.</div>
-                <div class="evidence-card-footer">
-                  <span>Integrity Exclusion</span>
-                  <span>Zero citation rule</span>
-                </div>
-              </div>
+<!-- LIT_CARDS_PLACEHOLDER -->
             </div>
           </div>
         </section>
@@ -1808,6 +1648,10 @@ html_content = '''<!DOCTYPE html>
 </body>
 </html>
 '''
+
+html_content = html_content.replace('<!-- UDRHP_CARDS_PLACEHOLDER -->', cards_html)
+html_content = html_content.replace('<!-- MEDIA_ROWS_PLACEHOLDER -->', media_rows_html)
+html_content = html_content.replace('<!-- LIT_CARDS_PLACEHOLDER -->', lit_cards_html)
 
 (ROOT / "index.html").write_text(html_content, encoding="utf-8")
 print(f"[SUCCESS] Upgraded index.html generated successfully ({len(html_content):,} bytes).")

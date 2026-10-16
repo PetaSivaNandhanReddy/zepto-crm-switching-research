@@ -153,7 +153,7 @@
   function initEvidenceSearch() {
     var searchInput = document.getElementById('evidence-search-input');
     var constructSelect = document.getElementById('evidence-construct-select');
-    var cards = document.querySelectorAll('.evidence-card');
+    var cards = document.querySelectorAll('#udrhp-cards-container .evidence-card');
 
     function applyFilter() {
       var query = searchInput ? searchInput.value.toLowerCase().trim() : '';
