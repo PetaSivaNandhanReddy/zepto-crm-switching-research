@@ -264,6 +264,17 @@
               </div>
             </div>
 
+            <!-- Trace Buttons for CRM Recommendations -->
+            <div class="filter-bar" style="margin-top: 1rem; margin-bottom: 1rem;">
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Trace Evidence Lineage:</span>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R1">Trace R1 (Waitlist)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R2">Trace R2 (Restock Alerts)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R3">Trace R3 (Assortment Win-Back)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R4">Trace R4 (Lock-In Evaluated)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R5">Trace R5 (Service Recovery)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="reset">Reset Highlights</button>
+            </div>
+
             <!-- Flowchart Container (rendered by flow.js) -->
             <div id="flowchart-canvas" class="flowchart-container" style="min-height: 240px;"></div>
             <div id="flow-detail-content" class="flow-detail-drawer" style="margin-top: 1rem;"></div>
@@ -469,6 +480,54 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <!-- Platform Multi-Homing & Ordering Characteristics (Table 02 & Table 02b) -->
+          <div class="stat-grid" style="grid-template-columns: 1fr 1fr; margin-top: 1.5rem;">
+            <div class="table-wrapper">
+              <table class="data-table" aria-label="Platforms used by respondents">
+                <thead>
+                  <tr>
+                    <th>Quick-Commerce Platform</th>
+                    <th class="num-cell">Users (n)</th>
+                    <th class="num-cell">Adoption Share (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="cell-highlight">Blinkit</td><td class="num-cell">149</td><td class="num-cell">81.9%</td></tr>
+                  <tr><td class="cell-highlight">Swiggy Instamart</td><td class="num-cell">119</td><td class="num-cell">65.4%</td></tr>
+                  <tr><td class="cell-highlight">Zepto</td><td class="num-cell">91</td><td class="num-cell">50.0%</td></tr>
+                  <tr><td class="cell-highlight">BigBasket Now</td><td class="num-cell">88</td><td class="num-cell">48.4%</td></tr>
+                  <tr><td>Other Platforms</td><td class="num-cell">16</td><td class="num-cell">8.8%</td></tr>
+                  <tr><td>None</td><td class="num-cell">1</td><td class="num-cell">0.5%</td></tr>
+                </tbody>
+              </table>
+              <p class="chart-caption">Table 02b: Base <i>n</i> = 182 (2 missing Q1). Multi-select reveals intense multi-homing across rival platforms.</p>
+            </div>
+
+            <div class="table-wrapper">
+              <table class="data-table" aria-label="Primary choice factors">
+                <thead>
+                  <tr>
+                    <th>Most Important Choice Factor</th>
+                    <th class="num-cell">Total (N=184)</th>
+                    <th class="num-cell">Current</th>
+                    <th class="num-cell">Former</th>
+                    <th class="num-cell">Never</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="cell-highlight">Product availability</td><td class="num-cell">59</td><td class="num-cell">18</td><td class="num-cell">24</td><td class="num-cell">17</td></tr>
+                  <tr><td class="cell-highlight">Discounts / promotions</td><td class="num-cell">33</td><td class="num-cell">10</td><td class="num-cell">12</td><td class="num-cell">11</td></tr>
+                  <tr><td class="cell-highlight">Availability in locality</td><td class="num-cell">23</td><td class="num-cell">4</td><td class="num-cell">10</td><td class="num-cell">9</td></tr>
+                  <tr><td>Delivery experience</td><td class="num-cell">19</td><td class="num-cell">7</td><td class="num-cell">6</td><td class="num-cell">6</td></tr>
+                  <tr><td>Price</td><td class="num-cell">19</td><td class="num-cell">6</td><td class="num-cell">6</td><td class="num-cell">7</td></tr>
+                  <tr><td>Product variety</td><td class="num-cell">10</td><td class="num-cell">2</td><td class="num-cell">5</td><td class="num-cell">3</td></tr>
+                  <tr><td>App convenience</td><td class="num-cell">8</td><td class="num-cell">2</td><td class="num-cell">5</td><td class="num-cell">1</td></tr>
+                </tbody>
+              </table>
+              <p class="chart-caption">Table 02: Product availability and promotions lead choice determinants across all lifecycle segments.</p>
+            </div>
           </div>
         </section>
 

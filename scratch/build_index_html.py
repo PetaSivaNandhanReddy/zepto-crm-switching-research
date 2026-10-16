@@ -1,0 +1,1763 @@
+"""Generate the complete upgraded index.html for Zepto CRM Switching Research.
+Ensures zero hard-coded statistics, persistent left sidebar, research stage progress tracker,
+guided viva mode floating dock, accessible chart wrappers, stable section IDs, and old anchor redirects.
+"""
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+html_content = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Switching Behaviour in India's Quick-Commerce Industry — Zepto Case Study</title>
+  <meta name="description" content="An empirical mixed-methods investigation into customer switching intentions, catalog-driven attrition, and evidence-based CRM strategy in Indian quick commerce using survey micro-data (N=184) and Zepto's UDRHP regulatory disclosures (E01–E25).">
+
+  <!-- Typography: Inter, JetBrains Mono, Source Serif 4 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
+
+  <!-- Pinned CDN: Chart.js 4.4.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Modular Stylesheet Hierarchy -->
+  <link rel="stylesheet" href="web/design_tokens.css">
+  <link rel="stylesheet" href="web/css/theme.css">
+  <link rel="stylesheet" href="web/css/layout.css">
+  <link rel="stylesheet" href="web/css/components.css">
+  <link rel="stylesheet" href="web/css/charts.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#overview" class="skip-link">Skip to main research content</a>
+
+  <!-- Main Application Shell -->
+  <div class="app-shell">
+
+    <!-- Persistent Left Sidebar -->
+    <aside class="app-sidebar" id="app-sidebar" aria-label="Research Navigation">
+      <div class="sidebar-header">
+        <div class="brand-badge">Academic Research Dashboard</div>
+        <h1 class="brand-title">Zepto Switching Behaviour</h1>
+        <p class="brand-subtitle">Empirical Mixed-Methods Investigation</p>
+      </div>
+
+      <!-- Research Stage Progress Tracker -->
+      <div class="stage-tracker" aria-label="Research Stage Progress">
+        <div class="stage-tracker-title">
+          <span>Research Stage</span>
+          <span id="stage-step-num">1/5</span>
+        </div>
+        <div class="stage-bar-rail" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20">
+          <div class="stage-bar-fill" id="stage-bar-fill" style="width: 20%;"></div>
+        </div>
+        <div class="stage-name" id="stage-name">Stage 1: Inception & Context</div>
+      </div>
+
+      <!-- Sidebar Navigation Links (10 Core Sections) -->
+      <nav class="sidebar-nav" role="navigation" aria-label="Sections">
+        <div class="nav-section-label">Pipeline Sections</div>
+        <a href="#overview" class="nav-link active" aria-current="true">
+          <span class="nav-num">01</span>
+          <span class="nav-title">Executive Overview</span>
+        </a>
+        <a href="#design" class="nav-link">
+          <span class="nav-num">02</span>
+          <span class="nav-title">Research Design</span>
+        </a>
+        <a href="#survey" class="nav-link">
+          <span class="nav-num">03</span>
+          <span class="nav-title">Survey & Data Quality</span>
+        </a>
+        <a href="#ppm" class="nav-link">
+          <span class="nav-num">04</span>
+          <span class="nav-title">PPM Framework</span>
+        </a>
+        <a href="#hypothesis" class="nav-link">
+          <span class="nav-num">05</span>
+          <span class="nav-title">Hypothesis Lab</span>
+        </a>
+        <a href="#statistics" class="nav-link">
+          <span class="nav-num">06</span>
+          <span class="nav-title">Statistical Results</span>
+        </a>
+        <a href="#former" class="nav-link">
+          <span class="nav-num">07</span>
+          <span class="nav-title">Exit Analysis</span>
+        </a>
+        <a href="#udrhp" class="nav-link">
+          <span class="nav-num">08</span>
+          <span class="nav-title">UDRHP Evidence</span>
+        </a>
+        <a href="#triangulation" class="nav-link">
+          <span class="nav-num">09</span>
+          <span class="nav-title">Triangulation</span>
+        </a>
+        <a href="#recommendations" class="nav-link">
+          <span class="nav-num">10</span>
+          <span class="nav-title">CRM Recommendations</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Footer Controls -->
+      <div class="sidebar-footer">
+        <button type="button" class="btn-viva-trigger" id="viva-trigger-btn" aria-label="Start Guided Viva Mode">
+          <span>🎓</span> Guided Viva Mode
+        </button>
+        <a href="DISCREPANCIES.md" target="_blank" class="btn-discrepancy-link" title="Open Statistical Reconciliation Ledger">
+          <span>📋</span> Reconciliation Ledger
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="app-main">
+
+      <!-- Sticky Top Control Rail -->
+      <header class="top-rail" role="banner">
+        <div class="scroll-progress-line" id="scroll-progress-line" aria-hidden="true"></div>
+        <div class="top-bar-inner">
+          <div class="top-left-status">
+            <button type="button" class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+              ☰ Menu
+            </button>
+            <a href="DISCREPANCIES.md" target="_blank" class="discrepancy-alert-chip" title="View Discrepancy Ledger">
+              ⚠️ Report superseded where it differs from tables; see DISCREPANCIES.md
+            </a>
+          </div>
+          <div class="top-right-controls">
+            <button type="button" class="filter-btn" id="viva-trigger-top" aria-label="Launch viva walkthrough">
+              🎓 Viva Walkthrough
+            </button>
+          </div>
+        </div>
+
+        <!-- Chart.js CDN Fallback Notice -->
+        <div class="chart-fallback-banner" id="chart-fallback-banner" role="alert">
+          <strong>Notice:</strong> Chart.js library is unavailable (offline mode). Interactive charts have fallen back to accessible data tables below each figure.
+        </div>
+      </header>
+
+      <!-- Guided Viva Mode Floating Dock -->
+      <aside class="viva-dock" id="viva-dock" role="region" aria-label="Guided Viva Walkthrough" aria-live="polite">
+        <div class="viva-dock-header">
+          <span class="viva-step-badge" id="viva-step-badge">Step 1 of 10</span>
+          <button type="button" class="btn-viva-close" id="viva-close-btn" aria-label="Exit Viva Mode">✕ Exit</button>
+        </div>
+        <h4 class="viva-dock-title" id="viva-dock-title">1. Executive Overview</h4>
+        <div class="viva-dock-body" id="viva-dock-body">Loading walkthrough content...</div>
+        <div class="viva-dock-actions">
+          <button type="button" class="btn-viva-nav" id="viva-prev-btn">← Previous</button>
+          <div class="viva-btn-group">
+            <button type="button" class="btn-viva-nav primary" id="viva-next-btn">Next Step →</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Research Content Container -->
+      <main class="content-container" role="main">
+
+        <!-- ===================================================================
+             01. EXECUTIVE OVERVIEW
+             Old Anchor Aliases: #hero, #findings
+             =================================================================== -->
+        <section class="dashboard-section" id="overview">
+          <span id="hero" class="anchor-target" aria-hidden="true"></span>
+          <span id="findings" class="anchor-target" aria-hidden="true"></span>
+
+          <div class="section-eyebrow">
+            <span>Stage 1 · Inception & Overview</span>
+          </div>
+          <h2 class="section-title">Customer Switching Behaviour in Indian Quick Commerce</h2>
+          <p class="section-description">
+            An empirical mixed-methods investigation into customer switching intentions, catalog-driven attrition, and evidence-based CRM strategy in Indian quick commerce. Survey micro-data (<i>N</i> = 184) is triangulated with Zepto's 690-page Updated Draft Red Herring Prospectus (UDRHP-I) regulatory disclosures (E01–E25) and academic Push–Pull–Mooring literature.
+          </p>
+
+          <!-- Crucial Epistemological Precaution Box -->
+          <div class="callout-box warning" role="note">
+            <div class="callout-header">
+              <span>⚠️</span> Methodological Precaution & Epistemological Boundaries
+            </div>
+            <div class="callout-body">
+              This research adheres strictly to disciplined, non-causal empirical standards. Cross-sectional survey correlations reflect statistical associations among self-reported perceptual measures and do not demonstrate causal mechanisms. Operational metrics from Zepto's regulatory disclosures (UDRHP-I) describe firm-level network capacity and financial constraints without establishing individual customer retention causality. Never-users (<i>n</i> = 60) are non-adopters and remain strictly segregated from former-user switching analyses.
+            </div>
+          </div>
+
+          <!-- Primary Empirical Summary Stat Cards -->
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-card-label">
+                <span>Total Sample</span>
+                <span class="badge badge-verified">Cleaned</span>
+              </div>
+              <div class="stat-card-value">N = 184</div>
+              <div class="stat-card-sub">51 Current · 73 Former · 60 Never</div>
+              <div class="stat-card-meta">Table 03 · Zero exclusions</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-label">
+                <span>Model M1 Fit</span>
+                <span class="badge badge-verified">HC3 SE</span>
+              </div>
+              <div class="stat-card-value">R² = 0.7057</div>
+              <div class="stat-card-sub">Adj R² = 0.6802 · F(4,46) = 27.58</div>
+              <div class="stat-card-meta">Table 12c · SAT, PULL, SWEFFORT, FAM</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-label">
+                <span>PULL-Alone R²</span>
+                <span class="badge badge-caution">Item Overlap</span>
+              </div>
+              <div class="stat-card-value">R² = 0.6356</div>
+              <div class="stat-card-sub">SAT+SWEFFORT+FAM gain: +0.0701</div>
+              <div class="stat-card-meta">Regression Overlap Diagnostics</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-label">
+                <span>Former Exit Driver</span>
+                <span class="badge badge-verified">56.2% Logistic</span>
+              </div>
+              <div class="stat-card-value">41 / 73 Exits</div>
+              <div class="stat-card-sub">Class A (31) + Class B (10) Coverage</div>
+              <div class="stat-card-meta">Table 13d · Unserved pin codes</div>
+            </div>
+          </div>
+
+          <!-- Discrepancy Reconciliation Summary Banner -->
+          <div class="callout-box info">
+            <div class="callout-header">
+              <span>📋</span> Source Reconciliation Principle (Outputs Supersede Reports)
+            </div>
+            <div class="callout-body">
+              Whenever text in historical report drafts or upgrade notes conflicted with deterministic output CSV tables, the tables strictly governed the displayed result. Authoritative canonical values: H1 &rho; = +0.170 (Holm <i>p</i> = 0.2492); H6 &rho; = +0.245; H7 &rho; = +0.253 (<i>n</i> = 46 complete-case); Model M1 <i>R</i>&sup2; = 0.7057; PULL-alone <i>R</i>&sup2; = 0.6356; H9 <i>p</i> = 0.6029; H10 <i>p</i> = 0.2141; Centered VAR &rho; = +0.305 (VAR1 only); Voluntary exits (availability 8, variety 8, delivery 4, app 3, discounts 3, pricing 2, preferred 2, quality 1, refund 1). See <a href="DISCREPANCIES.md" target="_blank" style="color: var(--accent-magenta); font-weight: 600;">DISCREPANCIES.md</a> for full provenance.
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             02. RESEARCH DESIGN & METHODOLOGY PIPELINE
+             Old Anchor Aliases: #question, #method
+             =================================================================== -->
+        <section class="dashboard-section" id="design">
+          <span id="question" class="anchor-target" aria-hidden="true"></span>
+          <span id="method" class="anchor-target" aria-hidden="true"></span>
+
+          <div class="section-eyebrow">
+            <span>Stage 1 · Methodology</span>
+          </div>
+          <h2 class="section-title">Research Design & Evidence Lineage Pipeline</h2>
+          <p class="section-description">
+            The study employs a disciplined 5-stage mixed-methods architecture connecting foundational PPM theory, primary consumer micro-data, measurement diagnostics, regulatory IPO disclosures, and synthesized CRM strategy.
+          </p>
+
+          <!-- Interactive Methodology Flowchart Canvas -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Methodology Lineage & Traceability Pipeline</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Unit: Multi-Stage Research Architecture</span>
+                  <span class="chart-meta-tag">Denominator: N=184 respondents, 690-page UDRHP-I</span>
+                  <span class="chart-meta-tag">Source: web_config/research_flow.json</span>
+                </div>
+              </div>
+              <div class="chart-controls-row">
+                <span class="stat-card-meta" id="trace-status-msg">Click any stage node to inspect empirical inputs and lineage.</span>
+              </div>
+            </div>
+
+            <!-- Trace Buttons for CRM Recommendations -->
+            <div class="filter-bar" style="margin-top: 1rem; margin-bottom: 1rem;">
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Trace Evidence Lineage:</span>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R1">Trace R1 (Waitlist)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R2">Trace R2 (Restock Alerts)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R3">Trace R3 (Assortment Win-Back)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R4">Trace R4 (Lock-In Evaluated)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="R5">Trace R5 (Service Recovery)</button>
+              <button type="button" class="trace-btn filter-btn" data-trace-r="reset">Reset Highlights</button>
+            </div>
+
+            <!-- Flowchart Container (rendered by flow.js) -->
+            <div id="flowchart-canvas" class="flowchart-container" style="min-height: 240px;"></div>
+            <div id="flow-detail-content" class="flow-detail-drawer" style="margin-top: 1rem;"></div>
+          </div>
+
+          <!-- Data Cleaning & Quality Summary Table -->
+          <div class="table-wrapper">
+            <table class="data-table" aria-label="Data cleaning and sample quality summary">
+              <thead>
+                <tr>
+                  <th>Audit Metric</th>
+                  <th class="num-cell">Observed Value</th>
+                  <th>Methodological Treatment & Integrity Rule</th>
+                  <th>Impact on Analysis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-highlight">Raw Survey Submissions</td>
+                  <td class="num-cell">184</td>
+                  <td>Deterministic ingest from primary survey responses</td>
+                  <td>Full sample base <i>N</i> = 184</td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">Case Exclusions</td>
+                  <td class="num-cell">0</td>
+                  <td>Strict zero-exclusion policy to avoid researcher degree of freedom bias</td>
+                  <td>Preserves all 184 collected records</td>
+                </tr>
+                <tr>
+                  <td>Identified Straight-Liners</td>
+                  <td class="num-cell">12</td>
+                  <td>Retained in primary analysis; tested in sensitivity analysis (<i>n</i> = 39 current)</td>
+                  <td>Correlations robust to exclusion (Table 12b)</td>
+                </tr>
+                <tr>
+                  <td>Q1-Inconsistent Cases</td>
+                  <td class="num-cell">40</td>
+                  <td>Respondents citing contradictory multi-platform choices; tested in sensitivity</td>
+                  <td>Substantive conclusions unaffected</td>
+                </tr>
+                <tr>
+                  <td>Routing Branch Leaks</td>
+                  <td class="num-cell">15</td>
+                  <td>Google Forms branching flaws allowing cross-branch item completion (7 former, 15 never)</td>
+                  <td>Quarantined; descriptive only, omitted from hypothesis tests</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             03. SURVEY AND DATA QUALITY
+             Anchor: #survey
+             =================================================================== -->
+        <section class="dashboard-section" id="survey">
+          <div class="section-eyebrow">
+            <span>Stage 2 · Sample & Quality</span>
+          </div>
+          <h2 class="section-title">Survey Partitioning & Measurement Quality</h2>
+          <p class="section-description">
+            Analysis of the primary sample (<i>N</i> = 184) across user lifecycle segments, questionnaire rollout iterations, demographic distributions, and platform multi-homing characteristics.
+          </p>
+
+          <div class="stat-grid" style="grid-template-columns: 1fr 1fr;">
+            <!-- Lifecycle Composition Donut -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-header-main">
+                  <h3 class="chart-title">Lifecycle Partitioning</h3>
+                  <div class="chart-meta-row">
+                    <span class="chart-meta-tag">Total: N = 184</span>
+                    <span class="chart-meta-tag">Source: table03_user_groups.csv</span>
+                  </div>
+                </div>
+                <div class="chart-controls-row">
+                  <button type="button" class="btn-chart-toggle" data-table-target="table-user-groups" aria-expanded="false">
+                    Show Table
+                  </button>
+                </div>
+              </div>
+              <div class="chart-canvas-wrapper" style="height: 240px;">
+                <canvas id="userGroupChart" role="img" aria-label="Donut chart showing Current Users 51, Former Users 73, Never Users 60"></canvas>
+              </div>
+
+              <!-- Accessible Fallback Table -->
+              <div class="chart-table-container" id="table-user-groups">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>Lifecycle Group</th><th class="num-cell">n</th><th class="num-cell">Share (%)</th><th>Analytical Role</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td class="cell-highlight">Current Users</td><td class="num-cell">51</td><td class="num-cell">27.7%</td><td>Evaluated for switching intentions (H1–H7, M1)</td></tr>
+                    <tr><td class="cell-highlight">Former Users</td><td class="num-cell">73</td><td class="num-cell">39.7%</td><td>Evaluated for realized exit reasons & return willingness</td></tr>
+                    <tr><td class="cell-highlight">Never-Users</td><td class="num-cell">60</td><td class="num-cell">32.6%</td><td>Non-adopter contextual baseline (Coverage barrier)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="chart-caption">Note: Never-users are non-adopters and are strictly excluded from switching-away analyses.</p>
+            </div>
+
+            <!-- Questionnaire Rollout Iterations -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-header-main">
+                  <h3 class="chart-title">Questionnaire Rollout Versions</h3>
+                  <div class="chart-meta-row">
+                    <span class="chart-meta-tag">Total: N = 184</span>
+                    <span class="chart-meta-tag">Source: table03b_questionnaire_versions.csv</span>
+                  </div>
+                </div>
+                <div class="chart-controls-row">
+                  <button type="button" class="btn-chart-toggle" data-table-target="table-versions" aria-expanded="false">
+                    Show Table
+                  </button>
+                </div>
+              </div>
+              <div class="chart-canvas-wrapper" style="height: 240px;">
+                <canvas id="versionChart" role="img" aria-label="Bar chart showing V1 16, V1.5 6, V2 162 respondents"></canvas>
+              </div>
+
+              <!-- Accessible Fallback Table -->
+              <div class="chart-table-container" id="table-versions">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>Version</th><th class="num-cell">n</th><th class="num-cell">Share (%)</th><th>Instrument Changes</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>V1 (Pilot)</td><td class="num-cell">16</td><td class="num-cell">8.7%</td><td>Initial 5-point scale; lacked VAR2, INERT1, location, spend items</td></tr>
+                    <tr><td>V1.5</td><td class="num-cell">6</td><td class="num-cell">3.3%</td><td>Added location and spend items</td></tr>
+                    <tr><td>V2 (Final)</td><td class="num-cell">162</td><td class="num-cell">88.0%</td><td>Complete instrument including VAR2 and INERT1 items</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="chart-caption">Items added in V2 yield <i>n</i> = 46 complete cases among Current Users (5 V1 respondents lacked INERT1).</p>
+            </div>
+          </div>
+
+          <!-- Demographic Distribution Profile -->
+          <div class="table-wrapper">
+            <table class="data-table" aria-label="Demographic distribution of sample">
+              <thead>
+                <tr>
+                  <th>Demographic Dimension</th>
+                  <th>Category</th>
+                  <th class="num-cell">Count (n)</th>
+                  <th class="num-cell">Percentage (%)</th>
+                  <th>Denominator & Scope</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-highlight" rowspan="2">Geography</td>
+                  <td>Tier 1 Metro (Bengaluru, Mumbai, Delhi-NCR, Hyderabad)</td>
+                  <td class="num-cell">115</td>
+                  <td class="num-cell">68.5%</td>
+                  <td rowspan="2"><i>n</i> = 168 (V1.5 & V2 respondents asked)</td>
+                </tr>
+                <tr>
+                  <td>Non-Metro / Tier 2</td>
+                  <td class="num-cell">53</td>
+                  <td class="num-cell">31.5%</td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight" rowspan="4">Age Distribution</td>
+                  <td>18–24 years</td>
+                  <td class="num-cell">94</td>
+                  <td class="num-cell">51.1%</td>
+                  <td rowspan="4"><i>N</i> = 184 total sample</td>
+                </tr>
+                <tr>
+                  <td>25–34 years</td>
+                  <td class="num-cell">63</td>
+                  <td class="num-cell">34.2%</td>
+                </tr>
+                <tr>
+                  <td>35–44 years</td>
+                  <td class="num-cell">18</td>
+                  <td class="num-cell">9.8%</td>
+                </tr>
+                <tr>
+                  <td>45+ years</td>
+                  <td class="num-cell">9</td>
+                  <td class="num-cell">4.9%</td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight" rowspan="3">Primary Occupation</td>
+                  <td>Salaried Professional</td>
+                  <td class="num-cell">98</td>
+                  <td class="num-cell">53.3%</td>
+                  <td rowspan="3"><i>N</i> = 184 total sample</td>
+                </tr>
+                <tr>
+                  <td>Student</td>
+                  <td class="num-cell">61</td>
+                  <td class="num-cell">33.2%</td>
+                </tr>
+                <tr>
+                  <td>Self-Employed / Other</td>
+                  <td class="num-cell">25</td>
+                  <td class="num-cell">13.6%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Platform Multi-Homing & Ordering Characteristics (Table 02 & Table 02b) -->
+          <div class="stat-grid" style="grid-template-columns: 1fr 1fr; margin-top: 1.5rem;">
+            <div class="table-wrapper">
+              <table class="data-table" aria-label="Platforms used by respondents">
+                <thead>
+                  <tr>
+                    <th>Quick-Commerce Platform</th>
+                    <th class="num-cell">Users (n)</th>
+                    <th class="num-cell">Adoption Share (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="cell-highlight">Blinkit</td><td class="num-cell">149</td><td class="num-cell">81.9%</td></tr>
+                  <tr><td class="cell-highlight">Swiggy Instamart</td><td class="num-cell">119</td><td class="num-cell">65.4%</td></tr>
+                  <tr><td class="cell-highlight">Zepto</td><td class="num-cell">91</td><td class="num-cell">50.0%</td></tr>
+                  <tr><td class="cell-highlight">BigBasket Now</td><td class="num-cell">88</td><td class="num-cell">48.4%</td></tr>
+                  <tr><td>Other Platforms</td><td class="num-cell">16</td><td class="num-cell">8.8%</td></tr>
+                  <tr><td>None</td><td class="num-cell">1</td><td class="num-cell">0.5%</td></tr>
+                </tbody>
+              </table>
+              <p class="chart-caption">Table 02b: Base <i>n</i> = 182 (2 missing Q1). Multi-select reveals intense multi-homing across rival platforms.</p>
+            </div>
+
+            <div class="table-wrapper">
+              <table class="data-table" aria-label="Primary choice factors">
+                <thead>
+                  <tr>
+                    <th>Most Important Choice Factor</th>
+                    <th class="num-cell">Total (N=184)</th>
+                    <th class="num-cell">Current</th>
+                    <th class="num-cell">Former</th>
+                    <th class="num-cell">Never</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="cell-highlight">Product availability</td><td class="num-cell">59</td><td class="num-cell">18</td><td class="num-cell">24</td><td class="num-cell">17</td></tr>
+                  <tr><td class="cell-highlight">Discounts / promotions</td><td class="num-cell">33</td><td class="num-cell">10</td><td class="num-cell">12</td><td class="num-cell">11</td></tr>
+                  <tr><td class="cell-highlight">Availability in locality</td><td class="num-cell">23</td><td class="num-cell">4</td><td class="num-cell">10</td><td class="num-cell">9</td></tr>
+                  <tr><td>Delivery experience</td><td class="num-cell">19</td><td class="num-cell">7</td><td class="num-cell">6</td><td class="num-cell">6</td></tr>
+                  <tr><td>Price</td><td class="num-cell">19</td><td class="num-cell">6</td><td class="num-cell">6</td><td class="num-cell">7</td></tr>
+                  <tr><td>Product variety</td><td class="num-cell">10</td><td class="num-cell">2</td><td class="num-cell">5</td><td class="num-cell">3</td></tr>
+                  <tr><td>App convenience</td><td class="num-cell">8</td><td class="num-cell">2</td><td class="num-cell">5</td><td class="num-cell">1</td></tr>
+                </tbody>
+              </table>
+              <p class="chart-caption">Table 02: Product availability and promotions lead choice determinants across all lifecycle segments.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             04. PPM FRAMEWORK
+             Anchor: #ppm
+             =================================================================== -->
+        <section class="dashboard-section" id="ppm">
+          <div class="section-eyebrow">
+            <span>Stage 3 · Construct Architecture</span>
+          </div>
+          <h2 class="section-title">Push–Pull–Mooring (PPM) Theoretical Framework</h2>
+          <p class="section-description">
+            Adapted from Bansal et al. (2005) and Chang et al. (2023) to quick commerce. Push factors drive abandonment; Pull factors attract customers to rivals; Mooring factors inhibit or govern transition velocity.
+          </p>
+
+          <!-- Interactive PPM Construct SVG Canvas -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Interactive PPM Construct Model</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Unit: Multi-Item Likert Constructs (1–5)</span>
+                  <span class="chart-meta-tag">Current Users: n=51 (H1–H6), n=46 (H7)</span>
+                  <span class="chart-meta-tag">Source: table06 & table08</span>
+                </div>
+              </div>
+              <div class="chart-controls-row">
+                <div class="filter-bar" style="margin-bottom: 0;">
+                  <button type="button" class="ppm-mode-btn filter-btn is-active" data-mode="raw">Raw Correlation</button>
+                  <button type="button" class="ppm-mode-btn filter-btn" data-mode="centered">Centered &rho;</button>
+                  <button type="button" class="ppm-mode-btn filter-btn" data-mode="hypothesised">Hypothesised Direction</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SVG Container (rendered by flow.js) -->
+            <div id="ppm-interactive-diagram" class="ppm-diagram-container" style="min-height: 380px;"></div>
+          </div>
+
+          <!-- Measurement Items & Scale Reliability Diagnostics -->
+          <div class="table-wrapper">
+            <table class="data-table" aria-label="Measurement items and scale reliability">
+              <thead>
+                <tr>
+                  <th>Construct</th>
+                  <th>PPM Role</th>
+                  <th>Survey Items</th>
+                  <th class="num-cell">Items</th>
+                  <th class="num-cell">Complete n</th>
+                  <th class="num-cell">Cronbach &alpha;</th>
+                  <th class="num-cell">Spearman-Brown</th>
+                  <th>Reliability Assessment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-highlight">SAT</td>
+                  <td><span class="badge badge-push">Push</span></td>
+                  <td>SAT1 (Delivery & quality expectations), SAT2 (Overall satisfaction)</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">0.721</td>
+                  <td class="num-cell">0.722</td>
+                  <td><span class="badge badge-verified">Acceptable (&ge; 0.70)</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">ALT</td>
+                  <td><span class="badge badge-pull">Pull</span></td>
+                  <td>ALT1 (Rival service attractiveness), ALT2 (Rival experience preference)</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">0.848</td>
+                  <td class="num-cell">0.851</td>
+                  <td><span class="badge badge-verified">Good (&ge; 0.80)</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">VAR</td>
+                  <td><span class="badge badge-pull">Pull</span></td>
+                  <td>VAR1 (Rival catalog breadth), VAR2 (Rival niche item availability)</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">46</td>
+                  <td class="num-cell">0.901</td>
+                  <td class="num-cell">0.904</td>
+                  <td><span class="badge badge-verified">Excellent (&ge; 0.90)</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">PROMO</td>
+                  <td><span class="badge badge-pull">Pull</span></td>
+                  <td>PROMO1 (Rival discounts and promo pricing)</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">n/a</td>
+                  <td class="num-cell">n/a</td>
+                  <td>Single-item construct</td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">SWEFFORT</td>
+                  <td><span class="badge badge-mooring">Mooring</span></td>
+                  <td>SC1 (Time & effort to switch apps), SC2 (App setup friction)</td>
+                  <td class="num-cell">2</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">0.792</td>
+                  <td class="num-cell">0.795</td>
+                  <td><span class="badge badge-verified">Acceptable (&ge; 0.70)</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">FAM</td>
+                  <td><span class="badge badge-mooring">Mooring</span></td>
+                  <td>FAM1 (Familiarity with Zepto app interface & routine)</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">n/a</td>
+                  <td class="num-cell">n/a</td>
+                  <td>Single-item construct</td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">INERT</td>
+                  <td><span class="badge badge-mooring">Mooring</span></td>
+                  <td>INERT1 (Habitual continued use tendency)</td>
+                  <td class="num-cell">1</td>
+                  <td class="num-cell">46</td>
+                  <td class="num-cell">n/a</td>
+                  <td class="num-cell">n/a</td>
+                  <td>Single-item construct (V2 only, <i>n</i> = 46)</td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">INT</td>
+                  <td><strong>Outcome</strong></td>
+                  <td>INT1 (Explore rivals), INT2 (Shift purchases), INT3 (Active switching)</td>
+                  <td class="num-cell">3</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">0.909</td>
+                  <td class="num-cell">n/a</td>
+                  <td><span class="badge badge-verified">Excellent (&ge; 0.90)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="chart-caption">Provenance rule: Scale reliability was computed via Cronbach's &alpha; and Spearman-Brown coefficients only; McDonald's &omega; is not present in canonical outputs.</p>
+        </section>
+
+        <!-- ===================================================================
+             05. HYPOTHESIS LAB
+             Old Anchor Alias: #current
+             =================================================================== -->
+        <section class="dashboard-section" id="hypothesis">
+          <span id="current" class="anchor-target" aria-hidden="true"></span>
+
+          <div class="section-eyebrow">
+            <span>Stage 3 · Empirical Testing</span>
+          </div>
+          <h2 class="section-title">Hypothesis Testing Laboratory (H1–H10)</h2>
+          <p class="section-description">
+            Complete register of formal hypothesis tests evaluated across primary survey respondents. Filterable by PPM dimension with expandable methodology drawers.
+          </p>
+
+          <!-- Filter Controls -->
+          <div class="filter-bar">
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Filter by Dimension:</span>
+            <button type="button" class="hypo-filter-btn filter-btn active" data-filter="all">All (H1–H10)</button>
+            <button type="button" class="hypo-filter-btn filter-btn" data-filter="Push">Push (H1)</button>
+            <button type="button" class="hypo-filter-btn filter-btn" data-filter="Pull">Pull (H2–H4)</button>
+            <button type="button" class="hypo-filter-btn filter-btn" data-filter="Mooring">Mooring (H5–H7)</button>
+            <button type="button" class="hypo-filter-btn filter-btn" data-filter="Outcome">Joint / Outcome (H8–H10)</button>
+          </div>
+
+          <!-- Comprehensive Hypothesis Register Table -->
+          <div class="table-wrapper">
+            <table class="data-table" aria-label="Hypothesis testing results">
+              <thead>
+                <tr>
+                  <th>Hypothesis</th>
+                  <th>Construct</th>
+                  <th>PPM Dimension</th>
+                  <th>Direction</th>
+                  <th class="num-cell">Sample (n)</th>
+                  <th class="num-cell">Coefficient / Result</th>
+                  <th class="num-cell">95% Bootstrap CI</th>
+                  <th class="num-cell">Holm p</th>
+                  <th>Empirical Decision</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- H1 -->
+                <tr class="hypo-table-row" data-ppm="Push">
+                  <td class="cell-highlight"><strong>H1</strong></td>
+                  <td>SAT</td>
+                  <td><span class="badge badge-push">Push</span></td>
+                  <td>Negative (&minus;)</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">+0.170</td>
+                  <td class="num-cell">[-0.12, +0.44]</td>
+                  <td class="num-cell">0.2492</td>
+                  <td><span class="badge badge-inconclusive">Inconclusive / Not Supported</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H1">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H1" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Relationship:</strong> Satisfaction/expectation fulfilment is negatively associated with switching intention.</p>
+                    <p><strong>Literature Precedent:</strong> Mixed evidence. L16 (B) noted significant push effects in online grocery, whereas L05 (A) found satisfaction &rarr; intention path (0.071) non-significant.</p>
+                    <p><strong>Planned Test:</strong> Spearman &rho; with 5,000 bootstrap replicates; Holm multiple testing adjustment across H1–H7.</p>
+                    <p><strong>Within-Person Centering Note:</strong> Centered &rho; = &minus;0.588 [CI &minus;0.77, &minus;0.32], indicating that relative dissatisfaction emerges only once common positivity bias is controlled.</p>
+                  </div>
+                </td></tr>
+
+                <!-- H2 -->
+                <tr class="hypo-table-row" data-ppm="Pull">
+                  <td class="cell-highlight"><strong>H2</strong></td>
+                  <td>ALT</td>
+                  <td><span class="badge badge-pull">Pull</span></td>
+                  <td>Positive (+)</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">+0.685</td>
+                  <td class="num-cell">[+0.49, +0.83]</td>
+                  <td class="num-cell">&lt; 0.0001</td>
+                  <td><span class="badge badge-verified">Supported (Raw Scores)</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H2">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H2" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Relationship:</strong> Alternative attractiveness is positively associated with switching intention.</p>
+                    <p><strong>Literature Precedent:</strong> Direct empirical support. L05 (A) path = 0.328; L10 (A) path = 0.314; L16 (B) significant.</p>
+                    <p><strong>Robustness Warning:</strong> Centered &rho; collapses to &minus;0.026 [CI &minus;0.34, +0.31], demonstrating that raw association is driven by general elevation rather than relative platform preference.</p>
+                  </div>
+                </td></tr>
+
+                <!-- H3 -->
+                <tr class="hypo-table-row" data-ppm="Pull">
+                  <td class="cell-highlight"><strong>H3</strong></td>
+                  <td>VAR (VAR1+VAR2)</td>
+                  <td><span class="badge badge-pull">Pull</span></td>
+                  <td>Positive (+)</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">+0.694</td>
+                  <td class="num-cell">[+0.49, +0.85]</td>
+                  <td class="num-cell">&lt; 0.0001</td>
+                  <td><span class="badge badge-verified">Supported (Raw Scores)</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H3">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H3" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Relationship:</strong> Perceived competitor product variety is positively associated with switching intention.</p>
+                    <p><strong>Item Definition Rule:</strong> H3 evaluates the 2-item composite VAR1+VAR2 (&rho; = +0.694, <i>n</i> = 51 in table12a). Table 21 centering uses VAR1 only (&rho; = +0.731 raw &rarr; +0.305 centered) to preserve <i>n</i> = 51 across V1 respondents.</p>
+                    <p><strong>Decision:</strong> Supported on raw scores; attenuated but positive under within-person centering (+0.305).</p>
+                  </div>
+                </td></tr>
+
+                <!-- H4 -->
+                <tr class="hypo-table-row" data-ppm="Pull">
+                  <td class="cell-highlight"><strong>H4</strong></td>
+                  <td>PROMO</td>
+                  <td><span class="badge badge-pull">Pull</span></td>
+                  <td>Positive (+)</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">+0.700</td>
+                  <td class="num-cell">[+0.51, +0.84]</td>
+                  <td class="num-cell">&lt; 0.0001</td>
+                  <td><span class="badge badge-verified">Supported (Raw Scores)</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H4">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H4" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Relationship:</strong> Competitor promotional attractiveness is positively associated with switching intention.</p>
+                    <p><strong>Robustness:</strong> Centered &rho; = +0.233 [CI &minus;0.10, +0.55]. Evaluated on single-item PROMO1.</p>
+                  </div>
+                </td></tr>
+
+                <!-- H5 -->
+                <tr class="hypo-table-row" data-ppm="Mooring">
+                  <td class="cell-highlight"><strong>H5</strong></td>
+                  <td>SWEFFORT</td>
+                  <td><span class="badge badge-mooring">Mooring</span></td>
+                  <td>Negative (&minus;)</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">+0.721</td>
+                  <td class="num-cell">[+0.51, +0.87]</td>
+                  <td class="num-cell">&lt; 0.0001</td>
+                  <td><span class="badge badge-anomalous">Anomalous (Positive Sign)</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H5">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H5" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Relationship:</strong> Switching effort was hypothesised to inhibit switching (&minus;), but yielded a strong positive correlation (+0.721).</p>
+                    <p><strong>Epistemological Diagnosis:</strong> This anomalous finding reflects item framing: respondents who actively contemplate switching are acutely cognizant of the procedural effort required to adopt rival apps (verified precedent in L10: switching cost &rarr; intention +0.294).</p>
+                    <p><strong>CRM Impact:</strong> Interventions predicated on switching barriers are unviable; Recommendation R4 is strictly NOT RECOMMENDED on current evidence.</p>
+                  </div>
+                </td></tr>
+
+                <!-- H6 -->
+                <tr class="hypo-table-row" data-ppm="Mooring">
+                  <td class="cell-highlight"><strong>H6</strong></td>
+                  <td>FAM</td>
+                  <td><span class="badge badge-mooring">Mooring</span></td>
+                  <td>Negative (&minus;)</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">+0.245</td>
+                  <td class="num-cell">[-0.09, +0.54]</td>
+                  <td class="num-cell">0.2492</td>
+                  <td><span class="badge badge-inconclusive">Inconclusive / Not Supported</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H6">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H6" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Relationship:</strong> Familiarity with Zepto was hypothesised to inhibit switching.</p>
+                    <p><strong>Result:</strong> Statistically non-significant (Holm <i>p</i> = 0.2492); bootstrap CI spans zero [-0.09, +0.54].</p>
+                    <p><strong>Centering:</strong> Centered &rho; = &minus;0.406 [CI &minus;0.67, &minus;0.08].</p>
+                  </div>
+                </td></tr>
+
+                <!-- H7 -->
+                <tr class="hypo-table-row" data-ppm="Mooring">
+                  <td class="cell-highlight"><strong>H7</strong></td>
+                  <td>INERT</td>
+                  <td><span class="badge badge-mooring">Mooring</span></td>
+                  <td>Negative (&minus;)</td>
+                  <td class="num-cell">46</td>
+                  <td class="num-cell">+0.253</td>
+                  <td class="num-cell">[-0.09, +0.57]</td>
+                  <td class="num-cell">0.2492</td>
+                  <td><span class="badge badge-inconclusive">Inconclusive / Not Supported</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H7">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H7" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Relationship:</strong> Inertia (habitual use tendency) was hypothesised to inhibit switching.</p>
+                    <p><strong>Complete-Case Sample:</strong> Evaluated on <i>n</i> = 46 complete cases (5 V1 respondents lacked INERT1).</p>
+                    <p><strong>Result:</strong> Statistically non-significant after Holm adjustment (Holm <i>p</i> = 0.2492).</p>
+                  </div>
+                </td></tr>
+
+                <!-- H8 -->
+                <tr class="hypo-table-row" data-ppm="Outcome">
+                  <td class="cell-highlight"><strong>H8</strong></td>
+                  <td>Joint PPM (M1)</td>
+                  <td><strong>Joint Model</strong></td>
+                  <td>Joint F-test</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">R² = 0.7057</td>
+                  <td class="num-cell">F(4,46) = 27.58</td>
+                  <td class="num-cell">&lt; 0.0001</td>
+                  <td><span class="badge badge-verified">Significant Model (Exploratory)</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H8">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H8" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Relationship:</strong> Push, Pull, and Mooring composites jointly explain variance in switching intention.</p>
+                    <p><strong>Critical Overlap Caveat:</strong> Model M1 is overall significant, but variance decomposition demonstrates that PULL alone accounts for <i>R</i>&sup2; = 0.6356. Adding SAT, SWEFFORT, and FAM provides an incremental gain of only &Delta;<i>R</i>&sup2; = +0.0701.</p>
+                  </div>
+                </td></tr>
+
+                <!-- H9 -->
+                <tr class="hypo-table-row" data-ppm="Outcome">
+                  <td class="cell-highlight"><strong>H9</strong></td>
+                  <td>Partial Shift (Q19)</td>
+                  <td><strong>Behavioral Link</strong></td>
+                  <td>Shifted &gt; Not</td>
+                  <td class="num-cell">51</td>
+                  <td class="num-cell">U = 346.5</td>
+                  <td class="num-cell">Medians: 3.67 vs 3.17</td>
+                  <td class="num-cell">0.6029</td>
+                  <td><span class="badge badge-inconclusive">Inconclusive / Not Supported</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H9">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H9" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Test:</strong> Mann–Whitney <i>U</i> comparing switching intention between users reporting shifted purchases (<i>n</i> = 29) vs those who have not (<i>n</i> = 22).</p>
+                    <p><strong>Result:</strong> <i>U</i> = 346.5, <i>p</i> = 0.6029, rank-biserial <i>r</i> = 0.086. Medians: 3.67 vs 3.17. Stated intention does not reliably separate self-reported partial switchers.</p>
+                  </div>
+                </td></tr>
+
+                <!-- H10 -->
+                <tr class="hypo-table-row" data-ppm="Outcome">
+                  <td class="cell-highlight"><strong>H10</strong></td>
+                  <td>Return Willingness</td>
+                  <td><strong>Retention Class</strong></td>
+                  <td>Class A &gt; Class C</td>
+                  <td class="num-cell">58</td>
+                  <td class="num-cell">U = 496.0</td>
+                  <td class="num-cell">Medians: 4.0 vs 3.5</td>
+                  <td class="num-cell">0.2141</td>
+                  <td><span class="badge badge-inconclusive">Inconclusive / Not Supported</span></td>
+                  <td><button type="button" class="btn-hypo-drawer filter-btn" data-target="drawer-H10">View Details ▾</button></td>
+                </tr>
+                <tr id="drawer-H10" class="drawer-content"><td colspan="10">
+                  <div style="padding: 0.5rem 0;">
+                    <p><strong>Test:</strong> Mann–Whitney <i>U</i> comparing willingness to return between Coverage-primary (Class A, <i>n</i> = 28) and Voluntary-only (Class C, <i>n</i> = 30) former users.</p>
+                    <p><strong>Result:</strong> <i>U</i> = 496.0, <i>p</i> = 0.2141, rank-biserial <i>r</i> = 0.181. Medians: 4.0 (Class A) vs 3.5 (Class C). Difference is directionally consistent but statistically non-significant.</p>
+                    <p><strong>Sample Note:</strong> 5 V1 former users lacked the return item, leaving 58 valid former users in Class A and C.</p>
+                  </div>
+                </td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             06. STATISTICAL RESULTS & ROBUSTNESS
+             Old Anchor Alias: #robustness
+             =================================================================== -->
+        <section class="dashboard-section" id="statistics">
+          <span id="robustness" class="anchor-target" aria-hidden="true"></span>
+
+          <div class="section-eyebrow">
+            <span>Stage 4 · Statistical Modeling</span>
+          </div>
+          <h2 class="section-title">Statistical Results & Robustness Diagnostics</h2>
+          <p class="section-description">
+            Rigorous statistical evaluations: 95% bootstrap confidence intervals for H1–H7, raw-vs-centered correlation dumbbell sensitivity, Model M1 multiple regression with HC3 standard errors, and HTMT discriminant validity.
+          </p>
+
+          <!-- 1. Correlation Dot-and-Whisker Plot -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Spearman Correlation Dot-and-Whisker Plot (H1–H7)</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Estimator: Spearman &rho; with 95% Bootstrap CI (5,000 reps)</span>
+                  <span class="chart-meta-tag">Current Users: n=51 (H1–H6), n=46 (H7)</span>
+                  <span class="chart-meta-tag">Source: table12a_hypothesis_results.csv</span>
+                </div>
+              </div>
+            </div>
+            <!-- SVG Container (rendered by flow.js) -->
+            <div id="hypotheses-dot-whisker-svg" class="svg-chart-container" style="min-height: 360px;"></div>
+            <p class="chart-caption">Green points indicate statistically supported hypotheses on raw scores (H2, H3, H4). Red point denotes H5 (anomalous positive sign). Grey points denote inconclusive tests with CIs spanning zero (H1, H6, H7).</p>
+          </div>
+
+          <!-- 2. Raw vs Within-Person Centered Dumbbell Plot (Interactive Toggle) -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Raw vs Within-Person Centered Dumbbell Sensitivity</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Sensitivity Diagnostic: Ipsatization / Within-Person Centering</span>
+                  <span class="chart-meta-tag">Sample: n=51 (VAR evaluated on VAR1 only)</span>
+                  <span class="chart-meta-tag">Source: table21_within_person_centering_sensitivity.csv</span>
+                </div>
+              </div>
+              <div class="chart-controls-row">
+                <label class="toggle-control" for="dumbbell-mode-toggle">
+                  <span style="font-size: 0.78rem; font-weight: 600;">Within-Person Centered View</span>
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="dumbbell-mode-toggle">
+                    <span class="toggle-slider"></span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- SVG Container (rendered by flow.js) -->
+            <div id="centering-dumbbell-svg" class="svg-chart-container" style="min-height: 300px;"></div>
+
+            <!-- Narrative Box dynamically updated by toggle -->
+            <div class="callout-box info" id="dumbbell-interpretation-text" style="margin-top: 1rem;">
+              <strong>Raw Bivariate Correlation Mode:</strong> Reflects unadjusted Spearman rank correlations across current users (n=51). Strong pull factors are observed: ALT (+0.685), VAR (+0.694 composite / +0.731 VAR1), PROMO (+0.700). Switching Effort (SWEFFORT) displays an anomalous positive association (+0.721), while Satisfaction (+0.170) is statistically non-significant (inconclusive).
+            </div>
+            <p class="chart-caption">Methodological note: Table 21 centering uses VAR1 only to preserve <i>n</i> = 51 across all respondents.</p>
+          </div>
+
+          <!-- 3. Model M1 Regression Coefficients & Overlap Diagnostics -->
+          <div class="stat-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-header-main">
+                  <h3 class="chart-title">Model M1 Regression Coefficients</h3>
+                  <div class="chart-meta-row">
+                    <span class="chart-meta-tag">OLS with HC3 Standard Errors</span>
+                    <span class="chart-meta-tag">Sample: n=51</span>
+                    <span class="chart-meta-tag">Source: table12_regression_results.csv</span>
+                  </div>
+                </div>
+                <div class="chart-controls-row">
+                  <button type="button" class="btn-chart-toggle" data-table-target="table-m1-reg" aria-expanded="false">
+                    Show Table
+                  </button>
+                </div>
+              </div>
+              <div class="chart-canvas-wrapper" style="height: 240px;">
+                <canvas id="regressionCoeffChart" role="img" aria-label="Bar chart showing M1 regression coefficients"></canvas>
+              </div>
+
+              <!-- Accessible Table -->
+              <div class="chart-table-container" id="table-m1-reg">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>Term</th><th class="num-cell">b (Coeff)</th><th class="num-cell">HC3 SE</th><th class="num-cell">p (HC3)</th><th>95% Boot CI</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td class="cell-highlight">PULL</td><td class="num-cell">+0.581</td><td class="num-cell">0.152</td><td class="num-cell">0.0001</td><td>[+0.292, +0.856]</td></tr>
+                    <tr><td class="cell-highlight">SWEFFORT</td><td class="num-cell">+0.337</td><td class="num-cell">0.135</td><td class="num-cell">0.0126</td><td>[+0.087, +0.583]</td></tr>
+                    <tr><td>FAM</td><td class="num-cell">&minus;0.097</td><td class="num-cell">0.113</td><td class="num-cell">0.3924</td><td>[&minus;0.321, +0.109]</td></tr>
+                    <tr><td>SAT</td><td class="num-cell">&minus;0.084</td><td class="num-cell">0.100</td><td class="num-cell">0.4051</td><td>[&minus;0.263, +0.136]</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="chart-caption">Full Model: <i>R</i>&sup2; = 0.7057, Adj <i>R</i>&sup2; = 0.6802, <i>F</i>(4,46) = 27.58, <i>p</i> &lt; 0.0001.</p>
+            </div>
+
+            <!-- Discriminant Validity & Overlap Box -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-header-main">
+                  <h3 class="chart-title">Variance Decomposition & Overlap</h3>
+                  <div class="chart-meta-row">
+                    <span class="chart-meta-tag">Construct Overlap Diagnostic</span>
+                    <span class="chart-meta-tag">Source: regression_overlap_diagnostics.csv</span>
+                  </div>
+                </div>
+              </div>
+              <div style="padding: 0.5rem 0;">
+                <div class="stat-card" style="margin-bottom: 0.75rem; background: var(--bg-surface-elevated);">
+                  <div class="stat-card-label">PULL Composite Alone</div>
+                  <div class="stat-card-value">R² = 0.6356</div>
+                  <div class="stat-card-sub">Spearman correlation with INT: &rho; = 0.768</div>
+                </div>
+                <div class="stat-card" style="margin-bottom: 0.75rem; background: var(--bg-surface-elevated);">
+                  <div class="stat-card-label">Incremental Gain from SAT + SWEFFORT + FAM</div>
+                  <div class="stat-card-value">&Delta;R² = +0.0701</div>
+                  <div class="stat-card-sub">Explains only 7.0% additional variance beyond PULL</div>
+                </div>
+                <p class="chart-caption">HTMT Discriminant Validity: The HTMT ratio between SWEFFORT/PULL and Switching Intention reaches <strong>0.92</strong>, indicating severe conceptual overlap between perceived attractiveness and switching intent.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             07. FORMER-USER EXIT ANALYSIS & NEVER-USERS
+             Old Anchor Alias: #never
+             =================================================================== -->
+        <section class="dashboard-section" id="former">
+          <span id="never" class="anchor-target" aria-hidden="true"></span>
+
+          <div class="section-eyebrow">
+            <span>Stage 4 · Customer Attrition</span>
+          </div>
+          <h2 class="section-title">Former-User Exit Dynamics & Non-Adopter Baseline</h2>
+          <p class="section-description">
+            Analysis of 73 former users partitioned into 3 behavioral classes, itemized breakdown of 32 voluntary exits, and strict segregation of never-user non-adopters.
+          </p>
+
+          <div class="stat-grid" style="grid-template-columns: 1fr 1fr;">
+            <!-- 3-Class Exit Breakdown -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-header-main">
+                  <h3 class="chart-title">Former User 3-Class Exit Partitioning</h3>
+                  <div class="chart-meta-row">
+                    <span class="chart-meta-tag">Former Users: n = 73</span>
+                    <span class="chart-meta-tag">Source: table13d_former_coverage_vs_voluntary.csv</span>
+                  </div>
+                </div>
+                <div class="chart-controls-row">
+                  <button type="button" class="btn-chart-toggle" data-table-target="table-former-classes" aria-expanded="false">
+                    Show Table
+                  </button>
+                </div>
+              </div>
+              <div class="chart-canvas-wrapper" style="height: 240px;">
+                <canvas id="formerClassChart" role="img" aria-label="Donut chart of former user classes: A 31, B 10, C 32"></canvas>
+              </div>
+
+              <!-- Accessible Table -->
+              <div class="chart-table-container" id="table-former-classes">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>Exit Class</th><th class="num-cell">n</th><th class="num-cell">Share (%)</th><th>95% Wilson CI</th><th>Primary Nature</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td class="cell-highlight">Class A: Coverage-Primary</td><td class="num-cell">31</td><td class="num-cell">42.5%</td><td>[31.8%, 53.9%]</td><td>Involuntary (Unserved pin code / dark store relocation)</td></tr>
+                    <tr><td class="cell-highlight">Class B: Coverage-Mentioned</td><td class="num-cell">10</td><td class="num-cell">13.7%</td><td>[7.6%, 23.4%]</td><td>Involuntary Overlap (Area cited with secondary reasons)</td></tr>
+                    <tr><td class="cell-highlight">Class C: Voluntary-Only</td><td class="num-cell">32</td><td class="num-cell">43.8%</td><td>[33.0%, 55.2%]</td><td>Voluntary Platform Choice (Product, service, app)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="chart-caption">56.2% of former users (Class A + B, 41/73) cited dark-store unserviceability, proving that attrition is largely infrastructural rather than dissatisfaction-driven.</p>
+            </div>
+
+            <!-- Voluntary Exit Reasons (n=32) -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-header-main">
+                  <h3 class="chart-title">Voluntary Exit Main Reasons (n=32)</h3>
+                  <div class="chart-meta-row">
+                    <span class="chart-meta-tag">Class C Only: n = 32</span>
+                    <span class="chart-meta-tag">Source: table13e_voluntary_only_main_reason.csv</span>
+                  </div>
+                </div>
+                <div class="chart-controls-row">
+                  <button type="button" class="btn-chart-toggle" data-table-target="table-voluntary-reasons" aria-expanded="false">
+                    Show Table
+                  </button>
+                </div>
+              </div>
+              <div class="chart-canvas-wrapper" style="height: 240px;">
+                <canvas id="voluntaryReasonsChart" role="img" aria-label="Horizontal bar chart showing voluntary exit reasons"></canvas>
+              </div>
+
+              <!-- Accessible Table -->
+              <div class="chart-table-container" id="table-voluntary-reasons">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>Reason Category</th><th class="num-cell">n</th><th class="num-cell">Share (%)</th><th>95% Wilson CI</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td class="cell-highlight">Product availability</td><td class="num-cell">8</td><td class="num-cell">25.0%</td><td>[13.3%, 42.1%]</td></tr>
+                    <tr><td class="cell-highlight">Product variety / choice</td><td class="num-cell">8</td><td class="num-cell">25.0%</td><td>[13.3%, 42.1%]</td></tr>
+                    <tr><td>Delivery experience</td><td class="num-cell">4</td><td class="num-cell">12.5%</td><td>[5.0%, 28.1%]</td></tr>
+                    <tr><td>App experience</td><td class="num-cell">3</td><td class="num-cell">9.4%</td><td>[3.2%, 24.2%]</td></tr>
+                    <tr><td>Discounts / promotions</td><td class="num-cell">3</td><td class="num-cell">9.4%</td><td>[3.2%, 24.2%]</td></tr>
+                    <tr><td>Pricing</td><td class="num-cell">2</td><td class="num-cell">6.3%</td><td>[1.7%, 20.1%]</td></tr>
+                    <tr><td>Preferred another platform</td><td class="num-cell">2</td><td class="num-cell">6.3%</td><td>[1.7%, 20.1%]</td></tr>
+                    <tr><td>Product quality</td><td class="num-cell">1</td><td class="num-cell">3.1%</td><td>[0.6%, 15.7%]</td></tr>
+                    <tr><td>Return / refund experience</td><td class="num-cell">1</td><td class="num-cell">3.1%</td><td>[0.6%, 15.7%]</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="chart-caption">Product Availability and Variety combined account for exactly 50.0% (16/32) of voluntary customer departures.</p>
+            </div>
+          </div>
+
+          <!-- Secondary Behavioral Plots: Assortment Advantage & Return Willingness -->
+          <div class="stat-grid" style="grid-template-columns: 1fr 1fr;">
+            <!-- Competitor Variety Advantage -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-header-main">
+                  <h3 class="chart-title">Competitor Variety Advantage</h3>
+                  <div class="chart-meta-row">
+                    <span class="chart-meta-tag">Evaluating Former Users: n = 68</span>
+                    <span class="chart-meta-tag">Source: table13c_former_alt_variants.csv</span>
+                  </div>
+                </div>
+                <div class="chart-controls-row">
+                  <button type="button" class="btn-chart-toggle" data-table-target="table-alt-variants" aria-expanded="false">
+                    Show Table
+                  </button>
+                </div>
+              </div>
+              <div class="chart-canvas-wrapper" style="height: 200px;">
+                <canvas id="formerAltVariantChart" role="img" aria-label="Bar chart of competitor variety advantage"></canvas>
+              </div>
+              <div class="chart-table-container" id="table-alt-variants">
+                <table class="data-table">
+                  <thead><tr><th>Response</th><th class="num-cell">n</th><th class="num-cell">Share (%)</th></tr></thead>
+                  <tbody>
+                    <tr><td>Yes (Competitor had better variety)</td><td class="num-cell">41</td><td class="num-cell">60.3%</td></tr>
+                    <tr><td>Maybe / Not Sure</td><td class="num-cell">18</td><td class="num-cell">26.5%</td></tr>
+                    <tr><td>No (Similar variety)</td><td class="num-cell">9</td><td class="num-cell">13.2%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="chart-caption">60.3% (41/68) of evaluating former users confirmed that competing platforms carried products they could not readily find on Zepto.</p>
+            </div>
+
+            <!-- Return Willingness Distribution -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-header-main">
+                  <h3 class="chart-title">Return Willingness Distribution</h3>
+                  <div class="chart-meta-row">
+                    <span class="chart-meta-tag">Former Users: n = 68 (5 missing in V1)</span>
+                    <span class="chart-meta-tag">Source: table13c_former_return.csv</span>
+                  </div>
+                </div>
+                <div class="chart-controls-row">
+                  <button type="button" class="btn-chart-toggle" data-table-target="table-return-dist" aria-expanded="false">
+                    Show Table
+                  </button>
+                </div>
+              </div>
+              <div class="chart-canvas-wrapper" style="height: 200px;">
+                <canvas id="formerReturnChart" role="img" aria-label="Bar chart of return willingness distribution"></canvas>
+              </div>
+              <div class="chart-table-container" id="table-return-dist">
+                <table class="data-table">
+                  <thead><tr><th>Rating Category</th><th class="num-cell">n</th><th class="num-cell">Share (%)</th></tr></thead>
+                  <tbody>
+                    <tr><td>Definitely Yes</td><td class="num-cell">14</td><td class="num-cell">20.6%</td></tr>
+                    <tr><td>Probably Yes</td><td class="num-cell">27</td><td class="num-cell">39.7%</td></tr>
+                    <tr><td>Not Sure</td><td class="num-cell">20</td><td class="num-cell">29.4%</td></tr>
+                    <tr><td>Probably No</td><td class="num-cell">5</td><td class="num-cell">7.4%</td></tr>
+                    <tr><td>Definitely No</td><td class="num-cell">2</td><td class="num-cell">2.9%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="chart-caption">60.3% (41/68) express positive willingness to return (Definitely or Probably Yes), confirming strong latent reactivation potential.</p>
+            </div>
+          </div>
+
+          <!-- Segregated Never-Users Panel -->
+          <div class="callout-box" id="never-users-panel" style="border-left-color: var(--accent-cyan); background: rgba(6, 182, 212, 0.04);">
+            <div class="callout-header">
+              <span>📍</span> Never-Users Non-Adopter Segment (n = 60 Baseline)
+            </div>
+            <div class="callout-body">
+              <p>Never-users represent non-adopters rather than switched customers. Primary barrier to adoption is dark-store serviceability: <strong>37 out of 60 (61.7%)</strong> never-users cited lack of delivery coverage in their residential pin codes as their primary reason for never ordering (Table 16b). When asked what would encourage adoption, <strong>34 out of 54 (63.0%)</strong> cited serviceability expansion into their locality (Table 16f).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             08. ZEPTO UDRHP-I EVIDENCE EXPLORER
+             Old Anchor Alias: #literature
+             =================================================================== -->
+        <section class="dashboard-section" id="udrhp">
+          <span id="literature" class="anchor-target" aria-hidden="true"></span>
+
+          <div class="section-eyebrow">
+            <span>Stage 5 · Secondary Disclosures</span>
+          </div>
+          <h2 class="section-title">Zepto UDRHP-I Regulatory Evidence Explorer (E01–E25)</h2>
+          <p class="section-description">
+            Extraction and analysis of official disclosures from Zepto Limited's 690-page Updated Draft Red Herring Prospectus (UDRHP-I, June 2026), tracked media claims (M01–M11), and academic literature verification tiers (L01–L17).
+          </p>
+
+          <!-- Capital Allocation Summary Cards -->
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-card-label">Dark Store Capex</div>
+              <div class="stat-card-value">₹16,289.75M</div>
+              <div class="stat-card-sub">Expanding store network FY27–FY29</div>
+              <div class="stat-card-meta">E07 · UDRHP pp. 143–145</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-label">Store Lease Rentals</div>
+              <div class="stat-card-value">₹17,349.41M</div>
+              <div class="stat-card-sub">Network lease commitments through FY30</div>
+              <div class="stat-card-meta">E08 · UDRHP pp. 148–150</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-label">Cloud & Tech Capex</div>
+              <div class="stat-card-value">₹4,000.00M</div>
+              <div class="stat-card-sub">Search, recommendations & ML forecasting</div>
+              <div class="stat-card-meta">E09 · UDRHP pp. 154–156</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-card-label">Marketing & Promotion</div>
+              <div class="stat-card-value">₹5,200.00M</div>
+              <div class="stat-card-sub">Top-of-funnel customer acquisition</div>
+              <div class="stat-card-meta">E10 · UDRHP pp. 156–157</div>
+            </div>
+          </div>
+
+          <!-- Searchable Evidence Explorer (E01–E25) -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Regulatory Disclosures Explorer (25 Verified Items)</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Source: Zepto Limited UDRHP-I (SEBI Filing)</span>
+                  <span class="chart-meta-tag">Catalog: table16_zepto_secondary_evidence.csv</span>
+                </div>
+              </div>
+              <div class="chart-controls-row">
+                <input type="text" id="evidence-search-input" class="filter-search-input" placeholder="Search claims, metrics, pages...">
+                <select id="evidence-construct-select" class="filter-search-input" style="width: 170px;">
+                  <option value="all">All Constructs</option>
+                  <option value="Coverage">Coverage & Dark Stores</option>
+                  <option value="assortment">Assortment & SKUs</option>
+                  <option value="promotions">Promotions & Fees</option>
+                  <option value="retention">Retention & Cohorts</option>
+                  <option value="CRM">Technology & CRM</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Evidence Cards Container -->
+            <div class="card-grid" id="udrhp-cards-container">
+              <!-- Dynamically rendered or static semantic cards E01-E25 -->
+              <div class="evidence-card" data-construct="operational">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">E01</span>
+                  <span class="evidence-card-source">UDRHP p. 24 · Risk Factors</span>
+                </div>
+                <div class="evidence-card-claim">Revenue grew from ₹44,545.16M (FY24) to ₹226,235.84M (FY26) while net loss was ₹59,051.92M (FY26) driven by network expansion.</div>
+                <div class="evidence-card-footer">
+                  <span class="badge badge-verified">Verified</span>
+                  <span>Financial cost floor for H4</span>
+                </div>
+              </div>
+
+              <div class="evidence-card" data-construct="Coverage">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">E07</span>
+                  <span class="evidence-card-source">UDRHP pp. 143–145 · Objects of Offer</span>
+                </div>
+                <div class="evidence-card-claim">Gross proceeds earmarked include ₹16,289.75M for setting up new dark stores in existing and new geographies over FY27–FY29.</div>
+                <div class="evidence-card-footer">
+                  <span class="badge badge-verified">Verified</span>
+                  <span>Underpins Recommendation R1</span>
+                </div>
+              </div>
+
+              <div class="evidence-card" data-construct="assortment">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">E13</span>
+                  <span class="evidence-card-source">UDRHP p. 162 · Basis for Offer</span>
+                </div>
+                <div class="evidence-card-claim">Store-level unique SKUs expanded from 12,312 (FY24) to 44,341 (FY25) to 46,623 (FY26), reaching 49,602 in Q4 FY26.</div>
+                <div class="evidence-card-footer">
+                  <span class="badge badge-verified">Verified</span>
+                  <span>Contextualizes H3 & variety exits</span>
+                </div>
+              </div>
+
+              <div class="evidence-card" data-construct="Coverage">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">E14</span>
+                  <span class="evidence-card-source">UDRHP p. 163 · Basis for Offer</span>
+                </div>
+                <div class="evidence-card-claim">Dark store network expanded from 337 stores across 11 cities (FY24) to 1,029 across 43 cities (FY25) to 1,139 across 66 cities (FY26).</div>
+                <div class="evidence-card-footer">
+                  <span class="badge badge-verified">Verified</span>
+                  <span>Geographic non-metro footprint</span>
+                </div>
+              </div>
+
+              <div class="evidence-card" data-construct="retention">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">E20</span>
+                  <span class="evidence-card-source">UDRHP pp. 253–254 · Our Business</span>
+                </div>
+                <div class="evidence-card-claim">User cohort retention matrix shows quarterly active ordering stabilizes between 44.3% and 54.0% across multi-year cohorts.</div>
+                <div class="evidence-card-footer">
+                  <span class="badge badge-verified">Verified</span>
+                  <span>Industry retention baseline</span>
+                </div>
+              </div>
+
+              <div class="evidence-card" data-construct="CRM">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">E18</span>
+                  <span class="evidence-card-source">UDRHP pp. 246–247 · Our Business</span>
+                </div>
+                <div class="evidence-card-claim">In-house search and recommendations engine utilizes ML models for user intent parsing, query understanding, and catalog ranking.</div>
+                <div class="evidence-card-footer">
+                  <span class="badge badge-verified">Verified</span>
+                  <span>Enabler for Recommendation R2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Media Claims Register (M01–M11) -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Media Claims Verification Register (M01–M11)</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Tracked Claims: 11 Items</span>
+                  <span class="chart-meta-tag">Rule: Media claims are non-evidence; checked against UDRHP</span>
+                  <span class="chart-meta-tag">Source: secondary_data/media_claims_register.csv</span>
+                </div>
+              </div>
+              <div class="chart-controls-row">
+                <div class="filter-bar" id="media-filter-bar" style="margin-bottom: 0;">
+                  <button type="button" class="filter-btn active" data-filter="all">All</button>
+                  <button type="button" class="filter-btn" data-filter="VERIFIED">Verified</button>
+                  <button type="button" class="filter-btn" data-filter="DISPROVED">Disproved</button>
+                  <button type="button" class="filter-btn" data-filter="NOT VERIFIED">Not Verified</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-wrapper">
+              <table class="data-table" id="media-claims-table" aria-label="Media claims verification register">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Media Source</th>
+                    <th>Reported Claim</th>
+                    <th>UDRHP Verification Finding</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-status="NOT VERIFIED">
+                    <td class="cell-highlight">M01</td>
+                    <td>S06 (Inc42)</td>
+                    <td>UDRHP acknowledges low switching costs and pricing pressure</td>
+                    <td>Checked against UDRHP pp. 30–32: filing notes competitor promotions and multi-homing as business risks; no explicit statement on low switching costs.</td>
+                    <td><span class="badge badge-inconclusive">Unverified as Worded</span></td>
+                  </tr>
+                  <tr data-status="VERIFIED">
+                    <td class="cell-highlight">M02</td>
+                    <td>S10 (Groww)</td>
+                    <td>Average SKUs per dark store rose from 12,312 (FY24) to 46,623 (FY26)</td>
+                    <td>Verified on UDRHP p. 162 & p. 538: SKUs reached 46,623 (FY26) and 49,602 in Q4 FY26.</td>
+                    <td><span class="badge badge-verified">Verified Primary KPI</span></td>
+                  </tr>
+                  <tr data-status="VERIFIED">
+                    <td class="cell-highlight">M03</td>
+                    <td>S10 (Groww)</td>
+                    <td>45.2–49.8% of users remain active three years after first order</td>
+                    <td>Verified on UDRHP pp. 253–254: FY23 Q2 cohort retention was 45.2% in Q12 and 44.3% in Q15; cohorts stabilize between 44.3% and 54.0%.</td>
+                    <td><span class="badge badge-verified">Verified Primary KPI</span></td>
+                  </tr>
+                  <tr data-status="DISPROVED">
+                    <td class="cell-highlight">M04</td>
+                    <td>S07 (Inc42)</td>
+                    <td>Zepto curtailed platform-wide discounts and launched a paid membership ('Zepto Club')</td>
+                    <td>Checked against UDRHP p. 13 & p. 258: official program is 'Zepto Pass'. 'Zepto Club' is not established in the filing.</td>
+                    <td><span class="badge badge-anomalous">Disproved / Contradicted</span></td>
+                  </tr>
+                  <tr data-status="VERIFIED">
+                    <td class="cell-highlight">M05</td>
+                    <td>Groww / others</td>
+                    <td>1,139 dark stores across 66 cities</td>
+                    <td>Verified on UDRHP p. 163: store counts 337 (FY24), 1,029 (FY25), 1,139 (FY26).</td>
+                    <td><span class="badge badge-verified">Verified Primary KPI</span></td>
+                  </tr>
+                  <tr data-status="VERIFIED">
+                    <td class="cell-highlight">M06</td>
+                    <td>Several outlets</td>
+                    <td>Annual Transacting Users (ATU) was 47.97 million at 31 Mar 2026</td>
+                    <td>Verified on UDRHP p. 160: ATU was 10.57M (FY24), 38.38M (FY25), 47.97M (FY26).</td>
+                    <td><span class="badge badge-verified">Verified Primary KPI</span></td>
+                  </tr>
+                  <tr data-status="VERIFIED">
+                    <td class="cell-highlight">M08</td>
+                    <td>Outlook Business</td>
+                    <td>₹1,629 crore capex for dark stores; ₹1,735 crore lease rentals</td>
+                    <td>Verified on UDRHP pp. 143, 148: ₹16,289.75M dark store capex and ₹17,349.41M lease rentals.</td>
+                    <td><span class="badge badge-verified">Verified Primary Offer</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Academic Literature Verification Tiers (L01–L17) -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Academic Literature Verification Register (L01–L17)</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Tracked Sources: 17 Records</span>
+                  <span class="chart-meta-tag">Tier A: Full Text (2) · Tier B: Abstract (8) · Tier C: Background (5) · Unverified (2)</span>
+                  <span class="chart-meta-tag">Source: literature/references.csv</span>
+                </div>
+              </div>
+              <div class="chart-controls-row">
+                <div class="filter-bar" id="lit-filter-bar" style="margin-bottom: 0;">
+                  <button type="button" class="filter-btn active" data-filter="all">All</button>
+                  <button type="button" class="filter-btn" data-filter="A">Tier A (Full Text)</button>
+                  <button type="button" class="filter-btn" data-filter="B">Tier B (Abstract)</button>
+                  <button type="button" class="filter-btn" data-filter="C">Tier C (Background)</button>
+                  <button type="button" class="filter-btn" data-filter="UNVERIFIED">Unverified (Withdrawn)</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-grid" id="literature-cards-container">
+              <div class="evidence-card lit-card" data-tier="A">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">L05</span>
+                  <span class="badge badge-verified">Tier A: Full Text Read</span>
+                </div>
+                <div class="evidence-card-claim"><strong>Chang et al. (2023)</strong>, <i>JTAER</i>: On-demand food delivery platform switching. Attractive alternatives &rarr; intention 0.328 (p &lt; .001); satisfaction &rarr; intention 0.071 (non-significant).</div>
+                <div class="evidence-card-footer">
+                  <span>Taiwan (n=441)</span>
+                  <span>Primary analogue for H1, H2, H8</span>
+                </div>
+              </div>
+
+              <div class="evidence-card lit-card" data-tier="A">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">L10</span>
+                  <span class="badge badge-verified">Tier A: Full Text Read</span>
+                </div>
+                <div class="evidence-card-claim"><strong>Monoarfa et al. (2023)</strong>, <i>Sustainability</i>: E-grocery adoption. Dissatisfaction non-significant (p=.069); alternative attractiveness significant (0.314); switching cost path positive (+0.294, p=.017).</div>
+                <div class="evidence-card-footer">
+                  <span>Indonesia (n=252)</span>
+                  <span>Precedent for positive H5 sign</span>
+                </div>
+              </div>
+
+              <div class="evidence-card lit-card" data-tier="B">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">L16</span>
+                  <span class="badge badge-caution">Tier B: Abstract Verified</span>
+                </div>
+                <div class="evidence-card-claim"><strong>Singh & Rosengren (2020)</strong>, <i>JRCS</i>: Online grocery switching. Push factors (service, quality, price perception) and pull factors significant; switching costs moderate.</div>
+                <div class="evidence-card-footer">
+                  <span>Online Grocery</span>
+                  <span>Context for H1, H2, H5</span>
+                </div>
+              </div>
+
+              <div class="evidence-card lit-card" data-tier="UNVERIFIED">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id">L07 / L09</span>
+                  <span class="badge badge-anomalous">Unverified / Withdrawn</span>
+                </div>
+                <div class="evidence-card-claim">Unconfirmed records withdrawn from evidence base. Authors/venue unconfirmed on publisher pages. Strictly barred from supporting any hypothesis.</div>
+                <div class="evidence-card-footer">
+                  <span>Integrity Exclusion</span>
+                  <span>Zero citation rule</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             09. EVIDENCE TRIANGULATION
+             Anchor: #triangulation
+             =================================================================== -->
+        <section class="dashboard-section" id="triangulation">
+          <div class="section-eyebrow">
+            <span>Stage 5 · Synthesis</span>
+          </div>
+          <h2 class="section-title">Multi-Source Evidence Triangulation</h2>
+          <p class="section-description">
+            Synthesis matrix reconciling primary consumer survey findings, secondary UDRHP-I regulatory disclosures, and academic literature across 6 operational dimensions.
+          </p>
+
+          <div class="table-wrapper">
+            <table class="data-table" aria-label="Evidence triangulation matrix">
+              <thead>
+                <tr>
+                  <th>Switching Dimension</th>
+                  <th>Primary Survey Finding (N=184)</th>
+                  <th>Secondary UDRHP-I Filing (E01–E25)</th>
+                  <th>Academic Literature (L01–L17)</th>
+                  <th>Convergence Verdict</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-highlight">Geographic Coverage</td>
+                  <td>56.2% of former users (41/73) and 61.7% of never-users cite unserved areas as primary barrier.</td>
+                  <td>₹16,289.75M earmarked for dark stores; network scaled to 1,139 stores across 66 cities (E07, E14).</td>
+                  <td>Involuntary switching literature establishes physical channel access as a prerequisite condition.</td>
+                  <td><span class="badge badge-verified">Strong Multi-Source Convergence</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">Product Variety & Stock-outs</td>
+                  <td>50.0% of voluntary exits (16/32) cite availability and variety; 60.3% find superior variety on rivals.</td>
+                  <td>Store SKUs grew 4x to 46,623 (E13); merchant multi-homing identified as stock-out risk factor (E03).</td>
+                  <td>L05 (A) & L16 (B) confirm assortment gaps as key pull drivers of platform switching.</td>
+                  <td><span class="badge badge-verified">Strong Multi-Source Convergence</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">Promotional Pull vs Unit Costs</td>
+                  <td>PROMO &rho; = +0.700; discounts cited in 9.4% of voluntary exits.</td>
+                  <td>Net loss ₹59,051.92M (FY26); marketing budget ₹5,200.00M; supply chain cost floor limits discounting (E01, E10).</td>
+                  <td>L05 (A) identifies deals/promotions as an attractive alternative sub-dimension.</td>
+                  <td><span class="badge badge-caution">Convergent with Economic Constraints</span></td>
+                </tr>
+                <tr>
+                  <td class="cell-highlight">Switching Barriers & Lock-in</td>
+                  <td>SWEFFORT &rho; = +0.721 (anomalous positive sign); collapses to +0.054 under within-person centering.</td>
+                  <td>Zepto Pass launched (E21); merchant and delivery partner multi-homing limits platform defensibility (E03).</td>
+                  <td>L10 (A) verifies positive switching-cost path (+0.294) when items capture transition effort.</td>
+                  <td><span class="badge badge-anomalous">Empirical Anomaly Confirmed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             10. CRM RECOMMENDATIONS & BOUNDARIES
+             Old Anchor Aliases: #crm, #sources
+             =================================================================== -->
+        <section class="dashboard-section" id="recommendations">
+          <span id="crm" class="anchor-target" aria-hidden="true"></span>
+          <span id="sources" class="anchor-target" aria-hidden="true"></span>
+
+          <div class="section-eyebrow">
+            <span>Stage 5 · Actionable Strategy</span>
+          </div>
+          <h2 class="section-title">Evidence-Based CRM Recommendations (R1–R5)</h2>
+          <p class="section-description">
+            Pragmatic CRM strategic recommendations derived strictly from converged primary survey and regulatory evidence. Evaluated with statistical confidence tiers.
+          </p>
+
+          <!-- Filter Controls for CRM -->
+          <div class="filter-bar" id="crm-filter-bar">
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Filter by Status:</span>
+            <button type="button" class="filter-btn active" data-filter="all">All (R1–R5)</button>
+            <button type="button" class="filter-btn" data-filter="Recommended">Recommended</button>
+            <button type="button" class="filter-btn" data-filter="Conditional">Conditional</button>
+            <button type="button" class="filter-btn" data-filter="Not recommended">Not Recommended</button>
+          </div>
+
+          <!-- R1-R5 Strategy Cards -->
+          <div class="card-grid" style="grid-template-columns: 1fr; gap: 1.25rem;">
+            <!-- R1 -->
+            <div class="evidence-card crm-rec-card" data-status="Recommended">
+              <div class="evidence-card-header">
+                <div>
+                  <span class="evidence-card-id">R1 · HIGH CONFIDENCE</span>
+                  <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Serviceability Waitlist & Expansion-Triggered Reactivation</h3>
+                </div>
+                <span class="badge badge-verified">Recommended (Conditional, Testable)</span>
+              </div>
+              <div class="evidence-card-claim">
+                <p><strong>Target Segment:</strong> Residents of unserved localities (Class A former users, <i>n</i> = 31; never-users citing coverage, <i>n</i> = 37).</p>
+                <p><strong>Mechanism:</strong> Capture pin codes at registration and on failed-delivery screens. Trigger automated notification when a dark store covering that catchment goes live. Zepto's ₹16,289.75M network expansion (E07) directly enables this strategy.</p>
+                <p><strong>Primary Limitations:</strong> Exit was involuntary; this represents demand recapture rather than true behavioural retention.</p>
+              </div>
+              <div class="evidence-card-footer">
+                <span>KPI: Waitlist-to-first-order conversion; 30/90-day repeat rate</span>
+                <span>Primary Evidence: Table 13d (31/73) & Table 16 (E07)</span>
+              </div>
+            </div>
+
+            <!-- R2 -->
+            <div class="evidence-card crm-rec-card" data-status="Conditional">
+              <div class="evidence-card-header">
+                <div>
+                  <span class="evidence-card-id">R2 · MODERATE CONFIDENCE</span>
+                  <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Restock Alerts & Intelligent Substitution Recommendations</h3>
+                </div>
+                <span class="badge badge-caution">Conditional (Pilot with Control Group)</span>
+              </div>
+              <div class="evidence-card-claim">
+                <p><strong>Target Segment:</strong> Current users experiencing repeated failed catalog searches or out-of-stock views.</p>
+                <p><strong>Mechanism:</strong> Log stock-out events and failed searches. Automatically trigger back-in-stock alerts and personalized close-substitute recommendations powered by Zepto's existing in-house ML engine (E18, ₹4,000.00M cloud investment).</p>
+                <p><strong>Primary Limitations:</strong> Associational survey evidence; recommendation engine efficacy must be tested in a randomized holdout pilot.</p>
+              </div>
+              <div class="evidence-card-footer">
+                <span>KPI: Repeat ordering among stock-out affected users vs control</span>
+                <span>Primary Evidence: Table 13e (16/32) & Table 16 (E18)</span>
+              </div>
+            </div>
+
+            <!-- R3 -->
+            <div class="evidence-card crm-rec-card" data-status="Conditional">
+              <div class="evidence-card-header">
+                <div>
+                  <span class="evidence-card-id">R3 · LOW-MODERATE CONFIDENCE</span>
+                  <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Segmented Win-Back for Voluntary Assortment Leavers</h3>
+                </div>
+                <span class="badge badge-caution">Conditional (Small n; Matched Reasons Only)</span>
+              </div>
+              <div class="evidence-card-claim">
+                <p><strong>Target Segment:</strong> Former voluntary users whose documented exit reason was product availability or variety (<i>n</i> = 16).</p>
+                <p><strong>Mechanism:</strong> Reason-specific win-back messaging triggered when relevant categories or brands are introduced. Restrict incentives to matched assortment leavers; broad-based discount discounting is unsupported (only 3/32 cited discounts).</p>
+                <p><strong>Primary Limitations:</strong> Small matched segment (<i>n</i> = 16); stated return intention may overstate actual conversion.</p>
+              </div>
+              <div class="evidence-card-footer">
+                <span>KPI: Reactivation rate vs holdout; 30/90-day post-reactivation repeat</span>
+                <span>Primary Evidence: Table 13e (Availability 8, Variety 8)</span>
+              </div>
+            </div>
+
+            <!-- R4 -->
+            <div class="evidence-card crm-rec-card" data-status="Not recommended">
+              <div class="evidence-card-header">
+                <div>
+                  <span class="evidence-card-id" style="color: var(--accent-rose);">R4 · CRITICAL RESEARCH FINDING</span>
+                  <h3 style="font-size: 1.15rem; color: #f87171; margin-top: 2px;">Switching-Barrier or Habit Lock-In Mechanisms</h3>
+                </div>
+                <span class="badge badge-anomalous">Not Recommended on Current Evidence</span>
+              </div>
+              <div class="evidence-card-claim">
+                <p><strong>Evaluation Status:</strong> <strong style="color: #f87171;">NOT RECOMMENDED ON CURRENT EVIDENCE.</strong> Switching-barrier evidence is inconclusive and current measurement is problematic.</p>
+                <p><strong>Scientific Rationale:</strong> Hypothesis H5 yielded an anomalous positive coefficient (&rho; = +0.721), and familiarity (H6) and inertia (H7) were statistically non-significant. Deploying artificial lock-in or switching barriers without validated reverse-worded re-measurement risks user alienation in a competitive multi-homing market.</p>
+              </div>
+              <div class="evidence-card-footer">
+                <span>Status: Table 19 canonical determination</span>
+                <span>Primary Evidence: Table 12a (H5, H6, H7)</span>
+              </div>
+            </div>
+
+            <!-- R5 -->
+            <div class="evidence-card crm-rec-card" data-status="Conditional">
+              <div class="evidence-card-header">
+                <div>
+                  <span class="evidence-card-id">R5 · LOW CONFIDENCE</span>
+                  <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Trigger-Based Service Recovery Safeguard</h3>
+                </div>
+                <span class="badge badge-caution">Monitor Only (Hygienic Operational Safeguard)</span>
+              </div>
+              <div class="evidence-card-claim">
+                <p><strong>Target Segment:</strong> All users experiencing delivery SLA failures, defective items, or unresolved app complaints.</p>
+                <p><strong>Mechanism:</strong> Automated micro-reimbursement and priority support queueing immediately following an SLA breach. Track complaint-to-churn linkage before investing in dedicated proactive recovery programs.</p>
+                <p><strong>Primary Limitations:</strong> Sample may under-represent service-driven exits (delivery 4/32, app 3/32); service recovery is a hygienic operational necessity.</p>
+              </div>
+              <div class="evidence-card-footer">
+                <span>KPI: Complaint resolution time; repeat purchase post-complaint</span>
+                <span>Primary Evidence: Table 13e (Delivery 4, App 3)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Source Register -->
+          <div class="callout-box" style="margin-top: 2rem;">
+            <div class="callout-header">
+              <span>📚</span> Authoritative Sources & Regulatory Documents
+            </div>
+            <div class="callout-body">
+              <p>Primary data: Deterministic survey output tables in <code>outputs/tables/</code> (Tables 01–22) and statistical registers in <code>outputs/statistical_results/</code>. Secondary corporate disclosures: Zepto Limited Updated Draft Red Herring Prospectus (UDRHP-I, 690 pages, filed with SEBI, June 2026). Academic PPM framework: Bansal et al. (2005, <i>JAMS</i>), Moon (1995), Chang et al. (2023, <i>JTAER</i>), and Monoarfa et al. (2023, <i>Sustainability</i>).</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Application Script Pipeline (Classic Scripts, file:// compatible) -->
+  <script src="web/site_data.js"></script>
+  <script src="web/js/app_state.js"></script>
+  <script src="web/js/sidebar.js"></script>
+  <script src="web/js/chart_manager.js"></script>
+  <script src="web/js/components.js"></script>
+  <script src="web/js/viva_mode.js"></script>
+  <script src="web/flow.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+'''
+
+(ROOT / "index.html").write_text(html_content, encoding="utf-8")
+print(f"[SUCCESS] Upgraded index.html generated successfully ({len(html_content):,} bytes).")
