@@ -1,13 +1,30 @@
 /** Generated site data bundle — do not hand-edit */
 window.SITE_DATA = {
   "metadata": {
-    "title": "Zepto Customer Switching Behaviour Research Dashboard",
+    "title": "Customer Switching Behaviour in India's Quick-Commerce Industry — Zepto Case Study",
     "sample_size": 184,
     "current_users": 51,
     "former_users": 73,
     "never_users": 60,
-    "verification_status": "53/53 Verified",
-    "build_timestamp": "2026-10-07"
+    "current_pct": 27.7,
+    "former_pct": 39.7,
+    "never_pct": 32.6,
+    "versions": {
+      "V1": 16,
+      "V1.5": 6,
+      "V2": 162
+    },
+    "former_classes": {
+      "C": 32,
+      "A": 31,
+      "B": 10
+    },
+    "complete_case_n": 46,
+    "udrhp_items_count": 25,
+    "media_claims_count": 11,
+    "crm_recommendations_count": 5,
+    "discrepancy_notice": "Report superseded where it differs from the tables; see DISCREPANCIES.md",
+    "build_timestamp": "2026-10-16 08:58:25"
   },
   "table01_demographics": [
     {
@@ -155,6 +172,174 @@ window.SITE_DATA = {
       "All": 10
     }
   ],
+  "table02_usage": [
+    {
+      "category": "Daily",
+      "variable": "QC frequency",
+      "Current": 2,
+      "Former": 4,
+      "Never": 0,
+      "All": 6
+    },
+    {
+      "category": "Several times a week",
+      "variable": "QC frequency",
+      "Current": 18,
+      "Former": 22,
+      "Never": 6,
+      "All": 46
+    },
+    {
+      "category": "About once a week",
+      "variable": "QC frequency",
+      "Current": 12,
+      "Former": 23,
+      "Never": 17,
+      "All": 52
+    },
+    {
+      "category": "2–3 times a month",
+      "variable": "QC frequency",
+      "Current": 11,
+      "Former": 15,
+      "Never": 16,
+      "All": 42
+    },
+    {
+      "category": "Rarely",
+      "variable": "QC frequency",
+      "Current": 8,
+      "Former": 8,
+      "Never": 19,
+      "All": 35
+    },
+    {
+      "category": "I don't currently use quick-commerce platforms",
+      "variable": "QC frequency",
+      "Current": 0,
+      "Former": 1,
+      "Never": 2,
+      "All": 3
+    },
+    {
+      "category": "App convenience",
+      "variable": "Most important choice factor",
+      "Current": 2,
+      "Former": 5,
+      "Never": 1,
+      "All": 8
+    },
+    {
+      "category": "Availability in my location",
+      "variable": "Most important choice factor",
+      "Current": 4,
+      "Former": 10,
+      "Never": 9,
+      "All": 23
+    },
+    {
+      "category": "Customer service",
+      "variable": "Most important choice factor",
+      "Current": 2,
+      "Former": 3,
+      "Never": 0,
+      "All": 5
+    },
+    {
+      "category": "Delivery experience",
+      "variable": "Most important choice factor",
+      "Current": 7,
+      "Former": 6,
+      "Never": 6,
+      "All": 19
+    },
+    {
+      "category": "Discounts / promotions",
+      "variable": "Most important choice factor",
+      "Current": 10,
+      "Former": 12,
+      "Never": 11,
+      "All": 33
+    },
+    {
+      "category": "Other",
+      "variable": "Most important choice factor",
+      "Current": 0,
+      "Former": 1,
+      "Never": 3,
+      "All": 4
+    },
+    {
+      "category": "Price",
+      "variable": "Most important choice factor",
+      "Current": 6,
+      "Former": 6,
+      "Never": 7,
+      "All": 19
+    },
+    {
+      "category": "Product availability",
+      "variable": "Most important choice factor",
+      "Current": 18,
+      "Former": 24,
+      "Never": 17,
+      "All": 59
+    },
+    {
+      "category": "Product variety",
+      "variable": "Most important choice factor",
+      "Current": 2,
+      "Former": 5,
+      "Never": 3,
+      "All": 10
+    },
+    {
+      "category": "Trust / reliability",
+      "variable": "Most important choice factor",
+      "Current": 0,
+      "Former": 1,
+      "Never": 3,
+      "All": 4
+    }
+  ],
+  "table02b_platforms": [
+    {
+      "category": "bigbasket_now",
+      "n": 88,
+      "pct_of_184_with_Q1": 48.3516483516,
+      "base_n": 182
+    },
+    {
+      "category": "blinkit",
+      "n": 149,
+      "pct_of_184_with_Q1": 81.8681318681,
+      "base_n": 182
+    },
+    {
+      "category": "none",
+      "n": 1,
+      "pct_of_184_with_Q1": 0.5494505495,
+      "base_n": 182
+    },
+    {
+      "category": "other",
+      "n": 16,
+      "pct_of_184_with_Q1": 8.7912087912,
+      "base_n": 182
+    },
+    {
+      "category": "swiggy_instamart",
+      "n": 119,
+      "pct_of_184_with_Q1": 65.3846153846,
+      "base_n": 182
+    },
+    {
+      "category": "zepto",
+      "n": 91,
+      "pct_of_184_with_Q1": 50.0,
+      "base_n": 182
+    }
+  ],
   "table03_user_groups": [
     {
       "category": "Current",
@@ -207,42 +392,1069 @@ window.SITE_DATA = {
       "base_n": 184
     }
   ],
-  "table02b_platforms": [
+  "table03c_version_by_group": [
     {
-      "category": "bigbasket_now",
-      "n": 88,
-      "pct_of_184_with_Q1": 48.3516483516,
-      "base_n": 182
+      "questionnaire_version": "V1",
+      "Current": 5,
+      "Former": 5,
+      "Never": 6
     },
     {
-      "category": "blinkit",
-      "n": 149,
-      "pct_of_184_with_Q1": 81.8681318681,
-      "base_n": 182
+      "questionnaire_version": "V1.5",
+      "Current": 2,
+      "Former": 3,
+      "Never": 1
     },
     {
-      "category": "none",
-      "n": 1,
-      "pct_of_184_with_Q1": 0.5494505495,
-      "base_n": 182
+      "questionnaire_version": "V2",
+      "Current": 44,
+      "Former": 65,
+      "Never": 53
+    }
+  ],
+  "table04_cleaning_summary": [
+    {
+      "metric": "rows",
+      "value": 184
     },
     {
-      "category": "other",
-      "n": 16,
-      "pct_of_184_with_Q1": 8.7912087912,
-      "base_n": 182
+      "metric": "columns_raw",
+      "value": 37
     },
     {
-      "category": "swiggy_instamart",
-      "n": 119,
-      "pct_of_184_with_Q1": 65.3846153846,
-      "base_n": 182
+      "metric": "current",
+      "value": 51
     },
     {
-      "category": "zepto",
-      "n": 91,
-      "pct_of_184_with_Q1": 50.0,
-      "base_n": 182
+      "metric": "former",
+      "value": 73
+    },
+    {
+      "metric": "never",
+      "value": 60
+    },
+    {
+      "metric": "V1",
+      "value": 16
+    },
+    {
+      "metric": "V1.5",
+      "value": 6
+    },
+    {
+      "metric": "V2",
+      "value": 162
+    },
+    {
+      "metric": "routing_leak_unique_respondents",
+      "value": 15
+    },
+    {
+      "metric": "routing_leak_block_instances",
+      "value": 22
+    },
+    {
+      "metric": "routing_leak_former_block_respondents",
+      "value": 7
+    },
+    {
+      "metric": "routing_leak_never_block_respondents",
+      "value": 15
+    },
+    {
+      "metric": "straight_liners",
+      "value": 12
+    },
+    {
+      "metric": "q1_inconsistent",
+      "value": 40
+    },
+    {
+      "metric": "exclusions",
+      "value": 0
+    }
+  ],
+  "table04_cleaning_log": [
+    {
+      "step": "C01",
+      "rule": "Header standardisation",
+      "n_rows": 0,
+      "response_ids": null,
+      "action": "Renamed 37 columns to short names; whitespace/leading '. ' removed",
+      "rationale": "10 headers carried stray spaces; original text preserved in codebook"
+    },
+    {
+      "step": "C02",
+      "rule": "Questionnaire version",
+      "n_rows": 22,
+      "response_ids": "1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22",
+      "action": "Added questionnaire_version (V1: 1-16; V1.5: 17-22; V2: 23-184)",
+      "rationale": "Version boundaries from timestamps (21 Aug vs 11 Sep) and observed item availability"
+    },
+    {
+      "step": "C03",
+      "rule": "Duplicate check (all answer columns)",
+      "n_rows": 0,
+      "response_ids": null,
+      "action": "None found; no rows removed",
+      "rationale": "0 duplicate answer patterns; timestamps unique"
+    },
+    {
+      "step": "C04",
+      "rule": "Likert range check (1-5 integers)",
+      "n_rows": 0,
+      "response_ids": null,
+      "action": "Invalid columns: none",
+      "rationale": "No impossible values"
+    },
+    {
+      "step": "C05",
+      "rule": "Structural missing: VAR2 & INERT1 not asked in V1",
+      "n_rows": 5,
+      "response_ids": "3;9;11;14;15",
+      "action": "Left as NaN; flagged",
+      "rationale": "Items added after V1; not zero, not respondent error"
+    },
+    {
+      "step": "C06",
+      "rule": "Structural missing: fu_alt_variants & fu_return not asked in V1",
+      "n_rows": 5,
+      "response_ids": "2;5;7;10;13",
+      "action": "Left as NaN; flagged",
+      "rationale": "Items added after V1"
+    },
+    {
+      "step": "C07",
+      "rule": "Structural missing: location_type & monthly_spend not asked in V1",
+      "n_rows": 16,
+      "response_ids": "1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16",
+      "action": "Left as NaN; flagged",
+      "rationale": "Items added after V1 (all 16 V1 respondents)"
+    },
+    {
+      "step": "C08",
+      "rule": "Routing leak: current users answered former-user block (Q21-26)",
+      "n_rows": 7,
+      "response_ids": "3;9;11;14;15;21;22",
+      "action": "Cells kept in cleaned data with flag; removed from primary analysis datasets; reported as supplementary (n=7)",
+      "rationale": "Out-of-branch answers cannot be pooled with former users, but may describe partial switching by current users"
+    },
+    {
+      "step": "C09",
+      "rule": "Routing leak: current/former users answered never-user block (Q27-32)",
+      "n_rows": 15,
+      "response_ids": "2;3;5;7;9;10;11;13;14;15;18;19;20;21;22",
+      "action": "Cells kept with flag; excluded from never-user analysis and from models (15 respondents: 7 current + 8 former)",
+      "rationale": "Out-of-branch; never-user items are about a platform other than Zepto"
+    },
+    {
+      "step": "C09b",
+      "rule": "Routing leak reconciliation: UNIQUE respondents affected (leak_any)",
+      "n_rows": 15,
+      "response_ids": "2;3;5;7;9;10;11;13;14;15;18;19;20;21;22",
+      "action": "15 unique respondents (all among responses 2-22). The 7 current users who answered the former-user block ALSO answered the never-user block, so block-level instances = 7 + 15 = 22, but unique respondents = 15",
+      "rationale": "Earlier '22 routing leaks' counted block-level incidents (double-counting the 7); 22 also coincides with the size of V1+V1.5 by chance"
+    },
+    {
+      "step": "C10",
+      "rule": "Q1 inconsistency (Zepto not listed by current/former; listed by never-users)",
+      "n_rows": 40,
+      "response_ids": "30;31;34;35;37;38;43;48;57;65;71;72;74;78;80;81;84;87;88;90;92;98;99;106;114;115;116;123;128;129;136;138;139;140;156;165;168;172;174;176",
+      "action": "Flagged; retained; sensitivity analysis",
+      "rationale": "Q1 is not used in inferential models; may reflect wording ('used' vs 'currently use')"
+    },
+    {
+      "step": "C11",
+      "rule": "Contradictory multi-select ('Zepto;None')",
+      "n_rows": 1,
+      "response_ids": "147",
+      "action": "Flagged; retained",
+      "rationale": "Single contradictory tick; Q1 descriptive only"
+    },
+    {
+      "step": "C12",
+      "rule": "Never-user says no QC use (Q2) yet names a platform used most (Q28)",
+      "n_rows": 1,
+      "response_ids": "70",
+      "action": "Flagged; retained",
+      "rationale": "Ambiguous rather than impossible ('currently' vs 'most often')"
+    },
+    {
+      "step": "C13",
+      "rule": "Straight-lining across 13 current-user Likert items",
+      "n_rows": 12,
+      "response_ids": "11;33;36;74;115;122;128;140;146;153;154;157",
+      "action": "Flagged; retained; sensitivity analysis with/without",
+      "rationale": "Item set mixes satisfaction (positive), barrier and switching-propensity wording, so a constant pattern is ambiguous (neutrality vs acquiescence)"
+    },
+    {
+      "step": "C14",
+      "rule": "Multi-select splitting",
+      "n_rows": 0,
+      "response_ids": null,
+      "action": "Indicator columns created for platforms_used, fu_reasons, nu_what_would",
+      "rationale": "Enables frequency tables; source columns retained"
+    },
+    {
+      "step": "C15",
+      "rule": "Ordinal/binary encodings",
+      "n_rows": 0,
+      "response_ids": null,
+      "action": "fu_return_num (1-5), age_ord, spend_ord, freq_ord, shifted_any_num, is_student, metro",
+      "rationale": "Missing stays NaN"
+    },
+    {
+      "step": "C16",
+      "rule": "Former-user classification: coverage-driven vs voluntary",
+      "n_rows": 73,
+      "response_ids": "73 rows (see cleaned data flag)",
+      "action": "A=area is single most important reason; B=area mentioned in Q21 but other main reason; C=no area mention and other main reason",
+      "rationale": "Separates service-coverage constraint from voluntary platform choice. 'Availability in my area' may be read as product availability locally; ambiguity noted"
+    },
+    {
+      "step": "C17",
+      "rule": "Exclusions",
+      "n_rows": 0,
+      "response_ids": null,
+      "action": "NONE of 184 responses excluded",
+      "rationale": "No duplicates, impossible values or empty responses; issues flagged and handled by sensitivity analysis"
+    }
+  ],
+  "table05_codebook_summary": [
+    {
+      "raw_column_position": 1,
+      "original_column": "Timestamp",
+      "clean_variable": "timestamp",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 184,
+      "n_unique": 184,
+      "coding": "text; see derived columns",
+      "construct": "Metadata",
+      "ppm_dimension": "-",
+      "role": "ID",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Timestamp; used for version assignment",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 2,
+      "original_column": "Which quick-commerce platforms have you used?",
+      "clean_variable": "platforms_used",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 182,
+      "n_unique": 21,
+      "coding": "text; see derived columns",
+      "construct": "Usage",
+      "ppm_dimension": "-",
+      "role": "Profile",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Multi-select; split into used_* indicators; descriptive only",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 3,
+      "original_column": "How frequently do you use quick-commerce platforms?",
+      "clean_variable": "qc_frequency",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 184,
+      "n_unique": 6,
+      "coding": "text; see derived columns",
+      "construct": "Usage",
+      "ppm_dimension": "-",
+      "role": "Profile/control",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Ordinal (6 levels) -> freq_ord",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 4,
+      "original_column": "What factor most influences your choice of a quick-commerce platform?",
+      "clean_variable": "choice_factor",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 184,
+      "n_unique": 10,
+      "coding": "text; see derived columns",
+      "construct": "Choice drivers",
+      "ppm_dimension": "-",
+      "role": "Descriptive",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Nominal, all 184",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 5,
+      "original_column": "Have you ever used Zepto?",
+      "clean_variable": "ever_used_zepto",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 184,
+      "n_unique": 3,
+      "coding": "text; see derived columns",
+      "construct": "Group",
+      "ppm_dimension": "-",
+      "role": "Group definition",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Current/Former/Never",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 6,
+      "original_column": "Overall, I am satisfied with my experience using Zepto.",
+      "clean_variable": "SAT1",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Satisfaction",
+      "ppm_dimension": "Push",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 7,
+      "original_column": "My experience using Zepto generally meets my expectations.",
+      "clean_variable": "SAT2",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 4,
+      "coding": "as recorded (1-5)",
+      "construct": "Satisfaction",
+      "ppm_dimension": "Push",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 8,
+      "original_column": "Some aspects of my Zepto experience make me consider using another quick-commerce platform.",
+      "clean_variable": "PUSH_consider",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Push (single item)",
+      "ppm_dimension": "Push",
+      "role": "Descriptive/sensitivity",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Overlaps conceptually with intention; not in models",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 9,
+      "original_column": "Other quick-commerce platforms can better meet some of my needs than Zepto.",
+      "clean_variable": "ALT1",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 4,
+      "coding": "as recorded (1-5)",
+      "construct": "Alternative attractiveness",
+      "ppm_dimension": "Pull",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 10,
+      "original_column": "I find some competing quick-commerce platforms more attractive than Zepto.",
+      "clean_variable": "ALT2",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Alternative attractiveness",
+      "ppm_dimension": "Pull",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 11,
+      "original_column": "Competing quick-commerce platforms offer product choices that better meet my needs.",
+      "clean_variable": "VAR1",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Competitor variety",
+      "ppm_dimension": "Pull",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 12,
+      "original_column": "Competing platforms provide a wider range of brands or product variants that are relevant to me.",
+      "clean_variable": "VAR2",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 46,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Competitor variety",
+      "ppm_dimension": "Pull",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Added after V1 (structural missing n=5)",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 13,
+      "original_column": "Deals and promotional offers on competing quick-commerce platforms are more attractive to me than those on Zepto.",
+      "clean_variable": "PROMO1",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Promotional attractiveness",
+      "ppm_dimension": "Pull",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Single item",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 14,
+      "original_column": "Switching from Zepto to another quick-commerce platform would require additional time and effort.",
+      "clean_variable": "SC1",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Switching effort",
+      "ppm_dimension": "Mooring",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 15,
+      "original_column": "My familiarity with Zepto makes me less likely to switch to another platform.",
+      "clean_variable": "FAM1",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Familiarity",
+      "ppm_dimension": "Mooring",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Single item",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 16,
+      "original_column": "The effort involved in changing to another quick-commerce platform makes me less likely to switch.",
+      "clean_variable": "SC2",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Switching effort",
+      "ppm_dimension": "Mooring",
+      "role": "Predictor",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 17,
+      "original_column": "I am considering switching from Zepto to another quick-commerce platform.",
+      "clean_variable": "INT1",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Switching intention",
+      "ppm_dimension": "Outcome",
+      "role": "Outcome",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 18,
+      "original_column": "I am likely to choose another quick-commerce platform instead of Zepto in the future.",
+      "clean_variable": "INT2",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Switching intention",
+      "ppm_dimension": "Outcome",
+      "role": "Outcome",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 19,
+      "original_column": "I intend to reduce my use of Zepto and use competing platforms more often.",
+      "clean_variable": "INT3",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 51,
+      "n_unique": 4,
+      "coding": "as recorded (1-5)",
+      "construct": "Switching intention",
+      "ppm_dimension": "Outcome",
+      "role": "Outcome",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert 1-5",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 20,
+      "original_column": "Have you shifted any of your regular quick-commerce purchases from Zepto to another platform?",
+      "clean_variable": "shifted_any",
+      "variable_type": "binary",
+      "response_scale": null,
+      "n_non_missing": 51,
+      "n_unique": 2,
+      "coding": "text; see derived columns",
+      "construct": "Partial switching behaviour",
+      "ppm_dimension": "Outcome",
+      "role": "Outcome (behavioural)",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Binary; current users only",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 21,
+      "original_column": "I would continue using Zepto even when other quick-commerce platforms are available.",
+      "clean_variable": "INERT1",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 46,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Inertia",
+      "ppm_dimension": "Mooring",
+      "role": "Predictor (extension)",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Added after V1 (n=46)",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 22,
+      "original_column": "Why did you stop using Zepto regularly?",
+      "clean_variable": "fu_reasons",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 80,
+      "n_unique": 29,
+      "coding": "text; see derived columns",
+      "construct": "Reasons for stopping",
+      "ppm_dimension": "-",
+      "role": "Descriptive",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Multi-select; former users; split to fu_r_*",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 23,
+      "original_column": "Which platform did you primarily shift to after using Zepto?",
+      "clean_variable": "fu_destination",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 80,
+      "n_unique": 5,
+      "coding": "text; see derived columns",
+      "construct": "Destination platform",
+      "ppm_dimension": "-",
+      "role": "Descriptive",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Former users",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 24,
+      "original_column": "What was the single most important reason for your shift from Zepto?",
+      "clean_variable": "fu_main_reason",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 80,
+      "n_unique": 11,
+      "coding": "text; see derived columns",
+      "construct": "Main reason",
+      "ppm_dimension": "-",
+      "role": "Descriptive / classification",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Former users; basis of coverage vs voluntary class",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 25,
+      "original_column": "After moving away from Zepto, did you increase your use of another quick-commerce platform?",
+      "clean_variable": "fu_increased_other",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 80,
+      "n_unique": 3,
+      "coding": "text; see derived columns",
+      "construct": "Increased use of other platform",
+      "ppm_dimension": "-",
+      "role": "Descriptive",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Former users",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 26,
+      "original_column": "Did the alternative platform offer products or variants that you could not easily find on Zepto?",
+      "clean_variable": "fu_alt_variants",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 70,
+      "n_unique": 3,
+      "coding": "text; see derived columns",
+      "construct": "Alternative offered products not found on Zepto",
+      "ppm_dimension": "Pull (behavioural)",
+      "role": "Descriptive",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Added after V1 (former n=68)",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 27,
+      "original_column": "Would you consider returning to Zepto in the future?",
+      "clean_variable": "fu_return",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 70,
+      "n_unique": 5,
+      "coding": "text; see derived columns",
+      "construct": "Willingness to return",
+      "ppm_dimension": "Retention",
+      "role": "Outcome (former)",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Ordinal -> fu_return_num; added after V1",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 28,
+      "original_column": "What is the main reason you have never used Zepto?",
+      "clean_variable": "nu_reason",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 75,
+      "n_unique": 7,
+      "coding": "text; see derived columns",
+      "construct": "Reason for never using",
+      "ppm_dimension": "-",
+      "role": "Supplementary",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Never-users",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 29,
+      "original_column": "Which quick-commerce platform do you use most often?",
+      "clean_variable": "nu_platform",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 75,
+      "n_unique": 5,
+      "coding": "text; see derived columns",
+      "construct": "Platform used most",
+      "ppm_dimension": "-",
+      "role": "Supplementary",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Never-users",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 30,
+      "original_column": "What is the main reason you prefer your current platform over Zepto?",
+      "clean_variable": "nu_pref_reason",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 59,
+      "n_unique": 10,
+      "coding": "text; see derived columns",
+      "construct": "Why prefer current platform",
+      "ppm_dimension": "-",
+      "role": "Supplementary",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Never-users",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 31,
+      "original_column": "The quick-commerce platform I currently use better meets my needs than Zepto would.",
+      "clean_variable": "nu_current_better",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 75,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Current platform better",
+      "ppm_dimension": "-",
+      "role": "Supplementary",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert; never-users",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 32,
+      "original_column": "I would consider trying Zepto if it offered benefits that better matched my needs.",
+      "clean_variable": "nu_consider_trying",
+      "variable_type": "Likert (ordinal 1-5)",
+      "response_scale": "1=Strongly disagree ... 5=Strongly agree",
+      "n_non_missing": 75,
+      "n_unique": 5,
+      "coding": "as recorded (1-5)",
+      "construct": "Would consider trying Zepto",
+      "ppm_dimension": "-",
+      "role": "Supplementary",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Likert; never-users",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 33,
+      "original_column": "What could make you consider trying Zepto?",
+      "clean_variable": "nu_what_would",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 59,
+      "n_unique": 29,
+      "coding": "text; see derived columns",
+      "construct": "What would make you try Zepto",
+      "ppm_dimension": "-",
+      "role": "Supplementary",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Multi-select",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 34,
+      "original_column": "What is your age group?",
+      "clean_variable": "age_group",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 184,
+      "n_unique": 4,
+      "coding": "text; see derived columns",
+      "construct": "Age",
+      "ppm_dimension": "-",
+      "role": "Profile/control",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Ordinal",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 35,
+      "original_column": "What is your occupation?",
+      "clean_variable": "occupation",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 184,
+      "n_unique": 4,
+      "coding": "text; see derived columns",
+      "construct": "Occupation",
+      "ppm_dimension": "-",
+      "role": "Profile/control",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Nominal",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 36,
+      "original_column": "Location type",
+      "clean_variable": "location_type",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 168,
+      "n_unique": 5,
+      "coding": "text; see derived columns",
+      "construct": "Location",
+      "ppm_dimension": "-",
+      "role": "Profile/control",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Added after V1 (n=168)",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    },
+    {
+      "raw_column_position": 37,
+      "original_column": "Approximate monthly spending on quick-commerce",
+      "clean_variable": "monthly_spend",
+      "variable_type": "categorical/text",
+      "response_scale": null,
+      "n_non_missing": 168,
+      "n_unique": 5,
+      "coding": "text; see derived columns",
+      "construct": "Monthly QC spend",
+      "ppm_dimension": "-",
+      "role": "Profile/control",
+      "missing_treatment": "Structural NaN by branch or questionnaire version; never coded as zero",
+      "analysis_usage": "Ordinal; added after V1 (n=168)",
+      "inclusion_reason": "Used in the analytical sample named in role/notes"
+    }
+  ],
+  "analysis_n_register": [
+    {
+      "analysis": "Respondent profile / group distribution",
+      "sample": "All respondents",
+      "n": "184",
+      "note": null
+    },
+    {
+      "analysis": "Location and monthly-spend descriptives",
+      "sample": "All respondents who were asked (V1.5 and V2)",
+      "n": "168",
+      "note": "16 structurally missing (V1)"
+    },
+    {
+      "analysis": "Group x profile tests",
+      "sample": "All (location/spend: 168)",
+      "n": "184 / 168",
+      "note": null
+    },
+    {
+      "analysis": "Current-user descriptives, H1-H6",
+      "sample": "Current users",
+      "n": "51",
+      "note": "VAR uses VAR1 only for 5 V1 respondents"
+    },
+    {
+      "analysis": "H7 inertia",
+      "sample": "Current users with INERT1",
+      "n": "46",
+      "note": "5 structurally missing (V1)"
+    },
+    {
+      "analysis": "HTMT discriminant-validity analysis",
+      "sample": "Current users with all items incl. VAR2",
+      "n": "46",
+      "note": "complete cases"
+    },
+    {
+      "analysis": "M1 regression (SAT, PULL, SWEFFORT, FAM)",
+      "sample": "Current users",
+      "n": "51",
+      "note": "12.8 cases/predictor"
+    },
+    {
+      "analysis": "M2 regression (6 predictors)",
+      "sample": "Current users",
+      "n": "51",
+      "note": "8.5 cases/predictor (exploratory)"
+    },
+    {
+      "analysis": "Logistic partial shift (3 predictors)",
+      "sample": "Current users",
+      "n": "51",
+      "note": "29 events / 22 non-events"
+    },
+    {
+      "analysis": "Sensitivity: excl. straight-liners",
+      "sample": "Current users",
+      "n": "39",
+      "note": null
+    },
+    {
+      "analysis": "Sensitivity: V2 only",
+      "sample": "Current users",
+      "n": "44",
+      "note": null
+    },
+    {
+      "analysis": "Sensitivity: excl. Q1-inconsistent",
+      "sample": "Current users",
+      "n": "39",
+      "note": null
+    },
+    {
+      "analysis": "Sensitivity: straight-liners and V1/V1.5 excluded",
+      "sample": "Current users",
+      "n": "33",
+      "note": null
+    },
+    {
+      "analysis": "Former reasons/destination",
+      "sample": "Former users",
+      "n": "73",
+      "note": null
+    },
+    {
+      "analysis": "Former alt variants / return intention",
+      "sample": "Former users",
+      "n": "68",
+      "note": "5 structurally missing (V1)"
+    },
+    {
+      "analysis": "H10 (class A vs C)",
+      "sample": "Former users, class A (28) and C (30)",
+      "n": "58",
+      "note": "Return item missing for 5 V1 former users; class B (n=10) descriptive only"
+    },
+    {
+      "analysis": "Never-user reasons",
+      "sample": "Never-users",
+      "n": "60",
+      "note": null
+    },
+    {
+      "analysis": "Never-user preferred-platform reason / help items",
+      "sample": "Never-users",
+      "n": "54",
+      "note": "6 missing (branch/version)"
+    },
+    {
+      "analysis": "Supplementary: current users' out-of-branch reasons",
+      "sample": "Current users (leaked)",
+      "n": "7",
+      "note": "descriptive only"
+    }
+  ],
+  "group_by_profile_tests": [
+    {
+      "n": 184,
+      "chi2": 11.1966431199,
+      "dof": 6,
+      "p_asymptotic": 0.0824857763,
+      "p_perm": 0.0469906019,
+      "cramers_v": 0.1744295292,
+      "min_expected": 0.277173913,
+      "pct_cells_lt5": 50.0,
+      "variable": "Age group",
+      "p_perm_holm": 0.0939812038
+    },
+    {
+      "n": 184,
+      "chi2": 20.613681042,
+      "dof": 6,
+      "p_asymptotic": 0.0021519511,
+      "p_perm": 0.00039992,
+      "cramers_v": 0.236675807,
+      "min_expected": 0.277173913,
+      "pct_cells_lt5": 50.0,
+      "variable": "Occupation",
+      "p_perm_holm": 0.0019996001
+    },
+    {
+      "n": 168,
+      "chi2": 8.4015960143,
+      "dof": 8,
+      "p_asymptotic": 0.3952556232,
+      "p_perm": 0.4039192162,
+      "cramers_v": 0.1581289032,
+      "min_expected": 2.4642857143,
+      "pct_cells_lt5": 40.0,
+      "variable": "Location type",
+      "p_perm_holm": 0.4039192162
+    },
+    {
+      "n": 168,
+      "chi2": 19.9648469327,
+      "dof": 8,
+      "p_asymptotic": 0.0104698676,
+      "p_perm": 0.0087982404,
+      "cramers_v": 0.2437605122,
+      "min_expected": 2.7380952381,
+      "pct_cells_lt5": 26.6666666667,
+      "variable": "Monthly spend",
+      "p_perm_holm": 0.0351929614
+    },
+    {
+      "n": 184,
+      "chi2": 22.4900424546,
+      "dof": 10,
+      "p_asymptotic": 0.0127937651,
+      "p_perm": 0.0101979604,
+      "cramers_v": 0.2472129564,
+      "min_expected": 0.8315217391,
+      "pct_cells_lt5": 33.3333333333,
+      "variable": "QC frequency",
+      "p_perm_holm": 0.0351929614
+    }
+  ],
+  "table06_items": [
+    {
+      "construct": "SAT",
+      "label": "Satisfaction / expectation fulfilment",
+      "ppm": "Push",
+      "items": "SAT1, SAT2",
+      "n_items": 2
+    },
+    {
+      "construct": "ALT",
+      "label": "Alternative attractiveness",
+      "ppm": "Pull",
+      "items": "ALT1, ALT2",
+      "n_items": 2
+    },
+    {
+      "construct": "VAR",
+      "label": "Competitor product choice/variety",
+      "ppm": "Pull",
+      "items": "VAR1, VAR2",
+      "n_items": 2
+    },
+    {
+      "construct": "PROMO",
+      "label": "Competitor promotional attractiveness",
+      "ppm": "Pull",
+      "items": "PROMO1",
+      "n_items": 1
+    },
+    {
+      "construct": "SWEFFORT",
+      "label": "Switching effort (cost)",
+      "ppm": "Mooring",
+      "items": "SC1, SC2",
+      "n_items": 2
+    },
+    {
+      "construct": "FAM",
+      "label": "Familiarity",
+      "ppm": "Mooring",
+      "items": "FAM1",
+      "n_items": 1
+    },
+    {
+      "construct": "INERT",
+      "label": "Inertia / continued-use tendency",
+      "ppm": "Mooring",
+      "items": "INERT1",
+      "n_items": 1
+    },
+    {
+      "construct": "PULL",
+      "label": "Pull composite (5 items)",
+      "ppm": "Pull",
+      "items": "ALT1, ALT2, VAR1, VAR2, PROMO1",
+      "n_items": 5
+    },
+    {
+      "construct": "INT",
+      "label": "Switching intention",
+      "ppm": "Outcome",
+      "items": "INT1, INT2, INT3",
+      "n_items": 3
     }
   ],
   "table08_reliability": [
@@ -535,71 +1747,6 @@ window.SITE_DATA = {
       "alpha_if_deleted_INERT1": null
     }
   ],
-  "table06_items": [
-    {
-      "construct": "SAT",
-      "label": "Satisfaction / expectation fulfilment",
-      "ppm": "Push",
-      "items": "SAT1, SAT2",
-      "n_items": 2
-    },
-    {
-      "construct": "ALT",
-      "label": "Alternative attractiveness",
-      "ppm": "Pull",
-      "items": "ALT1, ALT2",
-      "n_items": 2
-    },
-    {
-      "construct": "VAR",
-      "label": "Competitor product choice/variety",
-      "ppm": "Pull",
-      "items": "VAR1, VAR2",
-      "n_items": 2
-    },
-    {
-      "construct": "PROMO",
-      "label": "Competitor promotional attractiveness",
-      "ppm": "Pull",
-      "items": "PROMO1",
-      "n_items": 1
-    },
-    {
-      "construct": "SWEFFORT",
-      "label": "Switching effort (cost)",
-      "ppm": "Mooring",
-      "items": "SC1, SC2",
-      "n_items": 2
-    },
-    {
-      "construct": "FAM",
-      "label": "Familiarity",
-      "ppm": "Mooring",
-      "items": "FAM1",
-      "n_items": 1
-    },
-    {
-      "construct": "INERT",
-      "label": "Inertia / continued-use tendency",
-      "ppm": "Mooring",
-      "items": "INERT1",
-      "n_items": 1
-    },
-    {
-      "construct": "PULL",
-      "label": "Pull composite (5 items)",
-      "ppm": "Pull",
-      "items": "ALT1, ALT2, VAR1, VAR2, PROMO1",
-      "n_items": 5
-    },
-    {
-      "construct": "INT",
-      "label": "Switching intention",
-      "ppm": "Outcome",
-      "items": "INT1, INT2, INT3",
-      "n_items": 3
-    }
-  ],
   "table22_htmt": [
     {
       "pair": "SAT - ALT",
@@ -818,203 +1965,243 @@ window.SITE_DATA = {
   "table12a_hypotheses": [
     {
       "H": "H1",
-      "Construct": "SAT",
-      "PPM": "Push",
-      "Relationship": "Satisfaction/expectation fulfilment is negatively associated with switching intention.",
-      "Literature_rationale": "L16 (B): push factors (service, product issues, technical issues, price perception) significant; L06 (B): push positive (retailers); L01 (B) generic",
-      "Literature_mixed_or_contrary": "L05 (A): satisfaction -> intention 0.071, not significant; L10 (A): dissatisfaction -> intention 0.127, p=.069, not significant",
-      "Literature_evidence_class": "Mixed evidence",
-      "Survey_items": "SAT1, SAT2",
-      "Expected_direction": "-",
-      "Planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
+      "construct": "SAT",
+      "ppm": "Push",
+      "relationship": "Satisfaction/expectation fulfilment is negatively associated with switching intention.",
+      "literature_rationale": "L16 (B): push factors (service, product issues, technical issues, price perception) significant; L06 (B): push positive (retailers); L01 (B) generic",
+      "literature_mixed_or_contrary": "L05 (A): satisfaction -> intention 0.071, not significant; L10 (A): dissatisfaction -> intention 0.127, p=.069, not significant",
+      "literature_evidence_class": "Mixed evidence",
+      "survey_items": "SAT1, SAT2",
+      "expected_direction": "-",
+      "planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
       "n": 51,
-      "Coefficient": "0.17",
-      "CI95": "[-0.12, 0.44]",
+      "coefficient_num": 0.17,
+      "ci_low": -0.12,
+      "ci_high": 0.44,
+      "coefficient_display": "+0.170",
+      "ci_display": "[-0.12, +0.44]",
       "p_unadjusted": 0.2341,
-      "p_Holm": "0.2492",
-      "Decision_rule_result": "Not supported / insufficient evidence",
-      "Evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
-      "Robustness_note": "Within-person-centered rho = -0.59 [-0.77, -0.32] (exploratory; ipsatization can bias)"
+      "p_holm": 0.2492,
+      "decision_rule_result": "Not supported / insufficient evidence",
+      "evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
+      "robustness_note": "Within-person-centered rho = -0.59 [-0.77, -0.32] (exploratory; ipsatization can bias)",
+      "is_numeric": true
     },
     {
       "H": "H2",
-      "Construct": "ALT",
-      "PPM": "Pull",
-      "Relationship": "Alternative attractiveness is positively associated with switching intention.",
-      "Literature_rationale": "L05 (A): 0.328; L10 (A): 0.314; L16 (B): alternative attraction significant",
-      "Literature_mixed_or_contrary": "none retrieved",
-      "Literature_evidence_class": "Direct empirical support",
-      "Survey_items": "ALT1, ALT2",
-      "Expected_direction": "+",
-      "Planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
+      "construct": "ALT",
+      "ppm": "Pull",
+      "relationship": "Alternative attractiveness is positively associated with switching intention.",
+      "literature_rationale": "L05 (A): 0.328; L10 (A): 0.314; L16 (B): alternative attraction significant",
+      "literature_mixed_or_contrary": "none retrieved",
+      "literature_evidence_class": "Direct empirical support",
+      "survey_items": "ALT1, ALT2",
+      "expected_direction": "+",
+      "planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
       "n": 51,
-      "Coefficient": "0.685",
-      "CI95": "[0.49, 0.83]",
+      "coefficient_num": 0.685,
+      "ci_low": 0.49,
+      "ci_high": 0.83,
+      "coefficient_display": "+0.685",
+      "ci_display": "[+0.49, +0.83]",
       "p_unadjusted": 0.0,
-      "p_Holm": "0.0",
-      "Decision_rule_result": "Supported",
-      "Evidence_label": "Supported (raw scores)",
-      "Robustness_note": "Within-person-centered rho = -0.03 [-0.34, +0.31] (exploratory; ipsatization can bias)"
+      "p_holm": 0.0,
+      "decision_rule_result": "Supported",
+      "evidence_label": "Supported (raw scores)",
+      "robustness_note": "Within-person-centered rho = -0.03 [-0.34, +0.31] (exploratory; ipsatization can bias)",
+      "is_numeric": true
     },
     {
       "H": "H3",
-      "Construct": "VAR",
-      "PPM": "Pull",
-      "Relationship": "Perceived competitor product choice/variety is positively associated with switching intention.",
-      "Literature_rationale": "L05 (A): attractiveness scale includes 'other platforms better meet my needs'; L16 (B): alternative attraction",
-      "Literature_mixed_or_contrary": "none",
-      "Literature_evidence_class": "Indirect/theoretical support",
-      "Survey_items": "VAR1, VAR2",
-      "Expected_direction": "+",
-      "Planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
+      "construct": "VAR",
+      "ppm": "Pull",
+      "relationship": "Perceived competitor product choice/variety is positively associated with switching intention.",
+      "literature_rationale": "L05 (A): attractiveness scale includes 'other platforms better meet my needs'; L16 (B): alternative attraction",
+      "literature_mixed_or_contrary": "none",
+      "literature_evidence_class": "Indirect/theoretical support",
+      "survey_items": "VAR1, VAR2",
+      "expected_direction": "+",
+      "planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
       "n": 51,
-      "Coefficient": "0.694",
-      "CI95": "[0.49, 0.85]",
+      "coefficient_num": 0.694,
+      "ci_low": 0.49,
+      "ci_high": 0.85,
+      "coefficient_display": "+0.694",
+      "ci_display": "[+0.49, +0.85]",
       "p_unadjusted": 0.0,
-      "p_Holm": "0.0",
-      "Decision_rule_result": "Supported",
-      "Evidence_label": "Supported (raw scores)",
-      "Robustness_note": "Within-person-centered rho = +0.31 [-0.00, +0.62] (exploratory; ipsatization can bias)"
+      "p_holm": 0.0,
+      "decision_rule_result": "Supported",
+      "evidence_label": "Supported (raw scores)",
+      "robustness_note": "Within-person-centered rho = +0.31 [-0.00, +0.62] (exploratory; ipsatization can bias)",
+      "is_numeric": true
     },
     {
       "H": "H4",
-      "Construct": "PROMO",
-      "PPM": "Pull",
-      "Relationship": "Perceived competitor promotional attractiveness is positively associated with switching intention.",
-      "Literature_rationale": "L05 (A): one attractiveness item concerns deals/promotions",
-      "Literature_mixed_or_contrary": "none",
-      "Literature_evidence_class": "Indirect/theoretical support",
-      "Survey_items": "PROMO1",
-      "Expected_direction": "+",
-      "Planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
+      "construct": "PROMO",
+      "ppm": "Pull",
+      "relationship": "Perceived competitor promotional attractiveness is positively associated with switching intention.",
+      "literature_rationale": "L05 (A): one attractiveness item concerns deals/promotions",
+      "literature_mixed_or_contrary": "none",
+      "literature_evidence_class": "Indirect/theoretical support",
+      "survey_items": "PROMO1",
+      "expected_direction": "+",
+      "planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
       "n": 51,
-      "Coefficient": "0.7",
-      "CI95": "[0.51, 0.84]",
+      "coefficient_num": 0.7,
+      "ci_low": 0.51,
+      "ci_high": 0.84,
+      "coefficient_display": "+0.700",
+      "ci_display": "[+0.51, +0.84]",
       "p_unadjusted": 0.0,
-      "p_Holm": "0.0",
-      "Decision_rule_result": "Supported",
-      "Evidence_label": "Supported (raw scores)",
-      "Robustness_note": "Within-person-centered rho = +0.23 [-0.10, +0.55] (exploratory; ipsatization can bias)"
+      "p_holm": 0.0,
+      "decision_rule_result": "Supported",
+      "evidence_label": "Supported (raw scores)",
+      "robustness_note": "Within-person-centered rho = +0.23 [-0.10, +0.55] (exploratory; ipsatization can bias)",
+      "is_numeric": true
     },
     {
       "H": "H5",
-      "Construct": "SWEFFORT",
-      "PPM": "Mooring",
-      "Relationship": "Perceived switching effort is negatively associated with switching intention.",
-      "Literature_rationale": "L04 (C): typology; L01 (B): mooring effects generic; L16 (B): switching cost moderates",
-      "Literature_mixed_or_contrary": "L10 (A): switching cost -> intention +0.294 (positive; items concern effort of changing to the alternative); L06 (B): switching cost not significant; L17 (B): lower switching costs strengthen the pull effect (moderation)",
-      "Literature_evidence_class": "Mixed evidence",
-      "Survey_items": "SC1, SC2",
-      "Expected_direction": "-",
-      "Planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
+      "construct": "SWEFFORT",
+      "ppm": "Mooring",
+      "relationship": "Perceived switching effort is negatively associated with switching intention.",
+      "literature_rationale": "L04 (C): typology; L01 (B): mooring effects generic; L16 (B): switching cost moderates",
+      "literature_mixed_or_contrary": "L10 (A): switching cost -> intention +0.294 (positive; items concern effort of changing to the alternative); L06 (B): switching cost not significant; L17 (B): lower switching costs strengthen the pull effect (moderation)",
+      "literature_evidence_class": "Mixed evidence",
+      "survey_items": "SC1, SC2",
+      "expected_direction": "-",
+      "planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
       "n": 51,
-      "Coefficient": "0.721",
-      "CI95": "[0.51, 0.87]",
+      "coefficient_num": 0.721,
+      "ci_low": 0.51,
+      "ci_high": 0.87,
+      "coefficient_display": "+0.721",
+      "ci_display": "[+0.51, +0.87]",
       "p_unadjusted": 0.0,
-      "p_Holm": "0.0",
-      "Decision_rule_result": "Not supported (significant, opposite direction)",
-      "Evidence_label": "Anomalous / inconclusive (significant, opposite to hypothesised direction)",
-      "Robustness_note": "Within-person-centered rho = +0.05 [-0.29, +0.40] (exploratory; ipsatization can bias)"
+      "p_holm": 0.0,
+      "decision_rule_result": "Not supported (significant, opposite direction)",
+      "evidence_label": "Anomalous / inconclusive (significant, opposite to hypothesised direction)",
+      "robustness_note": "Within-person-centered rho = +0.05 [-0.29, +0.40] (exploratory; ipsatization can bias)",
+      "is_numeric": true
     },
     {
       "H": "H6",
-      "Construct": "FAM",
-      "PPM": "Mooring",
-      "Relationship": "Familiarity with Zepto is negatively associated with switching intention.",
-      "Literature_rationale": "L11 (B): habit toward traditional stores -0.136 (abstract)",
-      "Literature_mixed_or_contrary": "none",
-      "Literature_evidence_class": "Insufficient evidence",
-      "Survey_items": "FAM1",
-      "Expected_direction": "-",
-      "Planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
+      "construct": "FAM",
+      "ppm": "Mooring",
+      "relationship": "Familiarity with Zepto is negatively associated with switching intention.",
+      "literature_rationale": "L11 (B): habit toward traditional stores -0.136 (abstract)",
+      "literature_mixed_or_contrary": "none",
+      "literature_evidence_class": "Insufficient evidence",
+      "survey_items": "FAM1",
+      "expected_direction": "-",
+      "planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
       "n": 51,
-      "Coefficient": "0.245",
-      "CI95": "[-0.09, 0.54]",
+      "coefficient_num": 0.245,
+      "ci_low": -0.09,
+      "ci_high": 0.54,
+      "coefficient_display": "+0.245",
+      "ci_display": "[-0.09, +0.54]",
       "p_unadjusted": 0.0831,
-      "p_Holm": "0.2492",
-      "Decision_rule_result": "Not supported / insufficient evidence",
-      "Evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
-      "Robustness_note": "Within-person-centered rho = -0.41 [-0.67, -0.08] (exploratory; ipsatization can bias)"
+      "p_holm": 0.2492,
+      "decision_rule_result": "Not supported / insufficient evidence",
+      "evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
+      "robustness_note": "Within-person-centered rho = -0.41 [-0.67, -0.08] (exploratory; ipsatization can bias)",
+      "is_numeric": true
     },
     {
       "H": "H7",
-      "Construct": "INERT",
-      "PPM": "Mooring",
-      "Relationship": "Inertia (continued-use tendency) is negatively associated with switching intention.",
-      "Literature_rationale": "L15 (B): inertia negatively affects switching intention (abstract); L08 (B): inertia moderates (abstract)",
-      "Literature_mixed_or_contrary": "none",
-      "Literature_evidence_class": "Direct empirical support (abstract-level only)",
-      "Survey_items": "INERT1",
-      "Expected_direction": "-",
-      "Planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
+      "construct": "INERT",
+      "ppm": "Mooring",
+      "relationship": "Inertia (continued-use tendency) is negatively associated with switching intention.",
+      "literature_rationale": "L15 (B): inertia negatively affects switching intention (abstract); L08 (B): inertia moderates (abstract)",
+      "literature_mixed_or_contrary": "none",
+      "literature_evidence_class": "Direct empirical support (abstract-level only)",
+      "survey_items": "INERT1",
+      "expected_direction": "-",
+      "planned_test": "Spearman rho (bootstrap CI, 5000 reps, fixed seed); Holm across H1-H7",
       "n": 46,
-      "Coefficient": "0.253",
-      "CI95": "[-0.09, 0.57]",
+      "coefficient_num": 0.253,
+      "ci_low": -0.09,
+      "ci_high": 0.57,
+      "coefficient_display": "+0.253",
+      "ci_display": "[-0.09, +0.57]",
       "p_unadjusted": 0.0897,
-      "p_Holm": "0.2492",
-      "Decision_rule_result": "Not supported / insufficient evidence",
-      "Evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
-      "Robustness_note": "n/a (single-item, n=46)"
+      "p_holm": 0.2492,
+      "decision_rule_result": "Not supported / insufficient evidence",
+      "evidence_label": "Inconclusive (not significant; CI includes zero and moderate effects)",
+      "robustness_note": "n/a (single-item, n=46)",
+      "is_numeric": true
     },
     {
       "H": "H8",
-      "Construct": "SAT, PULL, SWEFFORT, FAM jointly",
-      "PPM": "Push+Pull+Mooring",
-      "Relationship": "Push, Pull and Mooring composites jointly explain variance in switching intention (multiple regression, model F-test).",
-      "Literature_rationale": "L05 (A): about 42% variance with different constructs",
-      "Literature_mixed_or_contrary": "none",
-      "Literature_evidence_class": "Indirect/theoretical support",
-      "Survey_items": "SAT1-2, ALT1-2, VAR1-2, PROMO1, SC1-2, FAM1",
-      "Expected_direction": "joint",
-      "Planned_test": "OLS (HC3 SE, bootstrap CI); exploratory",
+      "construct": "SAT, PULL, SWEFFORT, FAM jointly",
+      "ppm": "Push+Pull+Mooring",
+      "relationship": "Push, Pull and Mooring composites jointly explain variance in switching intention (multiple regression, model F-test).",
+      "literature_rationale": "L05 (A): about 42% variance with different constructs",
+      "literature_mixed_or_contrary": "none",
+      "literature_evidence_class": "Indirect/theoretical support",
+      "survey_items": "SAT1-2, ALT1-2, VAR1-2, PROMO1, SC1-2, FAM1",
+      "expected_direction": "joint",
+      "planned_test": "OLS (HC3 SE, bootstrap CI); exploratory",
       "n": 51,
-      "Coefficient": "see regression table",
-      "CI95": null,
+      "coefficient_num": null,
+      "ci_low": null,
+      "ci_high": null,
+      "coefficient_display": "see regression table",
+      "ci_display": "n/a",
       "p_unadjusted": null,
-      "p_Holm": null,
-      "Decision_rule_result": "Model significant (F-test) but exploratory",
-      "Evidence_label": "Exploratory / associational only (item overlap)",
-      "Robustness_note": "R2 driven mainly by PULL (see overlap diagnostics)"
+      "p_holm": null,
+      "decision_rule_result": "Model significant (F-test) but exploratory",
+      "evidence_label": "Exploratory / associational only (item overlap)",
+      "robustness_note": "R2 driven mainly by PULL (see overlap diagnostics)",
+      "is_numeric": false
     },
     {
       "H": "H9",
-      "Construct": "Partial switching (Q19) vs intention",
-      "PPM": "Outcome link",
-      "Relationship": "Current users who report having shifted some purchases (Q19=Yes) have higher switching intention than those who have not.",
-      "Literature_rationale": "No directly verified study was identified in the search conducted",
-      "Literature_mixed_or_contrary": null,
-      "Literature_evidence_class": "No verified evidence",
-      "Survey_items": "INT1-3; shifted_any",
-      "Expected_direction": "Yes > No",
-      "Planned_test": "Mann-Whitney U",
+      "construct": "Partial switching (Q19) vs intention",
+      "ppm": "Outcome link",
+      "relationship": "Current users who report having shifted some purchases (Q19=Yes) have higher switching intention than those who have not.",
+      "literature_rationale": "No directly verified study was identified in the search conducted",
+      "literature_mixed_or_contrary": "",
+      "literature_evidence_class": "No verified evidence",
+      "survey_items": "INT1-3; shifted_any",
+      "expected_direction": "Yes > No",
+      "planned_test": "Mann-Whitney U",
       "n": 51,
-      "Coefficient": "rank-biserial 0.09; medians 3.67 vs 3.17",
-      "CI95": "not computed",
+      "coefficient_num": null,
+      "ci_low": null,
+      "ci_high": null,
+      "coefficient_display": "rank-biserial 0.09; medians 3.67 vs 3.17",
+      "ci_display": "not computed",
       "p_unadjusted": 0.6029,
-      "p_Holm": "n/a (separate test)",
-      "Decision_rule_result": "Not supported / insufficient evidence",
-      "Evidence_label": "Not supported / inconclusive",
-      "Robustness_note": null
+      "p_holm": null,
+      "decision_rule_result": "Not supported / insufficient evidence",
+      "evidence_label": "Not supported / inconclusive",
+      "robustness_note": "",
+      "is_numeric": false
     },
     {
       "H": "H10",
-      "Construct": "Return willingness: coverage-primary (A) vs voluntary-only (C)",
-      "PPM": "Retention (former users)",
-      "Relationship": "Former users whose most important reason was area/coverage have higher willingness to return than former users whose most important reason was voluntary (platform-choice).",
-      "Literature_rationale": "No directly verified study was identified in the search conducted",
-      "Literature_mixed_or_contrary": null,
-      "Literature_evidence_class": "No verified evidence",
-      "Survey_items": "fu_main_reason, Q21 area option, fu_return",
-      "Expected_direction": "A > C",
-      "Planned_test": "Mann-Whitney U",
+      "construct": "Return willingness: coverage-primary (A) vs voluntary-only (C)",
+      "ppm": "Retention (former users)",
+      "relationship": "Former users whose most important reason was area/coverage have higher willingness to return than former users whose most important reason was voluntary (platform-choice).",
+      "literature_rationale": "No directly verified study was identified in the search conducted",
+      "literature_mixed_or_contrary": "",
+      "literature_evidence_class": "No verified evidence",
+      "survey_items": "fu_main_reason, Q21 area option, fu_return",
+      "expected_direction": "A > C",
+      "planned_test": "Mann-Whitney U",
       "n": 58,
-      "Coefficient": "rank-biserial 0.18; medians 4.0 vs 3.5",
-      "CI95": "not computed",
+      "coefficient_num": null,
+      "ci_low": null,
+      "ci_high": null,
+      "coefficient_display": "rank-biserial 0.18; medians 4.0 vs 3.5",
+      "ci_display": "not computed",
       "p_unadjusted": 0.2141,
-      "p_Holm": "n/a (separate test)",
-      "Decision_rule_result": "Not supported / insufficient evidence",
-      "Evidence_label": "Not supported / inconclusive",
-      "Robustness_note": "Former users only; return item missing for 5 V1 respondents"
+      "p_holm": null,
+      "decision_rule_result": "Not supported / insufficient evidence",
+      "evidence_label": "Not supported / inconclusive",
+      "robustness_note": "Former users only; return item missing for 5 V1 respondents",
+      "is_numeric": false
     }
   ],
   "table10_descriptives": [
@@ -1259,6 +2446,24 @@ window.SITE_DATA = {
       "agree_rule": ">=4 (items) / >=3.5 (composites)"
     }
   ],
+  "table10b_partial_shift": [
+    {
+      "category": "Yes",
+      "n": 29,
+      "pct": 56.862745098,
+      "ci_low": 43.2653020059,
+      "ci_high": 69.4987639814,
+      "base_n": 51
+    },
+    {
+      "category": "No",
+      "n": 22,
+      "pct": 43.137254902,
+      "ci_low": 30.5012360186,
+      "ci_high": 56.7346979941,
+      "base_n": 51
+    }
+  ],
   "table11_spearman": [
     {
       "Unnamed: 0": "INT",
@@ -1367,6 +2572,116 @@ window.SITE_DATA = {
       "SWEFFORT": 0.4550430496,
       "FAM": 0.396117869,
       "INERT": 1.0
+    }
+  ],
+  "spearman_matrix_p": [
+    {
+      "Unnamed: 0": "INT",
+      "INT": 0.0,
+      "SAT": 0.2341127413,
+      "PUSH_consider": 0.0004382461,
+      "ALT": 2.89e-08,
+      "VAR": 1.67e-08,
+      "PROMO": 1.11e-08,
+      "SWEFFORT": 2.5e-09,
+      "FAM": 0.0830505158,
+      "INERT": 0.0896665441
+    },
+    {
+      "Unnamed: 0": "SAT",
+      "INT": 0.2341127413,
+      "SAT": 0.0,
+      "PUSH_consider": 0.0274954815,
+      "ALT": 0.0150101399,
+      "VAR": 0.0605742133,
+      "PROMO": 0.0323396508,
+      "SWEFFORT": 0.0581032451,
+      "FAM": 0.0017370023,
+      "INERT": 0.0002323395
+    },
+    {
+      "Unnamed: 0": "PUSH_consider",
+      "INT": 0.0004382461,
+      "SAT": 0.0274954815,
+      "PUSH_consider": 0.0,
+      "ALT": 5.45e-07,
+      "VAR": 0.0014630323,
+      "PROMO": 0.023213385,
+      "SWEFFORT": 0.0008666143,
+      "FAM": 0.0054863097,
+      "INERT": 0.0169955191
+    },
+    {
+      "Unnamed: 0": "ALT",
+      "INT": 2.89e-08,
+      "SAT": 0.0150101399,
+      "PUSH_consider": 5.45e-07,
+      "ALT": 0.0,
+      "VAR": 0.0,
+      "PROMO": 4.8635e-06,
+      "SWEFFORT": 8.0702e-06,
+      "FAM": 0.0761637531,
+      "INERT": 0.0227395739
+    },
+    {
+      "Unnamed: 0": "VAR",
+      "INT": 1.67e-08,
+      "SAT": 0.0605742133,
+      "PUSH_consider": 0.0014630323,
+      "ALT": 0.0,
+      "VAR": 0.0,
+      "PROMO": 7.38e-08,
+      "SWEFFORT": 2.0056e-06,
+      "FAM": 0.0569400095,
+      "INERT": 0.103021043
+    },
+    {
+      "Unnamed: 0": "PROMO",
+      "INT": 1.11e-08,
+      "SAT": 0.0323396508,
+      "PUSH_consider": 0.023213385,
+      "ALT": 4.8635e-06,
+      "VAR": 7.38e-08,
+      "PROMO": 0.0,
+      "SWEFFORT": 8.21e-08,
+      "FAM": 0.0365720752,
+      "INERT": 0.1523882302
+    },
+    {
+      "Unnamed: 0": "SWEFFORT",
+      "INT": 2.5e-09,
+      "SAT": 0.0581032451,
+      "PUSH_consider": 0.0008666143,
+      "ALT": 8.0702e-06,
+      "VAR": 2.0056e-06,
+      "PROMO": 8.21e-08,
+      "SWEFFORT": 0.0,
+      "FAM": 9.76475e-05,
+      "INERT": 0.0014863406
+    },
+    {
+      "Unnamed: 0": "FAM",
+      "INT": 0.0830505158,
+      "SAT": 0.0017370023,
+      "PUSH_consider": 0.0054863097,
+      "ALT": 0.0761637531,
+      "VAR": 0.0569400095,
+      "PROMO": 0.0365720752,
+      "SWEFFORT": 9.76475e-05,
+      "FAM": 0.0,
+      "INERT": 0.0064276704
+    },
+    {
+      "Unnamed: 0": "INERT",
+      "INT": 0.0896665441,
+      "SAT": 0.0002323395,
+      "PUSH_consider": 0.0169955191,
+      "ALT": 0.0227395739,
+      "VAR": 0.103021043,
+      "PROMO": 0.1523882302,
+      "SWEFFORT": 0.0014863406,
+      "FAM": 0.0064276704,
+      "INERT": 0.0
     }
   ],
   "table12_regression": [
@@ -1539,6 +2854,248 @@ window.SITE_DATA = {
       "p_rank_ols_hc3": 0.4909011243
     }
   ],
+  "table12b_sensitivity_M1": [
+    {
+      "sample": "All current users",
+      "n": 51,
+      "term": "SAT",
+      "b": -0.0835235952,
+      "ci_boot_low": -0.2629424583,
+      "ci_boot_high": 0.1355638359,
+      "p_hc3": 0.4050835521,
+      "std_beta": -0.0711831187,
+      "r2": 0.7057459116,
+      "adj_r2": 0.6801585996
+    },
+    {
+      "sample": "All current users",
+      "n": 51,
+      "term": "PULL",
+      "b": 0.5806364755,
+      "ci_boot_low": 0.2924868453,
+      "ci_boot_high": 0.8558302327,
+      "p_hc3": 0.0001385133,
+      "std_beta": 0.5514329432,
+      "r2": 0.7057459116,
+      "adj_r2": 0.6801585996
+    },
+    {
+      "sample": "All current users",
+      "n": 51,
+      "term": "SWEFFORT",
+      "b": 0.3369393579,
+      "ci_boot_low": 0.0866961603,
+      "ci_boot_high": 0.5832522284,
+      "p_hc3": 0.0125519735,
+      "std_beta": 0.4063171727,
+      "r2": 0.7057459116,
+      "adj_r2": 0.6801585996
+    },
+    {
+      "sample": "All current users",
+      "n": 51,
+      "term": "FAM",
+      "b": -0.0966441051,
+      "ci_boot_low": -0.3207044338,
+      "ci_boot_high": 0.1089462367,
+      "p_hc3": 0.3923769672,
+      "std_beta": -0.1127442395,
+      "r2": 0.7057459116,
+      "adj_r2": 0.6801585996
+    },
+    {
+      "sample": "Excl. straight-liners",
+      "n": 39,
+      "term": "SAT",
+      "b": -0.1493591385,
+      "ci_boot_low": -0.3189043275,
+      "ci_boot_high": 0.0541734208,
+      "p_hc3": 0.1082511211,
+      "std_beta": -0.1349826029,
+      "r2": 0.6287953368,
+      "adj_r2": 0.5851241999
+    },
+    {
+      "sample": "Excl. straight-liners",
+      "n": 39,
+      "term": "PULL",
+      "b": 0.4938728247,
+      "ci_boot_low": 0.1974330951,
+      "ci_boot_high": 0.7845752664,
+      "p_hc3": 0.002195403,
+      "std_beta": 0.4816836317,
+      "r2": 0.6287953368,
+      "adj_r2": 0.5851241999
+    },
+    {
+      "sample": "Excl. straight-liners",
+      "n": 39,
+      "term": "SWEFFORT",
+      "b": 0.3154709402,
+      "ci_boot_low": 0.062013398,
+      "ci_boot_high": 0.5499885794,
+      "p_hc3": 0.0181282013,
+      "std_beta": 0.3860699444,
+      "r2": 0.6287953368,
+      "adj_r2": 0.5851241999
+    },
+    {
+      "sample": "Excl. straight-liners",
+      "n": 39,
+      "term": "FAM",
+      "b": -0.1565687605,
+      "ci_boot_low": -0.3840164742,
+      "ci_boot_high": 0.0657756844,
+      "p_hc3": 0.223809711,
+      "std_beta": -0.1913163909,
+      "r2": 0.6287953368,
+      "adj_r2": 0.5851241999
+    },
+    {
+      "sample": "V2 only (excl. V1/V1.5)",
+      "n": 44,
+      "term": "SAT",
+      "b": -0.1028789493,
+      "ci_boot_low": -0.2753571775,
+      "ci_boot_high": 0.0959601433,
+      "p_hc3": 0.2729347469,
+      "std_beta": -0.0890421491,
+      "r2": 0.8173176299,
+      "adj_r2": 0.7985809766
+    },
+    {
+      "sample": "V2 only (excl. V1/V1.5)",
+      "n": 44,
+      "term": "PULL",
+      "b": 0.5709311873,
+      "ci_boot_low": 0.3171701289,
+      "ci_boot_high": 0.8227620269,
+      "p_hc3": 1.69339e-05,
+      "std_beta": 0.5498320372,
+      "r2": 0.8173176299,
+      "adj_r2": 0.7985809766
+    },
+    {
+      "sample": "V2 only (excl. V1/V1.5)",
+      "n": 44,
+      "term": "SWEFFORT",
+      "b": 0.3593372551,
+      "ci_boot_low": 0.1255735576,
+      "ci_boot_high": 0.6376113491,
+      "p_hc3": 0.0080437212,
+      "std_beta": 0.4381942402,
+      "r2": 0.8173176299,
+      "adj_r2": 0.7985809766
+    },
+    {
+      "sample": "V2 only (excl. V1/V1.5)",
+      "n": 44,
+      "term": "FAM",
+      "b": -0.0107970473,
+      "ci_boot_low": -0.2172877048,
+      "ci_boot_high": 0.1517123524,
+      "p_hc3": 0.9077143963,
+      "std_beta": -0.0122957971,
+      "r2": 0.8173176299,
+      "adj_r2": 0.7985809766
+    },
+    {
+      "sample": "Excl. Q1-inconsistent",
+      "n": 39,
+      "term": "SAT",
+      "b": -0.0706925592,
+      "ci_boot_low": -0.2586421854,
+      "ci_boot_high": 0.1627145718,
+      "p_hc3": 0.5047829898,
+      "std_beta": -0.0650333249,
+      "r2": 0.6802478559,
+      "adj_r2": 0.6426299565
+    },
+    {
+      "sample": "Excl. Q1-inconsistent",
+      "n": 39,
+      "term": "PULL",
+      "b": 0.573562194,
+      "ci_boot_low": 0.2811279196,
+      "ci_boot_high": 0.8990541025,
+      "p_hc3": 0.000931737,
+      "std_beta": 0.5584118005,
+      "r2": 0.6802478559,
+      "adj_r2": 0.6426299565
+    },
+    {
+      "sample": "Excl. Q1-inconsistent",
+      "n": 39,
+      "term": "SWEFFORT",
+      "b": 0.3120996996,
+      "ci_boot_low": 0.0115605041,
+      "ci_boot_high": 0.565285627,
+      "p_hc3": 0.0526442776,
+      "std_beta": 0.3813055085,
+      "r2": 0.6802478559,
+      "adj_r2": 0.6426299565
+    },
+    {
+      "sample": "Excl. Q1-inconsistent",
+      "n": 39,
+      "term": "FAM",
+      "b": -0.1347023039,
+      "ci_boot_low": -0.3701248196,
+      "ci_boot_high": 0.1059611749,
+      "p_hc3": 0.3278974127,
+      "std_beta": -0.1580071301,
+      "r2": 0.6802478559,
+      "adj_r2": 0.6426299565
+    },
+    {
+      "sample": "Excl. straight-liners & V1/V1.5",
+      "n": 33,
+      "term": "SAT",
+      "b": -0.1520602659,
+      "ci_boot_low": -0.3230579133,
+      "ci_boot_high": 0.0488576058,
+      "p_hc3": 0.0931071799,
+      "std_beta": -0.1431998234,
+      "r2": 0.7378670004,
+      "adj_r2": 0.7004194291
+    },
+    {
+      "sample": "Excl. straight-liners & V1/V1.5",
+      "n": 33,
+      "term": "PULL",
+      "b": 0.5019629229,
+      "ci_boot_low": 0.2286179206,
+      "ci_boot_high": 0.747367485,
+      "p_hc3": 5.47225e-05,
+      "std_beta": 0.5009286095,
+      "r2": 0.7378670004,
+      "adj_r2": 0.7004194291
+    },
+    {
+      "sample": "Excl. straight-liners & V1/V1.5",
+      "n": 33,
+      "term": "SWEFFORT",
+      "b": 0.3558678603,
+      "ci_boot_low": 0.1237624511,
+      "ci_boot_high": 0.6566783027,
+      "p_hc3": 0.0076668781,
+      "std_beta": 0.4370580261,
+      "r2": 0.7378670004,
+      "adj_r2": 0.7004194291
+    },
+    {
+      "sample": "Excl. straight-liners & V1/V1.5",
+      "n": 33,
+      "term": "FAM",
+      "b": -0.055110857,
+      "ci_boot_low": -0.2812479401,
+      "ci_boot_high": 0.1232046375,
+      "p_hc3": 0.6014505413,
+      "std_beta": -0.0672616404,
+      "r2": 0.7378670004,
+      "adj_r2": 0.7004194291
+    }
+  ],
   "table12c_regression_diag": [
     {
       "model": "M1 PPM composites (pre-specified)",
@@ -1571,6 +3128,17 @@ window.SITE_DATA = {
       "max_cooks_d": 0.2045187529,
       "max_vif": 4.1321948339,
       "cond_no": 54.4181202273
+    }
+  ],
+  "regression_overlap_diag": [
+    {
+      "n": 51,
+      "R2_PULL_alone": 0.6356073505,
+      "R2_M1_full": 0.7057459116,
+      "R2_gain_from_SAT_SWEFFORT_FAM": 0.0701385611,
+      "spearman_PULL_INT": 0.7677754087,
+      "alpha_pull4_plus_intention3_pooled": 0.9341668093,
+      "n_pooled": 51
     }
   ],
   "regression_vif": [
@@ -1623,6 +3191,125 @@ window.SITE_DATA = {
       "term": "FAM",
       "VIF": 1.6486726658,
       "model": "M2"
+    }
+  ],
+  "table20_h5_diagnostics": [
+    {
+      "variable": "SC1",
+      "description": "Switching effort item 1 ('would require additional time and effort')",
+      "expected_sign_with_intention": "-",
+      "n": 51,
+      "spearman_rho": 0.6716592459,
+      "ci_boot_low": 0.4648715924,
+      "ci_boot_high": 0.8206905964,
+      "p": 6.83e-08,
+      "observed_sign": "+",
+      "matches_expected": false
+    },
+    {
+      "variable": "SC2",
+      "description": "Switching effort item 2 ('effort ... makes me less likely to switch')",
+      "expected_sign_with_intention": "-",
+      "n": 51,
+      "spearman_rho": 0.658748536,
+      "ci_boot_low": 0.4174583003,
+      "ci_boot_high": 0.83584211,
+      "p": 1.48e-07,
+      "observed_sign": "+",
+      "matches_expected": false
+    },
+    {
+      "variable": "SWEFFORT",
+      "description": "Switching effort composite (SC1, SC2)",
+      "expected_sign_with_intention": "-",
+      "n": 51,
+      "spearman_rho": 0.7206374311,
+      "ci_boot_low": 0.5000417394,
+      "ci_boot_high": 0.8698378708,
+      "p": 2.5e-09,
+      "observed_sign": "+",
+      "matches_expected": false
+    },
+    {
+      "variable": "FAM1",
+      "description": "Familiarity ('makes me less likely to switch')",
+      "expected_sign_with_intention": "-",
+      "n": 51,
+      "spearman_rho": 0.2450634098,
+      "ci_boot_low": -0.0768275345,
+      "ci_boot_high": 0.527749283,
+      "p": 0.0830505158,
+      "observed_sign": "+",
+      "matches_expected": false
+    },
+    {
+      "variable": "INERT1",
+      "description": "Inertia ('would continue using Zepto')",
+      "expected_sign_with_intention": "-",
+      "n": 46,
+      "spearman_rho": 0.2531053195,
+      "ci_boot_low": -0.0814287219,
+      "ci_boot_high": 0.5669688953,
+      "p": 0.0896665441,
+      "observed_sign": "+",
+      "matches_expected": false
+    },
+    {
+      "variable": "SAT1",
+      "description": "Satisfaction item 1",
+      "expected_sign_with_intention": "-",
+      "n": 51,
+      "spearman_rho": 0.1720460563,
+      "ci_boot_low": -0.1230884073,
+      "ci_boot_high": 0.4605393152,
+      "p": 0.2273469733,
+      "observed_sign": "+",
+      "matches_expected": false
+    },
+    {
+      "variable": "SAT2",
+      "description": "Satisfaction item 2",
+      "expected_sign_with_intention": "-",
+      "n": 51,
+      "spearman_rho": 0.1908114938,
+      "ci_boot_low": -0.0707870249,
+      "ci_boot_high": 0.4343369271,
+      "p": 0.1798408086,
+      "observed_sign": "+",
+      "matches_expected": false
+    },
+    {
+      "variable": "SAT",
+      "description": "Satisfaction composite",
+      "expected_sign_with_intention": "-",
+      "n": 51,
+      "spearman_rho": 0.1696040566,
+      "ci_boot_low": -0.123028754,
+      "ci_boot_high": 0.4585110565,
+      "p": 0.2341127413,
+      "observed_sign": "+",
+      "matches_expected": false
+    }
+  ],
+  "h5_additional_diagnostics": [
+    {
+      "n_retention_keyed_constructs_positive_with_intention": 4,
+      "n_retention_keyed_constructs_total": 4,
+      "SC2_agree_n": 25,
+      "SC2_agree_and_INT_ge_3.5_n": 20,
+      "SC2_agree_and_INT_ge_3.5_pct": 80.0,
+      "rho_SWEFFORT_INT_excl_straightliners": 0.5965835983,
+      "n_excl_straightliners": 39,
+      "p_excl_straightliners": 6.11524e-05,
+      "rho_SWEFFORT_INT_V2_only": 0.8349047225,
+      "n_V2_only": 44,
+      "p_V2_only": 0.0,
+      "rho_SWEFFORT_INT_excl_Q1_inconsistent": 0.6430539913,
+      "n_excl_Q1_inconsistent": 39,
+      "p_excl_Q1_inconsistent": 1.01098e-05,
+      "partial_rho_SWEFFORT_INT_given_PULL_SAT": 0.4318843515,
+      "partial_p": 0.0015530446,
+      "partial_n": 51
     }
   ],
   "table21_centering": [
@@ -1899,6 +3586,100 @@ window.SITE_DATA = {
       "base_n": 73
     }
   ],
+  "table13c_alt_variants": [
+    {
+      "category": "Yes",
+      "n": 41,
+      "pct": 60.2941176471,
+      "ci_low": 48.4160549236,
+      "ci_high": 71.0712998963,
+      "base_n": 68
+    },
+    {
+      "category": "Maybe",
+      "n": 18,
+      "pct": 26.4705882353,
+      "ci_low": 17.4497406108,
+      "ci_high": 38.0077340866,
+      "base_n": 68
+    },
+    {
+      "category": "No",
+      "n": 9,
+      "pct": 13.2352941176,
+      "ci_low": 7.1222443757,
+      "ci_high": 23.2800598389,
+      "base_n": 68
+    }
+  ],
+  "table13c_increased_other": [
+    {
+      "category": "Yes",
+      "n": 43,
+      "pct": 58.904109589,
+      "ci_low": 47.4492231549,
+      "ci_high": 69.468727375,
+      "base_n": 73
+    },
+    {
+      "category": "No",
+      "n": 18,
+      "pct": 24.6575342466,
+      "ci_low": 16.204464593,
+      "ci_high": 35.6444454373,
+      "base_n": 73
+    },
+    {
+      "category": "Not sure",
+      "n": 12,
+      "pct": 16.4383561644,
+      "ci_low": 9.6612966511,
+      "ci_high": 26.5710436592,
+      "base_n": 73
+    }
+  ],
+  "table13c_return": [
+    {
+      "category": "Definitely Yes",
+      "n": 14,
+      "pct": 20.5882352941,
+      "ci_low": 12.6795608303,
+      "ci_high": 31.6422825414,
+      "base_n": 68
+    },
+    {
+      "category": "Probably Yes",
+      "n": 27,
+      "pct": 39.7058823529,
+      "ci_low": 28.9287001037,
+      "ci_high": 51.5839450764,
+      "base_n": 68
+    },
+    {
+      "category": "Not Sure",
+      "n": 20,
+      "pct": 29.4117647059,
+      "ci_low": 19.9190105403,
+      "ci_high": 41.1062798199,
+      "base_n": 68
+    },
+    {
+      "category": "Probably no",
+      "n": 5,
+      "pct": 7.3529411765,
+      "ci_low": 3.181484405,
+      "ci_high": 16.085188484,
+      "base_n": 68
+    },
+    {
+      "category": "Definitely No",
+      "n": 2,
+      "pct": 2.9411764706,
+      "ci_low": 0.810317947,
+      "ci_high": 10.1046314477,
+      "base_n": 68
+    }
+  ],
   "table13d_former_classes": [
     {
       "category": "C_voluntary_only",
@@ -1999,72 +3780,46 @@ window.SITE_DATA = {
       "base_n": 32
     }
   ],
-  "table13c_alt_variants": [
+  "table13f_classB_reasons": [
     {
-      "category": "Yes",
-      "n": 41,
-      "pct": 60.2941176471,
-      "ci_low": 48.4160549236,
-      "ci_high": 71.0712998963,
-      "base_n": 68
+      "category": "Other",
+      "n": 4,
+      "pct": 40.0,
+      "ci_low": 16.8180328526,
+      "ci_high": 68.7326232079,
+      "base_n": 10
     },
     {
-      "category": "Maybe",
-      "n": 18,
-      "pct": 26.4705882353,
-      "ci_low": 17.4497406108,
-      "ci_high": 38.0077340866,
-      "base_n": 68
-    },
-    {
-      "category": "No",
-      "n": 9,
-      "pct": 13.2352941176,
-      "ci_low": 7.1222443757,
-      "ci_high": 23.2800598389,
-      "base_n": 68
-    }
-  ],
-  "table13c_return": [
-    {
-      "category": "Definitely Yes",
-      "n": 14,
-      "pct": 20.5882352941,
-      "ci_low": 12.6795608303,
-      "ci_high": 31.6422825414,
-      "base_n": 68
-    },
-    {
-      "category": "Probably Yes",
-      "n": 27,
-      "pct": 39.7058823529,
-      "ci_low": 28.9287001037,
-      "ci_high": 51.5839450764,
-      "base_n": 68
-    },
-    {
-      "category": "Not Sure",
-      "n": 20,
-      "pct": 29.4117647059,
-      "ci_low": 19.9190105403,
-      "ci_high": 41.1062798199,
-      "base_n": 68
-    },
-    {
-      "category": "Probably no",
-      "n": 5,
-      "pct": 7.3529411765,
-      "ci_low": 3.181484405,
-      "ci_high": 16.085188484,
-      "base_n": 68
-    },
-    {
-      "category": "Definitely No",
+      "category": "Delivery experience",
       "n": 2,
-      "pct": 2.9411764706,
-      "ci_low": 0.810317947,
-      "ci_high": 10.1046314477,
-      "base_n": 68
+      "pct": 20.0,
+      "ci_low": 5.6682150938,
+      "ci_high": 50.9837530878,
+      "base_n": 10
+    },
+    {
+      "category": "Discounts / promotions",
+      "n": 2,
+      "pct": 20.0,
+      "ci_low": 5.6682150938,
+      "ci_high": 50.9837530878,
+      "base_n": 10
+    },
+    {
+      "category": "I preferred another platform",
+      "n": 1,
+      "pct": 10.0,
+      "ci_low": 1.7876212896,
+      "ci_high": 40.4150029525,
+      "base_n": 10
+    },
+    {
+      "category": "Pricing",
+      "n": 1,
+      "pct": 10.0,
+      "ci_low": 1.7876212896,
+      "ci_high": 40.4150029525,
+      "base_n": 10
     }
   ],
   "table14_destinations": [
@@ -2109,6 +3864,32 @@ window.SITE_DATA = {
       "base_n": 73
     }
   ],
+  "table14b_class_by_destination": [
+    {
+      "fu_class": "A_coverage_primary",
+      "BigBasket Now": 3,
+      "Blinkit": 20,
+      "I did not shift to another platform": 1,
+      "Other": 0,
+      "Swiggy Instamart": 7
+    },
+    {
+      "fu_class": "B_coverage_mentioned_other_primary",
+      "BigBasket Now": 4,
+      "Blinkit": 1,
+      "I did not shift to another platform": 1,
+      "Other": 1,
+      "Swiggy Instamart": 3
+    },
+    {
+      "fu_class": "C_voluntary_only",
+      "BigBasket Now": 2,
+      "Blinkit": 19,
+      "I did not shift to another platform": 2,
+      "Other": 1,
+      "Swiggy Instamart": 8
+    }
+  ],
   "table15b_return_by_class": [
     {
       "fu_class": "A_coverage_primary",
@@ -2127,6 +3908,92 @@ window.SITE_DATA = {
       "count": 30,
       "mean": 3.4666666667,
       "median": 3.5
+    }
+  ],
+  "former_class_crosstab_tests": [
+    {
+      "n": 73,
+      "chi2": 15.3227637769,
+      "dof": 8,
+      "p_asymptotic": 0.0531651302,
+      "p_perm": 0.0571885623,
+      "cramers_v": 0.3239605483,
+      "min_expected": 0.2739726027,
+      "pct_cells_lt5": 66.6666666667,
+      "variable": "fu_destination",
+      "p_perm_holm": 0.2859428114
+    },
+    {
+      "n": 68,
+      "chi2": 9.949464447,
+      "dof": 4,
+      "p_asymptotic": 0.0412876051,
+      "p_perm": 0.0423915217,
+      "cramers_v": 0.2704770357,
+      "min_expected": 1.3235294118,
+      "pct_cells_lt5": 44.4444444444,
+      "variable": "fu_alt_variants",
+      "p_perm_holm": 0.2543491302
+    },
+    {
+      "n": 73,
+      "chi2": 7.3367278017,
+      "dof": 4,
+      "p_asymptotic": 0.1191281788,
+      "p_perm": 0.1125774845,
+      "cramers_v": 0.2241685979,
+      "min_expected": 1.6438356164,
+      "pct_cells_lt5": 22.2222222222,
+      "variable": "fu_increased_other",
+      "p_perm_holm": 0.450309938
+    },
+    {
+      "n": 73,
+      "chi2": 2.41942104,
+      "dof": 4,
+      "p_asymptotic": 0.65912044,
+      "p_perm": 0.8226354729,
+      "cramers_v": 0.1287298605,
+      "min_expected": 0.1369863014,
+      "pct_cells_lt5": 66.6666666667,
+      "variable": "age_group",
+      "p_perm_holm": 1.0
+    },
+    {
+      "n": 73,
+      "chi2": 3.4440830213,
+      "dof": 4,
+      "p_asymptotic": 0.4864314185,
+      "p_perm": 0.5694861028,
+      "cramers_v": 0.1535890938,
+      "min_expected": 0.2739726027,
+      "pct_cells_lt5": 66.6666666667,
+      "variable": "occupation",
+      "p_perm_holm": 1.0
+    },
+    {
+      "n": 68,
+      "chi2": 17.6907359307,
+      "dof": 8,
+      "p_asymptotic": 0.0236684356,
+      "p_perm": 0.0183963207,
+      "cramers_v": 0.3606645819,
+      "min_expected": 0.4411764706,
+      "pct_cells_lt5": 73.3333333333,
+      "variable": "location_type",
+      "p_perm_holm": 0.1287742452
+    },
+    {
+      "n": 73,
+      "chi2": 12.7395731929,
+      "dof": 10,
+      "p_asymptotic": 0.2385992619,
+      "p_perm": 0.2355528894,
+      "cramers_v": 0.2953935521,
+      "min_expected": 0.1369863014,
+      "pct_cells_lt5": 66.6666666667,
+      "variable": "qc_frequency",
+      "p_perm_holm": 0.7066586683
     }
   ],
   "table16b_never_reason": [
@@ -2311,6 +4178,28 @@ window.SITE_DATA = {
       "base_n": 54
     }
   ],
+  "table16e_never_likert": [
+    {
+      "item": "nu_current_better",
+      "n": 60,
+      "mean": 3.65,
+      "sd": 1.1323442011,
+      "median": 4.0,
+      "pct_agree": 55.0,
+      "ci_low": 42.4919357903,
+      "ci_high": 66.9063456793
+    },
+    {
+      "item": "nu_consider_trying",
+      "n": 60,
+      "mean": 3.8166666667,
+      "sd": 0.9998587471,
+      "median": 4.0,
+      "pct_agree": 65.0,
+      "ci_low": 52.3626187409,
+      "ci_high": 75.8322256681
+    }
+  ],
   "table16f_never_what_would_help": [
     {
       "option": "better_product_availability",
@@ -2373,7 +4262,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Financial constraint on price promotions",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E01"
     },
     {
       "source": "S01",
@@ -2386,7 +4276,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Operational risk context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E02"
     },
     {
       "source": "S01",
@@ -2399,7 +4290,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Supply-side switching risk",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E03"
     },
     {
       "source": "S01",
@@ -2412,7 +4304,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Triangulation of competitor pull factor",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E04"
     },
     {
       "source": "S01",
@@ -2425,7 +4318,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Fee sensitivity context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E05"
     },
     {
       "source": "S01",
@@ -2438,7 +4332,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Triangulation of coverage constraint",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E06"
     },
     {
       "source": "S01",
@@ -2451,7 +4346,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "R1 feasibility context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E07"
     },
     {
       "source": "S01",
@@ -2464,7 +4360,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Operational coverage stability",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E08"
     },
     {
       "source": "S01",
@@ -2477,7 +4374,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "R2 feasibility context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E09"
     },
     {
       "source": "S01",
@@ -2490,7 +4388,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Acquisition budget context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E10"
     },
     {
       "source": "S01",
@@ -2503,7 +4402,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Scale metric context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E11"
     },
     {
       "source": "S01",
@@ -2516,7 +4416,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Usage frequency context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E12"
     },
     {
       "source": "S01",
@@ -2529,7 +4430,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Triangulates assortment expansion",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E13"
     },
     {
       "source": "S01",
@@ -2542,7 +4444,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Coverage scale context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E14"
     },
     {
       "source": "S01",
@@ -2555,7 +4458,8 @@ window.SITE_DATA = {
       "status": "Verified as quoted; commissioned source",
       "use": "Macro market context; do not restate as CAGR",
       "claim_owner": "Zepto filing quoting a Zepto-commissioned Redseer report",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E15"
     },
     {
       "source": "S01",
@@ -2568,7 +4472,8 @@ window.SITE_DATA = {
       "status": "Verified as quoted; commissioned source",
       "use": "Category expansion context",
       "claim_owner": "Zepto filing quoting a Zepto-commissioned Redseer report",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E16"
     },
     {
       "source": "S01",
@@ -2581,7 +4486,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Platform positioning context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E17"
     },
     {
       "source": "S01",
@@ -2594,7 +4500,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "R2 feasibility context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E18"
     },
     {
       "source": "S01",
@@ -2607,7 +4514,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Retention marker context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E19"
     },
     {
       "source": "S01",
@@ -2620,7 +4528,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Retention baseline context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E20"
     },
     {
       "source": "S01",
@@ -2633,7 +4542,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Loyalty program context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E21"
     },
     {
       "source": "S01",
@@ -2646,7 +4556,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Delivery SLA context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E22"
     },
     {
       "source": "S01",
@@ -2659,7 +4570,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Unit economics context",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E23"
     },
     {
       "source": "S01",
@@ -2672,7 +4584,8 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Management retention perspective",
       "claim_owner": "Zepto Limited",
-      "survey_relation_type": "Contextualizes"
+      "survey_relation_type": "Contextualizes",
+      "id": "E24"
     },
     {
       "source": "S01",
@@ -2685,7 +4598,238 @@ window.SITE_DATA = {
       "status": "Verified",
       "use": "Acquisition spend context",
       "claim_owner": "Zepto Limited",
+      "survey_relation_type": "Contextualizes",
+      "id": "E25"
+    }
+  ],
+  "table17_industry_evidence": [
+    {
+      "source": "S03",
+      "page": null,
+      "section": "Full article (12 Feb 2026)",
+      "claim": "January 2026: quick-commerce GMV about Rs 11K crore (about 100% YoY); about 7.8 million orders/day (about +95% YoY); AOV (post MRP discounts, excluding delivery fees) about Rs 460; monthly transacting users about 5.2 crore (about +95% YoY); dark stores about 6,280 (from about 5,990 in Dec 2025)",
+      "construct": "Market context",
+      "evidence_type": "Independent industry (Redseer), full article read; proprietary Benchmarks data",
+      "relation_to_survey": "Context only",
+      "status": "Verified (as published by Redseer)",
+      "use": "Market context",
+      "claim_owner": "Redseer (independent public article; not Zepto-specific)",
       "survey_relation_type": "Contextualizes"
+    },
+    {
+      "source": "S03",
+      "page": null,
+      "section": "Full article (12 Feb 2026)",
+      "claim": "Redseer says competitive pressure is building: the top three platforms grow about 75% YoY in GMV while challenger platforms grow about 4x faster, with visible share movement at the margin",
+      "construct": "Competition",
+      "evidence_type": "Independent industry (Redseer)",
+      "relation_to_survey": "Industry-level competition, not user switching; no retention or churn data given",
+      "status": "Verified",
+      "use": "Context for competitor-pull factor",
+      "claim_owner": "Redseer (independent public article; not Zepto-specific)",
+      "survey_relation_type": "Contextualizes"
+    },
+    {
+      "source": "S04",
+      "page": null,
+      "section": "Full article (3 Jul 2025)",
+      "claim": "Non-metro cities (90+) contribute just over 20% of quick-commerce GMV; orders per dark store fall below 1,000 beyond the top 10-15 cities; Redseer cites nascent users with low digital trust, lower density and localised tastes and advises prioritising cities and refining assortment, pricing and marketing there",
+      "construct": "Coverage; assortment",
+      "evidence_type": "Independent industry (Redseer analysis)",
+      "relation_to_survey": "Independent context that footprint and local assortment are strategic issues; says nothing about individual user exits",
+      "status": "Verified",
+      "use": "Context for R1/R2",
+      "claim_owner": "Redseer (independent public article; not Zepto-specific)",
+      "survey_relation_type": "Contextualizes"
+    },
+    {
+      "source": "S05",
+      "page": null,
+      "section": "Full article (19 Nov 2025)",
+      "claim": "As of July 2025, about 33 million monthly transacting users across 150+ cities; users are typically Gen-Z/millennial from affluent metro/Tier-1 households; Redseer describes users as more time-sensitive than price-sensitive (brand-strategy context)",
+      "construct": "Market context; price sensitivity",
+      "evidence_type": "Independent industry (Redseer); not Zepto-specific",
+      "relation_to_survey": "User profile is similar in age band to the survey sample; price-sensitivity statement is general",
+      "status": "Verified",
+      "use": "Context (S03's Jan 2026 MTU of about 5.2 crore is a later date)",
+      "claim_owner": "Redseer (independent public article; not Zepto-specific)",
+      "survey_relation_type": "Contextualizes"
+    }
+  ],
+  "media_claims_register": [
+    {
+      "id": "M01",
+      "media_source": "S06 (Inc42)",
+      "claim": "UDRHP acknowledges low switching costs and pricing pressure",
+      "check": "Checked against UDRHP-I Risk Factors (pp. 30-32): filing discloses competitor promotions, incentives, alternative pricing models and merchant/delivery multi-homing as business risks. However, no explicit statement establishing 'customers have low switching costs' is present.",
+      "status": "NOT VERIFIED AS WORDED / CONTEXTUALIZED",
+      "action": "Classify as unverified as worded; contextualize with disclosed competitive risks (Risk Factor 6, p. 31)"
+    },
+    {
+      "id": "M02",
+      "media_source": "S10 (Groww)",
+      "claim": "Average SKUs per dark store rose from 12,312 (FY24) to 46,623 (FY26)",
+      "check": "Verified on UDRHP-I printed p. 162 (Basis for Offer Price) and p. 538 (MD&A). SKUs at store geography level: 12,312 (FY24), 44,341 (FY25), 46,623 (FY26), reaching 49,602 in Q4 FY26.",
+      "status": "VERIFIED - PRIMARY UDRHP KPI",
+      "action": "Upgrade to verified primary KPI (S01 p. 162, p. 538)"
+    },
+    {
+      "id": "M03",
+      "media_source": "S10 (Groww)",
+      "claim": "45.2-49.8% of users remain active three years after first order",
+      "check": "Verified cohort-specific retention observations in UDRHP-I printed pp. 253-254 (Our Business). Exact observations: FY23 Q2 cohort retention was 45.2% in Q12 (Year 3) and 44.3% in Q15; FY23 Q3 was 48.1% in Q14; FY24 Q1 was 49.8% in Q9. Multi-year cohorts descriptively stabilize between 44.3% and 54.0%.",
+      "status": "VERIFIED - PRIMARY UDRHP COHORT EVIDENCE",
+      "action": "Upgrade to verified cohort evidence (S01 pp. 253-254) with precise cohort/quarter wording"
+    },
+    {
+      "id": "M04",
+      "media_source": "S07 (Inc42)",
+      "claim": "Zepto curtailed platform-wide discounts and launched a paid membership (Zepto Club)",
+      "check": "Checked against UDRHP-I: Definitions (p. 13) and Our Business (p. 258) confirm 'Zepto Pass' as the official subscription membership program. 'Zepto Club' is not established in the filing.",
+      "status": "DISPROVED/CONTRADICTED",
+      "action": "Label disproved/contradicted; note Zepto Pass as official filing term"
+    },
+    {
+      "id": "M05",
+      "media_source": "Groww/others",
+      "claim": "1,139 dark stores, up from 1,029 (FY25) and 337 (FY24)",
+      "check": "Verified on UDRHP-I printed p. 163 and S09 p. 13: closing store counts 337 (FY24), 1,029 (FY25), 1,139 (FY26 across 66 cities).",
+      "status": "VERIFIED - PRIMARY UDRHP KPI",
+      "action": "Upgrade to primary KPI (S01 p. 163 / S09 p. 13)"
+    },
+    {
+      "id": "M06",
+      "media_source": "Several outlets",
+      "claim": "ATU 47.97 million at 31 Mar 2026 (10.57m FY24, 38.38m FY25)",
+      "check": "Verified on UDRHP-I printed p. 160 and S09 pp. 2, 13: Annual Transacting Users (ATU) was 10.57m (FY24), 38.38m (FY25), 47.97m (FY26). Maintained as platform scale/adoption metric.",
+      "status": "VERIFIED - PRIMARY UDRHP KPI",
+      "action": "Upgrade to primary KPI (S01 p. 160 / S09 pp. 2, 13)"
+    },
+    {
+      "id": "M07",
+      "media_source": "Groww",
+      "claim": "Order volume CAGR about 119.5% FY24-FY26",
+      "check": "Verified on UDRHP-I printed p. 3 and S09 p. 3 quoting company-commissioned Redseer report.",
+      "status": "VERIFIED - COMPANY-CITED REDSEER INDUSTRY EVIDENCE",
+      "action": "Label as company-cited commissioned report statement (S01 p. 3)"
+    },
+    {
+      "id": "M08",
+      "media_source": "Outlook Business",
+      "claim": "Rs 1,629 crore to open about 1,900 new dark stores; Rs 1,735 crore lease rentals through FY30",
+      "check": "Verified on UDRHP-I printed pp. 143, 148 and S09 p. 5: Rs 16,289.75M for dark store expansion and Rs 17,349.41M for lease rentals.",
+      "status": "VERIFIED - PRIMARY UDRHP OFFER/OBJECT DISCLOSURE",
+      "action": "Upgrade to primary offer disclosure (S01 pp. 143, 148 / S09 p. 5)"
+    },
+    {
+      "id": "M09",
+      "media_source": "S06 (Inc42)",
+      "claim": "Active user base fell from 49.54m (Dec 2025) to 47.97m (Mar 2026)",
+      "check": "Verified on UDRHP-I printed p. 161 and S09 p. 11: trailing-12-month ATU dipped from 49.54m (31 Dec 2025) to 47.97m (31 Mar 2026), while orders/day rose 28.6% QoQ.",
+      "status": "VERIFIED - PRIMARY UDRHP KPI",
+      "action": "Upgrade to primary KPI (S01 p. 161 / S09 p. 11)"
+    },
+    {
+      "id": "M10",
+      "media_source": "S10 (Groww)",
+      "claim": "Retained users purchase from over 18 product categories within two years",
+      "check": "Verified on UDRHP-I printed p. 252 (Our Business): text confirms users expand from ~6 categories in Month 1 to >12 in Year 1 and 18 product categories within 2 years of joining.",
+      "status": "VERIFIED - PRIMARY UDRHP BUSINESS DISCLOSURE",
+      "action": "Upgrade to primary business disclosure (S01 p. 252)"
+    },
+    {
+      "id": "M11",
+      "media_source": "S06/others",
+      "claim": "Delivery partners operate across multiple platforms; market follows the most aggressive pricer",
+      "check": "Verified on UDRHP-I printed pp. 27-28 and p. 56 (Risk Factor 13): filing notes delivery partners have flexibility to join/leave at convenience and multi-home across multiple platforms.",
+      "status": "VERIFIED - COMPANY RISK DISCLOSURE",
+      "action": "Upgrade to verified company risk disclosure (S01 pp. 27-28, 56)"
+    }
+  ],
+  "secondary_sources": [
+    {
+      "id": "S01",
+      "type": "Primary filing (organizational evidence)",
+      "title": "Zepto Limited - Updated Draft Red Herring Prospectus - I (UDRHP-I)",
+      "issuer": "Zepto Limited",
+      "date": "2026-06-08",
+      "url": "https://www.sebi.gov.in/sebi_data/attachdocs/jun-2026/1780983427091.pdf",
+      "also_at": "SEBI filing page https://www.sebi.gov.in/filings/public-issues/jun-2026/zepto-limited-udrhp1_101929.html ; BRLM copy https://www.morganstanley.com/content/dam/msdotcom/en/indiaofferdocuments/pdfs/Zepto_Limited_UDRHP-I.pdf",
+      "verification": "Full 690-page filing read in full across all key body sections (printed pp. 1-674). Verified across Section II Risk Factors (pp. 23-63), Section III Objects of Offer (pp. 143-157), Basis for Offer Price/KPIs (pp. 158-181), Section IV Industry Overview (pp. 189-231), Our Business (pp. 232-276), and Section V MD&A (pp. 529-575).",
+      "coverage_limit": "Covers all disclosed operational, KPI, risk, and financial parameters in the filing. Filing figures represent company-reported disclosures and KPIs, not econometric causal tests of consumer switching motivations.",
+      "version_note": "Latest version: UDRHP-I, 8 June 2026."
+    },
+    {
+      "id": "S09",
+      "type": "Primary filing (organizational evidence)",
+      "title": "Zepto Limited - Draft Abridged Prospectus (salient features of UDRHP-I)",
+      "issuer": "Zepto Limited; hosted by SEBI",
+      "date": "2026-06-08",
+      "url": "https://www.sebi.gov.in/sebi_data/commondocs/jun-2026/Zepto%20Limited%20-%20abridged_p.pdf",
+      "also_at": null,
+      "verification": "Full text read (19 printed pages). Cross-checked against UDRHP-I master filing.",
+      "coverage_limit": "Summary document; references inside correspond to UDRHP-I printed pages.",
+      "version_note": "Abridged companion to S01."
+    },
+    {
+      "id": "S02",
+      "type": "Industry report (commissioned by Zepto)",
+      "title": "India's Quick-Commerce Industry: Market Structure and Growth Drivers",
+      "issuer": "Redseer Strategy Consultants (commissioned and paid for by Zepto)",
+      "date": "2026-05-30",
+      "url": "listed as 'Industry Report' on https://investors.zepto.com/results/",
+      "also_at": null,
+      "verification": "Existence, title, date and commissioning confirmed from UDRHP-I p.3 and p.194. The standalone report file was NOT retrieved independently; figures from it are quoted from the primary UDRHP-I text and labelled company-cited/commissioned.",
+      "coverage_limit": "Report content accessed as reproduced within UDRHP-I",
+      "version_note": "Exclusively commissioned by Zepto."
+    },
+    {
+      "id": "S03",
+      "type": "Industry article (independent Redseer publication)",
+      "title": "Quick Commerce Finds Its New Normal with Scale, Mix, and Momentum",
+      "issuer": "Redseer (author: Nikhil Dalal)",
+      "date": "2026-02-12 (page modified 2026-02-23)",
+      "url": "https://redseer.com/articles/quick-commerce-finds-its-new-normal-with-scale-mix-and-momentum/",
+      "also_at": null,
+      "verification": "Full article text read",
+      "coverage_limit": "Figures derived from Redseer's proprietary 'Benchmarks' platform; underlying data not inspected",
+      "version_note": null
+    },
+    {
+      "id": "S04",
+      "type": "Industry article (independent Redseer publication)",
+      "title": "Scaling Quick Commerce Beyond Metros: A Strategic Reassessment",
+      "issuer": "Redseer (author: Kushal Bhatnagar)",
+      "date": "2025-07-03 (page modified 2025-11-06)",
+      "url": "https://redseer.com/articles/scaling-quick-commerce-beyond-metros-a-strategic-reassessment/",
+      "also_at": null,
+      "verification": "Full article text read",
+      "coverage_limit": "Opinion/analysis article",
+      "version_note": null
+    },
+    {
+      "id": "S05",
+      "type": "Industry article (independent Redseer publication)",
+      "title": "Quick Commerce, Quicker Decisions: Is your Brand Strategy Future-ready?",
+      "issuer": "Redseer (author: Kushal Bhatnagar)",
+      "date": "2025-11-19 (page modified 2026-01-22)",
+      "url": "https://redseer.com/articles/quick-commerce-quicker-decisions-is-your-brand-strategy-future-ready/",
+      "also_at": null,
+      "verification": "Full article text read",
+      "coverage_limit": "Brand-strategy article; mentions Zepto Atom only as a brand analytics tool",
+      "version_note": null
+    },
+    {
+      "id": "S11",
+      "type": "Primary filing (organizational evidence) - excerpt level",
+      "title": "Zepto Limited - UDRHP-I (Zepto investor-site copy), passages returned by a search index",
+      "issuer": "Zepto Limited",
+      "date": "2026-06-08",
+      "url": "https://cdn.zeptonow.com/investors/documents/Zepto%20Limited%20-%20UDRHP-I.pdf",
+      "also_at": "same text as S01",
+      "verification": "Historical search-index excerpts; superseded by full-text reading of S01.",
+      "coverage_limit": "Search engine excerpt selection; superseded by S01.",
+      "version_note": "Same document as S01"
     }
   ],
   "evidence_matrix": [
@@ -3065,609 +5209,6 @@ window.SITE_DATA = {
       "use": "Context (S03's Jan 2026 MTU of about 5.2 crore is a later date)",
       "claim_owner": "Redseer (independent public article; not Zepto-specific)",
       "survey_relation_type": "Contextualizes"
-    }
-  ],
-  "media_claims_register": [
-    {
-      "id": "M01",
-      "media_source": "S06 (Inc42)",
-      "claim": "UDRHP acknowledges low switching costs and pricing pressure",
-      "check": "Checked against UDRHP-I Risk Factors (pp. 30-32): filing discloses competitor promotions, incentives, alternative pricing models and merchant/delivery multi-homing as business risks. However, no explicit statement establishing 'customers have low switching costs' is present.",
-      "status": "NOT VERIFIED AS WORDED / CONTEXTUALIZED",
-      "action": "Classify as unverified as worded; contextualize with disclosed competitive risks (Risk Factor 6, p. 31)"
-    },
-    {
-      "id": "M02",
-      "media_source": "S10 (Groww)",
-      "claim": "Average SKUs per dark store rose from 12,312 (FY24) to 46,623 (FY26)",
-      "check": "Verified on UDRHP-I printed p. 162 (Basis for Offer Price) and p. 538 (MD&A). SKUs at store geography level: 12,312 (FY24), 44,341 (FY25), 46,623 (FY26), reaching 49,602 in Q4 FY26.",
-      "status": "VERIFIED - PRIMARY UDRHP KPI",
-      "action": "Upgrade to verified primary KPI (S01 p. 162, p. 538)"
-    },
-    {
-      "id": "M03",
-      "media_source": "S10 (Groww)",
-      "claim": "45.2-49.8% of users remain active three years after first order",
-      "check": "Verified cohort-specific retention observations in UDRHP-I printed pp. 253-254 (Our Business). Exact observations: FY23 Q2 cohort retention was 45.2% in Q12 (Year 3) and 44.3% in Q15; FY23 Q3 was 48.1% in Q14; FY24 Q1 was 49.8% in Q9. Multi-year cohorts descriptively stabilize between 44.3% and 54.0%.",
-      "status": "VERIFIED - PRIMARY UDRHP COHORT EVIDENCE",
-      "action": "Upgrade to verified cohort evidence (S01 pp. 253-254) with precise cohort/quarter wording"
-    },
-    {
-      "id": "M04",
-      "media_source": "S07 (Inc42)",
-      "claim": "Zepto curtailed platform-wide discounts and launched a paid membership (Zepto Club)",
-      "check": "Checked against UDRHP-I: Definitions (p. 13) and Our Business (p. 258) confirm 'Zepto Pass' as the official subscription membership program. 'Zepto Club' is not established in the filing.",
-      "status": "DISPROVED/CONTRADICTED",
-      "action": "Label disproved/contradicted; note Zepto Pass as official filing term"
-    },
-    {
-      "id": "M05",
-      "media_source": "Groww/others",
-      "claim": "1,139 dark stores, up from 1,029 (FY25) and 337 (FY24)",
-      "check": "Verified on UDRHP-I printed p. 163 and S09 p. 13: closing store counts 337 (FY24), 1,029 (FY25), 1,139 (FY26 across 66 cities).",
-      "status": "VERIFIED - PRIMARY UDRHP KPI",
-      "action": "Upgrade to primary KPI (S01 p. 163 / S09 p. 13)"
-    },
-    {
-      "id": "M06",
-      "media_source": "Several outlets",
-      "claim": "ATU 47.97 million at 31 Mar 2026 (10.57m FY24, 38.38m FY25)",
-      "check": "Verified on UDRHP-I printed p. 160 and S09 pp. 2, 13: Annual Transacting Users (ATU) was 10.57m (FY24), 38.38m (FY25), 47.97m (FY26). Maintained as platform scale/adoption metric.",
-      "status": "VERIFIED - PRIMARY UDRHP KPI",
-      "action": "Upgrade to primary KPI (S01 p. 160 / S09 pp. 2, 13)"
-    },
-    {
-      "id": "M07",
-      "media_source": "Groww",
-      "claim": "Order volume CAGR about 119.5% FY24-FY26",
-      "check": "Verified on UDRHP-I printed p. 3 and S09 p. 3 quoting company-commissioned Redseer report.",
-      "status": "VERIFIED - COMPANY-CITED REDSEER INDUSTRY EVIDENCE",
-      "action": "Label as company-cited commissioned report statement (S01 p. 3)"
-    },
-    {
-      "id": "M08",
-      "media_source": "Outlook Business",
-      "claim": "Rs 1,629 crore to open about 1,900 new dark stores; Rs 1,735 crore lease rentals through FY30",
-      "check": "Verified on UDRHP-I printed pp. 143, 148 and S09 p. 5: Rs 16,289.75M for dark store expansion and Rs 17,349.41M for lease rentals.",
-      "status": "VERIFIED - PRIMARY UDRHP OFFER/OBJECT DISCLOSURE",
-      "action": "Upgrade to primary offer disclosure (S01 pp. 143, 148 / S09 p. 5)"
-    },
-    {
-      "id": "M09",
-      "media_source": "S06 (Inc42)",
-      "claim": "Active user base fell from 49.54m (Dec 2025) to 47.97m (Mar 2026)",
-      "check": "Verified on UDRHP-I printed p. 161 and S09 p. 11: trailing-12-month ATU dipped from 49.54m (31 Dec 2025) to 47.97m (31 Mar 2026), while orders/day rose 28.6% QoQ.",
-      "status": "VERIFIED - PRIMARY UDRHP KPI",
-      "action": "Upgrade to primary KPI (S01 p. 161 / S09 p. 11)"
-    },
-    {
-      "id": "M10",
-      "media_source": "S10 (Groww)",
-      "claim": "Retained users purchase from over 18 product categories within two years",
-      "check": "Verified on UDRHP-I printed p. 252 (Our Business): text confirms users expand from ~6 categories in Month 1 to >12 in Year 1 and 18 product categories within 2 years of joining.",
-      "status": "VERIFIED - PRIMARY UDRHP BUSINESS DISCLOSURE",
-      "action": "Upgrade to primary business disclosure (S01 p. 252)"
-    },
-    {
-      "id": "M11",
-      "media_source": "S06/others",
-      "claim": "Delivery partners operate across multiple platforms; market follows the most aggressive pricer",
-      "check": "Verified on UDRHP-I printed pp. 27-28 and p. 56 (Risk Factor 13): filing notes delivery partners have flexibility to join/leave at convenience and multi-home across multiple platforms.",
-      "status": "VERIFIED - COMPANY RISK DISCLOSURE",
-      "action": "Upgrade to verified company risk disclosure (S01 pp. 27-28, 56)"
-    }
-  ],
-  "secondary_sources": [
-    {
-      "id": "S01",
-      "type": "Primary filing (organizational evidence)",
-      "title": "Zepto Limited - Updated Draft Red Herring Prospectus - I (UDRHP-I)",
-      "issuer": "Zepto Limited",
-      "date": "2026-06-08",
-      "url": "https://www.sebi.gov.in/sebi_data/attachdocs/jun-2026/1780983427091.pdf",
-      "also_at": "SEBI filing page https://www.sebi.gov.in/filings/public-issues/jun-2026/zepto-limited-udrhp1_101929.html ; BRLM copy https://www.morganstanley.com/content/dam/msdotcom/en/indiaofferdocuments/pdfs/Zepto_Limited_UDRHP-I.pdf",
-      "verification": "Full 690-page filing read in full across all key body sections (printed pp. 1-674). Verified across Section II Risk Factors (pp. 23-63), Section III Objects of Offer (pp. 143-157), Basis for Offer Price/KPIs (pp. 158-181), Section IV Industry Overview (pp. 189-231), Our Business (pp. 232-276), and Section V MD&A (pp. 529-575).",
-      "coverage_limit": "Covers all disclosed operational, KPI, risk, and financial parameters in the filing. Filing figures represent company-reported disclosures and KPIs, not econometric causal tests of consumer switching motivations.",
-      "version_note": "Latest version: UDRHP-I, 8 June 2026."
-    },
-    {
-      "id": "S09",
-      "type": "Primary filing (organizational evidence)",
-      "title": "Zepto Limited - Draft Abridged Prospectus (salient features of UDRHP-I)",
-      "issuer": "Zepto Limited; hosted by SEBI",
-      "date": "2026-06-08",
-      "url": "https://www.sebi.gov.in/sebi_data/commondocs/jun-2026/Zepto%20Limited%20-%20abridged_p.pdf",
-      "also_at": null,
-      "verification": "Full text read (19 printed pages). Cross-checked against UDRHP-I master filing.",
-      "coverage_limit": "Summary document; references inside correspond to UDRHP-I printed pages.",
-      "version_note": "Abridged companion to S01."
-    },
-    {
-      "id": "S02",
-      "type": "Industry report (commissioned by Zepto)",
-      "title": "India's Quick-Commerce Industry: Market Structure and Growth Drivers",
-      "issuer": "Redseer Strategy Consultants (commissioned and paid for by Zepto)",
-      "date": "2026-05-30",
-      "url": "listed as 'Industry Report' on https://investors.zepto.com/results/",
-      "also_at": null,
-      "verification": "Existence, title, date and commissioning confirmed from UDRHP-I p.3 and p.194. The standalone report file was NOT retrieved independently; figures from it are quoted from the primary UDRHP-I text and labelled company-cited/commissioned.",
-      "coverage_limit": "Report content accessed as reproduced within UDRHP-I",
-      "version_note": "Exclusively commissioned by Zepto."
-    },
-    {
-      "id": "S03",
-      "type": "Industry article (independent Redseer publication)",
-      "title": "Quick Commerce Finds Its New Normal with Scale, Mix, and Momentum",
-      "issuer": "Redseer (author: Nikhil Dalal)",
-      "date": "2026-02-12 (page modified 2026-02-23)",
-      "url": "https://redseer.com/articles/quick-commerce-finds-its-new-normal-with-scale-mix-and-momentum/",
-      "also_at": null,
-      "verification": "Full article text read",
-      "coverage_limit": "Figures derived from Redseer's proprietary 'Benchmarks' platform; underlying data not inspected",
-      "version_note": null
-    },
-    {
-      "id": "S04",
-      "type": "Industry article (independent Redseer publication)",
-      "title": "Scaling Quick Commerce Beyond Metros: A Strategic Reassessment",
-      "issuer": "Redseer (author: Kushal Bhatnagar)",
-      "date": "2025-07-03 (page modified 2025-11-06)",
-      "url": "https://redseer.com/articles/scaling-quick-commerce-beyond-metros-a-strategic-reassessment/",
-      "also_at": null,
-      "verification": "Full article text read",
-      "coverage_limit": "Opinion/analysis article",
-      "version_note": null
-    },
-    {
-      "id": "S05",
-      "type": "Industry article (independent Redseer publication)",
-      "title": "Quick Commerce, Quicker Decisions: Is your Brand Strategy Future-ready?",
-      "issuer": "Redseer (author: Kushal Bhatnagar)",
-      "date": "2025-11-19 (page modified 2026-01-22)",
-      "url": "https://redseer.com/articles/quick-commerce-quicker-decisions-is-your-brand-strategy-future-ready/",
-      "also_at": null,
-      "verification": "Full article text read",
-      "coverage_limit": "Brand-strategy article; mentions Zepto Atom only as a brand analytics tool",
-      "version_note": null
-    },
-    {
-      "id": "S11",
-      "type": "Primary filing (organizational evidence) - excerpt level",
-      "title": "Zepto Limited - UDRHP-I (Zepto investor-site copy), passages returned by a search index",
-      "issuer": "Zepto Limited",
-      "date": "2026-06-08",
-      "url": "https://cdn.zeptonow.com/investors/documents/Zepto%20Limited%20-%20UDRHP-I.pdf",
-      "also_at": "same text as S01",
-      "verification": "Historical search-index excerpts; superseded by full-text reading of S01.",
-      "coverage_limit": "Search engine excerpt selection; superseded by S01.",
-      "version_note": "Same document as S01"
-    }
-  ],
-  "udrhp_working_evidence": [
-    {
-      "evidence_id": "E01",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 24,
-      "section": "Section II: Risk Factors",
-      "evidence_type": "Company risk disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Rapid scaling resulted in net losses; revenue grew but dark store network expansion and delivery expenses drove negative cash flows",
-      "metric_value": "Revenue: Rs 226,235.84M (FY26) vs Rs 44,545.16M (FY24); Restated loss: Rs 59,051.92M (FY26)",
-      "crm_factor": "Operational context",
-      "relation_to_switching": "Cost pressure limits ability to sustain platform-wide discount subsidization",
-      "survey_mapping": "Context for H4 / promotions",
-      "interpretation": "Company financial risk; high cost-to-serve limits defensive price wars",
-      "causal_status": "Risk disclosure (non-causal)",
-      "verification_status": "Verified (Printed p. 24)"
-    },
-    {
-      "evidence_id": "E02",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 27,
-      "section": "Section II: Risk Factors",
-      "evidence_type": "Company risk disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Failure to attract and retain delivery partners cost-effectively and at competitive payout prices diminishes ability to service customer demand quickly",
-      "metric_value": "Active delivery partners: 221667 (FY26) vs 49278 (FY24); Delivery expense: 12.28% of NRV (FY26)",
-      "crm_factor": "Service / experience",
-      "relation_to_switching": "Delivery partner availability directly impacts delivery speed and service reliability",
-      "survey_mapping": "Context for service/speed exit reasons in survey",
-      "interpretation": "Operational constraint that could induce push switching if SLA breaches occur",
-      "causal_status": "Risk disclosure (non-causal)",
-      "verification_status": "Verified (Printed p. 27-28)"
-    },
-    {
-      "evidence_id": "E03",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 30,
-      "section": "Section II: Risk Factors",
-      "evidence_type": "Company risk disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Merchant partners multi-home across competing quick-commerce and e-commerce platforms and may reduce presence on Zepto if competitor terms are more favorable",
-      "metric_value": "Not quantified",
-      "crm_factor": "Switching / competitive dynamics",
-      "relation_to_switching": "Merchant partner switching directly affects product availability and assortment depth on Zepto",
-      "survey_mapping": "Context for H3 (variety) and former voluntary availability exits",
-      "interpretation": "Supply-side multi-homing mirrors consumer multi-platform behavior",
-      "causal_status": "Risk disclosure (non-causal)",
-      "verification_status": "Verified (Printed p. 30)"
-    },
-    {
-      "evidence_id": "E04",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 31,
-      "section": "Section II: Risk Factors",
-      "evidence_type": "Company risk disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Competitors may offer discounted services, user incentives, promotions, alternative pricing models, wider categories, or retain users more effectively",
-      "metric_value": "Not quantified",
-      "crm_factor": "Switching / competitive dynamics",
-      "relation_to_switching": "Competitor promotions and pull factors are primary disclosed business threats",
-      "survey_mapping": "Supports/contextualizes H2 (pull) and H4 (competitor promotions)",
-      "interpretation": "Triangulates current-user pull correlations (raw rho=0.69-0.70) as strategic risk",
-      "causal_status": "Risk disclosure (non-causal)",
-      "verification_status": "Verified (Printed p. 31)"
-    },
-    {
-      "evidence_id": "E05",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 34,
-      "section": "Section II: Risk Factors",
-      "evidence_type": "Company risk disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "If user-facing operating or delivery fees increase it may decrease the frequency with which users transact on the platform",
-      "metric_value": "Not quantified",
-      "crm_factor": "Price / promotion",
-      "relation_to_switching": "Direct acknowledgment that fees/pricing impact order frequency and retention",
-      "survey_mapping": "Context for H4 and fee sensitivity",
-      "interpretation": "Price sensitivity operates on transaction frequency as well as switching",
-      "causal_status": "Risk disclosure (non-causal)",
-      "verification_status": "Verified (Printed p. 34)"
-    },
-    {
-      "evidence_id": "E06",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 44,
-      "section": "Section II: Risk Factors",
-      "evidence_type": "Company risk disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Dark store network must be expanded cost-effectively; failure to deploy expansion proceeds effectively could impair growth and market coverage",
-      "metric_value": "Earmarked dark store capex: Rs 16289.75M; lease rentals: Rs 17349.41M",
-      "crm_factor": "Coverage / availability",
-      "relation_to_switching": "Geographic unserviceability directly prevents customer acquisition and retention",
-      "survey_mapping": "Supports former user Class A (42.5% area exit) and never users (61.7% area non-adoption)",
-      "interpretation": "Capital investment plan aligns with survey evidence that coverage is a dominant usage barrier",
-      "causal_status": "Company disclosure of plan (non-causal for past exits)",
-      "verification_status": "Verified (Printed p. 44)"
-    },
-    {
-      "evidence_id": "E07",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 143,
-      "section": "Section III: Objects of the Offer",
-      "evidence_type": "Offer/object disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Gross proceeds earmarked for establishing new dark stores in existing and new geographies over FY27-FY29",
-      "metric_value": "Rs 16289.75 million for new dark stores",
-      "crm_factor": "Coverage / availability",
-      "relation_to_switching": "Expansion capital aimed at eliminating pin-code serviceability gaps",
-      "survey_mapping": "Aligns with R1 serviceability waitlist and expansion capture",
-      "interpretation": "Demonstrates strategic focus on footprint density to capture unserved demand",
-      "causal_status": "Object disclosure",
-      "verification_status": "Verified (Printed p. 143-145)"
-    },
-    {
-      "evidence_id": "E08",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 148,
-      "section": "Section III: Objects of the Offer",
-      "evidence_type": "Offer/object disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Net proceeds allocated for lease rentals of existing dark store network through FY30",
-      "metric_value": "Rs 17349.41 million for dark store lease rentals",
-      "crm_factor": "Coverage / availability",
-      "relation_to_switching": "Sustaining dark store footprint infrastructure in core high-density catchments",
-      "survey_mapping": "Context for operational coverage stability",
-      "interpretation": "Secures physical real estate for ongoing catchment retention",
-      "causal_status": "Object disclosure",
-      "verification_status": "Verified (Printed p. 148-150)"
-    },
-    {
-      "evidence_id": "E09",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 154,
-      "section": "Section III: Objects of the Offer",
-      "evidence_type": "Offer/object disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Net proceeds allocated for investment in technology and cloud infrastructure to support platform scalability and personalization",
-      "metric_value": "Rs 4000.00 million for technology/cloud",
-      "crm_factor": "Loyalty / CRM",
-      "relation_to_switching": "Infrastructure funding for search recommendation engine and demand forecasting",
-      "survey_mapping": "Context for R2 assortment personalization and search discovery",
-      "interpretation": "Technical enabler for automated CRM recommendation tools",
-      "causal_status": "Object disclosure",
-      "verification_status": "Verified (Printed p. 154-156)"
-    },
-    {
-      "evidence_id": "E10",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 156,
-      "section": "Section III: Objects of the Offer",
-      "evidence_type": "Offer/object disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Net proceeds allocated for marketing and business promotion through subsidiary Zepto Marketplace Private Limited",
-      "metric_value": "Rs 5200.00 million for marketing/promotion",
-      "crm_factor": "Customer acquisition",
-      "relation_to_switching": "User acquisition and brand visibility spend",
-      "survey_mapping": "Context for customer acquisition vs retention CRM balance",
-      "interpretation": "Paid acquisition budget to drive top-of-funnel customer traffic",
-      "causal_status": "Object disclosure",
-      "verification_status": "Verified (Printed p. 156-157)"
-    },
-    {
-      "evidence_id": "E11",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 160,
-      "section": "Section III: Basis for Offer Price",
-      "evidence_type": "Company KPI",
-      "claim_owner": "Zepto Limited",
-      "claim": "Annual Transacting Users (ATU) grew from 10.57M (FY24) to 38.38M (FY25) to 47.97M (FY26)",
-      "metric_value": "ATU: 47.97 million (31 March 2026)",
-      "crm_factor": "Customer acquisition / scale",
-      "relation_to_switching": "Trailing 12-month unique customer count showing overall platform scale",
-      "survey_mapping": "Population scale context (does not measure individual churn)",
-      "interpretation": "Scale metric; ATU dipped 3.2% from Dec 2025 (49.54M) to Mar 2026 (47.97M)",
-      "causal_status": "Company KPI disclosure",
-      "verification_status": "Verified (Printed p. 160-161)"
-    },
-    {
-      "evidence_id": "E12",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 161,
-      "section": "Section III: Basis for Offer Price",
-      "evidence_type": "Company KPI",
-      "claim_owner": "Zepto Limited",
-      "claim": "Orders per day increased significantly across quarters",
-      "metric_value": "Q4 FY26 orders per day: 2333488 vs Q3 FY26: 1814288 (+28.6% QoQ)",
-      "crm_factor": "Operational context",
-      "relation_to_switching": "Transaction velocity increased even while trailing 12-month ATU stabilized",
-      "survey_mapping": "Contrasts with ATU dip; existing user frequency increased",
-      "interpretation": "Indicates intensification of active cohort usage despite top-line user flattening",
-      "causal_status": "Company KPI disclosure",
-      "verification_status": "Verified (Printed p. 161)"
-    },
-    {
-      "evidence_id": "E13",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 162,
-      "section": "Section III: Basis for Offer Price",
-      "evidence_type": "Company KPI",
-      "claim_owner": "Zepto Limited",
-      "claim": "Weighted average unique SKUs available at a store geography level grew from 12,312 (FY24) to 44,341 (FY25) to 46,623 (FY26) and reached 49,602 in Q4 FY26",
-      "metric_value": "SKUs: 12312 (FY24) -> 44341 (FY25) -> 46623 (FY26) -> 49602 (Q4 FY26)",
-      "crm_factor": "Product / assortment",
-      "relation_to_switching": "Direct company verification of Media Claim M02",
-      "survey_mapping": "Directly contextualizes H3 (variety) and former user variety exit reasons",
-      "interpretation": "Triangulates voluntary former leavers citing variety (8/32) as real historical gap being closed",
-      "causal_status": "Company KPI disclosure",
-      "verification_status": "Verified (Printed p. 162)"
-    },
-    {
-      "evidence_id": "E14",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 163,
-      "section": "Section III: Basis for Offer Price",
-      "evidence_type": "Company KPI",
-      "claim_owner": "Zepto Limited",
-      "claim": "Dark store network grew from 337 stores across 11 cities (FY24) to 1029 across 43 cities (FY25) to 1139 across 66 cities (FY26)",
-      "metric_value": "Dark stores: 1139 closing stores; 66 cities (31 March 2026)",
-      "crm_factor": "Coverage / availability",
-      "relation_to_switching": "Geographic rollout progression across Indian urban centers",
-      "survey_mapping": "Directly relates to Class A former users (31/73) and never users (37/60 citing area)",
-      "interpretation": "Footprint expansion from Tier-1 into Tier-2/non-metro cities",
-      "causal_status": "Company KPI disclosure",
-      "verification_status": "Verified (Printed p. 163)"
-    },
-    {
-      "evidence_id": "E15",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 194,
-      "section": "Section IV: Industry Overview",
-      "evidence_type": "Redseer/industry evidence",
-      "claim_owner": "Redseer Strategy Consultants (quoted in UDRHP)",
-      "claim": "India quick-commerce market expanded from ~Rs 133B (CY2022) to ~Rs 963B (CY2025), representing ~95% growth; accounts for >2/3 of online grocery orders",
-      "metric_value": "Market size: ~Rs 963 billion (CY2025); ~13% of online retail GMV",
-      "crm_factor": "Operational context",
-      "relation_to_switching": "Macro market expansion drives category adoption across competing platforms",
-      "survey_mapping": "Context for overall quick-commerce market growth",
-      "interpretation": "Commissioned industry market context; not Zepto-specific customer data",
-      "causal_status": "Company-cited industry report",
-      "verification_status": "Verified (Printed p. 194-196)"
-    },
-    {
-      "evidence_id": "E16",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 202,
-      "section": "Section IV: Industry Overview",
-      "evidence_type": "Redseer/industry evidence",
-      "claim_owner": "Redseer Strategy Consultants (quoted in UDRHP)",
-      "claim": "Quick-commerce consumer adoption is driven primarily by speed and convenience with expanding category mix beyond impulse grocery into beauty electronics and general merchandise",
-      "metric_value": "Top categories: Packaged foods fresh grocery beauty personal care",
-      "crm_factor": "Product / assortment",
-      "relation_to_switching": "Broadening category breadth increases multi-category basket frequency",
-      "survey_mapping": "Context for H3 and multi-category purchasing (M10)",
-      "interpretation": "Category expansion is an industry-wide structural evolution",
-      "causal_status": "Company-cited industry report",
-      "verification_status": "Verified (Printed p. 202-205)"
-    },
-    {
-      "evidence_id": "E17",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 234,
-      "section": "Section IV: Our Business",
-      "evidence_type": "Company business description",
-      "claim_owner": "Zepto Limited",
-      "claim": "Company operates on S.Q.A.P. customer experience framework: Speed, Quality, Assortment, and Price transparency, supported by everyday low price (EDLP) philosophy",
-      "metric_value": "S.Q.A.P. 4-pillar operating model",
-      "crm_factor": "Product / assortment; Price",
-      "relation_to_switching": "Core platform value proposition designed to drive customer stickiness and repeat frequency",
-      "survey_mapping": "Directly maps to survey constructs: SAT ALT VAR PROMO",
-      "interpretation": "Defines company intended positioning against rival quick-commerce platforms",
-      "causal_status": "Company business description",
-      "verification_status": "Verified (Printed p. 234-235)"
-    },
-    {
-      "evidence_id": "E18",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 246,
-      "section": "Section IV: Our Business",
-      "evidence_type": "Company business description",
-      "claim_owner": "Zepto Limited",
-      "claim": "In-house search and recommendation engine with machine learning models for intent parsing, query understanding, and catalog ranking",
-      "metric_value": "Proprietary ML search and recommendation system",
-      "crm_factor": "Loyalty / CRM",
-      "relation_to_switching": "Personalization tooling intended to reduce search friction and stock-out abandonment",
-      "survey_mapping": "Directly enables CRM Recommendation R2 (assortment/stock-out personalization)",
-      "interpretation": "Confirms existing algorithmic capability to deploy personalized recommendations",
-      "causal_status": "Company business description",
-      "verification_status": "Verified (Printed p. 246-247)"
-    },
-    {
-      "evidence_id": "E19",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 252,
-      "section": "Section IV: Our Business",
-      "evidence_type": "Company business description",
-      "claim_owner": "Zepto Limited",
-      "claim": "User cohort expansion: users purchase from an average of ~6 product categories in month 1, expanding to >12 categories within 1 year and 18 product categories within 2 years of joining",
-      "metric_value": "Categories purchased: 6 in Month 1 -> >12 in Year 1 -> 18 in Year 2",
-      "crm_factor": "Customer retention / loss",
-      "relation_to_switching": "Direct company verification of Media Claim M10",
-      "survey_mapping": "Contextualizes cross-category retention dynamics",
-      "interpretation": "Cross-category purchasing depth is directly associated with multi-year user stickiness",
-      "causal_status": "Company business disclosure",
-      "verification_status": "Verified (Printed p. 252)"
-    },
-    {
-      "evidence_id": "E20",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 253,
-      "section": "Section IV: Our Business",
-      "evidence_type": "Company KPI",
-      "claim_owner": "Zepto Limited",
-      "claim": "User Cohort Retention Table: Quarterly transacting user retention demonstrates long-term cohort stabilization between 44.3% and 54.0% across multi-year cohorts (e.g. FY23 Q2 cohort shows 51.5% in Q2 -> 45.2% in Q12 -> 44.3% in Q15)",
-      "metric_value": "Cohort retention: 45.2% - 49.8% 3-year active order retention",
-      "crm_factor": "Customer retention / loss",
-      "relation_to_switching": "Direct company verification of Media Claim M03",
-      "survey_mapping": "Provides empirical benchmark for longitudinal customer retention in Indian quick-commerce",
-      "interpretation": "Shows ~50% customer attrition occurs within the first 3-4 quarters before cohort stabilizes",
-      "causal_status": "Company KPI disclosure",
-      "verification_status": "Verified (Printed p. 253-254)"
-    },
-    {
-      "evidence_id": "E21",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 258,
-      "section": "Section IV: Our Business",
-      "evidence_type": "Company business description",
-      "claim_owner": "Zepto Limited",
-      "claim": "Zepto Pass is the defined subscription program offering delivery benefits and selective promotions; Zepto Club is NOT a registered filing term or defined program",
-      "metric_value": "Zepto Pass active subscription program",
-      "crm_factor": "Loyalty / CRM",
-      "relation_to_switching": "Subscription loyalty program designed to build platform mooring and frequency",
-      "survey_mapping": "Context for H5/H6 mooring and CRM loyalty interventions",
-      "interpretation": "Confirms Zepto Pass as official membership program while disproving Media Claim M04 (Zepto Club)",
-      "causal_status": "Company business disclosure",
-      "verification_status": "Verified (Printed p. 258-259)"
-    },
-    {
-      "evidence_id": "E22",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 260,
-      "section": "Section IV: Our Business",
-      "evidence_type": "Company business description",
-      "claim_owner": "Zepto Limited",
-      "claim": "Dark store densification strategy reduces delivery radius to optimize delivery speed and maintain average order delivery times under 10-15 minutes",
-      "metric_value": "Average delivery radius reduced as store density increased",
-      "crm_factor": "Service / experience",
-      "relation_to_switching": "Hyperlocal proximity sustains 10-minute delivery value proposition",
-      "survey_mapping": "Relates to delivery speed mentions in survey former-user reasons (7/73)",
-      "interpretation": "Proximity reduces delivery time variance and order cancellation risk",
-      "causal_status": "Company business description",
-      "verification_status": "Verified (Printed p. 260-261)"
-    },
-    {
-      "evidence_id": "E23",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 530,
-      "section": "Section V: MD&A",
-      "evidence_type": "Company disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Supply Chain Variable Cost per Order includes delivery and handling expenses, mid-mile transport, packaging, and store franchisee variable costs",
-      "metric_value": "Supply Chain Variable Cost per Order definition",
-      "crm_factor": "Operational context",
-      "relation_to_switching": "Unit economics of fulfilling individual customer orders",
-      "survey_mapping": "Context for delivery fee structures and gross margin thresholds",
-      "interpretation": "Demonstrates cost floor below which free delivery incentives cannot be extended",
-      "causal_status": "Company disclosure",
-      "verification_status": "Verified (Printed p. 530-532)"
-    },
-    {
-      "evidence_id": "E24",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 538,
-      "section": "Section V: MD&A",
-      "evidence_type": "Company disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Assortment expansion from 12,312 SKUs (FY24) to 49,602 SKUs (Q4 FY26) combined with Everyday Low Price (EDLP) strategy cited by management as primary driver of improved user value proposition and retention rate",
-      "metric_value": "SKUs reached 49602 in 3 months ended 31 March 2026",
-      "crm_factor": "Product / assortment; Retention",
-      "relation_to_switching": "Management direct rationale linking SKU breadth + EDLP pricing to customer retention",
-      "survey_mapping": "Directly aligns with survey voluntary churn findings (variety/availability = 16/32 main reasons)",
-      "interpretation": "Management strategic perspective linking catalog depth to lower customer acquisition dependence",
-      "causal_status": "Company disclosure / MD&A",
-      "verification_status": "Verified (Printed p. 538)"
-    },
-    {
-      "evidence_id": "E25",
-      "source_id": "S01",
-      "source_doc": "Zepto Limited UDRHP-I",
-      "printed_page": 545,
-      "section": "Section V: MD&A",
-      "evidence_type": "Company disclosure",
-      "claim_owner": "Zepto Limited",
-      "claim": "Advertising and sales promotion expenses increased in line with brand expansion and customer acquisition efforts across 66 cities",
-      "metric_value": "Advertising expenses tracked as percentage of NRV and revenue",
-      "crm_factor": "Price / promotion",
-      "relation_to_switching": "Marketing expenditure supporting top-of-funnel user traffic and app downloads",
-      "survey_mapping": "Context for acquisition spending vs retention CRM allocation",
-      "interpretation": "Reflects aggressive customer acquisition spending across new city launches",
-      "causal_status": "Company disclosure / MD&A",
-      "verification_status": "Verified (Printed p. 545-547)"
     }
   ],
   "literature_references": [

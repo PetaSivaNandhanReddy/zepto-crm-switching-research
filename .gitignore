@@ -36,3 +36,7 @@ ehthumbs.db
 *.log
 *.tmp
 *.temp
+
+# Sensitive survey research data (protect respondent microdata)
+data/
+
