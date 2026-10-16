@@ -1084,6 +1084,34 @@ html_content = '''<!DOCTYPE html>
               </div>
             </div>
           </div>
+
+          <!-- Complete HTMT Discriminant Validity Matrix (Table 22) -->
+          <div class="table-wrapper" style="margin-top: 1rem;">
+            <table class="data-table" aria-label="HTMT discriminant validity ratios">
+              <thead>
+                <tr>
+                  <th>Construct Pair</th>
+                  <th class="num-cell">Complete n</th>
+                  <th class="num-cell">HTMT Ratio</th>
+                  <th class="num-cell">95% Bootstrap CI</th>
+                  <th>Discriminant Validity Verdict</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="cell-highlight">ALT &minus; VAR</td><td class="num-cell">46</td><td class="num-cell">0.943</td><td class="num-cell">[0.808, 1.041]</td><td><span class="badge badge-anomalous">Not Established (&ge; 0.85)</span></td></tr>
+                <tr><td class="cell-highlight">SWEFFORT &minus; INT</td><td class="num-cell">46</td><td class="num-cell">0.923</td><td class="num-cell">[0.739, 1.157]</td><td><span class="badge badge-anomalous">Not Established (&ge; 0.85)</span></td></tr>
+                <tr><td class="cell-highlight">VAR &minus; INT</td><td class="num-cell">46</td><td class="num-cell">0.896</td><td class="num-cell">[0.724, 1.021]</td><td><span class="badge badge-anomalous">Not Established (&ge; 0.85)</span></td></tr>
+                <tr><td class="cell-highlight">ALT &minus; INT</td><td class="num-cell">46</td><td class="num-cell">0.874</td><td class="num-cell">[0.723, 0.989]</td><td><span class="badge badge-anomalous">Not Established (&ge; 0.85)</span></td></tr>
+                <tr><td>VAR &minus; SWEFFORT</td><td class="num-cell">46</td><td class="num-cell">0.792</td><td class="num-cell">[0.580, 0.946]</td><td><span class="badge badge-verified">Acceptable (&lt; 0.80)</span></td></tr>
+                <tr><td>ALT &minus; SWEFFORT</td><td class="num-cell">46</td><td class="num-cell">0.767</td><td class="num-cell">[0.521, 0.982]</td><td><span class="badge badge-verified">Acceptable (&lt; 0.80)</span></td></tr>
+                <tr><td>SAT &minus; ALT</td><td class="num-cell">46</td><td class="num-cell">0.391</td><td class="num-cell">[0.163, 0.710]</td><td><span class="badge badge-verified">Well Established (&lt; 0.80)</span></td></tr>
+                <tr><td>SAT &minus; SWEFFORT</td><td class="num-cell">46</td><td class="num-cell">0.379</td><td class="num-cell">[0.122, 0.756]</td><td><span class="badge badge-verified">Well Established (&lt; 0.80)</span></td></tr>
+                <tr><td>SAT &minus; INT</td><td class="num-cell">46</td><td class="num-cell">0.242</td><td class="num-cell">[0.070, 0.573]</td><td><span class="badge badge-verified">Well Established (&lt; 0.80)</span></td></tr>
+                <tr><td>SAT &minus; VAR</td><td class="num-cell">46</td><td class="num-cell">0.231</td><td class="num-cell">[0.053, 0.615]</td><td><span class="badge badge-verified">Well Established (&lt; 0.80)</span></td></tr>
+              </tbody>
+            </table>
+            <p class="chart-caption">Table 22: Strict HTMT0.85 conservative criterion (Henseler et al., 2015). High HTMT values (&ge; 0.85) between pull constructs and intention indicate substantial conceptual collinearity.</p>
+          </div>
         </section>
 
         <!-- ===================================================================
