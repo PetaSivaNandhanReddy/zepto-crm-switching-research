@@ -24,7 +24,7 @@ window.SITE_DATA = {
     "media_claims_count": 11,
     "crm_recommendations_count": 5,
     "discrepancy_notice": "Report superseded where it differs from the tables; see DISCREPANCIES.md",
-    "build_timestamp": "2026-10-16 09:07:20"
+    "build_timestamp": "2026-10-16 09:33:00"
   },
   "table01_demographics": [
     {

@@ -493,3 +493,24 @@
     bottom: 16px;
   }
 }
+
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 1.4rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .content-container {
+    padding: 1rem 0.75rem 3rem;
+  }
+  .top-left-status {
+    gap: 6px;
+  }
+  .discrepancy-alert-chip {
+    font-size: 0.68rem;
+    padding: 3px 8px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+}
+
