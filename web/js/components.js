@@ -149,7 +149,9 @@
     });
   }
 
-  // 7. E01-E25 Evidence Search & Filter
+  // 7. E01-E25 Evidence Search, Detail Drawers & 690-Page Explorer
+  var activeClusterFilter = 'all';
+
   function initEvidenceSearch() {
     var searchInput = document.getElementById('evidence-search-input');
     var constructSelect = document.getElementById('evidence-construct-select');
@@ -162,19 +164,109 @@
       cards.forEach(function (card) {
         var text = card.textContent.toLowerCase();
         var cardConstruct = card.getAttribute('data-construct') || '';
+        var cardCluster = card.getAttribute('data-cluster') || '';
         var matchText = !query || text.indexOf(query) !== -1;
         var matchConstruct = construct === 'all' || cardConstruct.indexOf(construct) !== -1;
+        var matchCluster = activeClusterFilter === 'all' || cardCluster === activeClusterFilter;
 
-        if (matchText && matchConstruct) {
+        if (matchText && matchConstruct && matchCluster) {
           card.style.display = '';
+          if (activeClusterFilter !== 'all') {
+            card.classList.add('cluster-highlight');
+          } else {
+            card.classList.remove('cluster-highlight');
+          }
         } else {
           card.style.display = 'none';
+          card.classList.remove('cluster-highlight');
         }
       });
     }
 
     if (searchInput) searchInput.addEventListener('input', applyFilter);
     if (constructSelect) constructSelect.addEventListener('change', applyFilter);
+
+    // Detail Drawer Toggles inside Evidence Cards
+    document.querySelectorAll('.btn-evidence-drawer-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var targetId = btn.getAttribute('data-target');
+        var drawer = document.getElementById(targetId);
+        if (drawer) {
+          var isOpen = drawer.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          btn.textContent = isOpen ? 'Close Details ▴' : 'Inspect Details ▾';
+        }
+      });
+    });
+
+    window.applyEvidenceFilter = applyFilter;
+  }
+
+  function initPageReferenceExplorer() {
+    var clusterBtns = document.querySelectorAll('.cluster-btn');
+    var pageMarkers = document.querySelectorAll('.page-marker');
+    var resetBtn = document.getElementById('btn-reset-page-filter');
+
+    function selectCluster(clusterId) {
+      activeClusterFilter = clusterId;
+
+      clusterBtns.forEach(function (b) {
+        if (b.getAttribute('data-cluster') === clusterId) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      pageMarkers.forEach(function (m) {
+        if (m.getAttribute('data-cluster') === clusterId) {
+          m.classList.add('active');
+        } else {
+          m.classList.remove('active');
+        }
+      });
+
+      if (window.applyEvidenceFilter) {
+        window.applyEvidenceFilter();
+      }
+
+      // Scroll smoothly to first visible card
+      var firstVisible = document.querySelector('#udrhp-cards-container .evidence-card[style=""]');
+      if (!firstVisible) {
+        firstVisible = Array.from(document.querySelectorAll('#udrhp-cards-container .evidence-card')).find(function (c) {
+          return c.style.display !== 'none';
+        });
+      }
+      if (firstVisible) {
+        firstVisible.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    clusterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var clusterId = this.getAttribute('data-cluster');
+        selectCluster(clusterId);
+      });
+    });
+
+    pageMarkers.forEach(function (marker) {
+      marker.addEventListener('click', function () {
+        var clusterId = this.getAttribute('data-cluster');
+        selectCluster(clusterId);
+      });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        activeClusterFilter = 'all';
+        clusterBtns.forEach(function (b) { b.classList.remove('active'); });
+        pageMarkers.forEach(function (m) { m.classList.remove('active'); });
+        if (window.applyEvidenceFilter) {
+          window.applyEvidenceFilter();
+        }
+      });
+    }
   }
 
   // 8. Triangulation Matrix Filter
@@ -281,6 +373,7 @@
     initCrmFilter();
     initAccordions();
     initEvidenceSearch();
+    initPageReferenceExplorer();
     initTriangulationFilter();
     initCrmPipeline();
   });

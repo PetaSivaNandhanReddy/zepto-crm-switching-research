@@ -78,7 +78,7 @@
       "phase": "data",
       "label": "Measurement Quality",
       "sub": [
-        "Cronbach's alpha & McDonald's omega",
+        "Cronbach's alpha & Spearman-Brown reliability",
         "HTMT discriminant validity (n=46)",
         "Single-item construct bounding"
       ],
@@ -111,7 +111,7 @@
       "sub": [
         "Raw vs. Within-person centered correlation comparison",
         "HTMT discriminant validity overlap assessment",
-        "H9 partial-shift comparison (Mann–Whitney U=346.5, p=0.6014)"
+        "H9 partial-shift comparison (Mann–Whitney U=346.5, p=0.6029)"
       ],
       "detail": "Pull associations attenuate substantially post-centering; switching barriers remain inconclusive.",
       "source": "final_report §6.3",
@@ -126,7 +126,7 @@
         "Exit reason frequencies & 95% Wilson CIs",
         "Class A (Coverage-primary) vs Class C (Voluntary)",
         "Competitor assortment advantage (n=68)",
-        "H10 return willingness test (U=496.0, p=0.2137)"
+        "H10 return willingness test (U=496.0, p=0.2141)"
       ],
       "detail": "Retrospective self-reported behavioral exit drivers; 50.0% of voluntary exits cite availability/variety.",
       "source": "final_report §6.5",

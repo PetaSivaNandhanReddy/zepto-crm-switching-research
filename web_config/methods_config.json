@@ -29,12 +29,12 @@
     },
     {
       "id": "alpha",
-      "badge": "Cronbach's α & McDonald's ω",
+      "badge": "Cronbach's α & Spearman-Brown Reliability",
       "purpose": "Scale internal consistency reliability",
       "where": "Multi-item survey constructs (SAT, ALT, VAR, SC/SWEFFORT, INT)",
       "status": "verified_in_report",
       "formula": "\\alpha = \\frac{k}{k-1}\\left(1 - \\frac{\\sum \\sigma_i^2}{\\sigma_X^2}\\right)",
-      "notes": "Not computable for single-item constructs (PROMO1, FAM1, INERT1) which are bounded accordingly."
+      "notes": "Not computable for single-item constructs (PROMO1, FAM1, INERT1) which are bounded accordingly. Only Cronbach's α and Spearman-Brown coefficients were computed; McDonald's ω is absent from canonical outputs."
     },
     {
       "id": "htmt",

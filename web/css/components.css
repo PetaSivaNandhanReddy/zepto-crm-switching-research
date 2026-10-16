@@ -507,3 +507,134 @@
   flex: 1;
 }
 
+/* ==========================================================================
+   Page-Reference Explorer (690-Page Spectrum)
+   ========================================================================== */
+.page-strip-wrapper {
+  margin: 1rem 0;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.page-strip-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.page-spectrum-track {
+  position: relative;
+  height: 24px;
+  background: linear-gradient(90deg, #1e1338 0%, #2e1a54 50%, #1a1033 100%);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-mid);
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.page-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #ec4899, #8b5cf6);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 8px rgba(236, 72, 153, 0.6);
+}
+
+.page-marker:hover,
+.page-marker.active {
+  background: linear-gradient(180deg, #f43f5e, #a855f7);
+  box-shadow: 0 0 14px rgba(236, 72, 153, 0.9);
+  transform: scaleY(1.2);
+  z-index: 2;
+}
+
+.cluster-btn {
+  font-size: 0.76rem;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cluster-btn:hover {
+  background: var(--bg-surface-elevated);
+  border-color: var(--border-mid);
+  color: var(--text-primary);
+}
+
+.cluster-btn.active {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: var(--accent-purple);
+  color: #ffffff;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+}
+
+/* ==========================================================================
+   Evidence Detail Drawer (E01–E25)
+   ========================================================================== */
+.btn-evidence-drawer-toggle {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-evidence-drawer-toggle:hover {
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-mid);
+}
+
+.evidence-detail-drawer {
+  display: none;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--border-subtle);
+  animation: fadeIn 150ms ease-in;
+}
+
+.evidence-detail-drawer.open {
+  display: block;
+}
+
+.evidence-detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.evidence-detail-grid .detail-label {
+  font-weight: 700;
+  color: var(--text-primary);
+  display: inline-block;
+  min-width: 130px;
+  margin-right: 4px;
+}
+
+.evidence-detail-grid .detail-val {
+  color: var(--text-secondary);
+}
+
+.evidence-card.cluster-highlight {
+  border-color: var(--accent-magenta);
+  box-shadow: 0 0 12px rgba(236, 72, 153, 0.35);
+  transform: translateY(-2px);
+}
+

@@ -1,3 +1,4 @@
+
 /**
  * Zepto CRM Switching Research — Chart Manager
  * Handles Chart.js 4.4.1 instances with ZERO hard-coded statistics.
@@ -285,6 +286,314 @@
     });
   }
 
+  // 8. Demographics Age Distribution
+  function buildDemographicsAgeChart(canvas) {
+    if (!window.SITE_DATA || !window.SITE_DATA.table01_demographics) return null;
+    var rows = window.SITE_DATA.table01_demographics.filter(function (r) {
+      return r.variable === 'Age group';
+    });
+    var labels = rows.map(function (r) { return r.category + ' (n=' + r.All + ')'; });
+    var counts = rows.map(function (r) { return r.All; });
+
+    return new Chart(canvas, {
+      type: 'doughnut',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: counts,
+          backgroundColor: ['#8b5cf6', '#ec4899', '#f59e0b', '#63577d'],
+          borderColor: '#090611',
+          borderWidth: 2,
+          hoverOffset: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { boxWidth: 10, padding: 8, color: '#c9bedf', font: { size: 10 } }
+          }
+        },
+        cutout: '58%'
+      }
+    });
+  }
+
+  // 9. Demographics Occupation Distribution
+  function buildDemographicsOccChart(canvas) {
+    if (!window.SITE_DATA || !window.SITE_DATA.table01_demographics) return null;
+    var rows = window.SITE_DATA.table01_demographics.filter(function (r) {
+      return r.variable === 'Occupation';
+    });
+    var labels = rows.map(function (r) { return r.category; });
+    var counts = rows.map(function (r) { return r.All; });
+
+    return new Chart(canvas, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          axis: 'y',
+          label: 'Respondents',
+          data: counts,
+          backgroundColor: ['#ec4899', '#8b5cf6', '#06b6d4', '#63577d'],
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: { color: '#8e80ab' }
+          },
+          y: { grid: { display: false }, ticks: { color: '#c9bedf' } }
+        }
+      }
+    });
+  }
+
+  // 10. Demographics Location Tier (n=168)
+  function buildDemographicsLocChart(canvas) {
+    if (!window.SITE_DATA || !window.SITE_DATA.table01_demographics) return null;
+    var rows = window.SITE_DATA.table01_demographics.filter(function (r) {
+      return r.variable.indexOf('Location') === 0;
+    });
+    var labels = rows.map(function (r) { return r.category; });
+    var counts = rows.map(function (r) { return r.All; });
+
+    return new Chart(canvas, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Respondents (n=168)',
+          data: counts,
+          backgroundColor: '#06b6d4',
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: { color: '#8e80ab' }
+          },
+          x: { grid: { display: false }, ticks: { color: '#c9bedf', font: { size: 10 } } }
+        }
+      }
+    });
+  }
+
+  // 11. Demographics Quick-Commerce Monthly Spend (n=168)
+  function buildDemographicsSpendChart(canvas) {
+    if (!window.SITE_DATA || !window.SITE_DATA.table01_demographics) return null;
+    var rows = window.SITE_DATA.table01_demographics.filter(function (r) {
+      return r.variable.indexOf('spend') !== -1;
+    });
+    var labels = rows.map(function (r) { return r.category; });
+    var counts = rows.map(function (r) { return r.All; });
+
+    return new Chart(canvas, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Respondents (n=168)',
+          data: counts,
+          backgroundColor: '#f59e0b',
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            ticks: { color: '#8e80ab' }
+          },
+          x: { grid: { display: false }, ticks: { color: '#c9bedf', font: { size: 10 } } }
+        }
+      }
+    });
+  }
+
+  // 12. UDRHP Capital Allocation & Commitments
+  function buildUdrhpCapitalChart(canvas) {
+    if (!window.SITE_DATA) return null;
+    var labels = [
+      'Dark Store Capex (FY27–29)',
+      'Store Lease Rentals (Through FY30)',
+      'Cloud & Tech Capex (FY27–29)',
+      'Marketing & Promotion (FY27–29)'
+    ];
+    var amounts = [16289.75, 17349.41, 4000.00, 5200.00];
+    var colors = ['#8b5cf6', '#f59e0b', '#06b6d4', '#ec4899'];
+
+    return new Chart(canvas, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          axis: 'y',
+          label: 'Allocated Capital (₹ Millions)',
+          data: amounts,
+          backgroundColor: colors,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (ctx) {
+                return '₹' + ctx.raw.toLocaleString('en-IN', { minimumFractionDigits: 2 }) + ' Million';
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            title: { display: true, text: 'Allocation Amount (₹ Millions INR)', color: '#8e80ab' },
+            ticks: { color: '#8e80ab' }
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: '#c9bedf', font: { size: 11 } }
+          }
+        }
+      }
+    });
+  }
+
+  // 13. UDRHP Dark Store Network Timeline
+  function buildUdrhpStoresChart(canvas) {
+    if (!window.SITE_DATA) return null;
+    return new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels: ['FY24', 'FY25', 'FY26'],
+        datasets: [
+          {
+            label: 'Dark Stores',
+            data: [337, 1029, 1139],
+            borderColor: '#ec4899',
+            backgroundColor: 'rgba(236, 72, 153, 0.15)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 5,
+            pointBackgroundColor: '#ec4899'
+          },
+          {
+            label: 'Cities Covered',
+            data: [11, 43, 66],
+            borderColor: '#06b6d4',
+            backgroundColor: 'transparent',
+            borderDash: [4, 4],
+            pointRadius: 4,
+            pointBackgroundColor: '#06b6d4',
+            yAxisID: 'yCities'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: { color: '#c9bedf', boxWidth: 12 }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            title: { display: true, text: 'Dark Stores (Count)', color: '#ec4899' },
+            ticks: { color: '#8e80ab' }
+          },
+          yCities: {
+            position: 'right',
+            beginAtZero: true,
+            grid: { display: false },
+            title: { display: true, text: 'Cities (Count)', color: '#06b6d4' },
+            ticks: { color: '#06b6d4' }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#c9bedf' }
+          }
+        }
+      }
+    });
+  }
+
+  // 14. UDRHP Unique Store SKUs Timeline
+  function buildUdrhpSkusChart(canvas) {
+    if (!window.SITE_DATA) return null;
+    return new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels: ['FY24', 'FY25', 'FY26', 'Q4 FY26'],
+        datasets: [{
+          label: 'Unique Store SKUs',
+          data: [12312, 44341, 46623, 49602],
+          borderColor: '#8b5cf6',
+          backgroundColor: 'rgba(139, 92, 246, 0.15)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 5,
+          pointBackgroundColor: '#8b5cf6'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (ctx) {
+                return ctx.raw.toLocaleString('en-IN') + ' Unique SKUs';
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            title: { display: true, text: 'Unique SKUs per Store', color: '#8e80ab' },
+            ticks: { color: '#8e80ab' }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#c9bedf' }
+          }
+        }
+      }
+    });
+  }
+
   // Lazy Initialisation via IntersectionObserver
   function initLazyCharts() {
     if (typeof Chart === 'undefined') return;
@@ -292,11 +601,18 @@
     var chartRegistry = {
       'userGroupChart': buildUserGroupChart,
       'versionChart': buildVersionChart,
+      'demographicsAgeChart': buildDemographicsAgeChart,
+      'demographicsOccChart': buildDemographicsOccChart,
+      'demographicsLocChart': buildDemographicsLocChart,
+      'demographicsSpendChart': buildDemographicsSpendChart,
       'formerClassChart': buildFormerClassChart,
       'voluntaryReasonsChart': buildVoluntaryReasonsChart,
       'formerAltVariantChart': buildFormerAltVariantChart,
       'formerReturnChart': buildFormerReturnChart,
-      'regressionCoeffChart': buildRegressionChart
+      'regressionCoeffChart': buildRegressionChart,
+      'udrhpCapitalChart': buildUdrhpCapitalChart,
+      'udrhpStoresChart': buildUdrhpStoresChart,
+      'udrhpSkusChart': buildUdrhpSkusChart
     };
 
     var observer = new IntersectionObserver(function (entries) {

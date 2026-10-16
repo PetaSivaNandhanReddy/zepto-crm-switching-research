@@ -24,7 +24,7 @@ window.SITE_DATA = {
     "media_claims_count": 11,
     "crm_recommendations_count": 5,
     "discrepancy_notice": "Report superseded where it differs from the tables; see DISCREPANCIES.md",
-    "build_timestamp": "2026-10-16 09:33:00"
+    "build_timestamp": "2026-10-16 12:21:42"
   },
   "table01_demographics": [
     {
@@ -5991,7 +5991,7 @@ window.SITE_DATA = {
         "phase": "data",
         "label": "Measurement Quality",
         "sub": [
-          "Cronbach's alpha & McDonald's omega",
+          "Cronbach's alpha & Spearman-Brown reliability",
           "HTMT discriminant validity (n=46)",
           "Single-item construct bounding"
         ],
@@ -6027,7 +6027,7 @@ window.SITE_DATA = {
         "sub": [
           "Raw vs. Within-person centered correlation comparison",
           "HTMT discriminant validity overlap assessment",
-          "H9 partial-shift comparison (Mann–Whitney U=346.5, p=0.6014)"
+          "H9 partial-shift comparison (Mann–Whitney U=346.5, p=0.6029)"
         ],
         "detail": "Pull associations attenuate substantially post-centering; switching barriers remain inconclusive.",
         "source": "final_report §6.3",
@@ -6042,7 +6042,7 @@ window.SITE_DATA = {
           "Exit reason frequencies & 95% Wilson CIs",
           "Class A (Coverage-primary) vs Class C (Voluntary)",
           "Competitor assortment advantage (n=68)",
-          "H10 return willingness test (U=496.0, p=0.2137)"
+          "H10 return willingness test (U=496.0, p=0.2141)"
         ],
         "detail": "Retrospective self-reported behavioral exit drivers; 50.0% of voluntary exits cite availability/variety.",
         "source": "final_report §6.5",
@@ -6247,12 +6247,12 @@ window.SITE_DATA = {
       },
       {
         "id": "alpha",
-        "badge": "Cronbach's α & McDonald's ω",
+        "badge": "Cronbach's α & Spearman-Brown Reliability",
         "purpose": "Scale internal consistency reliability",
         "where": "Multi-item survey constructs (SAT, ALT, VAR, SC/SWEFFORT, INT)",
         "status": "verified_in_report",
         "formula": "\\alpha = \\frac{k}{k-1}\\left(1 - \\frac{\\sum \\sigma_i^2}{\\sigma_X^2}\\right)",
-        "notes": "Not computable for single-item constructs (PROMO1, FAM1, INERT1) which are bounded accordingly."
+        "notes": "Not computable for single-item constructs (PROMO1, FAM1, INERT1) which are bounded accordingly. Only Cronbach's α and Spearman-Brown coefficients were computed; McDonald's ω is absent from canonical outputs."
       },
       {
         "id": "htmt",

@@ -14,6 +14,9 @@ crm_flow_html = (ROOT / "scratch/crm_flow.html").read_text(encoding="utf-8")
 crm_cards_html = (ROOT / "scratch/crm_cards.html").read_text(encoding="utf-8")
 claims_ledger_html = (ROOT / "scratch/claims_ledger.html").read_text(encoding="utf-8")
 limitations_html = (ROOT / "scratch/limitations.html").read_text(encoding="utf-8")
+demo_viz_html = (ROOT / "scratch/demographics_visualizations.html").read_text(encoding="utf-8")
+udrhp_viz_html = (ROOT / "scratch/udrhp_visualizations.html").read_text(encoding="utf-8")
+stat_viz_html = (ROOT / "scratch/statistical_visualizations.html").read_text(encoding="utf-8")
 
 html_content = '''<!DOCTYPE html>
 <html lang="en">
@@ -28,8 +31,13 @@ html_content = '''<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
 
-  <!-- Pinned CDN: Chart.js 4.4.1 -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <!-- Local Vendored Chart.js 4.4.1 (with CDN fallback for zero-network file:// compatibility) -->
+  <script src="web/vendor/chart.umd.min.js"></script>
+  <script>
+    if (typeof Chart === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"><\\/script>');
+    }
+  </script>
 
   <!-- Modular Stylesheet Hierarchy -->
   <link rel="stylesheet" href="web/design_tokens.css">
@@ -431,73 +439,7 @@ html_content = '''<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Demographic Distribution Profile -->
-          <div class="table-wrapper">
-            <table class="data-table" aria-label="Demographic distribution of sample">
-              <thead>
-                <tr>
-                  <th>Demographic Dimension</th>
-                  <th>Category</th>
-                  <th class="num-cell">Count (n)</th>
-                  <th class="num-cell">Percentage (%)</th>
-                  <th>Denominator & Scope</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="cell-highlight" rowspan="2">Geography</td>
-                  <td>Tier 1 Metro (Bengaluru, Mumbai, Delhi-NCR, Hyderabad)</td>
-                  <td class="num-cell">115</td>
-                  <td class="num-cell">68.5%</td>
-                  <td rowspan="2"><i>n</i> = 168 (V1.5 & V2 respondents asked)</td>
-                </tr>
-                <tr>
-                  <td>Non-Metro / Tier 2</td>
-                  <td class="num-cell">53</td>
-                  <td class="num-cell">31.5%</td>
-                </tr>
-                <tr>
-                  <td class="cell-highlight" rowspan="4">Age Distribution</td>
-                  <td>18–24 years</td>
-                  <td class="num-cell">94</td>
-                  <td class="num-cell">51.1%</td>
-                  <td rowspan="4"><i>N</i> = 184 total sample</td>
-                </tr>
-                <tr>
-                  <td>25–34 years</td>
-                  <td class="num-cell">63</td>
-                  <td class="num-cell">34.2%</td>
-                </tr>
-                <tr>
-                  <td>35–44 years</td>
-                  <td class="num-cell">18</td>
-                  <td class="num-cell">9.8%</td>
-                </tr>
-                <tr>
-                  <td>45+ years</td>
-                  <td class="num-cell">9</td>
-                  <td class="num-cell">4.9%</td>
-                </tr>
-                <tr>
-                  <td class="cell-highlight" rowspan="3">Primary Occupation</td>
-                  <td>Salaried Professional</td>
-                  <td class="num-cell">98</td>
-                  <td class="num-cell">53.3%</td>
-                  <td rowspan="3"><i>N</i> = 184 total sample</td>
-                </tr>
-                <tr>
-                  <td>Student</td>
-                  <td class="num-cell">61</td>
-                  <td class="num-cell">33.2%</td>
-                </tr>
-                <tr>
-                  <td>Self-Employed / Other</td>
-                  <td class="num-cell">25</td>
-                  <td class="num-cell">13.6%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <!-- DEMOGRAPHICS_VISUALIZATIONS_PLACEHOLDER -->
 
           <!-- Platform Multi-Homing & Ordering Characteristics (Table 02 & Table 02b) -->
           <div class="stat-grid" style="grid-template-columns: 1fr 1fr; margin-top: 1.5rem;">
@@ -996,6 +938,8 @@ html_content = '''<!DOCTYPE html>
             <p class="chart-caption">Green points indicate statistically supported hypotheses on raw scores (H2, H3, H4). Red point denotes H5 (anomalous positive sign). Grey points denote inconclusive tests with CIs spanning zero (H1, H6, H7).</p>
           </div>
 
+          <!-- STATISTICAL_HEATMAP_PLACEHOLDER -->
+
           <!-- 2. Raw vs Within-Person Centered Dumbbell Plot (Interactive Toggle) -->
           <div class="chart-card">
             <div class="chart-header">
@@ -1313,36 +1257,7 @@ html_content = '''<!DOCTYPE html>
             Extraction and analysis of official disclosures from Zepto Limited's 690-page Updated Draft Red Herring Prospectus (UDRHP-I, June 2026), tracked media claims (M01–M11), and academic literature verification tiers (L01–L17).
           </p>
 
-          <!-- Capital Allocation Summary Cards -->
-          <div class="stat-grid">
-            <div class="stat-card">
-              <div class="stat-card-label">Dark Store Capex</div>
-              <div class="stat-card-value">₹16,289.75M</div>
-              <div class="stat-card-sub">Expanding store network FY27–FY29</div>
-              <div class="stat-card-meta">E07 · UDRHP pp. 143–145</div>
-            </div>
-
-            <div class="stat-card">
-              <div class="stat-card-label">Store Lease Rentals</div>
-              <div class="stat-card-value">₹17,349.41M</div>
-              <div class="stat-card-sub">Network lease commitments through FY30</div>
-              <div class="stat-card-meta">E08 · UDRHP pp. 148–150</div>
-            </div>
-
-            <div class="stat-card">
-              <div class="stat-card-label">Cloud & Tech Capex</div>
-              <div class="stat-card-value">₹4,000.00M</div>
-              <div class="stat-card-sub">Search, recommendations & ML forecasting</div>
-              <div class="stat-card-meta">E09 · UDRHP pp. 154–156</div>
-            </div>
-
-            <div class="stat-card">
-              <div class="stat-card-label">Marketing & Promotion</div>
-              <div class="stat-card-value">₹5,200.00M</div>
-              <div class="stat-card-sub">Top-of-funnel customer acquisition</div>
-              <div class="stat-card-meta">E10 · UDRHP pp. 156–157</div>
-            </div>
-          </div>
+          <!-- UDRHP_VISUALIZATIONS_PLACEHOLDER -->
 
           <!-- Searchable Evidence Explorer (E01–E25) -->
           <div class="chart-card">
@@ -1518,6 +1433,9 @@ html_content = html_content.replace('<!-- CRM_FLOW_PLACEHOLDER -->', crm_flow_ht
 html_content = html_content.replace('<!-- CRM_CARDS_PLACEHOLDER -->', crm_cards_html)
 html_content = html_content.replace('<!-- CLAIMS_LEDGER_PLACEHOLDER -->', claims_ledger_html)
 html_content = html_content.replace('<!-- LIMITATIONS_PLACEHOLDER -->', limitations_html)
+html_content = html_content.replace('<!-- DEMOGRAPHICS_VISUALIZATIONS_PLACEHOLDER -->', demo_viz_html)
+html_content = html_content.replace('<!-- UDRHP_VISUALIZATIONS_PLACEHOLDER -->', udrhp_viz_html)
+html_content = html_content.replace('<!-- STATISTICAL_HEATMAP_PLACEHOLDER -->', stat_viz_html)
 
 (ROOT / "index.html").write_text(html_content, encoding="utf-8")
 print(f"[SUCCESS] Upgraded index.html generated successfully ({len(html_content):,} bytes).")
