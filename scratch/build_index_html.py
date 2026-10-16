@@ -9,6 +9,11 @@ ROOT = Path(__file__).resolve().parent.parent
 cards_html = (ROOT / "scratch/cards_e01_e25.html").read_text(encoding="utf-8")
 media_rows_html = (ROOT / "scratch/media_rows.html").read_text(encoding="utf-8")
 lit_cards_html = (ROOT / "scratch/lit_cards.html").read_text(encoding="utf-8")
+triangulation_html = (ROOT / "scratch/triangulation_table.html").read_text(encoding="utf-8")
+crm_flow_html = (ROOT / "scratch/crm_flow.html").read_text(encoding="utf-8")
+crm_cards_html = (ROOT / "scratch/crm_cards.html").read_text(encoding="utf-8")
+claims_ledger_html = (ROOT / "scratch/claims_ledger.html").read_text(encoding="utf-8")
+limitations_html = (ROOT / "scratch/limitations.html").read_text(encoding="utf-8")
 
 html_content = '''<!DOCTYPE html>
 <html lang="en">
@@ -1449,58 +1454,19 @@ html_content = '''<!DOCTYPE html>
             Synthesis matrix reconciling primary consumer survey findings, secondary UDRHP-I regulatory disclosures, and academic literature across 6 operational dimensions.
           </p>
 
-          <div class="table-wrapper">
-            <table class="data-table" aria-label="Evidence triangulation matrix">
-              <thead>
-                <tr>
-                  <th>Switching Dimension</th>
-                  <th>Primary Survey Finding (N=184)</th>
-                  <th>Secondary UDRHP-I Filing (E01–E25)</th>
-                  <th>Academic Literature (L01–L17)</th>
-                  <th>Convergence Verdict</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="cell-highlight">Geographic Coverage</td>
-                  <td>56.2% of former users (41/73) and 61.7% of never-users cite unserved areas as primary barrier.</td>
-                  <td>₹16,289.75M earmarked for dark stores; network scaled to 1,139 stores across 66 cities (E07, E14).</td>
-                  <td>Involuntary switching literature establishes physical channel access as a prerequisite condition.</td>
-                  <td><span class="badge badge-verified">Strong Multi-Source Convergence</span></td>
-                </tr>
-                <tr>
-                  <td class="cell-highlight">Product Variety & Stock-outs</td>
-                  <td>50.0% of voluntary exits (16/32) cite availability and variety; 60.3% find superior variety on rivals.</td>
-                  <td>Store SKUs grew 4x to 46,623 (E13); merchant multi-homing identified as stock-out risk factor (E03).</td>
-                  <td>L05 (A) & L16 (B) confirm assortment gaps as key pull drivers of platform switching.</td>
-                  <td><span class="badge badge-verified">Strong Multi-Source Convergence</span></td>
-                </tr>
-                <tr>
-                  <td class="cell-highlight">Promotional Pull vs Unit Costs</td>
-                  <td>PROMO &rho; = +0.700; discounts cited in 9.4% of voluntary exits.</td>
-                  <td>Net loss ₹59,051.92M (FY26); marketing budget ₹5,200.00M; supply chain cost floor limits discounting (E01, E10).</td>
-                  <td>L05 (A) identifies deals/promotions as an attractive alternative sub-dimension.</td>
-                  <td><span class="badge badge-caution">Convergent with Economic Constraints</span></td>
-                </tr>
-                <tr>
-                  <td class="cell-highlight">Switching Barriers & Lock-in</td>
-                  <td>SWEFFORT &rho; = +0.721 (anomalous positive sign); collapses to +0.054 under within-person centering.</td>
-                  <td>Zepto Pass launched (E21); merchant and delivery partner multi-homing limits platform defensibility (E03).</td>
-                  <td>L10 (A) verifies positive switching-cost path (+0.294) when items capture transition effort.</td>
-                  <td><span class="badge badge-anomalous">Empirical Anomaly Confirmed</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+<!-- TRIANGULATION_TABLE_PLACEHOLDER -->
+
+<!-- CRM_FLOW_PLACEHOLDER -->
         </section>
 
         <!-- ===================================================================
              10. CRM RECOMMENDATIONS & BOUNDARIES
-             Old Anchor Aliases: #crm, #sources
+             Old Anchor Aliases: #crm, #sources, #findings
              =================================================================== -->
         <section class="dashboard-section" id="recommendations">
           <span id="crm" class="anchor-target" aria-hidden="true"></span>
           <span id="sources" class="anchor-target" aria-hidden="true"></span>
+          <span id="findings" class="anchor-target" aria-hidden="true"></span>
 
           <div class="section-eyebrow">
             <span>Stage 5 · Actionable Strategy</span>
@@ -1510,118 +1476,13 @@ html_content = '''<!DOCTYPE html>
             Pragmatic CRM strategic recommendations derived strictly from converged primary survey and regulatory evidence. Evaluated with statistical confidence tiers.
           </p>
 
-          <!-- Filter Controls for CRM -->
-          <div class="filter-bar" id="crm-filter-bar">
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Filter by Status:</span>
-            <button type="button" class="filter-btn active" data-filter="all">All (R1–R5)</button>
-            <button type="button" class="filter-btn" data-filter="Recommended">Recommended</button>
-            <button type="button" class="filter-btn" data-filter="Conditional">Conditional</button>
-            <button type="button" class="filter-btn" data-filter="Not recommended">Not Recommended</button>
-          </div>
+<!-- CRM_CARDS_PLACEHOLDER -->
 
-          <!-- R1-R5 Strategy Cards -->
-          <div class="card-grid" style="grid-template-columns: 1fr; gap: 1.25rem;">
-            <!-- R1 -->
-            <div class="evidence-card crm-rec-card" data-status="Recommended">
-              <div class="evidence-card-header">
-                <div>
-                  <span class="evidence-card-id">R1 · HIGH CONFIDENCE</span>
-                  <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Serviceability Waitlist & Expansion-Triggered Reactivation</h3>
-                </div>
-                <span class="badge badge-verified">Recommended (Conditional, Testable)</span>
-              </div>
-              <div class="evidence-card-claim">
-                <p><strong>Target Segment:</strong> Residents of unserved localities (Class A former users, <i>n</i> = 31; never-users citing coverage, <i>n</i> = 37).</p>
-                <p><strong>Mechanism:</strong> Capture pin codes at registration and on failed-delivery screens. Trigger automated notification when a dark store covering that catchment goes live. Zepto's ₹16,289.75M network expansion (E07) directly enables this strategy.</p>
-                <p><strong>Primary Limitations:</strong> Exit was involuntary; this represents demand recapture rather than true behavioural retention.</p>
-              </div>
-              <div class="evidence-card-footer">
-                <span>KPI: Waitlist-to-first-order conversion; 30/90-day repeat rate</span>
-                <span>Primary Evidence: Table 13d (31/73) & Table 16 (E07)</span>
-              </div>
-            </div>
+<!-- CLAIMS_LEDGER_PLACEHOLDER -->
 
-            <!-- R2 -->
-            <div class="evidence-card crm-rec-card" data-status="Conditional">
-              <div class="evidence-card-header">
-                <div>
-                  <span class="evidence-card-id">R2 · MODERATE CONFIDENCE</span>
-                  <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Restock Alerts & Intelligent Substitution Recommendations</h3>
-                </div>
-                <span class="badge badge-caution">Conditional (Pilot with Control Group)</span>
-              </div>
-              <div class="evidence-card-claim">
-                <p><strong>Target Segment:</strong> Current users experiencing repeated failed catalog searches or out-of-stock views.</p>
-                <p><strong>Mechanism:</strong> Log stock-out events and failed searches. Automatically trigger back-in-stock alerts and personalized close-substitute recommendations powered by Zepto's existing in-house ML engine (E18, ₹4,000.00M cloud investment).</p>
-                <p><strong>Primary Limitations:</strong> Associational survey evidence; recommendation engine efficacy must be tested in a randomized holdout pilot.</p>
-              </div>
-              <div class="evidence-card-footer">
-                <span>KPI: Repeat ordering among stock-out affected users vs control</span>
-                <span>Primary Evidence: Table 13e (16/32) & Table 16 (E18)</span>
-              </div>
-            </div>
+<!-- LIMITATIONS_PLACEHOLDER -->
 
-            <!-- R3 -->
-            <div class="evidence-card crm-rec-card" data-status="Conditional">
-              <div class="evidence-card-header">
-                <div>
-                  <span class="evidence-card-id">R3 · LOW-MODERATE CONFIDENCE</span>
-                  <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Segmented Win-Back for Voluntary Assortment Leavers</h3>
-                </div>
-                <span class="badge badge-caution">Conditional (Small n; Matched Reasons Only)</span>
-              </div>
-              <div class="evidence-card-claim">
-                <p><strong>Target Segment:</strong> Former voluntary users whose documented exit reason was product availability or variety (<i>n</i> = 16).</p>
-                <p><strong>Mechanism:</strong> Reason-specific win-back messaging triggered when relevant categories or brands are introduced. Restrict incentives to matched assortment leavers; broad-based discount discounting is unsupported (only 3/32 cited discounts).</p>
-                <p><strong>Primary Limitations:</strong> Small matched segment (<i>n</i> = 16); stated return intention may overstate actual conversion.</p>
-              </div>
-              <div class="evidence-card-footer">
-                <span>KPI: Reactivation rate vs holdout; 30/90-day post-reactivation repeat</span>
-                <span>Primary Evidence: Table 13e (Availability 8, Variety 8)</span>
-              </div>
-            </div>
-
-            <!-- R4 -->
-            <div class="evidence-card crm-rec-card" data-status="Not recommended">
-              <div class="evidence-card-header">
-                <div>
-                  <span class="evidence-card-id" style="color: var(--accent-rose);">R4 · CRITICAL RESEARCH FINDING</span>
-                  <h3 style="font-size: 1.15rem; color: #f87171; margin-top: 2px;">Switching-Barrier or Habit Lock-In Mechanisms</h3>
-                </div>
-                <span class="badge badge-anomalous">Not Recommended on Current Evidence</span>
-              </div>
-              <div class="evidence-card-claim">
-                <p><strong>Evaluation Status:</strong> <strong style="color: #f87171;">NOT RECOMMENDED ON CURRENT EVIDENCE.</strong> Switching-barrier evidence is inconclusive and current measurement is problematic.</p>
-                <p><strong>Scientific Rationale:</strong> Hypothesis H5 yielded an anomalous positive coefficient (&rho; = +0.721), and familiarity (H6) and inertia (H7) were statistically non-significant. Deploying artificial lock-in or switching barriers without validated reverse-worded re-measurement risks user alienation in a competitive multi-homing market.</p>
-              </div>
-              <div class="evidence-card-footer">
-                <span>Status: Table 19 canonical determination</span>
-                <span>Primary Evidence: Table 12a (H5, H6, H7)</span>
-              </div>
-            </div>
-
-            <!-- R5 -->
-            <div class="evidence-card crm-rec-card" data-status="Conditional">
-              <div class="evidence-card-header">
-                <div>
-                  <span class="evidence-card-id">R5 · LOW CONFIDENCE</span>
-                  <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Trigger-Based Service Recovery Safeguard</h3>
-                </div>
-                <span class="badge badge-caution">Monitor Only (Hygienic Operational Safeguard)</span>
-              </div>
-              <div class="evidence-card-claim">
-                <p><strong>Target Segment:</strong> All users experiencing delivery SLA failures, defective items, or unresolved app complaints.</p>
-                <p><strong>Mechanism:</strong> Automated micro-reimbursement and priority support queueing immediately following an SLA breach. Track complaint-to-churn linkage before investing in dedicated proactive recovery programs.</p>
-                <p><strong>Primary Limitations:</strong> Sample may under-represent service-driven exits (delivery 4/32, app 3/32); service recovery is a hygienic operational necessity.</p>
-              </div>
-              <div class="evidence-card-footer">
-                <span>KPI: Complaint resolution time; repeat purchase post-complaint</span>
-                <span>Primary Evidence: Table 13e (Delivery 4, App 3)</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Academic Source Register -->
+          <!-- Academic Source Register --><!-- Academic Source Register -->
           <div class="callout-box" style="margin-top: 2rem;">
             <div class="callout-header">
               <span>📚</span> Authoritative Sources & Regulatory Documents
@@ -1652,6 +1513,11 @@ html_content = '''<!DOCTYPE html>
 html_content = html_content.replace('<!-- UDRHP_CARDS_PLACEHOLDER -->', cards_html)
 html_content = html_content.replace('<!-- MEDIA_ROWS_PLACEHOLDER -->', media_rows_html)
 html_content = html_content.replace('<!-- LIT_CARDS_PLACEHOLDER -->', lit_cards_html)
+html_content = html_content.replace('<!-- TRIANGULATION_TABLE_PLACEHOLDER -->', triangulation_html)
+html_content = html_content.replace('<!-- CRM_FLOW_PLACEHOLDER -->', crm_flow_html)
+html_content = html_content.replace('<!-- CRM_CARDS_PLACEHOLDER -->', crm_cards_html)
+html_content = html_content.replace('<!-- CLAIMS_LEDGER_PLACEHOLDER -->', claims_ledger_html)
+html_content = html_content.replace('<!-- LIMITATIONS_PLACEHOLDER -->', limitations_html)
 
 (ROOT / "index.html").write_text(html_content, encoding="utf-8")
 print(f"[SUCCESS] Upgraded index.html generated successfully ({len(html_content):,} bytes).")

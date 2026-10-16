@@ -1,0 +1,28 @@
+
+          <!-- Interactive CRM Strategy Flow Pipeline -->
+          <div class="chart-card" style="margin-top: 2rem;">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Interactive CRM Strategy Flow (Evidence ➔ Policy Lineage)</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">6-Stage Translation Chain</span>
+                  <span class="chart-meta-tag">Empirical Trace: Survey ➔ Problem ➔ Mechanism ➔ Pilot ➔ KPI ➔ Boundary</span>
+                  <span class="chart-meta-tag">Source: table19_crm_recommendations.csv</span>
+                </div>
+              </div>
+              <div class="chart-controls-row">
+                <div class="filter-bar" id="crm-flow-selector" style="margin-bottom: 0;">
+                  <button type="button" class="filter-btn active" data-flow-r="R1">R1: Waitlist</button>
+                  <button type="button" class="filter-btn" data-flow-r="R2">R2: Restock Alerts</button>
+                  <button type="button" class="filter-btn" data-flow-r="R3">R3: Win-Back</button>
+                  <button type="button" class="filter-btn" data-flow-r="R4">R4: Lock-In Stop</button>
+                  <button type="button" class="filter-btn" data-flow-r="R5">R5: Service Recovery</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic 6-Step Pipeline Display -->
+            <div class="crm-pipeline-container" id="crm-pipeline-display" role="region" aria-live="polite">
+              <!-- Rendered via JS based on active R -->
+            </div>
+          </div>

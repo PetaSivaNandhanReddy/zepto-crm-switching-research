@@ -1,0 +1,151 @@
+
+          <!-- Triangulation Filter Bar -->
+          <div class="filter-bar" id="triangulation-filter-bar">
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Filter by Verdict:</span>
+            <button type="button" class="filter-btn active" data-filter="all">All Factors (6)</button>
+            <button type="button" class="filter-btn" data-filter="Partial">Partial Convergence (3)</button>
+            <button type="button" class="filter-btn" data-filter="Contradictory">Contradictory Anomaly (1)</button>
+            <button type="button" class="filter-btn" data-filter="Insufficient">Insufficient Evidence (2)</button>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="data-table" id="triangulation-table" aria-label="Evidence triangulation synthesis matrix">
+              <thead>
+                <tr>
+                  <th style="min-width: 170px;">Switching Dimension & PPM Role</th>
+                  <th style="min-width: 220px;">Primary Survey Findings (N=184)</th>
+                  <th style="min-width: 220px;">Secondary UDRHP-I Disclosures</th>
+                  <th style="min-width: 180px;">Academic & Industry Context</th>
+                  <th style="min-width: 150px;">Integrated Verdict</th>
+                  <th style="min-width: 130px;">Strategic CRM Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-verdict="Partial">
+                  <td class="cell-highlight">
+                    <strong>Service Coverage Constraints</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-inconclusive">Involuntary / Structural</span></div>
+                  </td>
+                  <td>
+                    Main reason for <strong>31/73 (42.5%)</strong> former users (Class A); cited as exit barrier by 38/73. Primary reason for <strong>37/60 (61.7%)</strong> never-users (context only).
+                  </td>
+                  <td>
+                    <strong>₹16,289.75M</strong> earmarked for dark-store network expansion (pp. 143–145); scaled to 1,139 stores across 66 cities at 31 Mar 2026 (p. 163).
+                  </td>
+                  <td>
+                    Redseer (S04): smaller-city quick commerce shows weaker demand maturity; advises prioritising dense clusters. No standard PPM study tests coverage.
+                  </td>
+                  <td>
+                    <span class="badge badge-verified">Partial Convergence</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Convergent context; non-causal.</div>
+                  </td>
+                  <td><a href="#rec-R1" class="meta-link">R1: Waitlist</a></td>
+                </tr>
+
+                <tr data-verdict="Partial">
+                  <td class="cell-highlight">
+                    <strong>Competitor Pull & Assortment Variety</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-pull">PULL FACTOR</span></div>
+                  </td>
+                  <td>
+                    ALT &rho; = +0.685, VAR &rho; = +0.694 (composite) / +0.731 (VAR1) (n=51, p &lt; .001). Under centering: ALT collapses to <strong>-0.026</strong>, VAR1 drops to <strong>+0.305</strong>. Availability + variety = <strong>16/32 (50.0%)</strong> voluntary exits.
+                  </td>
+                  <td>
+                    Store-level unique SKUs grew 4x from 12,312 (FY24) to <strong>46,623</strong> (FY26) and 49,602 in Q4 FY26 (p. 162). Competitor promotions and wider assortment disclosed as key risk (p. 31).
+                  </td>
+                  <td>
+                    L05 (Tier A) & L16 (Tier B): alternative attractiveness drives switching. Redseer (S03): platform-level assortment depth is a primary defensibility lever.
+                  </td>
+                  <td>
+                    <span class="badge badge-verified">Partial Convergence</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Supported on raw only; fragile to centering.</div>
+                  </td>
+                  <td><a href="#rec-R2" class="meta-link">R2 / R3: Alerts & Win-Back</a></td>
+                </tr>
+
+                <tr data-verdict="Partial">
+                  <td class="cell-highlight">
+                    <strong>Competitor Promotions & Pricing</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-pull">PULL FACTOR</span></div>
+                  </td>
+                  <td>
+                    PROMO &rho; = +0.700 (single item, n=51); under centering &rho; drops to <strong>+0.233</strong> (95% CI [-0.07, 0.50] spans zero). Discounts cited in only <strong>3/32 (9.4%)</strong> voluntary exits.
+                  </td>
+                  <td>
+                    Risk Factor 6 (p. 31) names competitor promotional subsidies; user fee increase risks velocity (p. 34); net loss ₹59,051.92M establishes financial cost floor (p. 24).
+                  </td>
+                  <td>
+                    L05 (Tier A): promotions are one sub-dimension in attractiveness scale. Redseer (S05): quick-commerce users are more time-sensitive than price-sensitive.
+                  </td>
+                  <td>
+                    <span class="badge badge-caution">Partial Convergence</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Raw correlation not matched by exit reasons.</div>
+                  </td>
+                  <td><span style="font-size: 0.75rem; color: var(--text-muted);">No promotion priority (R2/R3 lead)</span></td>
+                </tr>
+
+                <tr data-verdict="Contradictory">
+                  <td class="cell-highlight">
+                    <strong>Switching Effort & Lock-In</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-mooring">MOORING FACTOR</span></div>
+                  </td>
+                  <td>
+                    SWEFFORT &rho; = <strong>+0.721</strong> (n=51, anomalous positive direction); centered &rho; collapses to <strong>+0.054</strong>. HTMT discriminant overlap with intention = <strong>0.92</strong>.
+                  </td>
+                  <td>
+                    Delivery partners and merchants multi-home across competing platforms (pp. 27–28, 56); no structural switching barrier exists for multi-app consumer usage.
+                  </td>
+                  <td>
+                    Theory expects negative sign. L10 (Tier A) found positive coefficient (+0.294) when items captured transition effort. L06 (Tier B): non-significant.
+                  </td>
+                  <td>
+                    <span class="badge badge-anomalous">Contradictory Anomaly</span>
+                    <div style="font-size: 0.72rem; color: #f87171; margin-top: 4px;">Contradicts theoretical negative direction.</div>
+                  </td>
+                  <td><a href="#rec-R4" class="meta-link" style="color: #f87171;">R4: Do Not Deploy Lock-In</a></td>
+                </tr>
+
+                <tr data-verdict="Insufficient">
+                  <td class="cell-highlight">
+                    <strong>Satisfaction / Expectation Fulfilment</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-push">PUSH FACTOR</span></div>
+                  </td>
+                  <td>
+                    SAT mean 3.88/5; correlation with intention &rho; = <strong>+0.170</strong> (Holm p = 0.2492, 95% CI [-0.12, 0.44], non-significant). Service experience reasons are a minority (delivery 4, app 3 of 32 voluntary exits).
+                  </td>
+                  <td>
+                    S.Q.A.P. quality framework and ZAP instant-support tool (p. 13); store densification targeting sub-10-minute speed (p. 260).
+                  </td>
+                  <td>
+                    L05 (Tier A) & L10 (Tier A) report non-significant satisfaction paths in food delivery/e-grocery. L16 (Tier B) reports significant service-push paths.
+                  </td>
+                  <td>
+                    <span class="badge badge-inconclusive">Insufficient / Contextual</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Non-significant survey association; inconclusive.</div>
+                  </td>
+                  <td><a href="#rec-R5" class="meta-link">R5: Monitor Only (Safeguard)</a></td>
+                </tr>
+
+                <tr data-verdict="Insufficient">
+                  <td class="cell-highlight">
+                    <strong>Familiarity & Inertia</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-mooring">MOORING FACTOR</span></div>
+                  </td>
+                  <td>
+                    FAM &rho; = <strong>+0.245</strong> (Holm p = 0.2492, n=51); INERT &rho; = <strong>+0.253</strong> (Holm p = 0.2492, complete-case n=46). Both positive (unexpected sign) and statistically non-significant.
+                  </td>
+                  <td>
+                    Tenured users expand category breadth from ~6 categories (Month 1) to 18 categories in Year 2 (p. 252); Zepto Pass loyalty subscription active (p. 258).
+                  </td>
+                  <td>
+                    L15 (Tier B) reports inertia reduces switching; L11 (Tier B) habit. Abstract-level verification only.
+                  </td>
+                  <td>
+                    <span class="badge badge-inconclusive">Insufficient</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Estimates imprecise; minimum detectable |&rho;| &approx; 0.38–0.40.</div>
+                  </td>
+                  <td><a href="#rec-R4" class="meta-link">R4: No Habit Lock-In</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>

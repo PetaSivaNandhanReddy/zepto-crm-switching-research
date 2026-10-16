@@ -2024,58 +2024,198 @@
             Synthesis matrix reconciling primary consumer survey findings, secondary UDRHP-I regulatory disclosures, and academic literature across 6 operational dimensions.
           </p>
 
+
+          <!-- Triangulation Filter Bar -->
+          <div class="filter-bar" id="triangulation-filter-bar">
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Filter by Verdict:</span>
+            <button type="button" class="filter-btn active" data-filter="all">All Factors (6)</button>
+            <button type="button" class="filter-btn" data-filter="Partial">Partial Convergence (3)</button>
+            <button type="button" class="filter-btn" data-filter="Contradictory">Contradictory Anomaly (1)</button>
+            <button type="button" class="filter-btn" data-filter="Insufficient">Insufficient Evidence (2)</button>
+          </div>
+
           <div class="table-wrapper">
-            <table class="data-table" aria-label="Evidence triangulation matrix">
+            <table class="data-table" id="triangulation-table" aria-label="Evidence triangulation synthesis matrix">
               <thead>
                 <tr>
-                  <th>Switching Dimension</th>
-                  <th>Primary Survey Finding (N=184)</th>
-                  <th>Secondary UDRHP-I Filing (E01–E25)</th>
-                  <th>Academic Literature (L01–L17)</th>
-                  <th>Convergence Verdict</th>
+                  <th style="min-width: 170px;">Switching Dimension & PPM Role</th>
+                  <th style="min-width: 220px;">Primary Survey Findings (N=184)</th>
+                  <th style="min-width: 220px;">Secondary UDRHP-I Disclosures</th>
+                  <th style="min-width: 180px;">Academic & Industry Context</th>
+                  <th style="min-width: 150px;">Integrated Verdict</th>
+                  <th style="min-width: 130px;">Strategic CRM Link</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="cell-highlight">Geographic Coverage</td>
-                  <td>56.2% of former users (41/73) and 61.7% of never-users cite unserved areas as primary barrier.</td>
-                  <td>₹16,289.75M earmarked for dark stores; network scaled to 1,139 stores across 66 cities (E07, E14).</td>
-                  <td>Involuntary switching literature establishes physical channel access as a prerequisite condition.</td>
-                  <td><span class="badge badge-verified">Strong Multi-Source Convergence</span></td>
+                <tr data-verdict="Partial">
+                  <td class="cell-highlight">
+                    <strong>Service Coverage Constraints</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-inconclusive">Involuntary / Structural</span></div>
+                  </td>
+                  <td>
+                    Main reason for <strong>31/73 (42.5%)</strong> former users (Class A); cited as exit barrier by 38/73. Primary reason for <strong>37/60 (61.7%)</strong> never-users (context only).
+                  </td>
+                  <td>
+                    <strong>₹16,289.75M</strong> earmarked for dark-store network expansion (pp. 143–145); scaled to 1,139 stores across 66 cities at 31 Mar 2026 (p. 163).
+                  </td>
+                  <td>
+                    Redseer (S04): smaller-city quick commerce shows weaker demand maturity; advises prioritising dense clusters. No standard PPM study tests coverage.
+                  </td>
+                  <td>
+                    <span class="badge badge-verified">Partial Convergence</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Convergent context; non-causal.</div>
+                  </td>
+                  <td><a href="#rec-R1" class="meta-link">R1: Waitlist</a></td>
                 </tr>
-                <tr>
-                  <td class="cell-highlight">Product Variety & Stock-outs</td>
-                  <td>50.0% of voluntary exits (16/32) cite availability and variety; 60.3% find superior variety on rivals.</td>
-                  <td>Store SKUs grew 4x to 46,623 (E13); merchant multi-homing identified as stock-out risk factor (E03).</td>
-                  <td>L05 (A) & L16 (B) confirm assortment gaps as key pull drivers of platform switching.</td>
-                  <td><span class="badge badge-verified">Strong Multi-Source Convergence</span></td>
+
+                <tr data-verdict="Partial">
+                  <td class="cell-highlight">
+                    <strong>Competitor Pull & Assortment Variety</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-pull">PULL FACTOR</span></div>
+                  </td>
+                  <td>
+                    ALT &rho; = +0.685, VAR &rho; = +0.694 (composite) / +0.731 (VAR1) (n=51, p &lt; .001). Under centering: ALT collapses to <strong>-0.026</strong>, VAR1 drops to <strong>+0.305</strong>. Availability + variety = <strong>16/32 (50.0%)</strong> voluntary exits.
+                  </td>
+                  <td>
+                    Store-level unique SKUs grew 4x from 12,312 (FY24) to <strong>46,623</strong> (FY26) and 49,602 in Q4 FY26 (p. 162). Competitor promotions and wider assortment disclosed as key risk (p. 31).
+                  </td>
+                  <td>
+                    L05 (Tier A) & L16 (Tier B): alternative attractiveness drives switching. Redseer (S03): platform-level assortment depth is a primary defensibility lever.
+                  </td>
+                  <td>
+                    <span class="badge badge-verified">Partial Convergence</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Supported on raw only; fragile to centering.</div>
+                  </td>
+                  <td><a href="#rec-R2" class="meta-link">R2 / R3: Alerts & Win-Back</a></td>
                 </tr>
-                <tr>
-                  <td class="cell-highlight">Promotional Pull vs Unit Costs</td>
-                  <td>PROMO &rho; = +0.700; discounts cited in 9.4% of voluntary exits.</td>
-                  <td>Net loss ₹59,051.92M (FY26); marketing budget ₹5,200.00M; supply chain cost floor limits discounting (E01, E10).</td>
-                  <td>L05 (A) identifies deals/promotions as an attractive alternative sub-dimension.</td>
-                  <td><span class="badge badge-caution">Convergent with Economic Constraints</span></td>
+
+                <tr data-verdict="Partial">
+                  <td class="cell-highlight">
+                    <strong>Competitor Promotions & Pricing</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-pull">PULL FACTOR</span></div>
+                  </td>
+                  <td>
+                    PROMO &rho; = +0.700 (single item, n=51); under centering &rho; drops to <strong>+0.233</strong> (95% CI [-0.07, 0.50] spans zero). Discounts cited in only <strong>3/32 (9.4%)</strong> voluntary exits.
+                  </td>
+                  <td>
+                    Risk Factor 6 (p. 31) names competitor promotional subsidies; user fee increase risks velocity (p. 34); net loss ₹59,051.92M establishes financial cost floor (p. 24).
+                  </td>
+                  <td>
+                    L05 (Tier A): promotions are one sub-dimension in attractiveness scale. Redseer (S05): quick-commerce users are more time-sensitive than price-sensitive.
+                  </td>
+                  <td>
+                    <span class="badge badge-caution">Partial Convergence</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Raw correlation not matched by exit reasons.</div>
+                  </td>
+                  <td><span style="font-size: 0.75rem; color: var(--text-muted);">No promotion priority (R2/R3 lead)</span></td>
                 </tr>
-                <tr>
-                  <td class="cell-highlight">Switching Barriers & Lock-in</td>
-                  <td>SWEFFORT &rho; = +0.721 (anomalous positive sign); collapses to +0.054 under within-person centering.</td>
-                  <td>Zepto Pass launched (E21); merchant and delivery partner multi-homing limits platform defensibility (E03).</td>
-                  <td>L10 (A) verifies positive switching-cost path (+0.294) when items capture transition effort.</td>
-                  <td><span class="badge badge-anomalous">Empirical Anomaly Confirmed</span></td>
+
+                <tr data-verdict="Contradictory">
+                  <td class="cell-highlight">
+                    <strong>Switching Effort & Lock-In</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-mooring">MOORING FACTOR</span></div>
+                  </td>
+                  <td>
+                    SWEFFORT &rho; = <strong>+0.721</strong> (n=51, anomalous positive direction); centered &rho; collapses to <strong>+0.054</strong>. HTMT discriminant overlap with intention = <strong>0.92</strong>.
+                  </td>
+                  <td>
+                    Delivery partners and merchants multi-home across competing platforms (pp. 27–28, 56); no structural switching barrier exists for multi-app consumer usage.
+                  </td>
+                  <td>
+                    Theory expects negative sign. L10 (Tier A) found positive coefficient (+0.294) when items captured transition effort. L06 (Tier B): non-significant.
+                  </td>
+                  <td>
+                    <span class="badge badge-anomalous">Contradictory Anomaly</span>
+                    <div style="font-size: 0.72rem; color: #f87171; margin-top: 4px;">Contradicts theoretical negative direction.</div>
+                  </td>
+                  <td><a href="#rec-R4" class="meta-link" style="color: #f87171;">R4: Do Not Deploy Lock-In</a></td>
+                </tr>
+
+                <tr data-verdict="Insufficient">
+                  <td class="cell-highlight">
+                    <strong>Satisfaction / Expectation Fulfilment</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-push">PUSH FACTOR</span></div>
+                  </td>
+                  <td>
+                    SAT mean 3.88/5; correlation with intention &rho; = <strong>+0.170</strong> (Holm p = 0.2492, 95% CI [-0.12, 0.44], non-significant). Service experience reasons are a minority (delivery 4, app 3 of 32 voluntary exits).
+                  </td>
+                  <td>
+                    S.Q.A.P. quality framework and ZAP instant-support tool (p. 13); store densification targeting sub-10-minute speed (p. 260).
+                  </td>
+                  <td>
+                    L05 (Tier A) & L10 (Tier A) report non-significant satisfaction paths in food delivery/e-grocery. L16 (Tier B) reports significant service-push paths.
+                  </td>
+                  <td>
+                    <span class="badge badge-inconclusive">Insufficient / Contextual</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Non-significant survey association; inconclusive.</div>
+                  </td>
+                  <td><a href="#rec-R5" class="meta-link">R5: Monitor Only (Safeguard)</a></td>
+                </tr>
+
+                <tr data-verdict="Insufficient">
+                  <td class="cell-highlight">
+                    <strong>Familiarity & Inertia</strong>
+                    <div style="margin-top: 4px;"><span class="badge badge-mooring">MOORING FACTOR</span></div>
+                  </td>
+                  <td>
+                    FAM &rho; = <strong>+0.245</strong> (Holm p = 0.2492, n=51); INERT &rho; = <strong>+0.253</strong> (Holm p = 0.2492, complete-case n=46). Both positive (unexpected sign) and statistically non-significant.
+                  </td>
+                  <td>
+                    Tenured users expand category breadth from ~6 categories (Month 1) to 18 categories in Year 2 (p. 252); Zepto Pass loyalty subscription active (p. 258).
+                  </td>
+                  <td>
+                    L15 (Tier B) reports inertia reduces switching; L11 (Tier B) habit. Abstract-level verification only.
+                  </td>
+                  <td>
+                    <span class="badge badge-inconclusive">Insufficient</span>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Estimates imprecise; minimum detectable |&rho;| &approx; 0.38–0.40.</div>
+                  </td>
+                  <td><a href="#rec-R4" class="meta-link">R4: No Habit Lock-In</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+
+
+          <!-- Interactive CRM Strategy Flow Pipeline -->
+          <div class="chart-card" style="margin-top: 2rem;">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Interactive CRM Strategy Flow (Evidence ➔ Policy Lineage)</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">6-Stage Translation Chain</span>
+                  <span class="chart-meta-tag">Empirical Trace: Survey ➔ Problem ➔ Mechanism ➔ Pilot ➔ KPI ➔ Boundary</span>
+                  <span class="chart-meta-tag">Source: table19_crm_recommendations.csv</span>
+                </div>
+              </div>
+              <div class="chart-controls-row">
+                <div class="filter-bar" id="crm-flow-selector" style="margin-bottom: 0;">
+                  <button type="button" class="filter-btn active" data-flow-r="R1">R1: Waitlist</button>
+                  <button type="button" class="filter-btn" data-flow-r="R2">R2: Restock Alerts</button>
+                  <button type="button" class="filter-btn" data-flow-r="R3">R3: Win-Back</button>
+                  <button type="button" class="filter-btn" data-flow-r="R4">R4: Lock-In Stop</button>
+                  <button type="button" class="filter-btn" data-flow-r="R5">R5: Service Recovery</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic 6-Step Pipeline Display -->
+            <div class="crm-pipeline-container" id="crm-pipeline-display" role="region" aria-live="polite">
+              <!-- Rendered via JS based on active R -->
+            </div>
+          </div>
+
         </section>
 
         <!-- ===================================================================
              10. CRM RECOMMENDATIONS & BOUNDARIES
-             Old Anchor Aliases: #crm, #sources
+             Old Anchor Aliases: #crm, #sources, #findings
              =================================================================== -->
         <section class="dashboard-section" id="recommendations">
           <span id="crm" class="anchor-target" aria-hidden="true"></span>
           <span id="sources" class="anchor-target" aria-hidden="true"></span>
+          <span id="findings" class="anchor-target" aria-hidden="true"></span>
 
           <div class="section-eyebrow">
             <span>Stage 5 · Actionable Strategy</span>
@@ -2084,6 +2224,7 @@
           <p class="section-description">
             Pragmatic CRM strategic recommendations derived strictly from converged primary survey and regulatory evidence. Evaluated with statistical confidence tiers.
           </p>
+
 
           <!-- Filter Controls for CRM -->
           <div class="filter-bar" id="crm-filter-bar">
@@ -2097,106 +2238,253 @@
           <!-- R1-R5 Strategy Cards -->
           <div class="card-grid" style="grid-template-columns: 1fr; gap: 1.25rem;">
             <!-- R1 -->
-            <div class="evidence-card crm-rec-card" data-status="Recommended">
+            <div class="evidence-card crm-rec-card" id="rec-R1" data-status="Recommended">
               <div class="evidence-card-header">
                 <div>
-                  <span class="evidence-card-id">R1 · HIGH CONFIDENCE</span>
+                  <span class="evidence-card-id">R1 · RECOMMENDED (CONDITIONAL, TESTABLE)</span>
                   <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Serviceability Waitlist & Expansion-Triggered Reactivation</h3>
                 </div>
-                <span class="badge badge-verified">Recommended (Conditional, Testable)</span>
+                <span class="badge badge-verified">Moderate Confidence (Descriptive)</span>
               </div>
               <div class="evidence-card-claim">
-                <p><strong>Target Segment:</strong> Residents of unserved localities (Class A former users, <i>n</i> = 31; never-users citing coverage, <i>n</i> = 37).</p>
-                <p><strong>Mechanism:</strong> Capture pin codes at registration and on failed-delivery screens. Trigger automated notification when a dark store covering that catchment goes live. Zepto's ₹16,289.75M network expansion (E07) directly enables this strategy.</p>
-                <p><strong>Primary Limitations:</strong> Exit was involuntary; this represents demand recapture rather than true behavioural retention.</p>
+                <p><strong>Customer Problem:</strong> Coverage-driven involuntary exit and non-adoption (unserved residential localities).</p>
+                <p><strong>Underlying Evidence:</strong> Primary survey: Area is the main exit reason for 31/73 former users (Class A) and the main never-use reason for 37/60; 19/28 coverage-primary leavers state positive return willingness. Secondary filing: Zepto earmarks ₹16,289.75M for dark-store network expansion across FY27–FY29 (UDRHP pp. 143–145).</p>
+                <p><strong>Target Segment:</strong> Residents of unserved localities (former Class A users, <i>n</i> = 31; never-users citing coverage constraints, <i>n</i> = 37).</p>
+                <p><strong>Operational Mechanism:</strong> Serviceability waitlist; expansion-triggered automated reactivation; pin-code-based messaging (CRM interpretation).</p>
+                <p><strong>Pilot Implementation:</strong> Capture pin codes at install/registration and on failed-serviceability screens; trigger an automated notification when a dark store covering that catchment goes live; suppress if already served.</p>
+                <p><strong>Expected Output:</strong> Higher first-order conversion after a coverage launch (to be tested empirically in pilot, not assumed).</p>
+                <p><strong>Key Limitations:</strong> Exit was involuntary, so this represents geographic demand recapture rather than true behavioural retention; item wording ambiguity; stated intention may overstate actual conversion.</p>
               </div>
               <div class="evidence-card-footer">
-                <span>KPI: Waitlist-to-first-order conversion; 30/90-day repeat rate</span>
-                <span>Primary Evidence: Table 13d (31/73) & Table 16 (E07)</span>
+                <span>Target KPI: Waitlist size; waitlist-to-first-order conversion; 30/90-day repeat rate of reactivated users</span>
+                <span>Source: Table 19 canonical record (Table 13d & UDRHP S01)</span>
               </div>
             </div>
 
             <!-- R2 -->
-            <div class="evidence-card crm-rec-card" data-status="Conditional">
+            <div class="evidence-card crm-rec-card" id="rec-R2" data-status="Conditional">
               <div class="evidence-card-header">
                 <div>
-                  <span class="evidence-card-id">R2 · MODERATE CONFIDENCE</span>
+                  <span class="evidence-card-id">R2 · CONDITIONAL (PILOT WITH CONTROL GROUP)</span>
                   <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Restock Alerts & Intelligent Substitution Recommendations</h3>
                 </div>
-                <span class="badge badge-caution">Conditional (Pilot with Control Group)</span>
+                <span class="badge badge-caution">Low-Moderate Confidence</span>
               </div>
               <div class="evidence-card-claim">
-                <p><strong>Target Segment:</strong> Current users experiencing repeated failed catalog searches or out-of-stock views.</p>
-                <p><strong>Mechanism:</strong> Log stock-out events and failed searches. Automatically trigger back-in-stock alerts and personalized close-substitute recommendations powered by Zepto's existing in-house ML engine (E18, ₹4,000.00M cloud investment).</p>
-                <p><strong>Primary Limitations:</strong> Associational survey evidence; recommendation engine efficacy must be tested in a randomized holdout pilot.</p>
+                <p><strong>Customer Problem:</strong> Competitor pull and assortment stock-out gaps causing platform leakage.</p>
+                <p><strong>Underlying Evidence:</strong> Primary survey: Among 32 voluntary-only former users, availability + variety = 16/32 main reasons; 41/68 evaluating former users state rivals carried products not easily found on Zepto; H2/H3 supported on raw scores only. Secondary filing: Store-level unique SKUs expanded from 12,312 to 46,623 (FY26) and 49,602 in Q4 FY26 (UDRHP p. 162, p. 538); in-house ML recommendations engine active (p. 246).</p>
+                <p><strong>Target Segment:</strong> Current users experiencing repeated failed searches or out-of-stock views; active multi-platform users.</p>
+                <p><strong>Operational Mechanism:</strong> Restock/availability alerts; substitution recommendations; pin-code assortment personalisation (CRM interpretation).</p>
+                <p><strong>Pilot Implementation:</strong> Log failed searches and out-of-stock views per user; notify immediately upon restock; rank close substitutes using the existing in-house recommendations engine (UDRHP p. 246 confirms capability).</p>
+                <p><strong>Expected Output:</strong> Fewer abandoned baskets and reduced item leakage to rivals (to be evaluated in a randomized holdout pilot).</p>
+                <p><strong>Key Limitations:</strong> Associational survey evidence; variety not empirically separable from general attractiveness (HTMT 0.94); recommendation engine effectiveness is a proposed test, not an established certainty.</p>
               </div>
               <div class="evidence-card-footer">
-                <span>KPI: Repeat ordering among stock-out affected users vs control</span>
-                <span>Primary Evidence: Table 13e (16/32) & Table 16 (E18)</span>
+                <span>Target KPI: Repeat rate among stock-out-affected users vs control; notify-me conversion; share of regular items bought on Zepto</span>
+                <span>Source: Table 19 canonical record (Table 13e & UDRHP S01)</span>
               </div>
             </div>
 
             <!-- R3 -->
-            <div class="evidence-card crm-rec-card" data-status="Conditional">
+            <div class="evidence-card crm-rec-card" id="rec-R3" data-status="Conditional">
               <div class="evidence-card-header">
                 <div>
-                  <span class="evidence-card-id">R3 · LOW-MODERATE CONFIDENCE</span>
+                  <span class="evidence-card-id">R3 · CONDITIONAL (SMALL N; MATCHED REASONS ONLY)</span>
                   <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Segmented Win-Back for Voluntary Assortment Leavers</h3>
                 </div>
-                <span class="badge badge-caution">Conditional (Small n; Matched Reasons Only)</span>
+                <span class="badge badge-caution">Low Confidence (Small n=16)</span>
               </div>
               <div class="evidence-card-claim">
-                <p><strong>Target Segment:</strong> Former voluntary users whose documented exit reason was product availability or variety (<i>n</i> = 16).</p>
-                <p><strong>Mechanism:</strong> Reason-specific win-back messaging triggered when relevant categories or brands are introduced. Restrict incentives to matched assortment leavers; broad-based discount discounting is unsupported (only 3/32 cited discounts).</p>
-                <p><strong>Primary Limitations:</strong> Small matched segment (<i>n</i> = 16); stated return intention may overstate actual conversion.</p>
+                <p><strong>Customer Problem:</strong> Departure of voluntary users driven specifically by catalog availability or product variety limitations.</p>
+                <p><strong>Underlying Evidence:</strong> Primary survey: Voluntary-only former users <i>n</i> = 32; 15/30 state return willingness; main reasons: availability 8, variety 8, delivery 4, app 3, discounts 3. Secondary filing: Cross-category expansion depth reaches 18 product categories at 2 years of tenure (UDRHP p. 252).</p>
+                <p><strong>Target Segment:</strong> Former users whose documented main exit reason was product availability or variety (<i>n</i> = 16).</p>
+                <p><strong>Operational Mechanism:</strong> Reason-specific win-back messaging triggered when the relevant missing product category or brand is introduced (CRM interpretation).</p>
+                <p><strong>Pilot Implementation:</strong> Match the stored exit reason (or inferred search history) to catalog updates; no proactive win-back for minority reasons with counts of 1–3 (insufficient evidence base).</p>
+                <p><strong>Expected Output:</strong> Higher reactivation rate among the matched assortment segment (to be tested against an uncontacted holdout control group).</p>
+                <p><strong>Key Limitations:</strong> Small matched segment (<i>n</i> = 16); stated return intention only; broad-based promotional discount incentives are unsupported (only 3/32 cited discounts).</p>
               </div>
               <div class="evidence-card-footer">
-                <span>KPI: Reactivation rate vs holdout; 30/90-day post-reactivation repeat</span>
-                <span>Primary Evidence: Table 13e (Availability 8, Variety 8)</span>
+                <span>Target KPI: Reactivation rate vs holdout; 30/90-day repeat purchase rate after reactivation</span>
+                <span>Source: Table 19 canonical record (Table 13e, Availability 8, Variety 8)</span>
               </div>
             </div>
 
             <!-- R4 -->
-            <div class="evidence-card crm-rec-card" data-status="Not recommended">
+            <div class="evidence-card crm-rec-card" id="rec-R4" data-status="Not recommended">
               <div class="evidence-card-header">
                 <div>
-                  <span class="evidence-card-id" style="color: var(--accent-rose);">R4 · CRITICAL RESEARCH FINDING</span>
+                  <span class="evidence-card-id" style="color: var(--accent-rose);">R4 · CRITICAL RESEARCH FINDING (UNRECOMMENDED)</span>
                   <h3 style="font-size: 1.15rem; color: #f87171; margin-top: 2px;">Switching-Barrier or Habit Lock-In Mechanisms</h3>
                 </div>
                 <span class="badge badge-anomalous">Not Recommended on Current Evidence</span>
               </div>
               <div class="evidence-card-claim">
-                <p><strong>Evaluation Status:</strong> <strong style="color: #f87171;">NOT RECOMMENDED ON CURRENT EVIDENCE.</strong> Switching-barrier evidence is inconclusive and current measurement is problematic.</p>
-                <p><strong>Scientific Rationale:</strong> Hypothesis H5 yielded an anomalous positive coefficient (&rho; = +0.721), and familiarity (H6) and inertia (H7) were statistically non-significant. Deploying artificial lock-in or switching barriers without validated reverse-worded re-measurement risks user alienation in a competitive multi-homing market.</p>
+                <p><strong>Canonical Evaluation Status:</strong> <strong style="color: #f87171;">NOT RECOMMENDED ON CURRENT EVIDENCE — switching-barrier evidence is inconclusive and the current measurement is problematic; re-measure switching barriers with a validated scale before designing lock-in interventions.</strong></p>
+                <p><strong>Target Problem:</strong> Proposed switching-cost or artificial platform lock-in schemes.</p>
+                <p><strong>Underlying Evidence:</strong> Primary survey: Hypothesis H5 yielded an anomalous positive association (&rho; = +0.721), which collapses under within-person centering (&rho; = +0.054) and exhibits severe discriminant overlap with intention (HTMT 0.92); familiarity (H6) and inertia (H7) were statistically non-significant. Secondary filing: Delivery and merchant partner multi-homing risk disclosures (UDRHP pp. 27–28, 30); Zepto Pass active (p. 258). Academic literature: Mixed switching-cost findings across on-demand studies.</p>
+                <p><strong>Operational Mechanism:</strong> NONE. No lock-in, cancellation friction, or artificial barrier mechanism should be deployed.</p>
+                <p><strong>Required Research Action:</strong> Re-measure switching barriers with a validated, reverse-worded psychometric scale before any lock-in intervention is conceived or designed.</p>
+                <p><strong>Scientific Conclusion:</strong> Attempting to artificially trap users in a competitive quick-commerce market where consumers, delivery partners, and merchants multi-home freely is empirically unsupported and risks accelerating customer alienation.</p>
               </div>
               <div class="evidence-card-footer">
                 <span>Status: Table 19 canonical determination</span>
-                <span>Primary Evidence: Table 12a (H5, H6, H7)</span>
+                <span>Source: Table 12a (H5, H6, H7) & Table 20 (H5 item diagnostics)</span>
               </div>
             </div>
 
             <!-- R5 -->
-            <div class="evidence-card crm-rec-card" data-status="Conditional">
+            <div class="evidence-card crm-rec-card" id="rec-R5" data-status="Conditional">
               <div class="evidence-card-header">
                 <div>
-                  <span class="evidence-card-id">R5 · LOW CONFIDENCE</span>
+                  <span class="evidence-card-id">R5 · MONITOR ONLY (OPERATIONAL SAFEGUARD)</span>
                   <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-top: 2px;">Trigger-Based Service Recovery Safeguard</h3>
                 </div>
-                <span class="badge badge-caution">Monitor Only (Hygienic Operational Safeguard)</span>
+                <span class="badge badge-caution">Low Confidence (Monitor Only)</span>
               </div>
               <div class="evidence-card-claim">
-                <p><strong>Target Segment:</strong> All users experiencing delivery SLA failures, defective items, or unresolved app complaints.</p>
-                <p><strong>Mechanism:</strong> Automated micro-reimbursement and priority support queueing immediately following an SLA breach. Track complaint-to-churn linkage before investing in dedicated proactive recovery programs.</p>
-                <p><strong>Primary Limitations:</strong> Sample may under-represent service-driven exits (delivery 4/32, app 3/32); service recovery is a hygienic operational necessity.</p>
+                <p><strong>Customer Problem:</strong> Service delivery experience failures (delayed delivery SLA breaches, app glitches, customer support friction, product quality defects).</p>
+                <p><strong>Underlying Evidence:</strong> Primary survey: Satisfaction was not significantly associated with switching intention (&rho; = +0.170, Holm p = 0.2492, inconclusive); service experience reasons are minority exit mentions (delivery 4, app 3 of 32 voluntary exits). Secondary filing: Store densification targets sub-10-minute speed (UDRHP p. 260); ZAP customer support tool active (p. 13).</p>
+                <p><strong>Target Segment:</strong> Whole customer base experiencing order SLA breaches or defective fulfillments.</p>
+                <p><strong>Operational Mechanism:</strong> Trigger-based automated service recovery on failed orders using existing customer support infrastructure (operational safeguard).</p>
+                <p><strong>Pilot Implementation:</strong> Track complaint-to-churn linkage systematically before investing in expensive dedicated proactive service recovery programs.</p>
+                <p><strong>Expected Output:</strong> Early warning operational indicator only.</p>
+                <p><strong>Key Limitations:</strong> The sample may under-represent severe service-driven exits; service recovery is a hygienic operational requirement rather than a differentiated CRM growth engine.</p>
               </div>
               <div class="evidence-card-footer">
-                <span>KPI: Complaint resolution time; repeat purchase post-complaint</span>
-                <span>Primary Evidence: Table 13e (Delivery 4, App 3)</span>
+                <span>Target KPI: Complaint resolution time; repeat purchase rate after an order complaint</span>
+                <span>Source: Table 19 canonical record (Table 13e, Delivery 4, App 3)</span>
               </div>
             </div>
           </div>
 
-          <!-- Academic Source Register -->
+
+
+          <!-- Claims Ledger: What the Research Establishes vs What Must NOT Be Claimed -->
+          <div class="chart-card" style="margin-top: 2.5rem;">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Epistemic Claims Ledger (Research Truth Register)</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Scientific Standards: Zero Causal Overreach</span>
+                  <span class="chart-meta-tag">Partition: Supported · Cautious / Conditional · Strictly Barred</span>
+                  <span class="chart-meta-tag">Evidence Audit: DISCREPANCIES.md Reconciled</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ledger Grid -->
+            <div class="stat-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+              
+              <!-- 1. Supported Claims -->
+              <div class="evidence-card" style="border-top: 3px solid var(--accent-emerald);">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id" style="color: var(--accent-emerald);">TIER 1 · SUPPORTED</span>
+                  <span class="badge badge-verified">Empirically Established</span>
+                </div>
+                <div class="evidence-card-claim">
+                  <ul style="padding-left: 1.1rem; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                    <li><strong>Coverage is the primary barrier:</strong> 42.5% of former users (Class A, 31/73) and 61.7% of never-users (37/60) departed or never ordered due to dark-store serviceability limits.</li>
+                    <li><strong>Assortment drives voluntary departure:</strong> Stock availability and product variety together account for exactly 50.0% (16/32) of voluntary customer exits.</li>
+                    <li><strong>Competitor variety advantage:</strong> 60.3% of evaluating former users (41/68) confirmed rivals carried items unavailable on Zepto.</li>
+                    <li><strong>Pull factors dominate raw scores:</strong> On unadjusted bivariate correlations, Alternative Attractiveness (&rho; = +0.685), Variety (&rho; = +0.694), and Promotions (&rho; = +0.700) show strong positive associations with intention.</li>
+                    <li><strong>Regulatory capital convergence:</strong> Zepto's UDRHP verifies ₹16,289.75M dark-store expansion and 4x SKU growth to 46,623, directly addressing the two primary empirical churn drivers.</li>
+                  </ul>
+                </div>
+                <div class="evidence-card-footer">
+                  <span>Authoritative Baseline</span>
+                  <span>Tables 03, 12a, 13d, 13e, 16</span>
+                </div>
+              </div>
+
+              <!-- 2. Cautious / Conditional Findings -->
+              <div class="evidence-card" style="border-top: 3px solid var(--accent-amber);">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id" style="color: var(--accent-amber);">TIER 2 · CAUTIOUS</span>
+                  <span class="badge badge-caution">Conditional / Fragile</span>
+                </div>
+                <div class="evidence-card-claim">
+                  <ul style="padding-left: 1.1rem; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                    <li><strong>Pull correlations attenuate under centering:</strong> Alternative Attractiveness collapses from +0.685 to -0.026 and Variety drops from +0.731 to +0.305 when individual response-style elevation is removed.</li>
+                    <li><strong>Small matched segments:</strong> Voluntary assortment exits comprise <i>n</i> = 16 respondents; win-back strategy must be piloted with control groups rather than scaled globally.</li>
+                    <li><strong>Stated vs actual reactivation:</strong> 60.3% stated return willingness represents self-reported customer optimism that historically exceeds behavioural re-ordering rates.</li>
+                    <li><strong>Platform multi-homing dampens lock-in:</strong> Multi-app usage across Zepto, Blinkit, and Instamart is standard consumer behaviour, weakening customer retention moats.</li>
+                  </ul>
+                </div>
+                <div class="evidence-card-footer">
+                  <span>Requires Pilot Testing</span>
+                  <span>Tables 13c, 19, 21</span>
+                </div>
+              </div>
+
+              <!-- 3. Strictly Barred Claims -->
+              <div class="evidence-card" style="border-top: 3px solid var(--accent-rose);">
+                <div class="evidence-card-header">
+                  <span class="evidence-card-id" style="color: var(--accent-rose);">TIER 3 · STRICTLY BARRED</span>
+                  <span class="badge badge-anomalous">Scientific Overreach</span>
+                </div>
+                <div class="evidence-card-claim">
+                  <ul style="padding-left: 1.1rem; font-size: 0.82rem; color: #fca5a5; line-height: 1.6; margin: 0;">
+                    <li><strong>DO NOT CLAIM dissatisfaction drives switching:</strong> Hypothesis H1 was statistically non-significant (&rho; = +0.170, Holm p = 0.2492); service issues are a minority exit factor.</li>
+                    <li><strong>DO NOT CLAIM switching costs protect Zepto:</strong> H5 yielded an anomalous positive sign (&rho; = +0.721); R4 is strictly unrecommended on current evidence.</li>
+                    <li><strong>DO NOT CLAIM survey data establishes causality:</strong> Observational, cross-sectional survey data captures statistical associations, never causal mechanisms.</li>
+                    <li><strong>DO NOT TREAT never-users as former customers:</strong> Never-users (<i>n</i> = 60) are non-adopters who have never placed an order; they cannot have switched or churned.</li>
+                    <li><strong>DO NOT CLAIM discounts are the primary retention tool:</strong> Price/discounts were cited in only 3/32 voluntary exits; cost floor limits promotional price subsidization.</li>
+                  </ul>
+                </div>
+                <div class="evidence-card-footer">
+                  <span style="color: #f87171;">Strict Viva Defense Rule</span>
+                  <span>DISCREPANCIES.md & Ethics</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <!-- Methodological Limitations & Boundaries -->
+          <div class="chart-card" style="margin-top: 1.5rem;">
+            <div class="chart-header">
+              <div class="chart-header-main">
+                <h3 class="chart-title">Methodological Boundaries & Limitations</h3>
+                <div class="chart-meta-row">
+                  <span class="chart-meta-tag">Epistemic Scope</span>
+                  <span class="chart-meta-tag">Self-Critical Academic Appraisal</span>
+                  <span class="chart-meta-tag">Contextual Grounding</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stat-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+              <div class="callout-box" style="margin: 0; border-left-color: var(--accent-purple);">
+                <h4 style="font-size: 0.92rem; color: var(--text-primary); margin-bottom: 0.4rem;">1. Cross-Sectional Design</h4>
+                <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Data was collected concurrently across groups (N=184). The study cannot establish temporal ordering or prove causal switching pathways. Stated intentions serve as behavioural proxies.</p>
+              </div>
+
+              <div class="callout-box" style="margin: 0; border-left-color: var(--accent-magenta);">
+                <h4 style="font-size: 0.92rem; color: var(--text-primary); margin-bottom: 0.4rem;">2. Single-Item Measurement Scales</h4>
+                <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Promotional Pull (H4) and Inertia (H7) were measured with single indicators in questionnaire versions V1/V1.5, precluding multi-item scale reliability assessment and HTMT modeling.</p>
+              </div>
+
+              <div class="callout-box" style="margin: 0; border-left-color: var(--accent-amber);">
+                <h4 style="font-size: 0.92rem; color: var(--text-primary); margin-bottom: 0.4rem;">3. Response-Style Elevation Bias</h4>
+                <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Current-user Likert scores exhibit general positivity bias across all items. Within-person centering successfully diagnosed this artifact, demonstrating that raw pull correlations attenuate when individual elevations are controlled.</p>
+              </div>
+
+              <div class="callout-box" style="margin: 0; border-left-color: var(--accent-cyan);">
+                <h4 style="font-size: 0.92rem; color: var(--text-primary); margin-bottom: 0.4rem;">4. Retrospective Recall in Former Users</h4>
+                <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Former-user exit reasons (n=73) rely on retrospective self-report. While geographic coverage unserviceability (Class A, n=31) is an objective physical constraint, voluntary exit reasons may suffer from rationalization.</p>
+              </div>
+
+              <div class="callout-box" style="margin: 0; border-left-color: var(--accent-emerald);">
+                <h4 style="font-size: 0.92rem; color: var(--text-primary); margin-bottom: 0.4rem;">5. Regulatory Disclosure Context</h4>
+                <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">Zepto Limited's UDRHP-I filings provide audited operational KPIs and statutory risk disclosures. While legally binding under SEBI regulations, disclosures reflect management strategy rather than controlled counterfactual experiments.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Academic Source Register --><!-- Academic Source Register -->
           <div class="callout-box" style="margin-top: 2rem;">
             <div class="callout-header">
               <span>📚</span> Authoritative Sources & Regulatory Documents

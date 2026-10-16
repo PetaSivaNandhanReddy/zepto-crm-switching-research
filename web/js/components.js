@@ -177,6 +177,102 @@
     if (constructSelect) constructSelect.addEventListener('change', applyFilter);
   }
 
+  // 8. Triangulation Matrix Filter
+  function initTriangulationFilter() {
+    var chips = document.querySelectorAll('#triangulation-filter-bar .filter-btn');
+    var rows = document.querySelectorAll('#triangulation-table tbody tr');
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-filter');
+
+        rows.forEach(function (row) {
+          var verdict = row.getAttribute('data-verdict') || '';
+          if (filter === 'all' || verdict.indexOf(filter) !== -1) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // 9. Interactive CRM Strategy Flow Pipeline
+  function initCrmPipeline() {
+    var buttons = document.querySelectorAll('#crm-flow-selector .filter-btn');
+    var display = document.getElementById('crm-pipeline-display');
+    if (!buttons.length || !display) return;
+
+    var crmData = (window.SITE_DATA && window.SITE_DATA.table19_crm) ? window.SITE_DATA.table19_crm : [];
+
+    function renderPipeline(recId) {
+      var item = crmData.find(function (r) { return r.ID === recId; });
+      if (!item) return;
+
+      var isUnrec = recId === 'R4';
+      var badgeClass = isUnrec ? 'badge-anomalous' : (recId === 'R1' ? 'badge-verified' : 'badge-caution');
+      var statusShort = (item.Status || '').split('—')[0].trim();
+
+      display.innerHTML = [
+        '<div class="crm-pipeline-card ' + (isUnrec ? 'pipeline-unrec' : '') + '">',
+        '  <div class="pipeline-header">',
+        '    <div>',
+        '      <span class="evidence-card-id">' + item.ID + ' · STRATEGIC POLICY PIPELINE</span>',
+        '      <h4 style="font-size: 1.05rem; color: ' + (isUnrec ? '#f87171' : 'var(--text-primary)') + '; margin: 2px 0 0 0;">' + item.Problem + '</h4>',
+        '    </div>',
+        '    <span class="badge ' + badgeClass + '">' + statusShort + '</span>',
+        '  </div>',
+        '  <div class="pipeline-steps-grid">',
+        '    <div class="pipeline-step">',
+        '      <div class="step-num">01</div>',
+        '      <div class="step-title">Empirical Evidence</div>',
+        '      <div class="step-desc">' + item.Evidence + '</div>',
+        '    </div>',
+        '    <div class="pipeline-step">',
+        '      <div class="step-num">02</div>',
+        '      <div class="step-title">Target Segment</div>',
+        '      <div class="step-desc">' + item.Segment + '</div>',
+        '    </div>',
+        '    <div class="pipeline-step">',
+        '      <div class="step-num">03</div>',
+        '      <div class="step-title">CRM Mechanism</div>',
+        '      <div class="step-desc">' + (item.Mechanism || 'NONE — Deploy no artificial lock-in mechanism.') + '</div>',
+        '    </div>',
+        '    <div class="pipeline-step">',
+        '      <div class="step-num">04</div>',
+        '      <div class="step-title">Pilot Test Design</div>',
+        '      <div class="step-desc">' + item.Implementation + '</div>',
+        '    </div>',
+        '    <div class="pipeline-step">',
+        '      <div class="step-num">05</div>',
+        '      <div class="step-title">Target Evaluation KPI</div>',
+        '      <div class="step-desc">' + item.KPI + '</div>',
+        '    </div>',
+        '    <div class="pipeline-step">',
+        '      <div class="step-num">06</div>',
+        '      <div class="step-title">Key Epistemic Boundary</div>',
+        '      <div class="step-desc">' + item.Limitations + '</div>',
+        '    </div>',
+        '  </div>',
+        '</div>'
+      ].join('');
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var rId = this.getAttribute('data-flow-r');
+        renderPipeline(rId);
+      });
+    });
+
+    renderPipeline('R1');
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initHypothesisLab();
     initDumbbellToggle();
@@ -185,6 +281,8 @@
     initCrmFilter();
     initAccordions();
     initEvidenceSearch();
+    initTriangulationFilter();
+    initCrmPipeline();
   });
 
 })();
