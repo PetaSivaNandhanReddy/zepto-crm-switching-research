@@ -923,6 +923,28 @@
               </tbody>
             </table>
           </div>
+
+          <!-- How Was This Calculated Accordion -->
+          <button type="button" class="drawer-toggle-btn" data-drawer-target="hypo-method-accordion" aria-expanded="false" style="margin-top: 1rem;">
+            <span>🔬 How Were These Statistics Calculated? (Methodology & Formulas)</span>
+            <span class="arrow-icon">▼</span>
+          </button>
+          <div class="drawer-content" id="hypo-method-accordion">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; padding: 0.5rem 0;">
+              <div>
+                <h4 style="color: var(--text-primary); font-size: 0.9rem; margin-bottom: 4px;">Spearman Rank Correlation (&rho;)</h4>
+                <p>Non-parametric monotonic association metric computed across ordinal Likert items. Robust against non-normal skewness. Bootstrapped with 5,000 resamples using a fixed deterministic seed to establish 95% confidence intervals.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--text-primary); font-size: 0.9rem; margin-bottom: 4px;">Holm-Bonferroni Step-Down</h4>
+                <p>Controls Family-Wise Error Rate (FWER) across the family of 7 correlation tests (H1–H7). Sorts unadjusted <i>p</i>-values in ascending order and adjusts thresholds by <i>p</i> &times; (8 &minus; rank), preventing spurious alpha inflation.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--text-primary); font-size: 0.9rem; margin-bottom: 4px;">Mann–Whitney U Non-Parametric Test</h4>
+                <p>Used for two-group medians comparison (H9: Shifted vs Not Shifted; H10: Class A vs Class C). Effect size quantified via rank-biserial correlation <i>r</i> = 1 &minus; (2U / n1n2).</p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- ===================================================================
